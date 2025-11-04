@@ -1,0 +1,568 @@
+{
+	"final_summary" : "App.java: App does not have any design pattern.  It is a public class. The only method of App is main (void). No methods call main and main calls only one method : accept method of class commander.\n\n\nSoldier.java: Soldier does not have any design pattern.  It is a public class that extends Unit. The 2 methods of Soldier are accept (void) and toString (String). No methods call accept and accept calls 2 methods : accept method of class super and visit method of class visitor. No methods call toString and toString calls no methods.\n\n\nSergeant.java: Sergeant does not have any design pattern.  It is a public class that extends Unit. The 2 methods of Sergeant are accept (void) and toString (String). No methods call accept and accept calls 2 methods : accept method of class super and visit method of class visitor. No methods call toString and toString calls no methods.\n\n\nSoldierVisitor.java: SoldierVisitor does not have any design pattern.  It is a public class that implements UnitVisitor. The 3 methods of SoldierVisitor are visit (void), visit (void) and visit (void). No methods call visit and visit calls only one method : info method of class LOGGER. No methods call visit and visit calls only one method : info method of class LOGGER. No methods call visit and visit calls only one method : info method of class LOGGER.\n\n\nCommander.java: Commander does not have any design pattern.  It is a public class that extends Unit. The 2 methods of Commander are accept (void) and toString (String). No methods call accept and accept calls 2 methods : accept method of class super and visit method of class visitor. No methods call toString and toString calls no methods.\n\n\nUnitVisitor.java: UnitVisitor does not have any design pattern.  It is a public interface. The 3 methods of UnitVisitor are visit (void), visit (void) and visit (void). No methods call visit and visit calls no methods. No methods call visit and visit calls no methods. No methods call visit and visit calls no methods.\n\n\nSergeantVisitor.java: SergeantVisitor does not have any design pattern.  It is a public class that implements UnitVisitor. The 3 methods of SergeantVisitor are visit (void), visit (void) and visit (void). No methods call visit and visit calls only one method : info method of class LOGGER. No methods call visit and visit calls only one method : info method of class LOGGER. No methods call visit and visit calls only one method : info method of class LOGGER.\n\n\nCommanderVisitor.java: CommanderVisitor does not have any design pattern.  It is a public class that implements UnitVisitor. The 3 methods of CommanderVisitor are visit (void), visit (void) and visit (void). No methods call visit and visit calls only one method : info method of class LOGGER. No methods call visit and visit calls only one method : info method of class LOGGER. No methods call visit and visit calls only one method : info method of class LOGGER.\n\n\nUnit.java: Unit does not have any design pattern.  It is a public abstract class. The only method of Unit is accept (void). No methods call accept and accept calls 3 methods : forEach method of class Stream, accept method of class child and stream method of class Arrays.\n\n\n",
+	"design_pattern" : [ ],
+	"iluwatar-visitor" : {
+		"App" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "App",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "commander = new Commander(new Sergeant(new Soldier(), new Soldier(), new Soldier()), new Sergeant(new Soldier(), new Soldier(), new Soldier()))" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "commander",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "commander",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "commander",
+					"CALLEEMETHODNAME" : "accept"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Soldier" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "Unit" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Soldier",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "children",
+					"PARAMETERTYPE" : "Unit..."
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "visitor",
+					"CALLEEMETHODNAME" : "visit"
+				}, {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "accept"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "UnitVisitor"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Sergeant" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "Unit" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Sergeant",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "children",
+					"PARAMETERTYPE" : "Unit..."
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "visitor",
+					"CALLEEMETHODNAME" : "visit"
+				}, {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "accept"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "UnitVisitor"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"SoldierVisitor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "UnitVisitor" ],
+				"CLASSNAME" : "SoldierVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "soldier",
+					"PARAMETERTYPE" : "Soldier"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "sergeant",
+					"PARAMETERTYPE" : "Sergeant"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "commander",
+					"PARAMETERTYPE" : "Commander"
+				} ]
+			} ]
+		},
+		"Commander" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "Unit" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Commander",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "children",
+					"PARAMETERTYPE" : "Unit..."
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "visitor",
+					"CALLEEMETHODNAME" : "visit"
+				}, {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "accept"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "UnitVisitor"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UnitVisitor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UnitVisitor",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "soldier",
+					"PARAMETERTYPE" : "Soldier"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "sergeant",
+					"PARAMETERTYPE" : "Sergeant"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "commander",
+					"PARAMETERTYPE" : "Commander"
+				} ]
+			} ]
+		},
+		"SergeantVisitor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "UnitVisitor" ],
+				"CLASSNAME" : "SergeantVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "soldier",
+					"PARAMETERTYPE" : "Soldier"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "sergeant",
+					"PARAMETERTYPE" : "Sergeant"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "commander",
+					"PARAMETERTYPE" : "Commander"
+				} ]
+			} ]
+		},
+		"CommanderVisitor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "UnitVisitor" ],
+				"CLASSNAME" : "CommanderVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "soldier",
+					"PARAMETERTYPE" : "Soldier"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "sergeant",
+					"PARAMETERTYPE" : "Sergeant"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "commander",
+					"PARAMETERTYPE" : "Commander"
+				} ]
+			} ]
+		},
+		"Unit" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Unit[]",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "children" ],
+				"FIELDDATATYPE" : "Unit",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Unit",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "children",
+					"PARAMETERTYPE" : "Unit..."
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Stream",
+					"CALLEEMETHODNAME" : "forEach"
+				}, {
+					"CALLEECLASS" : "Arrays",
+					"CALLEEMETHODNAME" : "stream"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "accept"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "UnitVisitor"
+				} ]
+			} ]
+		}
+	},
+	"summary_NLG" : { }
+}

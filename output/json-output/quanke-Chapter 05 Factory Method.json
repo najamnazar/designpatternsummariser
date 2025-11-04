@@ -1,0 +1,425 @@
+{
+	"quanke-Chapter 05 Factory Method" : {
+		"HaierTV" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "TV" ],
+				"IMPLEMENTSFROM" : [ "TV" ],
+				"CLASSNAME" : "HaierTV",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "play",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"TV" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "TV",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "play",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"HaierTVFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "TVFactory" ],
+				"IMPLEMENTSFROM" : [ "TVFactory" ],
+				"CLASSNAME" : "HaierTVFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "produceTV",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "TV",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"TVFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "TVFactory",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "produceTV",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "TV",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"XMLUtil" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 10,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "XMLUtil",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "dFactory = DocumentBuilderFactory.newInstance()" ],
+				"VARIABLECOMMONTYPE" : "DocumentBuilderFactory",
+				"VARIABLEELEMENTTYPE" : "DocumentBuilderFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "builder = dFactory.newDocumentBuilder()" ],
+				"VARIABLECOMMONTYPE" : "DocumentBuilder",
+				"VARIABLEELEMENTTYPE" : "DocumentBuilder"
+			}, {
+				"VARIABLEDECLARATION" : [ "doc" ],
+				"VARIABLECOMMONTYPE" : "Document",
+				"VARIABLEELEMENTTYPE" : "Document"
+			}, {
+				"VARIABLEDECLARATION" : [ "nl = doc.getElementsByTagName(\"className\")" ],
+				"VARIABLECOMMONTYPE" : "NodeList",
+				"VARIABLEELEMENTTYPE" : "NodeList"
+			}, {
+				"VARIABLEDECLARATION" : [ "classNode = nl.item(0).getFirstChild()" ],
+				"VARIABLECOMMONTYPE" : "Node",
+				"VARIABLEELEMENTTYPE" : "Node"
+			}, {
+				"VARIABLEDECLARATION" : [ "cName = classNode.getNodeValue()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "c = Class.forName(cName)" ],
+				"VARIABLECOMMONTYPE" : "Class",
+				"VARIABLEELEMENTTYPE" : "Class"
+			}, {
+				"VARIABLEDECLARATION" : [ "obj = c.newInstance()" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getBean",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 10,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DocumentBuilderFactory",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "DocumentBuilderFactory",
+					"CALLEEMETHODNAME" : "newDocumentBuilder"
+				}, {
+					"CALLEECLASS" : "DocumentBuilder",
+					"CALLEEMETHODNAME" : "parse"
+				}, {
+					"CALLEECLASS" : "Document",
+					"CALLEEMETHODNAME" : "getElementsByTagName"
+				}, {
+					"CALLEECLASS" : "Node",
+					"CALLEEMETHODNAME" : "getFirstChild"
+				}, {
+					"CALLEECLASS" : "NodeList",
+					"CALLEEMETHODNAME" : "item"
+				}, {
+					"CALLEECLASS" : "Node",
+					"CALLEEMETHODNAME" : "getNodeValue"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "forName"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"HisenseTV" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "TV" ],
+				"IMPLEMENTSFROM" : [ "TV" ],
+				"CLASSNAME" : "HisenseTV",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "play",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"HisenseTVFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "TVFactory" ],
+				"IMPLEMENTSFROM" : [ "TVFactory" ],
+				"CLASSNAME" : "HisenseTVFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "produceTV",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "TV",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "tv" ],
+				"VARIABLECOMMONTYPE" : "TV",
+				"VARIABLEELEMENTTYPE" : "TV"
+			}, {
+				"VARIABLEDECLARATION" : [ "factory" ],
+				"VARIABLECOMMONTYPE" : "TVFactory",
+				"VARIABLEELEMENTTYPE" : "TVFactory"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "XMLUtil",
+					"CALLEEMETHODNAME" : "getBean"
+				}, {
+					"CALLEECLASS" : "TVFactory",
+					"CALLEEMETHODNAME" : "produceTV"
+				}, {
+					"CALLEECLASS" : "TV",
+					"CALLEEMETHODNAME" : "play"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "getMessage"
+				}, {
+					"CALLEECLASS" : "XMLUtil",
+					"CALLEEMETHODNAME" : "getBean"
+				}, {
+					"CALLEECLASS" : "TVFactory",
+					"CALLEEMETHODNAME" : "produceTV"
+				}, {
+					"CALLEECLASS" : "TV",
+					"CALLEEMETHODNAME" : "play"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	},
+	"final_summary" : "HaierTV.java: abstract_factory: HaierTV acts as a product for TVFactory, which overrides. It is a public class that extends TV and that implements TV. The only method of HaierTV is play (void). No methods call play and play calls only one method : println method of class PrintStream.\n\n memento: HaierTV acts as a memento, which plays. It is a public class that extends TV and that implements TV. The only method of HaierTV is play (void). No methods call play and play calls only one method : println method of class PrintStream.\n\n factory_method: HaierTV acts as a product for HaierTVFactory, which overrides. It is a public class that extends TV and that implements TV. The only method of HaierTV is play (void). No methods call play and play calls only one method : println method of class PrintStream.\n\n\nTV.java: abstract_factory: TV acts as an abstract product for TV, which is inherited by HaierTV, HisenseTV. It is a public interface. The only method of TV is play (void). Only one method ( main method of class Client ) calls play and play calls no methods.\n\n memento: TV acts as a memento, which is inherited by HaierTV, HisenseTV, which plays. It is a public interface. The only method of TV is play (void). Only one method ( main method of class Client ) calls play and play calls no methods.\n\n factory_method: TV acts as an abstract product for HaierTVFactory, which is inherited by HaierTV, HisenseTV. It is a public interface. The only method of TV is play (void). Only one method ( main method of class Client ) calls play and play calls no methods.\n\n\nHaierTVFactory.java: abstract_factory: HaierTVFactory acts as a factory for TVFactory, which overrides. It is a public class that extends TVFactory and that implements TVFactory. The only method of HaierTVFactory is produceTV (TV). No methods call produceTV and produceTV calls only one method : println method of class PrintStream.\n\n memento: HaierTVFactory acts as an originator for memento TV, which produces a TV TV to. It is a public class that extends TVFactory and that implements TVFactory. The only method of HaierTVFactory is produceTV (TV). No methods call produceTV and produceTV calls only one method : println method of class PrintStream.\n\n factory_method: HaierTVFactory acts as a factory method for TV, which is inherited by TVFactory, TVFactory. It is a public class that extends TVFactory and that implements TVFactory. The only method of HaierTVFactory is produceTV (TV). No methods call produceTV and produceTV calls only one method : println method of class PrintStream.\n\n\nTVFactory.java: abstract_factory: TVFactory acts as an abstract factory for TV, which is inherited by HaierTVFactory, HisenseTVFactory. It is a public interface. The only method of TVFactory is produceTV (TV). Only one method ( main method of class Client ) calls produceTV and produceTV calls no methods.\n\n memento: TVFactory acts as an originator for memento TV, which is inherited by, which produces a TV TV to. It is a public interface. The only method of TVFactory is produceTV (TV). Only one method ( main method of class Client ) calls produceTV and produceTV calls no methods.\n\n factory_method: TVFactory acts as a factory for HaierTVFactory, which overrides. It is a public interface. The only method of TVFactory is produceTV (TV). Only one method ( main method of class Client ) calls produceTV and produceTV calls no methods.\n\n\nXMLUtil.java: XMLUtil does not have any design pattern.  It is a public class. The only method of XMLUtil is getBean (Object). Only one method ( main method of class Client ) calls getBean and getBean calls 10 methods : newInstance method of class DocumentBuilderFactory, item method of class NodeList, newInstance method of class Class, getNodeValue method of class Node, printStackTrace method of class Throwable, getElementsByTagName method of class Document, forName method of class Class, newDocumentBuilder method of class DocumentBuilderFactory, parse method of class DocumentBuilder and getFirstChild method of class Node.\n\n\nHisenseTV.java: abstract_factory: HisenseTV acts as a product for TVFactory, which overrides. It is a public class that extends TV and that implements TV. The only method of HisenseTV is play (void). No methods call play and play calls only one method : println method of class PrintStream.\n\n memento: HisenseTV acts as a memento, which plays. It is a public class that extends TV and that implements TV. The only method of HisenseTV is play (void). No methods call play and play calls only one method : println method of class PrintStream.\n\n factory_method: HisenseTV acts as a product for HaierTVFactory, which overrides. It is a public class that extends TV and that implements TV. The only method of HisenseTV is play (void). No methods call play and play calls only one method : println method of class PrintStream.\n\n\nHisenseTVFactory.java: abstract_factory: HisenseTVFactory acts as a factory for TVFactory, which overrides. It is a public class that extends TVFactory and that implements TVFactory. The only method of HisenseTVFactory is produceTV (TV). No methods call produceTV and produceTV calls only one method : println method of class PrintStream.\n\n memento: HisenseTVFactory acts as an originator for memento TV, which produces a TV TV to. It is a public class that extends TVFactory and that implements TVFactory. The only method of HisenseTVFactory is produceTV (TV). No methods call produceTV and produceTV calls only one method : println method of class PrintStream.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 5 methods : produceTV method of class TVFactory, getMessage method of class Throwable, getBean method of class XMLUtil, println method of class PrintStream and play method of class TV.\n\n\n",
+	"design_pattern" : [ {
+		"factory_method" : {
+			"HaierTVFactory" : {
+				"concrete_product" : [ "HaierTV", "HisenseTV" ],
+				"abstract_product" : "TV",
+				"concrete_factory" : [ "TVFactory", "TVFactory" ]
+			}
+		}
+	}, {
+		"abstract_factory" : {
+			"TVFactory" : {
+				"abstract_product" : {
+					"TV" : [ "HaierTV", "HisenseTV" ]
+				},
+				"concrete_factory" : [ "HaierTVFactory", "HisenseTVFactory" ]
+			}
+		}
+	}, {
+		"memento" : {
+			"TV" : {
+				"caretaker" : { },
+				"originator" : {
+					"TVFactory" : [ "HaierTVFactory", "HisenseTVFactory" ]
+				},
+				"concrete_memento" : [ "HaierTV", "HisenseTV" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"abstract_factory" : {
+			"HaierTV" : [ "HaierTV acts as a product for TVFactory, which overrides." ],
+			"TV" : [ "TV acts as an abstract product for TV, which is inherited by HaierTV, HisenseTV." ],
+			"HaierTVFactory" : [ "HaierTVFactory acts as a factory for TVFactory, which overrides." ],
+			"TVFactory" : [ "TVFactory acts as an abstract factory for TV, which is inherited by HaierTVFactory, HisenseTVFactory." ],
+			"HisenseTV" : [ "HisenseTV acts as a product for TVFactory, which overrides." ],
+			"HisenseTVFactory" : [ "HisenseTVFactory acts as a factory for TVFactory, which overrides." ]
+		},
+		"memento" : {
+			"HaierTV" : [ "HaierTV acts as a memento, which plays." ],
+			"TV" : [ "TV acts as a memento, which is inherited by HaierTV, HisenseTV, which plays." ],
+			"HaierTVFactory" : [ "HaierTVFactory acts as an originator for memento TV, which produces a TV TV to." ],
+			"TVFactory" : [ "TVFactory acts as an originator for memento TV, which is inherited by, which produces a TV TV to." ],
+			"HisenseTV" : [ "HisenseTV acts as a memento, which plays." ],
+			"HisenseTVFactory" : [ "HisenseTVFactory acts as an originator for memento TV, which produces a TV TV to." ]
+		},
+		"factory_method" : {
+			"HaierTV" : [ "HaierTV acts as a product for HaierTVFactory, which overrides." ],
+			"TV" : [ "TV acts as an abstract product for HaierTVFactory, which is inherited by HaierTV, HisenseTV." ],
+			"HaierTVFactory" : [ "HaierTVFactory acts as a factory method for TV, which is inherited by TVFactory, TVFactory." ],
+			"TVFactory" : [ "TVFactory acts as a factory for HaierTVFactory, which overrides." ],
+			"HisenseTV" : [ "HisenseTV acts as a product for HaierTVFactory, which overrides." ]
+		}
+	}
+}

@@ -1,0 +1,432 @@
+{
+	"final_summary" : "Cake.java: adapter: Cake acts as an adaptee for adapter Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration. It is a public abstract class. The 12 methods of Cake are getIngredients (String), getCost (double), getIngredients (String), getCost (double), getIngredients (String), getCost (double), getIngredients (String), getCost (double), getIngredients (String), getCost (double), getIngredients (String) and getCost (double). No methods call getIngredients and getIngredients calls no methods. No methods call getCost and getCost calls no methods. No methods call getIngredients and getIngredients calls no methods. No methods call getCost and getCost calls no methods. No methods call getIngredients and getIngredients calls no methods. No methods call getCost and getCost calls no methods. No methods call getIngredients and getIngredients calls no methods. No methods call getCost and getCost calls no methods. No methods call getIngredients and getIngredients calls no methods. No methods call getCost and getCost calls no methods. No methods call getIngredients and getIngredients calls no methods. No methods call getCost and getCost calls no methods.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 3 methods : getCost method of class cake, println method of class PrintStream and println method of class out.\n\n\nDecoration.java: adapter: Decoration acts as an adapter, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration. Decoration acts as a target for adapter Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration. It is a public abstract class that extends Cake. The 5 methods of Decoration are getIngredients (String), getCost (double), getIngredients (String), getCost (double) and getIngredients (String). No methods call getIngredients and getIngredients calls no methods. No methods call getCost and getCost calls no methods. No methods call getIngredients and getIngredients calls no methods. No methods call getCost and getCost calls no methods. No methods call getIngredients and getIngredients calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"adapter" : {
+			"Decoration" : {
+				"adaptee" : [ "Cake" ],
+				"target" : [ "Decoration" ]
+			}
+		}
+	} ],
+	"premaseem-pattern-decorator-pattern" : {
+		"Cake" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Cake",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Cake" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "VanillaCake",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Cake" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "VanillaCakeWithCandyDecoration",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Cake" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "VanillaCakeWithCandyAndCartoonDecoration",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Cake" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "VanillaCakeWithCartoonDecoration",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Cake" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ChocolateCake",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getIngredients",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getIngredients",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getIngredients",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getIngredients",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getIngredients",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getIngredients",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "cake = new VanillaCake()" ],
+				"VARIABLECOMMONTYPE" : "Cake",
+				"VARIABLEELEMENTTYPE" : "Cake"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "cake",
+					"CALLEEMETHODNAME" : "getCost"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "cake",
+					"CALLEEMETHODNAME" : "getCost"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "cake",
+					"CALLEEMETHODNAME" : "getCost"
+				} ],
+				"NUMBEROFMETHODLINES" : 8,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Decoration" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Cake",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "cake" ],
+				"FIELDDATATYPE" : "Cake",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Cake",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "baseCake" ],
+				"FIELDDATATYPE" : "Cake",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Cake",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "baseCake" ],
+				"FIELDDATATYPE" : "Cake",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Cake" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Decoration",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Decoration" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CandyDecoration",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Decoration" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CartoonDecoration",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "cake",
+					"PARAMETERTYPE" : "Cake"
+				} ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "cake",
+					"PARAMETERTYPE" : "Cake"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getIngredients",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getIngredients",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getIngredients",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"adapter" : {
+			"Cake" : [ "Cake acts as an adaptee for adapter Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration." ],
+			"Decoration" : [ "Decoration acts as an adapter, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration.", "Decoration acts as a target for adapter Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration, which adapts to Decoration." ]
+		}
+	}
+}

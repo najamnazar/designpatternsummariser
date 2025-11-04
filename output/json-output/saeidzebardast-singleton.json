@@ -1,0 +1,340 @@
+{
+	"saeidzebardast-singleton" : {
+		"GetTheTiles" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 8,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Runnable" ],
+				"CLASSNAME" : "GetTheTiles",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "newInstance = Singleton.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Singleton",
+				"VARIABLEELEMENTTYPE" : "Singleton"
+			}, {
+				"VARIABLEDECLARATION" : [ "playerOneTiles = newInstance.getTiles(7)" ],
+				"VARIABLECOMMONTYPE" : "LinkedList<String>",
+				"VARIABLEELEMENTTYPE" : "LinkedList<String>"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "run",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 8,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Singleton",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "System",
+					"CALLEEMETHODNAME" : "identityHashCode"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "newInstance",
+					"CALLEEMETHODNAME" : "getLetterList"
+				}, {
+					"CALLEECLASS" : "newInstance",
+					"CALLEEMETHODNAME" : "getTiles"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Singleton" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Singleton",
+				"FIELDMODIFIERTYPE" : [ "private", "static" ],
+				"FIELDDECLARATION" : [ "firstInstance = null" ],
+				"FIELDDATATYPE" : "Singleton",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String[]",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "scrabbleLetters = { \"a\", \"a\", \"a\", \"a\", \"a\", \"a\", \"a\", \"a\", \"a\", \"b\", \"b\", \"c\", \"c\", \"d\", \"d\", \"d\", \"d\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"e\", \"f\", \"f\", \"g\", \"g\", \"g\", \"h\", \"h\", \"i\", \"i\", \"i\", \"i\", \"i\", \"i\", \"i\", \"i\", \"i\", \"j\", \"k\", \"l\", \"l\", \"l\", \"l\", \"m\", \"m\", \"n\", \"n\", \"n\", \"n\", \"n\", \"n\", \"o\", \"o\", \"o\", \"o\", \"o\", \"o\", \"o\", \"o\", \"p\", \"p\", \"q\", \"r\", \"r\", \"r\", \"r\", \"r\", \"r\", \"s\", \"s\", \"s\", \"s\", \"t\", \"t\", \"t\", \"t\", \"t\", \"t\", \"u\", \"u\", \"u\", \"u\", \"v\", \"v\", \"w\", \"w\", \"x\", \"y\", \"y\", \"z\" }" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "LinkedList<String>",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "letterList = new LinkedList<String>(Arrays.asList(scrabbleLetters))" ],
+				"FIELDDATATYPE" : "LinkedList<String>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "boolean",
+				"FIELDMODIFIERTYPE" : [ "static" ],
+				"FIELDDECLARATION" : [ "firstThread = true" ],
+				"FIELDDATATYPE" : "boolean",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Singleton",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "tilesToSend = new LinkedList<String>()" ],
+				"VARIABLECOMMONTYPE" : "LinkedList<String>",
+				"VARIABLEELEMENTTYPE" : "LinkedList<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "i = 0" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 3,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ScrabbleTest"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ScrabbleTest"
+				}, {
+					"CALLEDMETHODNAME" : "run",
+					"CALLEDCLASS" : "GetTheTiles"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "Singleton",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "currentThread"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "sleep"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				}, {
+					"CALLEECLASS" : "Collections",
+					"CALLEEMETHODNAME" : "shuffle"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getLetterList",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "LinkedList<String>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getTiles",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "LinkedList<String>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LinkedList",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "LinkedList",
+					"CALLEEMETHODNAME" : "remove"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "howManyTiles",
+					"PARAMETERTYPE" : "int"
+				} ]
+			} ]
+		},
+		"ScrabbleTestThreads" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ScrabbleTestThreads",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "getTiles = new GetTheTiles()" ],
+				"VARIABLECOMMONTYPE" : "Runnable",
+				"VARIABLEELEMENTTYPE" : "Runnable"
+			}, {
+				"VARIABLEDECLARATION" : [ "getTilesAgain = new GetTheTiles()" ],
+				"VARIABLECOMMONTYPE" : "Runnable",
+				"VARIABLEELEMENTTYPE" : "Runnable"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"ScrabbleTest" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 16,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ScrabbleTest",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "newInstance = Singleton.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Singleton",
+				"VARIABLEELEMENTTYPE" : "Singleton"
+			}, {
+				"VARIABLEDECLARATION" : [ "playerOneTiles = newInstance.getTiles(7)" ],
+				"VARIABLECOMMONTYPE" : "LinkedList<String>",
+				"VARIABLEELEMENTTYPE" : "LinkedList<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "instanceTwo = Singleton.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Singleton",
+				"VARIABLEELEMENTTYPE" : "Singleton"
+			}, {
+				"VARIABLEDECLARATION" : [ "playerTwoTiles = newInstance.getTiles(7)" ],
+				"VARIABLECOMMONTYPE" : "LinkedList<String>",
+				"VARIABLEELEMENTTYPE" : "LinkedList<String>"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 4,
+				"NUMBEROFOUTGOINGMETHODS" : 16,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Singleton",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "System",
+					"CALLEEMETHODNAME" : "identityHashCode"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "newInstance",
+					"CALLEEMETHODNAME" : "getLetterList"
+				}, {
+					"CALLEECLASS" : "newInstance",
+					"CALLEEMETHODNAME" : "getTiles"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "newInstance",
+					"CALLEEMETHODNAME" : "getLetterList"
+				}, {
+					"CALLEECLASS" : "Singleton",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "System",
+					"CALLEEMETHODNAME" : "identityHashCode"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "instanceTwo",
+					"CALLEEMETHODNAME" : "getLetterList"
+				}, {
+					"CALLEECLASS" : "newInstance",
+					"CALLEEMETHODNAME" : "getTiles"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 11,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	},
+	"final_summary" : "GetTheTiles.java: GetTheTiles does not have any design pattern.  It is a public class that implements Runnable. The only method of GetTheTiles is run (void). No methods call run and run calls 6 methods : identityHashCode method of class System, getInstance method of class Singleton, getLetterList method of class newInstance, println method of class out, println method of class PrintStream and getTiles method of class newInstance.\n\n\nSingleton.java: singleton: Singleton acts as a singleton, which gets a Singleton Instance to main method of ScrabbleTest, run method of GetTheTiles. It is a public class. The 3 methods of Singleton are getInstance (Singleton), getLetterList (LinkedList<String>) and getTiles (LinkedList<String>). 2 methods ( run method of class GetTheTiles and main method of class ScrabbleTest ) call getInstance and getInstance calls 4 methods : shuffle method of class Collections, printStackTrace method of class Throwable, currentThread method of class Thread and sleep method of class Thread. No methods call getLetterList and getLetterList calls no methods. No methods call getTiles and getTiles calls 2 methods : add method of class LinkedList and remove method of class LinkedList.\n\n\nScrabbleTestThreads.java: ScrabbleTestThreads does not have any design pattern.  It is a public class. The only method of ScrabbleTestThreads is main (void). No methods call main and main calls only one method : start method of class Thread.\n\n\nScrabbleTest.java: ScrabbleTest does not have any design pattern.  It is a public class. The only method of ScrabbleTest is main (void). No methods call main and main calls 7 methods : getLetterList method of class instanceTwo, getLetterList method of class newInstance, identityHashCode method of class System, getInstance method of class Singleton, println method of class out, println method of class PrintStream and getTiles method of class newInstance.\n\n\n",
+	"design_pattern" : [ {
+		"singleton" : [ "Singleton" ]
+	} ],
+	"summary_NLG" : {
+		"singleton" : {
+			"Singleton" : [ "Singleton acts as a singleton, which gets a Singleton Instance to main method of ScrabbleTest, run method of GetTheTiles." ]
+		}
+	}
+}

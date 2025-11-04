@@ -1,0 +1,439 @@
+{
+	"final_summary" : "Party.java: observer: Party acts as a publisher for observer CookVisitorI, which accepts CookVisitorI parameter of visitor, which gets Party Detail, which cooks In House, which accepts CookVisitorI parameter of visitor, which accepts CookVisitorI parameter of visitor. Party acts as a publisher for observer CookVisitorI, which is inherited by Party, which accepts CookVisitorI parameter of visitor, which gets Party Detail, which cooks In House, which accepts CookVisitorI parameter of visitor, which accepts CookVisitorI parameter of visitor. It is a public abstract class. The 5 methods of Party are accept (void), getPartyDetail (String), cookInHouse (void), accept (void) and accept (void). No methods call accept and accept calls no methods. Only one method ( cookInHouse method of class Party ) calls getPartyDetail and getPartyDetail calls 5 methods : getSimpleName method of class getClass, getClass method of class Object, getClass method of class visitor, println method of class PrintStream and getSimpleName method of class Class. No methods call cookInHouse and cookInHouse calls only one method : getPartyDetail method of class Party. No methods call accept and accept calls no methods. No methods call accept and accept calls no methods.\n\n adapter: Party acts as a target for adapter Party, which adapts to Party, which adapts getPartyDetail method of CookVisitorI, getPartyDetail method of CookVisitorI to Party, which adapts to Party, which adapts to Party, which adapts to Party. Party acts as an adapter, which adapts to Party, which adapts getPartyDetail method of CookVisitorI, getPartyDetail method of CookVisitorI to Party, which adapts to Party, which adapts to Party, which adapts to Party. It is a public abstract class. The 5 methods of Party are accept (void), getPartyDetail (String), cookInHouse (void), accept (void) and accept (void). No methods call accept and accept calls no methods. Only one method ( cookInHouse method of class Party ) calls getPartyDetail and getPartyDetail calls 5 methods : getSimpleName method of class getClass, getClass method of class Object, getClass method of class visitor, println method of class PrintStream and getSimpleName method of class Class. No methods call cookInHouse and cookInHouse calls only one method : getPartyDetail method of class Party. No methods call accept and accept calls no methods. No methods call accept and accept calls no methods.\n\n\nClientFile.java: ClientFile does not have any design pattern.  It is a public class. The only method of ClientFile is main (void). No methods call main and main calls 5 methods : cookInHouse method of class party, printStackTrace method of class Throwable, accept method of class party, nextInt method of class Scanner and println method of class PrintStream.\n\n\nCookVisitorI.java: observer: CookVisitorI acts as an observer, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty. CookVisitorI acts as an observer for publisher Party, Party, which is inherited by CookVisitorI, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty. It is a public interface. The 6 methods of CookVisitorI are cook (void), cook (void), cook (void), cook (void), cook (void) and cook (void). No methods call cook and cook calls no methods. No methods call cook and cook calls no methods. No methods call cook and cook calls no methods. No methods call cook and cook calls no methods. No methods call cook and cook calls no methods. No methods call cook and cook calls no methods.\n\n adapter: CookVisitorI acts as an adaptee for adapter Party, which adapts to Party, which adapts to Party, which adapts to Party, which adapts to Party, which adapts to Party, which adapts to Party. It is a public interface. The 6 methods of CookVisitorI are cook (void), cook (void), cook (void), cook (void), cook (void) and cook (void). No methods call cook and cook calls no methods. No methods call cook and cook calls no methods. No methods call cook and cook calls no methods. No methods call cook and cook calls no methods. No methods call cook and cook calls no methods. No methods call cook and cook calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"adapter" : {
+			"Party" : {
+				"adaptee" : [ "CookVisitorI" ],
+				"target" : [ "Party" ]
+			}
+		}
+	}, {
+		"observer" : {
+			"CookVisitorI" : {
+				"concrete_observer" : [ "CookVisitorI" ],
+				"publisher" : {
+					"Party" : [ "Party" ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"Party" : [ "Party acts as a publisher for observer CookVisitorI, which accepts CookVisitorI parameter of visitor, which gets Party Detail, which cooks In House, which accepts CookVisitorI parameter of visitor, which accepts CookVisitorI parameter of visitor.", "Party acts as a publisher for observer CookVisitorI, which is inherited by Party, which accepts CookVisitorI parameter of visitor, which gets Party Detail, which cooks In House, which accepts CookVisitorI parameter of visitor, which accepts CookVisitorI parameter of visitor." ],
+			"CookVisitorI" : [ "CookVisitorI acts as an observer, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty.", "CookVisitorI acts as an observer for publisher Party, Party, which is inherited by CookVisitorI, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty, which cooks LoudParty parameter of loudParty, which cooks CalmParty parameter of calmParty." ]
+		},
+		"adapter" : {
+			"Party" : [ "Party acts as a target for adapter Party, which adapts to Party, which adapts getPartyDetail method of CookVisitorI, getPartyDetail method of CookVisitorI to Party, which adapts to Party, which adapts to Party, which adapts to Party.", "Party acts as an adapter, which adapts to Party, which adapts getPartyDetail method of CookVisitorI, getPartyDetail method of CookVisitorI to Party, which adapts to Party, which adapts to Party, which adapts to Party." ],
+			"CookVisitorI" : [ "CookVisitorI acts as an adaptee for adapter Party, which adapts to Party, which adapts to Party, which adapts to Party, which adapts to Party, which adapts to Party, which adapts to Party." ]
+		}
+	},
+	"premaseem-patternBonus-visitor-pattern" : {
+		"Party" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "music = \" No Music\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "meal = \" empty\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "drink = \"plane water \"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "CookVisitorI",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "visitor = null" ],
+				"FIELDDATATYPE" : "CookVisitorI",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Party",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Party" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "LoudParty",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Party" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CalmParty",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "detials = visitor != null ? visitor.getClass().getSimpleName() : \"in house cooking\" + \" organized \" + this.getClass().getSimpleName() + \" has Music : \" + music + \" with Drink :\" + drink + \" & Meal : \" + meal" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "CookVisitorI"
+				} ]
+			}, {
+				"METHODNAME" : "getPartyDetail",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "cookInHouse",
+					"CALLEDCLASS" : "Party"
+				}, {
+					"CALLEDMETHODNAME" : "cookInHouse",
+					"CALLEDCLASS" : "Party"
+				} ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getClass",
+					"CALLEEMETHODNAME" : "getSimpleName"
+				}, {
+					"CALLEECLASS" : "visitor",
+					"CALLEEMETHODNAME" : "getClass"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "getSimpleName"
+				}, {
+					"CALLEECLASS" : "Object",
+					"CALLEEMETHODNAME" : "getClass"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "cookInHouse",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Party",
+					"CALLEEMETHODNAME" : "getPartyDetail"
+				}, {
+					"CALLEECLASS" : "Party",
+					"CALLEEMETHODNAME" : "getPartyDetail"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "CookVisitorI"
+				} ]
+			}, {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "CookVisitorI"
+				} ]
+			} ]
+		},
+		"ClientFile" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 17,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientFile",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "party" ],
+				"VARIABLECOMMONTYPE" : "Party",
+				"VARIABLEELEMENTTYPE" : "Party"
+			}, {
+				"VARIABLEDECLARATION" : [ "visitorCook" ],
+				"VARIABLECOMMONTYPE" : "CookVisitorI",
+				"VARIABLEELEMENTTYPE" : "CookVisitorI"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "tvType = scan.nextInt()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "type = scan.nextInt()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 4,
+				"NUMBEROFOUTGOINGMETHODS" : 17,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "party",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "party",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "party",
+					"CALLEEMETHODNAME" : "cookInHouse"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"CookVisitorI" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CookVisitorI",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "CookVisitorI" ],
+				"IMPLEMENTSFROM" : [ "CookVisitorI" ],
+				"CLASSNAME" : "VegCookVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "CookVisitorI" ],
+				"IMPLEMENTSFROM" : [ "CookVisitorI" ],
+				"CLASSNAME" : "NonVegCookVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "cook",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "loudParty",
+					"PARAMETERTYPE" : "LoudParty"
+				} ]
+			}, {
+				"METHODNAME" : "cook",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "calmParty",
+					"PARAMETERTYPE" : "CalmParty"
+				} ]
+			}, {
+				"METHODNAME" : "cook",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "loudParty",
+					"PARAMETERTYPE" : "LoudParty"
+				} ]
+			}, {
+				"METHODNAME" : "cook",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "calmParty",
+					"PARAMETERTYPE" : "CalmParty"
+				} ]
+			}, {
+				"METHODNAME" : "cook",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "loudParty",
+					"PARAMETERTYPE" : "LoudParty"
+				} ]
+			}, {
+				"METHODNAME" : "cook",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "calmParty",
+					"PARAMETERTYPE" : "CalmParty"
+				} ]
+			} ]
+		}
+	}
+}

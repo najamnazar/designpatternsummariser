@@ -1,0 +1,422 @@
+{
+	"final_summary" : "EnemyRobot.java: adapter: EnemyRobot acts as an adaptee for adapter EnemyRobotAdapter, which adapts to EnemyAttacker, which adapts to EnemyAttacker, which adapts to EnemyAttacker. It is a public class. The 3 methods of EnemyRobot are smashWithHands (void), walkForward (void) and reactToHuman (void). No methods call smashWithHands and smashWithHands calls 2 methods : println method of class PrintStream and nextInt method of class Random. No methods call walkForward and walkForward calls 2 methods : println method of class PrintStream and nextInt method of class Random. No methods call reactToHuman and reactToHuman calls only one method : println method of class PrintStream.\n\n\nTestEnemyAttackers.java: TestEnemyAttackers does not have any design pattern.  It is a public class. The only method of TestEnemyAttackers is main (void). No methods call main and main calls 10 methods : assignDriver method of class robotAdapter, driveForward method of class robotAdapter, assignDriver method of class rx7Tank, fireWeapon method of class robotAdapter, walkForward method of class fredTheRobot, fireWeapon method of class rx7Tank, reactToHuman method of class fredTheRobot, println method of class PrintStream, driveForward method of class rx7Tank and smashWithHands method of class fredTheRobot.\n\n\nEnemyRobotAdapter.java: adapter: EnemyRobotAdapter acts as an adapter, which adapts to EnemyAttacker, which adapts to EnemyAttacker, which adapts to EnemyAttacker. It is a public class that extends EnemyAttacker and that implements EnemyAttacker. The 3 methods of EnemyRobotAdapter are fireWeapon (void), driveForward (void) and assignDriver (void). No methods call fireWeapon and fireWeapon calls only one method : smashWithHands method of class theRobot. No methods call driveForward and driveForward calls only one method : walkForward method of class theRobot. No methods call assignDriver and assignDriver calls only one method : reactToHuman method of class theRobot.\n\n\nEnemyAttacker.java: adapter: EnemyAttacker acts as a target for adapter EnemyRobotAdapter, which adapts to EnemyAttacker, which adapts to EnemyAttacker, which adapts to EnemyAttacker. It is a public interface. The 3 methods of EnemyAttacker are fireWeapon (void), driveForward (void) and assignDriver (void). No methods call fireWeapon and fireWeapon calls no methods. No methods call driveForward and driveForward calls no methods. No methods call assignDriver and assignDriver calls no methods.\n\n\nEnemyTank.java: EnemyTank does not have any design pattern.  It is a public class that extends EnemyAttacker and that implements EnemyAttacker. The 3 methods of EnemyTank are fireWeapon (void), driveForward (void) and assignDriver (void). No methods call fireWeapon and fireWeapon calls 2 methods : println method of class PrintStream and nextInt method of class Random. No methods call driveForward and driveForward calls 2 methods : println method of class PrintStream and nextInt method of class Random. No methods call assignDriver and assignDriver calls only one method : println method of class PrintStream.\n\n\n",
+	"design_pattern" : [ {
+		"adapter" : {
+			"EnemyRobotAdapter" : {
+				"adaptee" : [ "EnemyRobot" ],
+				"target" : [ "EnemyAttacker" ]
+			}
+		}
+	} ],
+	"saeidzebardast-adapter" : {
+		"EnemyRobot" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Random",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "generator = new Random()" ],
+				"FIELDDATATYPE" : "Random",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EnemyRobot",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "attackDamage = generator.nextInt(10) + 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "movement = generator.nextInt(5) + 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "smashWithHands",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Random",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "walkForward",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Random",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "reactToHuman",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "driverName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"TestEnemyAttackers" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 14,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "TestEnemyAttackers",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "rx7Tank = new EnemyTank()" ],
+				"VARIABLECOMMONTYPE" : "EnemyTank",
+				"VARIABLEELEMENTTYPE" : "EnemyTank"
+			}, {
+				"VARIABLEDECLARATION" : [ "fredTheRobot = new EnemyRobot()" ],
+				"VARIABLECOMMONTYPE" : "EnemyRobot",
+				"VARIABLEELEMENTTYPE" : "EnemyRobot"
+			}, {
+				"VARIABLEDECLARATION" : [ "robotAdapter = new EnemyRobotAdapter(fredTheRobot)" ],
+				"VARIABLECOMMONTYPE" : "EnemyAttacker",
+				"VARIABLEELEMENTTYPE" : "EnemyAttacker"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 14,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "fredTheRobot",
+					"CALLEEMETHODNAME" : "reactToHuman"
+				}, {
+					"CALLEECLASS" : "fredTheRobot",
+					"CALLEEMETHODNAME" : "walkForward"
+				}, {
+					"CALLEECLASS" : "fredTheRobot",
+					"CALLEEMETHODNAME" : "smashWithHands"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "rx7Tank",
+					"CALLEEMETHODNAME" : "assignDriver"
+				}, {
+					"CALLEECLASS" : "rx7Tank",
+					"CALLEEMETHODNAME" : "driveForward"
+				}, {
+					"CALLEECLASS" : "rx7Tank",
+					"CALLEEMETHODNAME" : "fireWeapon"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "robotAdapter",
+					"CALLEEMETHODNAME" : "assignDriver"
+				}, {
+					"CALLEECLASS" : "robotAdapter",
+					"CALLEEMETHODNAME" : "driveForward"
+				}, {
+					"CALLEECLASS" : "robotAdapter",
+					"CALLEEMETHODNAME" : "fireWeapon"
+				} ],
+				"NUMBEROFMETHODLINES" : 17,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"EnemyRobotAdapter" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "EnemyRobot",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "theRobot" ],
+				"FIELDDATATYPE" : "EnemyRobot",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ "EnemyAttacker" ],
+				"IMPLEMENTSFROM" : [ "EnemyAttacker" ],
+				"CLASSNAME" : "EnemyRobotAdapter",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "newRobot",
+					"PARAMETERTYPE" : "EnemyRobot"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "fireWeapon",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "theRobot",
+					"CALLEEMETHODNAME" : "smashWithHands"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "driveForward",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "theRobot",
+					"CALLEEMETHODNAME" : "walkForward"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "assignDriver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "theRobot",
+					"CALLEEMETHODNAME" : "reactToHuman"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "driverName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"EnemyAttacker" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EnemyAttacker",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "fireWeapon",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "driveForward",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "assignDriver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "driverName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"EnemyTank" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Random",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "generator = new Random()" ],
+				"FIELDDATATYPE" : "Random",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ "EnemyAttacker" ],
+				"IMPLEMENTSFROM" : [ "EnemyAttacker" ],
+				"CLASSNAME" : "EnemyTank",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "attackDamage = generator.nextInt(10) + 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "movement = generator.nextInt(5) + 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "fireWeapon",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Random",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "driveForward",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Random",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "assignDriver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "driverName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"adapter" : {
+			"EnemyRobot" : [ "EnemyRobot acts as an adaptee for adapter EnemyRobotAdapter, which adapts to EnemyAttacker, which adapts to EnemyAttacker, which adapts to EnemyAttacker." ],
+			"EnemyRobotAdapter" : [ "EnemyRobotAdapter acts as an adapter, which adapts to EnemyAttacker, which adapts to EnemyAttacker, which adapts to EnemyAttacker." ],
+			"EnemyAttacker" : [ "EnemyAttacker acts as a target for adapter EnemyRobotAdapter, which adapts to EnemyAttacker, which adapts to EnemyAttacker, which adapts to EnemyAttacker." ]
+		}
+	}
+}

@@ -1,0 +1,270 @@
+{
+	"final_summary" : "App.java: App does not have any design pattern.  It is a public class. The only method of App is main (void). No methods call main and main calls 7 methods : attack method of class troll, getAttackPower method of class clubbedTroll, fleeBattle method of class clubbedTroll, info method of class LOGGER, getAttackPower method of class troll, fleeBattle method of class troll and attack method of class clubbedTroll.\n\n\nSimpleTroll.java: SimpleTroll does not have any design pattern.  It is a public class that implements Troll. The 3 methods of SimpleTroll are attack (void), getAttackPower (int) and fleeBattle (void). No methods call attack and attack calls only one method : info method of class LOGGER. No methods call getAttackPower and getAttackPower calls no methods. No methods call fleeBattle and fleeBattle calls only one method : info method of class LOGGER.\n\n\nTroll.java: Troll does not have any design pattern.  It is a public interface. The 3 methods of Troll are attack (void), getAttackPower (int) and fleeBattle (void). No methods call attack and attack calls no methods. No methods call getAttackPower and getAttackPower calls no methods. No methods call fleeBattle and fleeBattle calls no methods.\n\n\nClubbedTroll.java: ClubbedTroll does not have any design pattern.  It is a public class that implements Troll. The 3 methods of ClubbedTroll are attack (void), getAttackPower (int) and fleeBattle (void). No methods call attack and attack calls 2 methods : attack method of class decorated and info method of class LOGGER. No methods call getAttackPower and getAttackPower calls only one method : getAttackPower method of class decorated. No methods call fleeBattle and fleeBattle calls only one method : fleeBattle method of class decorated.\n\n\n",
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"iluwatar-decorator" : {
+		"App" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 10,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "App",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "troll = new SimpleTroll()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "clubbedTroll = new ClubbedTroll(troll)" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 10,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "troll",
+					"CALLEEMETHODNAME" : "attack"
+				}, {
+					"CALLEECLASS" : "troll",
+					"CALLEEMETHODNAME" : "fleeBattle"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "troll",
+					"CALLEEMETHODNAME" : "getAttackPower"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "clubbedTroll",
+					"CALLEEMETHODNAME" : "attack"
+				}, {
+					"CALLEECLASS" : "clubbedTroll",
+					"CALLEEMETHODNAME" : "fleeBattle"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "clubbedTroll",
+					"CALLEEMETHODNAME" : "getAttackPower"
+				} ],
+				"NUMBEROFMETHODLINES" : 10,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"SimpleTroll" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Troll" ],
+				"CLASSNAME" : "SimpleTroll",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "attack",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getAttackPower",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "fleeBattle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Troll" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Troll",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "attack",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getAttackPower",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "fleeBattle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ClubbedTroll" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Troll",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "decorated" ],
+				"FIELDDATATYPE" : "Troll",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Troll" ],
+				"CLASSNAME" : "ClubbedTroll",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "attack",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "decorated",
+					"CALLEEMETHODNAME" : "attack"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getAttackPower",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "decorated",
+					"CALLEEMETHODNAME" : "getAttackPower"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "fleeBattle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "decorated",
+					"CALLEEMETHODNAME" : "fleeBattle"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

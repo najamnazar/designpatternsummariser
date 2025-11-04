@@ -1,0 +1,524 @@
+{
+	"final_summary" : "ProductBTwo.java: ProductBTwo does not have any design pattern.  It is a public class that extends AbstractProductB.\nProductATwo.java: ProductATwo does not have any design pattern.  It is a public class that extends AbstractProductA.\nConcreteFactoryTwo.java: ConcreteFactoryTwo does not have any design pattern.  It is a public class that extends AbstractFactory. The 2 methods of ConcreteFactoryTwo are createProductA (AbstractProductA) and createProductB (AbstractProductB). No methods call createProductA and createProductA calls no methods. No methods call createProductB and createProductB calls no methods.\n\n\nProductBOne.java: ProductBOne does not have any design pattern.  It is a public class that extends AbstractProductB.\nProductAOne.java: ProductAOne does not have any design pattern.  It is a public class that extends AbstractProductA.\nAbstractFactory.java: AbstractFactory does not have any design pattern.  It is a public abstract class. The 2 methods of AbstractFactory are createProductA (AbstractProductA) and createProductB (AbstractProductB). No methods call createProductA and createProductA calls no methods. No methods call createProductB and createProductB calls no methods.\n\n\nAbstractProductB.java: AbstractProductB does not have any design pattern.  It is a public class. The 5 methods of AbstractProductB are getName (String), setName (void), getDescription (String), setDescription (void) and getInformation (String). Only one method ( getInformation method of class AbstractProductB ) calls getName and getName calls no methods. No methods call setName and setName calls no methods. Only one method ( getInformation method of class AbstractProductB ) calls getDescription and getDescription calls no methods. No methods call setDescription and setDescription calls no methods. No methods call getInformation and getInformation calls 2 methods : getName method of class AbstractProductB and getDescription method of class AbstractProductB.\n\n\nAbstractProductA.java: AbstractProductA does not have any design pattern.  It is a public abstract class. The 5 methods of AbstractProductA are getName (String), setName (void), getDescription (String), setDescription (void) and getInformation (String). Only one method ( getInformation method of class AbstractProductA ) calls getName and getName calls no methods. No methods call setName and setName calls no methods. Only one method ( getInformation method of class AbstractProductA ) calls getDescription and getDescription calls no methods. No methods call setDescription and setDescription calls no methods. No methods call getInformation and getInformation calls 2 methods : getName method of class AbstractProductA and getDescription method of class AbstractProductA.\n\n\nConcreteFactoryOne.java: ConcreteFactoryOne does not have any design pattern.  It is a public class that extends AbstractFactory. The 2 methods of ConcreteFactoryOne are createProductA (AbstractProductA) and createProductB (AbstractProductB). No methods call createProductA and createProductA calls no methods. No methods call createProductB and createProductB calls no methods.\n\n\n",
+	"design_pattern" : [ ],
+	"luisburgos-abstractfactory-pattern" : {
+		"ProductBTwo" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AbstractProductB" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ProductBTwo",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"ProductATwo" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AbstractProductA" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ProductATwo",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"ConcreteFactoryTwo" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "AbstractFactory" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ConcreteFactoryTwo",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createProductA",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "AbstractProductA",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createProductB",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "AbstractProductB",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ProductBOne" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AbstractProductB" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ProductBOne",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"ProductAOne" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AbstractProductA" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ProductAOne",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"AbstractFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AbstractFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createProductA",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "AbstractProductA",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createProductB",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "AbstractProductB",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"AbstractProductB" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "description" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AbstractProductB",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "getInformation",
+					"CALLEDCLASS" : "AbstractProductB"
+				}, {
+					"CALLEDMETHODNAME" : "getInformation",
+					"CALLEDCLASS" : "AbstractProductB"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "getInformation",
+					"CALLEDCLASS" : "AbstractProductB"
+				}, {
+					"CALLEDMETHODNAME" : "getInformation",
+					"CALLEDCLASS" : "AbstractProductB"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getInformation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "AbstractProductB",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "AbstractProductB",
+					"CALLEEMETHODNAME" : "getDescription"
+				}, {
+					"CALLEECLASS" : "AbstractProductB",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "AbstractProductB",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"AbstractProductA" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "description" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AbstractProductA",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "getInformation",
+					"CALLEDCLASS" : "AbstractProductA"
+				}, {
+					"CALLEDMETHODNAME" : "getInformation",
+					"CALLEDCLASS" : "AbstractProductA"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "getInformation",
+					"CALLEDCLASS" : "AbstractProductA"
+				}, {
+					"CALLEDMETHODNAME" : "getInformation",
+					"CALLEDCLASS" : "AbstractProductA"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getInformation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "AbstractProductA",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "AbstractProductA",
+					"CALLEEMETHODNAME" : "getDescription"
+				}, {
+					"CALLEECLASS" : "AbstractProductA",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "AbstractProductA",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ConcreteFactoryOne" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "AbstractFactory" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ConcreteFactoryOne",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createProductA",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "AbstractProductA",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createProductB",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "AbstractProductB",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : { }
+}

@@ -1,0 +1,501 @@
+{
+	"final_summary" : "Whip.java: Whip does not have any design pattern.  It is a public class that extends AddonsOfCoffee. The 2 methods of Whip are getDescription (String) and getCost (Double). No methods call getDescription and getDescription calls only one method : getDescription method of class coffee. No methods call getCost and getCost calls only one method : getCost method of class coffee.\n\n\nColdCoffee.java: ColdCoffee does not have any design pattern.  It is a public class that extends AbstractCoffee. The only method of ColdCoffee is getCost (Double). No methods call getCost and getCost calls no methods.\n\n\nAddonsOfCoffee.java: AddonsOfCoffee does not have any design pattern.  It is a public abstract class that extends AbstractCoffee. The only method of AddonsOfCoffee is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nClientCoffeeBillingMachine.java: ClientCoffeeBillingMachine does not have any design pattern.  It is a public class. The only method of ClientCoffeeBillingMachine is main (void). No methods call main and main calls 5 methods : getDescription method of class coffee, nextInt method of class Scanner, getCost method of class coffee, println method of class PrintStream and println method of class out.\n\n\nChokos.java: Chokos does not have any design pattern.  It is a public class that extends AddonsOfCoffee. The 2 methods of Chokos are getDescription (String) and getCost (Double). No methods call getDescription and getDescription calls only one method : getDescription method of class coffee. No methods call getCost and getCost calls only one method : getCost method of class coffee.\n\n\nCream.java: Cream does not have any design pattern.  It is a public class that extends AddonsOfCoffee. The 2 methods of Cream are getDescription (String) and getCost (Double). No methods call getDescription and getDescription calls only one method : getDescription method of class coffee. No methods call getCost and getCost calls only one method : getCost method of class coffee.\n\n\nHotCoffee.java: HotCoffee does not have any design pattern.  It is a public class that extends AbstractCoffee. The only method of HotCoffee is getCost (Double). No methods call getCost and getCost calls no methods.\n\n\nAbstractCoffee.java: AbstractCoffee does not have any design pattern.  It is a public abstract class. The 5 methods of AbstractCoffee are getName (String), setName (void), getDescription (String), setDescription (void) and getCost (Double). No methods call getName and getName calls no methods. No methods call setName and setName calls no methods. No methods call getDescription and getDescription calls no methods. No methods call setDescription and setDescription calls no methods. No methods call getCost and getCost calls no methods.\n\n\n",
+	"design_pattern" : [ ],
+	"premaseem-patternBonus-decorator-pattern" : {
+		"Whip" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "AbstractCoffee",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "coffee = null" ],
+				"FIELDDATATYPE" : "AbstractCoffee",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AddonsOfCoffee" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Whip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "abstractCoffee",
+					"PARAMETERTYPE" : "AbstractCoffee"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "getCost"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ColdCoffee" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AbstractCoffee" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ColdCoffee",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"AddonsOfCoffee" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "AbstractCoffee" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AddonsOfCoffee",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "abstract", "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ClientCoffeeBillingMachine" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 22,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientCoffeeBillingMachine",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "coffeeType = scan.nextInt()" ],
+				"VARIABLECOMMONTYPE" : "Integer",
+				"VARIABLEELEMENTTYPE" : "Integer"
+			}, {
+				"VARIABLEDECLARATION" : [ "coffee" ],
+				"VARIABLECOMMONTYPE" : "AbstractCoffee",
+				"VARIABLEELEMENTTYPE" : "AbstractCoffee"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 22,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "getDescription"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "getCost"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Chokos" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "AbstractCoffee",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "coffee = null" ],
+				"FIELDDATATYPE" : "AbstractCoffee",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AddonsOfCoffee" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Chokos",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "abstractCoffee",
+					"PARAMETERTYPE" : "AbstractCoffee"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "getCost"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Cream" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "AbstractCoffee",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "coffee = null" ],
+				"FIELDDATATYPE" : "AbstractCoffee",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AddonsOfCoffee" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Cream",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "abstractCoffee",
+					"PARAMETERTYPE" : "AbstractCoffee"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "getCost"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"HotCoffee" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AbstractCoffee" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "HotCoffee",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"AbstractCoffee" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "description = \" This is HOT/COLD coffee and has xx xx \"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "name = \"HOT/COLD coffee \"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AbstractCoffee",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : { }
+}

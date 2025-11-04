@@ -1,0 +1,547 @@
+{
+	"final_summary" : "ConcreteSubject.java: observer: ConcreteSubject acts as a publisher for observer Observer, which is inherited by, which gets int parameter of type List, which attaches int parameter of eventTpye, Observer parameter of newObserver, which detaches int parameter of eventTpye, Observer parameter of observer, which notifies int parameter of eventTpye, Event parameter of event Observer. ConcreteSubject acts as a publisher for observer Observer, which gets int parameter of type List, which attaches int parameter of eventTpye, Observer parameter of newObserver, which detaches int parameter of eventTpye, Observer parameter of observer, which notifies int parameter of eventTpye, Event parameter of event Observer. It is a public class that extends Subject. The 4 methods of ConcreteSubject are getList (LinkedList<Observer>), attach (void), detach (void) and notifyObserver (void). 2 methods ( detach method of class ConcreteSubject and attach method of class ConcreteSubject ) call getList and getList calls 3 methods : put method of class observers, get method of class observers and containsKey method of class observers. No methods call attach and attach calls 2 methods : add method of class getList and getList method of class ConcreteSubject. No methods call detach and detach calls 2 methods : remove method of class getList and getList method of class ConcreteSubject. No methods call notifyObserver and notifyObserver calls 6 methods : hasNext method of class iterator, update method of class next, iterator method of class get, next method of class iterator, get method of class observers and containsKey method of class observers.\n\n\nTest.java: Test does not have any design pattern.  It is a public class. The only method of Test is main (void). No methods call main and main calls 2 methods : attach method of class concreteSubject and notifyObserver method of class concreteSubject.\n\n\nObserver.java: observer: Observer acts as an observer for publisher Subject, ConcreteSubject, which is inherited by ConcreteObserver, which updates Event parameter of event. It is a public interface. The only method of Observer is update (void). No methods call update and update calls no methods.\n\n\nEvent.java: Event does not have any design pattern.  It is a public class. The 5 methods of Event are getType (int), setType (void), getDescription (String), setDescription (void) and getDate (String). No methods call getType and getType calls no methods. No methods call setType and setType calls no methods. No methods call getDescription and getDescription calls no methods. No methods call setDescription and setDescription calls no methods. No methods call getDate and getDate calls only one method : format method of class DateFormat.\n\n\nConcreteObserver.java: observer: ConcreteObserver acts as an observer, which updates Event parameter of event. It is a public class that extends Observer and that implements Observer. The only method of ConcreteObserver is update (void). No methods call update and update calls 3 methods : getDescription method of class event, getType method of class event and println method of class out.\n\n\nSubject.java: observer: Subject acts as a publisher for observer Observer, which is inherited by ConcreteSubject, which attaches int parameter of eventTpye, Observer parameter of observer, which detaches int parameter of eventTpye, Observer parameter of observer, which notifies int parameter of eventTpye, Event parameter of event Observer. It is a public abstract class. The 3 methods of Subject are attach (void), detach (void) and notifyObserver (void). No methods call attach and attach calls no methods. No methods call detach and detach calls no methods. No methods call notifyObserver and notifyObserver calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"observer" : {
+			"Observer" : {
+				"concrete_observer" : [ "ConcreteObserver" ],
+				"publisher" : {
+					"ConcreteSubject" : [ ],
+					"Subject" : [ "ConcreteSubject" ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"ConcreteSubject" : [ "ConcreteSubject acts as a publisher for observer Observer, which is inherited by, which gets int parameter of type List, which attaches int parameter of eventTpye, Observer parameter of newObserver, which detaches int parameter of eventTpye, Observer parameter of observer, which notifies int parameter of eventTpye, Event parameter of event Observer.", "ConcreteSubject acts as a publisher for observer Observer, which gets int parameter of type List, which attaches int parameter of eventTpye, Observer parameter of newObserver, which detaches int parameter of eventTpye, Observer parameter of observer, which notifies int parameter of eventTpye, Event parameter of event Observer." ],
+			"Observer" : [ "Observer acts as an observer for publisher Subject, ConcreteSubject, which is inherited by ConcreteObserver, which updates Event parameter of event." ],
+			"ConcreteObserver" : [ "ConcreteObserver acts as an observer, which updates Event parameter of event." ],
+			"Subject" : [ "Subject acts as a publisher for observer Observer, which is inherited by ConcreteSubject, which attaches int parameter of eventTpye, Observer parameter of observer, which detaches int parameter of eventTpye, Observer parameter of observer, which notifies int parameter of eventTpye, Event parameter of event Observer." ]
+		}
+	},
+	"luisburgos-observer-pattern" : {
+		"ConcreteSubject" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "HashMap<Integer, LinkedList<Observer>>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "observers" ],
+				"FIELDDATATYPE" : "HashMap<Integer, LinkedList<Observer>>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 13,
+				"EXTENDSFROM" : [ "Subject" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ConcreteSubject",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "iterator = observers.get(eventTpye).iterator()" ],
+				"VARIABLECOMMONTYPE" : "Iterator<Observer>",
+				"VARIABLEELEMENTTYPE" : "Iterator<Observer>"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getList",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "attach",
+					"CALLEDCLASS" : "ConcreteSubject"
+				}, {
+					"CALLEDMETHODNAME" : "detach",
+					"CALLEDCLASS" : "ConcreteSubject"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "LinkedList<Observer>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "containsKey"
+				}, {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "put"
+				}, {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "type",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "attach",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getList",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "ConcreteSubject",
+					"CALLEEMETHODNAME" : "getList"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "eventTpye",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "newObserver",
+					"PARAMETERTYPE" : "Observer"
+				} ]
+			}, {
+				"METHODNAME" : "detach",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getList",
+					"CALLEEMETHODNAME" : "remove"
+				}, {
+					"CALLEECLASS" : "ConcreteSubject",
+					"CALLEEMETHODNAME" : "getList"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "eventTpye",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "Observer"
+				} ]
+			}, {
+				"METHODNAME" : "notifyObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "containsKey"
+				}, {
+					"CALLEECLASS" : "get",
+					"CALLEEMETHODNAME" : "iterator"
+				}, {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "get"
+				}, {
+					"CALLEECLASS" : "iterator",
+					"CALLEEMETHODNAME" : "hasNext"
+				}, {
+					"CALLEECLASS" : "next",
+					"CALLEEMETHODNAME" : "update"
+				}, {
+					"CALLEECLASS" : "iterator",
+					"CALLEEMETHODNAME" : "next"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "eventTpye",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "Event"
+				} ]
+			} ]
+		},
+		"Test" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 10,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Test",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "concreteSubject = new ConcreteSubject()" ],
+				"VARIABLECOMMONTYPE" : "Subject",
+				"VARIABLEELEMENTTYPE" : "Subject"
+			}, {
+				"VARIABLEDECLARATION" : [ "concreteObserverOne = new ConcreteObserver()" ],
+				"VARIABLECOMMONTYPE" : "Observer",
+				"VARIABLEELEMENTTYPE" : "Observer"
+			}, {
+				"VARIABLEDECLARATION" : [ "concreteObserverTwo = new ConcreteObserver()" ],
+				"VARIABLECOMMONTYPE" : "Observer",
+				"VARIABLEELEMENTTYPE" : "Observer"
+			}, {
+				"VARIABLEDECLARATION" : [ "concreteObserverThree = new ConcreteObserver()" ],
+				"VARIABLECOMMONTYPE" : "Observer",
+				"VARIABLEELEMENTTYPE" : "Observer"
+			}, {
+				"VARIABLEDECLARATION" : [ "mainEvent = new Event(0, \"Main event: \")" ],
+				"VARIABLECOMMONTYPE" : "Event",
+				"VARIABLEELEMENTTYPE" : "Event"
+			}, {
+				"VARIABLEDECLARATION" : [ "firstEvent = new Event(1, \"First event: \")" ],
+				"VARIABLECOMMONTYPE" : "Event",
+				"VARIABLEELEMENTTYPE" : "Event"
+			}, {
+				"VARIABLEDECLARATION" : [ "secondEvent = new Event(2, \"Second event: \")" ],
+				"VARIABLECOMMONTYPE" : "Event",
+				"VARIABLEELEMENTTYPE" : "Event"
+			}, {
+				"VARIABLEDECLARATION" : [ "thirdEvent = new Event(3, \"Third event: \")" ],
+				"VARIABLECOMMONTYPE" : "Event",
+				"VARIABLEELEMENTTYPE" : "Event"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 8,
+				"NUMBEROFOUTGOINGMETHODS" : 10,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "concreteSubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "concreteSubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "concreteSubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "concreteSubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "concreteSubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "concreteSubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "concreteSubject",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				}, {
+					"CALLEECLASS" : "concreteSubject",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				}, {
+					"CALLEECLASS" : "concreteSubject",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				}, {
+					"CALLEECLASS" : "concreteSubject",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				} ],
+				"NUMBEROFMETHODLINES" : 18,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Observer" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Observer",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "Event"
+				} ]
+			} ]
+		},
+		"Event" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "type" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "description" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Date",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "date" ],
+				"FIELDDATATYPE" : "Date",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Event",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "type",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "dateFormat = new SimpleDateFormat(\"yyyy/MM/dd HH:mm:ss\")" ],
+				"VARIABLECOMMONTYPE" : "DateFormat",
+				"VARIABLEELEMENTTYPE" : "DateFormat"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getType",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setType",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "type",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getDate",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DateFormat",
+					"CALLEEMETHODNAME" : "format"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ConcreteObserver" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private", "static" ],
+				"FIELDDECLARATION" : [ "ID = 0" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ "Observer" ],
+				"IMPLEMENTSFROM" : [ "Observer" ],
+				"CLASSNAME" : "ConcreteObserver",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "event",
+					"CALLEEMETHODNAME" : "getType"
+				}, {
+					"CALLEECLASS" : "event",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "Event"
+				} ]
+			} ]
+		},
+		"Subject" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Subject",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "attach",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "eventTpye",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "Observer"
+				} ]
+			}, {
+				"METHODNAME" : "detach",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "eventTpye",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "Observer"
+				} ]
+			}, {
+				"METHODNAME" : "notifyObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "eventTpye",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "Event"
+				} ]
+			} ]
+		}
+	}
+}

@@ -1,0 +1,387 @@
+{
+	"shusheng007-observer" : {
+		"ShangGuanSubject" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "List<TianDogObserver>",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "tianDogs = new ArrayList<>()" ],
+				"FIELDDATATYPE" : "List<TianDogObserver>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ "GreenTeaBitchSubject", "GreenTeaBitchSubject" ],
+				"IMPLEMENTSFROM" : [ "GreenTeaBitchSubject" ],
+				"CLASSNAME" : "ShangGuanSubject",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "tianDog" ],
+				"VARIABLECOMMONTYPE" : "TianDogObserver",
+				"VARIABLEELEMENTTYPE" : "TianDogObserver"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "add",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "tianDogs",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "TianDogObserver"
+				} ]
+			}, {
+				"METHODNAME" : "remove",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "tianDogs",
+					"CALLEEMETHODNAME" : "remove"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "TianDogObserver"
+				} ]
+			}, {
+				"METHODNAME" : "notifyState",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "tianDog",
+					"CALLEEMETHODNAME" : "update"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "state",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"TianDogObserver" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "TianDogObserver",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "message",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"ObserverClient" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 10,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ObserverClient",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "subject = new ShangGuanSubject()" ],
+				"VARIABLECOMMONTYPE" : "GreenTeaBitchSubject",
+				"VARIABLEELEMENTTYPE" : "GreenTeaBitchSubject"
+			}, {
+				"VARIABLEDECLARATION" : [ "dog2WangObserver = new Dog2WangObserver()" ],
+				"VARIABLECOMMONTYPE" : "Dog2WangObserver",
+				"VARIABLEELEMENTTYPE" : "Dog2WangObserver"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "sendThink",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 10,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "subject",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "subject",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "subject",
+					"CALLEEMETHODNAME" : "notifyState"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "subject",
+					"CALLEEMETHODNAME" : "notifyState"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "subject",
+					"CALLEEMETHODNAME" : "remove"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "subject",
+					"CALLEEMETHODNAME" : "notifyState"
+				} ],
+				"NUMBEROFMETHODLINES" : 12,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"YinDangObserver" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "TianDogObserver" ],
+				"CLASSNAME" : "YinDangObserver",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "message",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"Dog2WangObserver" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "TianDogObserver" ],
+				"CLASSNAME" : "Dog2WangObserver",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "message",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"GreenTeaBitchSubject" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "GreenTeaBitchSubject",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "add",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "TianDogObserver"
+				} ]
+			}, {
+				"METHODNAME" : "remove",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "TianDogObserver"
+				} ]
+			}, {
+				"METHODNAME" : "notifyState",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "state",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		}
+	},
+	"final_summary" : "ShangGuanSubject.java: observer: ShangGuanSubject acts as a publisher for observer TianDogObserver, which is inherited by, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies String parameter of state State. ShangGuanSubject acts as a publisher for observer TianDogObserver, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies String parameter of state State. It is a public class that extends GreenTeaBitchSubject and that implements GreenTeaBitchSubject. The 3 methods of ShangGuanSubject are add (void), remove (void) and notifyState (void). No methods call add and add calls only one method : add method of class tianDogs. No methods call remove and remove calls only one method : remove method of class tianDogs. No methods call notifyState and notifyState calls only one method : update method of class tianDog.\n\n visitor: ShangGuanSubject acts as a visitor for element GreenTeaBitchSubject, which overrides add method of GreenTeaBitchSubject, remove method of GreenTeaBitchSubject, notifyState method of GreenTeaBitchSubject, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies a State to. It is a public class that extends GreenTeaBitchSubject and that implements GreenTeaBitchSubject. The 3 methods of ShangGuanSubject are add (void), remove (void) and notifyState (void). No methods call add and add calls only one method : add method of class tianDogs. No methods call remove and remove calls only one method : remove method of class tianDogs. No methods call notifyState and notifyState calls only one method : update method of class tianDog.\n\n\nTianDogObserver.java: observer: TianDogObserver acts as an observer for publisher GreenTeaBitchSubject, ShangGuanSubject, which is inherited by YinDangObserver, Dog2WangObserver, which updates String parameter of message. It is a public interface. The only method of TianDogObserver is update (void). No methods call update and update calls no methods.\n\n\nObserverClient.java: ObserverClient does not have any design pattern.  It is a public class. The only method of ObserverClient is sendThink (void). No methods call sendThink and sendThink calls 4 methods : add method of class subject, notifyState method of class subject, remove method of class subject and println method of class PrintStream.\n\n\nYinDangObserver.java: observer: YinDangObserver acts as an observer, which updates String parameter of message. It is a public class that implements TianDogObserver. The only method of YinDangObserver is update (void). No methods call update and update calls 2 methods : equals method of class String and println method of class PrintStream.\n\n visitor: YinDangObserver acts as a visitor for element GreenTeaBitchSubject, which overrides, which updates String parameter of message. It is a public class that implements TianDogObserver. The only method of YinDangObserver is update (void). No methods call update and update calls 2 methods : equals method of class String and println method of class PrintStream.\n\n\nDog2WangObserver.java: observer: Dog2WangObserver acts as an observer, which updates String parameter of message. It is a public class that implements TianDogObserver. The only method of Dog2WangObserver is update (void). No methods call update and update calls 2 methods : equals method of class String and println method of class PrintStream.\n\n visitor: Dog2WangObserver acts as a visitor for element GreenTeaBitchSubject, which overrides, which updates String parameter of message. It is a public class that implements TianDogObserver. The only method of Dog2WangObserver is update (void). No methods call update and update calls 2 methods : equals method of class String and println method of class PrintStream.\n\n\nGreenTeaBitchSubject.java: observer: GreenTeaBitchSubject acts as a publisher for observer TianDogObserver, which is inherited by ShangGuanSubject, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies String parameter of state State. It is a public interface. The 3 methods of GreenTeaBitchSubject are add (void), remove (void) and notifyState (void). No methods call add and add calls no methods. No methods call remove and remove calls no methods. No methods call notifyState and notifyState calls no methods.\n\n visitor: GreenTeaBitchSubject acts as a visitor for element GreenTeaBitchSubject, which is inherited by YinDangObserver, Dog2WangObserver, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies a State to. GreenTeaBitchSubject acts as an element for visitor GreenTeaBitchSubject, which is inherited by ShangGuanSubject, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies a State to. GreenTeaBitchSubject acts as a visitor for element GreenTeaBitchSubject, which is inherited by ShangGuanSubject, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies a State to. It is a public interface. The 3 methods of GreenTeaBitchSubject are add (void), remove (void) and notifyState (void). No methods call add and add calls no methods. No methods call remove and remove calls no methods. No methods call notifyState and notifyState calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"visitor" : {
+			"GreenTeaBitchSubject" : {
+				"concrete_element" : [ "ShangGuanSubject" ],
+				"visitor" : {
+					"TianDogObserver" : [ "YinDangObserver", "Dog2WangObserver" ],
+					"GreenTeaBitchSubject" : [ "ShangGuanSubject" ]
+				}
+			}
+		}
+	}, {
+		"observer" : {
+			"TianDogObserver" : {
+				"concrete_observer" : [ "YinDangObserver", "Dog2WangObserver" ],
+				"publisher" : {
+					"ShangGuanSubject" : [ ],
+					"GreenTeaBitchSubject" : [ "ShangGuanSubject" ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"ShangGuanSubject" : [ "ShangGuanSubject acts as a publisher for observer TianDogObserver, which is inherited by, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies String parameter of state State.", "ShangGuanSubject acts as a publisher for observer TianDogObserver, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies String parameter of state State." ],
+			"TianDogObserver" : [ "TianDogObserver acts as an observer for publisher GreenTeaBitchSubject, ShangGuanSubject, which is inherited by YinDangObserver, Dog2WangObserver, which updates String parameter of message." ],
+			"YinDangObserver" : [ "YinDangObserver acts as an observer, which updates String parameter of message." ],
+			"Dog2WangObserver" : [ "Dog2WangObserver acts as an observer, which updates String parameter of message." ],
+			"GreenTeaBitchSubject" : [ "GreenTeaBitchSubject acts as a publisher for observer TianDogObserver, which is inherited by ShangGuanSubject, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies String parameter of state State." ]
+		},
+		"visitor" : {
+			"ShangGuanSubject" : [ "ShangGuanSubject acts as a visitor for element GreenTeaBitchSubject, which overrides add method of GreenTeaBitchSubject, remove method of GreenTeaBitchSubject, notifyState method of GreenTeaBitchSubject, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies a State to." ],
+			"YinDangObserver" : [ "YinDangObserver acts as a visitor for element GreenTeaBitchSubject, which overrides, which updates String parameter of message." ],
+			"Dog2WangObserver" : [ "Dog2WangObserver acts as a visitor for element GreenTeaBitchSubject, which overrides, which updates String parameter of message." ],
+			"GreenTeaBitchSubject" : [ "GreenTeaBitchSubject acts as a visitor for element GreenTeaBitchSubject, which is inherited by YinDangObserver, Dog2WangObserver, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies a State to.", "GreenTeaBitchSubject acts as an element for visitor GreenTeaBitchSubject, which is inherited by ShangGuanSubject, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies a State to.", "GreenTeaBitchSubject acts as a visitor for element GreenTeaBitchSubject, which is inherited by ShangGuanSubject, which adds TianDogObserver parameter of observer, which removes TianDogObserver parameter of observer, which notifies a State to." ]
+		}
+	}
+}

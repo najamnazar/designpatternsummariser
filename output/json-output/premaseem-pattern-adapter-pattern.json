@@ -1,0 +1,217 @@
+{
+	"final_summary" : "EarPlug.java: EarPlug does not have any design pattern.  It is a public class. The only method of EarPlug is takeSoundInput (void). No methods call takeSoundInput and takeSoundInput calls only one method : println method of class PrintStream.\n\n\nGooglePhone.java: GooglePhone does not have any design pattern.  It is a public class. The only method of GooglePhone is getSoundOutput (Integer). No methods call getSoundOutput and getSoundOutput calls no methods.\n\n\nEarPlugAdapter.java: EarPlugAdapter does not have any design pattern.  It is a public class. The only method of EarPlugAdapter is convertSoundSignal (String). No methods call convertSoundSignal and convertSoundSignal calls only one method : toString method of class Integer.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 5 methods : convertSoundSignal method of class earPlugAdapter, getSoundOutput method of class googlePhone, println method of class PrintStream, getSoundOutput method of class iPhone and takeSoundInput method of class earPlug.\n\n\nIPhone.java: IPhone does not have any design pattern.  It is a public class. The only method of IPhone is getSoundOutput (String). No methods call getSoundOutput and getSoundOutput calls no methods.\n\n\n",
+	"design_pattern" : [ ],
+	"premaseem-pattern-adapter-pattern" : {
+		"EarPlug" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EarPlug",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "takeSoundInput",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "inputSignal",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"GooglePhone" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "GooglePhone",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getSoundOutput",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"EarPlugAdapter" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EarPlugAdapter",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "convertSoundSignal",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Integer",
+					"CALLEEMETHODNAME" : "toString"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "soundSignal",
+					"PARAMETERTYPE" : "Integer"
+				} ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "iPhone = new IPhone()" ],
+				"VARIABLECOMMONTYPE" : "IPhone",
+				"VARIABLEELEMENTTYPE" : "IPhone"
+			}, {
+				"VARIABLEDECLARATION" : [ "googlePhone = new GooglePhone()" ],
+				"VARIABLECOMMONTYPE" : "GooglePhone",
+				"VARIABLEELEMENTTYPE" : "GooglePhone"
+			}, {
+				"VARIABLEDECLARATION" : [ "earPlug = new EarPlug()" ],
+				"VARIABLECOMMONTYPE" : "EarPlug",
+				"VARIABLEELEMENTTYPE" : "EarPlug"
+			}, {
+				"VARIABLEDECLARATION" : [ "soundSignal = iPhone.getSoundOutput()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "soundSignals = googlePhone.getSoundOutput()" ],
+				"VARIABLECOMMONTYPE" : "Integer",
+				"VARIABLEELEMENTTYPE" : "Integer"
+			}, {
+				"VARIABLEDECLARATION" : [ "earPlugAdapter = new EarPlugAdapter()" ],
+				"VARIABLECOMMONTYPE" : "EarPlugAdapter",
+				"VARIABLEELEMENTTYPE" : "EarPlugAdapter"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 6,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "iPhone",
+					"CALLEEMETHODNAME" : "getSoundOutput"
+				}, {
+					"CALLEECLASS" : "earPlug",
+					"CALLEEMETHODNAME" : "takeSoundInput"
+				}, {
+					"CALLEECLASS" : "googlePhone",
+					"CALLEEMETHODNAME" : "getSoundOutput"
+				}, {
+					"CALLEECLASS" : "earPlug",
+					"CALLEEMETHODNAME" : "takeSoundInput"
+				}, {
+					"CALLEECLASS" : "earPlugAdapter",
+					"CALLEEMETHODNAME" : "convertSoundSignal"
+				} ],
+				"NUMBEROFMETHODLINES" : 9,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"IPhone" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "IPhone",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getSoundOutput",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : { }
+}

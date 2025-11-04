@@ -1,0 +1,500 @@
+{
+	"RefactoringGuru-factory_method-example" : {
+		"WindowsButton" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "JPanel",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "panel = new JPanel()" ],
+				"FIELDDATATYPE" : "JPanel",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "JFrame",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "frame = new JFrame()" ],
+				"FIELDDATATYPE" : "JFrame",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "JButton",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "button" ],
+				"FIELDDATATYPE" : "JButton",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 17,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Button" ],
+				"CLASSNAME" : "WindowsButton",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "label = new JLabel(\"Hello World!\")" ],
+				"VARIABLECOMMONTYPE" : "JLabel",
+				"VARIABLEELEMENTTYPE" : "JLabel"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "render",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 14,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "JFrame",
+					"CALLEEMETHODNAME" : "setDefaultCloseOperation"
+				}, {
+					"CALLEECLASS" : "JComponent",
+					"CALLEEMETHODNAME" : "setOpaque"
+				}, {
+					"CALLEECLASS" : "JComponent",
+					"CALLEEMETHODNAME" : "setBackground"
+				}, {
+					"CALLEECLASS" : "JComponent",
+					"CALLEEMETHODNAME" : "setFont"
+				}, {
+					"CALLEECLASS" : "JLabel",
+					"CALLEEMETHODNAME" : "setHorizontalAlignment"
+				}, {
+					"CALLEECLASS" : "Container",
+					"CALLEEMETHODNAME" : "setLayout"
+				}, {
+					"CALLEECLASS" : "Container",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "JFrame",
+					"CALLEEMETHODNAME" : "getContentPane"
+				}, {
+					"CALLEECLASS" : "Container",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "WindowsButton",
+					"CALLEEMETHODNAME" : "onClick"
+				}, {
+					"CALLEECLASS" : "Container",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "Window",
+					"CALLEEMETHODNAME" : "setSize"
+				}, {
+					"CALLEECLASS" : "Window",
+					"CALLEEMETHODNAME" : "setVisible"
+				}, {
+					"CALLEECLASS" : "WindowsButton",
+					"CALLEEMETHODNAME" : "onClick"
+				}, {
+					"CALLEECLASS" : "WindowsButton",
+					"CALLEEMETHODNAME" : "onClick"
+				}, {
+					"CALLEECLASS" : "WindowsButton",
+					"CALLEEMETHODNAME" : "onClick"
+				} ],
+				"NUMBEROFMETHODLINES" : 14,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "onClick",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "render",
+					"CALLEDCLASS" : "WindowsButton"
+				}, {
+					"CALLEDMETHODNAME" : "render",
+					"CALLEDCLASS" : "WindowsButton"
+				}, {
+					"CALLEDMETHODNAME" : "render",
+					"CALLEDCLASS" : "WindowsButton"
+				}, {
+					"CALLEDMETHODNAME" : "render",
+					"CALLEDCLASS" : "WindowsButton"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "AbstractButton",
+					"CALLEEMETHODNAME" : "addActionListener"
+				}, {
+					"CALLEECLASS" : "Window",
+					"CALLEEMETHODNAME" : "setVisible"
+				}, {
+					"CALLEECLASS" : "System",
+					"CALLEEMETHODNAME" : "exit"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Demo" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Dialog",
+				"FIELDMODIFIERTYPE" : [ "private", "static" ],
+				"FIELDDECLARATION" : [ "dialog" ],
+				"FIELDDATATYPE" : "Dialog",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Demo",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Demo",
+					"CALLEEMETHODNAME" : "configure"
+				}, {
+					"CALLEECLASS" : "Demo",
+					"CALLEEMETHODNAME" : "runBusinessLogic"
+				}, {
+					"CALLEECLASS" : "Demo",
+					"CALLEEMETHODNAME" : "configure"
+				}, {
+					"CALLEECLASS" : "Demo",
+					"CALLEEMETHODNAME" : "runBusinessLogic"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			}, {
+				"METHODNAME" : "configure",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Demo"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Demo"
+				} ],
+				"METHODMODIFIERTYPE" : [ "static" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				}, {
+					"CALLEECLASS" : "System",
+					"CALLEEMETHODNAME" : "getProperty"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "runBusinessLogic",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Demo"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Demo"
+				} ],
+				"METHODMODIFIERTYPE" : [ "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "dialog",
+					"CALLEEMETHODNAME" : "renderWindow"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Button" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Button",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "render",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "onClick",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Dialog" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Dialog",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "okButton = createButton()" ],
+				"VARIABLECOMMONTYPE" : "Button",
+				"VARIABLEELEMENTTYPE" : "Button"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "renderWindow",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Dialog",
+					"CALLEEMETHODNAME" : "createButton"
+				}, {
+					"CALLEECLASS" : "Dialog",
+					"CALLEEMETHODNAME" : "createButton"
+				}, {
+					"CALLEECLASS" : "okButton",
+					"CALLEEMETHODNAME" : "render"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createButton",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "renderWindow",
+					"CALLEDCLASS" : "Dialog"
+				}, {
+					"CALLEDMETHODNAME" : "renderWindow",
+					"CALLEDCLASS" : "Dialog"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Button",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"WindowsDialog" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Dialog" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "WindowsDialog",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createButton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Button",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"HtmlDialog" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Dialog" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "HtmlDialog",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createButton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Button",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"HtmlButton" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Button" ],
+				"CLASSNAME" : "HtmlButton",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "render",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "HtmlButton",
+					"CALLEEMETHODNAME" : "onClick"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "HtmlButton",
+					"CALLEEMETHODNAME" : "onClick"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "onClick",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "render",
+					"CALLEDCLASS" : "HtmlButton"
+				}, {
+					"CALLEDMETHODNAME" : "render",
+					"CALLEDCLASS" : "HtmlButton"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"final_summary" : "WindowsButton.java: memento: WindowsButton acts as a memento, which ons Click, which ons Click. WindowsButton acts as a caretaker for memento Button, which renders, which ons Click. It is a public class that implements Button. The 2 methods of WindowsButton are render (void) and onClick (void). No methods call render and render calls 11 methods : setOpaque method of class JComponent, setBackground method of class JComponent, setVisible method of class Window, onClick method of class WindowsButton, setDefaultCloseOperation method of class JFrame, setHorizontalAlignment method of class JLabel, add method of class Container, getContentPane method of class JFrame, setFont method of class JComponent, setLayout method of class Container and setSize method of class Window. Only one method ( render method of class WindowsButton ) calls onClick and onClick calls 3 methods : addActionListener method of class AbstractButton, setVisible method of class Window and exit method of class System.\n\n factory_method: WindowsButton acts as a product for Dialog, which overrides. It is a public class that implements Button. The 2 methods of WindowsButton are render (void) and onClick (void). No methods call render and render calls 11 methods : setOpaque method of class JComponent, setBackground method of class JComponent, setVisible method of class Window, onClick method of class WindowsButton, setDefaultCloseOperation method of class JFrame, setHorizontalAlignment method of class JLabel, add method of class Container, getContentPane method of class JFrame, setFont method of class JComponent, setLayout method of class Container and setSize method of class Window. Only one method ( render method of class WindowsButton ) calls onClick and onClick calls 3 methods : addActionListener method of class AbstractButton, setVisible method of class Window and exit method of class System.\n\n\nDemo.java: Demo does not have any design pattern.  It is a public class. The 3 methods of Demo are main (void), configure (void) and runBusinessLogic (void). No methods call main and main calls 2 methods : runBusinessLogic method of class Demo and configure method of class Demo. Only one method ( main method of class Demo ) calls configure and configure calls 2 methods : getProperty method of class System and equals method of class String. Only one method ( main method of class Demo ) calls runBusinessLogic and runBusinessLogic calls only one method : renderWindow method of class dialog.\n\n\nButton.java: memento: Button acts as a memento, which is inherited by WindowsButton, HtmlButton, which ons Click, which ons Click. It is a public interface. The 2 methods of Button are render (void) and onClick (void). No methods call render and render calls no methods. No methods call onClick and onClick calls no methods.\n\n factory_method: Button acts as an abstract product for Dialog, which is inherited by WindowsButton, HtmlButton. It is a public interface. The 2 methods of Button are render (void) and onClick (void). No methods call render and render calls no methods. No methods call onClick and onClick calls no methods.\n\n\nDialog.java: memento: Dialog acts as an originator for memento Button, which is inherited by, which creates a Button Button to. It is a public abstract class. The 2 methods of Dialog are renderWindow (void) and createButton (Button). No methods call renderWindow and renderWindow calls 2 methods : createButton method of class Dialog and render method of class okButton. Only one method ( renderWindow method of class Dialog ) calls createButton and createButton calls no methods.\n\n factory_method: Dialog acts as a factory for Dialog, which overrides. Dialog acts as a factory method for Button, which is inherited by Dialog, Dialog. It is a public abstract class. The 2 methods of Dialog are renderWindow (void) and createButton (Button). No methods call renderWindow and renderWindow calls 2 methods : createButton method of class Dialog and render method of class okButton. Only one method ( renderWindow method of class Dialog ) calls createButton and createButton calls no methods.\n\n\nWindowsDialog.java: memento: WindowsDialog acts as an originator for memento Button, which creates a Button Button to. It is a public class that extends Dialog. The only method of WindowsDialog is createButton (Button). No methods call createButton and createButton calls no methods.\n\n\nHtmlDialog.java: memento: HtmlDialog acts as an originator for memento Button, which creates a Button Button to. It is a public class that extends Dialog. The only method of HtmlDialog is createButton (Button). No methods call createButton and createButton calls no methods.\n\n\nHtmlButton.java: memento: HtmlButton acts as a memento, which ons Click, which ons Click. It is a public class that implements Button. The 2 methods of HtmlButton are render (void) and onClick (void). No methods call render and render calls 2 methods : onClick method of class HtmlButton and println method of class PrintStream. Only one method ( render method of class HtmlButton ) calls onClick and onClick calls only one method : println method of class PrintStream.\n\n factory_method: HtmlButton acts as a product for Dialog, which overrides. It is a public class that implements Button. The 2 methods of HtmlButton are render (void) and onClick (void). No methods call render and render calls 2 methods : onClick method of class HtmlButton and println method of class PrintStream. Only one method ( render method of class HtmlButton ) calls onClick and onClick calls only one method : println method of class PrintStream.\n\n\n",
+	"design_pattern" : [ {
+		"factory_method" : {
+			"Dialog" : {
+				"concrete_product" : [ "WindowsButton", "HtmlButton" ],
+				"abstract_product" : "Button",
+				"concrete_factory" : [ "Dialog", "Dialog" ]
+			}
+		}
+	}, {
+		"memento" : {
+			"Button" : {
+				"caretaker" : {
+					"WindowsButton" : [ ]
+				},
+				"originator" : {
+					"Dialog" : [ "WindowsDialog", "HtmlDialog" ]
+				},
+				"concrete_memento" : [ "WindowsButton", "HtmlButton" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"memento" : {
+			"WindowsButton" : [ "WindowsButton acts as a memento, which ons Click, which ons Click.", "WindowsButton acts as a caretaker for memento Button, which renders, which ons Click." ],
+			"Button" : [ "Button acts as a memento, which is inherited by WindowsButton, HtmlButton, which ons Click, which ons Click." ],
+			"Dialog" : [ "Dialog acts as an originator for memento Button, which is inherited by, which creates a Button Button to." ],
+			"WindowsDialog" : [ "WindowsDialog acts as an originator for memento Button, which creates a Button Button to." ],
+			"HtmlDialog" : [ "HtmlDialog acts as an originator for memento Button, which creates a Button Button to." ],
+			"HtmlButton" : [ "HtmlButton acts as a memento, which ons Click, which ons Click." ]
+		},
+		"factory_method" : {
+			"WindowsButton" : [ "WindowsButton acts as a product for Dialog, which overrides." ],
+			"Button" : [ "Button acts as an abstract product for Dialog, which is inherited by WindowsButton, HtmlButton." ],
+			"Dialog" : [ "Dialog acts as a factory for Dialog, which overrides.", "Dialog acts as a factory method for Button, which is inherited by Dialog, Dialog." ],
+			"HtmlButton" : [ "HtmlButton acts as a product for Dialog, which overrides." ]
+		}
+	}
+}

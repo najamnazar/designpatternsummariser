@@ -1,0 +1,377 @@
+{
+	"iluwatar-factory-kit" : {
+		"App" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 16,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "App",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "factory = WeaponFactory.factory(builder -> {\r\n    builder.add(WeaponType.SWORD, Sword::new);\r\n    builder.add(WeaponType.AXE, Axe::new);\r\n    builder.add(WeaponType.SPEAR, Spear::new);\r\n    builder.add(WeaponType.BOW, Bow::new);\r\n})" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "list = new ArrayList<Weapon>()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 16,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "WeaponFactory",
+					"CALLEEMETHODNAME" : "factory"
+				}, {
+					"CALLEECLASS" : "builder",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "builder",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "builder",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "builder",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "list",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "factory",
+					"CALLEEMETHODNAME" : "create"
+				}, {
+					"CALLEECLASS" : "list",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "factory",
+					"CALLEEMETHODNAME" : "create"
+				}, {
+					"CALLEECLASS" : "list",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "factory",
+					"CALLEEMETHODNAME" : "create"
+				}, {
+					"CALLEECLASS" : "list",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "factory",
+					"CALLEEMETHODNAME" : "create"
+				}, {
+					"CALLEECLASS" : "list",
+					"CALLEEMETHODNAME" : "forEach"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "weapon",
+					"CALLEEMETHODNAME" : "toString"
+				} ],
+				"NUMBEROFMETHODLINES" : 7,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Sword" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Weapon" ],
+				"CLASSNAME" : "Sword",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Builder" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Builder",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "add",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "WeaponType"
+				}, {
+					"PARAMETERNAME" : "supplier",
+					"PARAMETERTYPE" : "Supplier<Weapon>"
+				} ]
+			} ]
+		},
+		"WeaponType" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"WeaponFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "WeaponFactory",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "map = new HashMap<WeaponType, Supplier<Weapon>>()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "create",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Weapon",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "WeaponType"
+				} ]
+			}, {
+				"METHODNAME" : "factory",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				} ],
+				"METHODMODIFIERTYPE" : [ "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "WeaponFactory",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "consumer",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "get",
+					"CALLEEMETHODNAME" : "get"
+				}, {
+					"CALLEECLASS" : "map",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "consumer",
+					"PARAMETERTYPE" : "Consumer<Builder>"
+				} ]
+			} ]
+		},
+		"Bow" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Weapon" ],
+				"CLASSNAME" : "Bow",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Weapon" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Weapon",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"Axe" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Weapon" ],
+				"CLASSNAME" : "Axe",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Spear" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Weapon" ],
+				"CLASSNAME" : "Spear",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"final_summary" : "App.java: App does not have any design pattern.  It is a public class. The only method of App is main (void). No methods call main and main calls 7 methods : add method of class builder, create method of class factory, forEach method of class list, add method of class list, toString method of class weapon, factory method of class WeaponFactory and info method of class LOGGER.\n\n\nSword.java: abstract_factory: Sword acts as a product for WeaponFactory, which overrides. It is a public class that implements Weapon. The only method of Sword is toString (String). No methods call toString and toString calls no methods.\n\n memento: Sword acts as a memento, which tos String. It is a public class that implements Weapon. The only method of Sword is toString (String). No methods call toString and toString calls no methods.\n\n\nBuilder.java: Builder does not have any design pattern.  It is a public interface. The only method of Builder is add (void). No methods call add and add calls no methods.\n\n\nWeaponFactory.java: abstract_factory: WeaponFactory acts as an abstract factory for Weapon, which is inherited by. It is a public interface. The 2 methods of WeaponFactory are create (Weapon) and factory (WeaponFactory). No methods call create and create calls no methods. Only one method ( main method of class App ) calls factory and factory calls 3 methods : get method of class map, accept method of class consumer and get method of class get.\n\n memento: WeaponFactory acts as an originator for memento Weapon, which creates Weapon. It is a public interface. The 2 methods of WeaponFactory are create (Weapon) and factory (WeaponFactory). No methods call create and create calls no methods. Only one method ( main method of class App ) calls factory and factory calls 3 methods : get method of class map, accept method of class consumer and get method of class get.\n\n\nBow.java: abstract_factory: Bow acts as a product for WeaponFactory, which overrides. It is a public class that implements Weapon. The only method of Bow is toString (String). No methods call toString and toString calls no methods.\n\n memento: Bow acts as a memento, which tos String. It is a public class that implements Weapon. The only method of Bow is toString (String). No methods call toString and toString calls no methods.\n\n\nWeapon.java: abstract_factory: Weapon acts as an abstract product for Weapon, which is inherited by Sword, Bow, Axe, Spear. It is a public interface. memento: Weapon acts as a memento, which is inherited by Sword, Bow, Axe, Spear. It is a public interface.\nAxe.java: abstract_factory: Axe acts as a product for WeaponFactory, which overrides. It is a public class that implements Weapon. The only method of Axe is toString (String). No methods call toString and toString calls no methods.\n\n memento: Axe acts as a memento, which tos String. It is a public class that implements Weapon. The only method of Axe is toString (String). No methods call toString and toString calls no methods.\n\n\nSpear.java: abstract_factory: Spear acts as a product for WeaponFactory, which overrides. It is a public class that implements Weapon. The only method of Spear is toString (String). No methods call toString and toString calls no methods.\n\n memento: Spear acts as a memento, which tos String. It is a public class that implements Weapon. The only method of Spear is toString (String). No methods call toString and toString calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"abstract_factory" : {
+			"WeaponFactory" : {
+				"abstract_product" : {
+					"Weapon" : [ "Sword", "Bow", "Axe", "Spear" ]
+				},
+				"concrete_factory" : [ ]
+			}
+		}
+	}, {
+		"memento" : {
+			"Weapon" : {
+				"caretaker" : { },
+				"originator" : {
+					"WeaponFactory" : [ ]
+				},
+				"concrete_memento" : [ "Sword", "Bow", "Axe", "Spear" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"abstract_factory" : {
+			"Sword" : [ "Sword acts as a product for WeaponFactory, which overrides." ],
+			"WeaponFactory" : [ "WeaponFactory acts as an abstract factory for Weapon, which is inherited by." ],
+			"Bow" : [ "Bow acts as a product for WeaponFactory, which overrides." ],
+			"Weapon" : [ "Weapon acts as an abstract product for Weapon, which is inherited by Sword, Bow, Axe, Spear." ],
+			"Axe" : [ "Axe acts as a product for WeaponFactory, which overrides." ],
+			"Spear" : [ "Spear acts as a product for WeaponFactory, which overrides." ]
+		},
+		"memento" : {
+			"Sword" : [ "Sword acts as a memento, which tos String." ],
+			"WeaponFactory" : [ "WeaponFactory acts as an originator for memento Weapon, which creates Weapon." ],
+			"Bow" : [ "Bow acts as a memento, which tos String." ],
+			"Weapon" : [ "Weapon acts as a memento, which is inherited by Sword, Bow, Axe, Spear." ],
+			"Axe" : [ "Axe acts as a memento, which tos String." ],
+			"Spear" : [ "Spear acts as a memento, which tos String." ]
+		}
+	}
+}

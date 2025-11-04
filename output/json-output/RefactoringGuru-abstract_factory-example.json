@@ -1,0 +1,538 @@
+{
+	"final_summary" : "WindowsButton.java: abstract_factory: WindowsButton acts as a product for GUIFactory, which overrides paint method of Button. It is a public class that implements Button. The only method of WindowsButton is paint (void). No methods call paint and paint calls only one method : println method of class PrintStream.\n\n memento: WindowsButton acts as a memento, which paints. It is a public class that implements Button. The only method of WindowsButton is paint (void). No methods call paint and paint calls only one method : println method of class PrintStream.\n\n\nDemo.java: Demo does not have any design pattern.  It is a public class. The 2 methods of Demo are configureApplication (Application) and main (void). Only one method ( main method of class Demo ) calls configureApplication and configureApplication calls 3 methods : toLowerCase method of class String, getProperty method of class System and contains method of class String. No methods call main and main calls 2 methods : paint method of class app and configureApplication method of class Demo.\n\n\nButton.java: abstract_factory: Button acts as an abstract product for Button, which is inherited by WindowsButton, MacOSButton. It is a public interface. The only method of Button is paint (void). No methods call paint and paint calls no methods.\n\n memento: Button acts as a memento, which is inherited by WindowsButton, MacOSButton, which paints. It is a public interface. The only method of Button is paint (void). No methods call paint and paint calls no methods.\n\n\nCheckbox.java: abstract_factory: Checkbox acts as an abstract product for Checkbox, which is inherited by WindowsCheckbox, MacOSCheckbox. It is a public interface. The only method of Checkbox is paint (void). No methods call paint and paint calls no methods.\n\n memento: Checkbox acts as a memento, which is inherited by WindowsCheckbox, MacOSCheckbox, which paints. It is a public interface. The only method of Checkbox is paint (void). No methods call paint and paint calls no methods.\n\n factory_method: Checkbox acts as an abstract product for MacOSFactory, which is inherited by WindowsCheckbox, MacOSCheckbox. It is a public interface. The only method of Checkbox is paint (void). No methods call paint and paint calls no methods.\n\n\nMacOSFactory.java: abstract_factory: MacOSFactory acts as a factory for GUIFactory, which overrides createButton method of GUIFactory, createCheckbox method of GUIFactory. It is a public class that implements GUIFactory. The 2 methods of MacOSFactory are createButton (Button) and createCheckbox (Checkbox). No methods call createButton and createButton calls no methods. No methods call createCheckbox and createCheckbox calls no methods.\n\n memento: MacOSFactory acts as an originator for memento Button, which creates a Button Button to. MacOSFactory acts as an originator for memento Checkbox, which creates a Checkbox Checkbox to. It is a public class that implements GUIFactory. The 2 methods of MacOSFactory are createButton (Button) and createCheckbox (Checkbox). No methods call createButton and createButton calls no methods. No methods call createCheckbox and createCheckbox calls no methods.\n\n factory_method: MacOSFactory acts as a factory method for Checkbox, which is inherited by GUIFactory, GUIFactory. It is a public class that implements GUIFactory. The 2 methods of MacOSFactory are createButton (Button) and createCheckbox (Checkbox). No methods call createButton and createButton calls no methods. No methods call createCheckbox and createCheckbox calls no methods.\n\n\nMacOSButton.java: abstract_factory: MacOSButton acts as a product for GUIFactory, which overrides paint method of Button. It is a public class that implements Button. The only method of MacOSButton is paint (void). No methods call paint and paint calls only one method : println method of class PrintStream.\n\n memento: MacOSButton acts as a memento, which paints. It is a public class that implements Button. The only method of MacOSButton is paint (void). No methods call paint and paint calls only one method : println method of class PrintStream.\n\n\nWindowsCheckbox.java: abstract_factory: WindowsCheckbox acts as a product for GUIFactory, which overrides paint method of Checkbox. It is a public class that implements Checkbox. The only method of WindowsCheckbox is paint (void). No methods call paint and paint calls only one method : println method of class PrintStream.\n\n memento: WindowsCheckbox acts as a memento, which paints. It is a public class that implements Checkbox. The only method of WindowsCheckbox is paint (void). No methods call paint and paint calls only one method : println method of class PrintStream.\n\n factory_method: WindowsCheckbox acts as a product for MacOSFactory, which overrides paint method of Checkbox. It is a public class that implements Checkbox. The only method of WindowsCheckbox is paint (void). No methods call paint and paint calls only one method : println method of class PrintStream.\n\n\nApplication.java: memento: Application acts as a caretaker for memento Checkbox, which paints. Application acts as a caretaker for memento Button, which paints. It is a public class. The only method of Application is paint (void). No methods call paint and paint calls 2 methods : paint method of class button and paint method of class checkbox.\n\n\nWindowsFactory.java: abstract_factory: WindowsFactory acts as a factory for GUIFactory, which overrides createButton method of GUIFactory, createCheckbox method of GUIFactory. It is a public class that implements GUIFactory. The 2 methods of WindowsFactory are createButton (Button) and createCheckbox (Checkbox). No methods call createButton and createButton calls no methods. No methods call createCheckbox and createCheckbox calls no methods.\n\n memento: WindowsFactory acts as an originator for memento Checkbox, which creates a Checkbox Checkbox to. WindowsFactory acts as an originator for memento Button, which creates a Button Button to. It is a public class that implements GUIFactory. The 2 methods of WindowsFactory are createButton (Button) and createCheckbox (Checkbox). No methods call createButton and createButton calls no methods. No methods call createCheckbox and createCheckbox calls no methods.\n\n\nMacOSCheckbox.java: abstract_factory: MacOSCheckbox acts as a product for GUIFactory, which overrides paint method of Checkbox. It is a public class that implements Checkbox. The only method of MacOSCheckbox is paint (void). No methods call paint and paint calls only one method : println method of class PrintStream.\n\n memento: MacOSCheckbox acts as a memento, which paints. It is a public class that implements Checkbox. The only method of MacOSCheckbox is paint (void). No methods call paint and paint calls only one method : println method of class PrintStream.\n\n factory_method: MacOSCheckbox acts as a product for MacOSFactory, which overrides paint method of Checkbox. It is a public class that implements Checkbox. The only method of MacOSCheckbox is paint (void). No methods call paint and paint calls only one method : println method of class PrintStream.\n\n\nGUIFactory.java: abstract_factory: GUIFactory acts as an abstract factory for Button, Checkbox, which is inherited by MacOSFactory, WindowsFactory. It is a public interface. The 2 methods of GUIFactory are createButton (Button) and createCheckbox (Checkbox). No methods call createButton and createButton calls no methods. No methods call createCheckbox and createCheckbox calls no methods.\n\n memento: GUIFactory acts as an originator for memento Button, which is inherited by, which creates a Button Button to. GUIFactory acts as an originator for memento Checkbox, which is inherited by, which creates a Checkbox Checkbox to. It is a public interface. The 2 methods of GUIFactory are createButton (Button) and createCheckbox (Checkbox). No methods call createButton and createButton calls no methods. No methods call createCheckbox and createCheckbox calls no methods.\n\n factory_method: GUIFactory acts as a factory for MacOSFactory, which overrides. It is a public interface. The 2 methods of GUIFactory are createButton (Button) and createCheckbox (Checkbox). No methods call createButton and createButton calls no methods. No methods call createCheckbox and createCheckbox calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"factory_method" : {
+			"MacOSFactory" : {
+				"concrete_product" : [ "WindowsCheckbox", "MacOSCheckbox" ],
+				"abstract_product" : "Checkbox",
+				"concrete_factory" : [ "GUIFactory", "GUIFactory" ]
+			}
+		}
+	}, {
+		"abstract_factory" : {
+			"GUIFactory" : {
+				"abstract_product" : {
+					"Button" : [ "WindowsButton", "MacOSButton" ],
+					"Checkbox" : [ "WindowsCheckbox", "MacOSCheckbox" ]
+				},
+				"concrete_factory" : [ "MacOSFactory", "WindowsFactory" ]
+			}
+		}
+	}, {
+		"memento" : {
+			"Button" : {
+				"caretaker" : {
+					"Application" : [ ]
+				},
+				"originator" : {
+					"GUIFactory" : [ "MacOSFactory", "WindowsFactory" ]
+				},
+				"concrete_memento" : [ "WindowsButton", "MacOSButton" ]
+			},
+			"Checkbox" : {
+				"caretaker" : {
+					"Application" : [ ]
+				},
+				"originator" : {
+					"GUIFactory" : [ "MacOSFactory", "WindowsFactory" ]
+				},
+				"concrete_memento" : [ "WindowsCheckbox", "MacOSCheckbox" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"abstract_factory" : {
+			"WindowsButton" : [ "WindowsButton acts as a product for GUIFactory, which overrides paint method of Button." ],
+			"Button" : [ "Button acts as an abstract product for Button, which is inherited by WindowsButton, MacOSButton." ],
+			"Checkbox" : [ "Checkbox acts as an abstract product for Checkbox, which is inherited by WindowsCheckbox, MacOSCheckbox." ],
+			"MacOSFactory" : [ "MacOSFactory acts as a factory for GUIFactory, which overrides createButton method of GUIFactory, createCheckbox method of GUIFactory." ],
+			"MacOSButton" : [ "MacOSButton acts as a product for GUIFactory, which overrides paint method of Button." ],
+			"WindowsCheckbox" : [ "WindowsCheckbox acts as a product for GUIFactory, which overrides paint method of Checkbox." ],
+			"WindowsFactory" : [ "WindowsFactory acts as a factory for GUIFactory, which overrides createButton method of GUIFactory, createCheckbox method of GUIFactory." ],
+			"MacOSCheckbox" : [ "MacOSCheckbox acts as a product for GUIFactory, which overrides paint method of Checkbox." ],
+			"GUIFactory" : [ "GUIFactory acts as an abstract factory for Button, Checkbox, which is inherited by MacOSFactory, WindowsFactory." ]
+		},
+		"memento" : {
+			"WindowsButton" : [ "WindowsButton acts as a memento, which paints." ],
+			"Button" : [ "Button acts as a memento, which is inherited by WindowsButton, MacOSButton, which paints." ],
+			"Checkbox" : [ "Checkbox acts as a memento, which is inherited by WindowsCheckbox, MacOSCheckbox, which paints." ],
+			"MacOSFactory" : [ "MacOSFactory acts as an originator for memento Button, which creates a Button Button to.", "MacOSFactory acts as an originator for memento Checkbox, which creates a Checkbox Checkbox to." ],
+			"MacOSButton" : [ "MacOSButton acts as a memento, which paints." ],
+			"WindowsCheckbox" : [ "WindowsCheckbox acts as a memento, which paints." ],
+			"Application" : [ "Application acts as a caretaker for memento Checkbox, which paints.", "Application acts as a caretaker for memento Button, which paints." ],
+			"WindowsFactory" : [ "WindowsFactory acts as an originator for memento Checkbox, which creates a Checkbox Checkbox to.", "WindowsFactory acts as an originator for memento Button, which creates a Button Button to." ],
+			"GUIFactory" : [ "GUIFactory acts as an originator for memento Button, which is inherited by, which creates a Button Button to.", "GUIFactory acts as an originator for memento Checkbox, which is inherited by, which creates a Checkbox Checkbox to." ],
+			"MacOSCheckbox" : [ "MacOSCheckbox acts as a memento, which paints." ]
+		},
+		"factory_method" : {
+			"Checkbox" : [ "Checkbox acts as an abstract product for MacOSFactory, which is inherited by WindowsCheckbox, MacOSCheckbox." ],
+			"MacOSFactory" : [ "MacOSFactory acts as a factory method for Checkbox, which is inherited by GUIFactory, GUIFactory." ],
+			"WindowsCheckbox" : [ "WindowsCheckbox acts as a product for MacOSFactory, which overrides paint method of Checkbox." ],
+			"MacOSCheckbox" : [ "MacOSCheckbox acts as a product for MacOSFactory, which overrides paint method of Checkbox." ],
+			"GUIFactory" : [ "GUIFactory acts as a factory for MacOSFactory, which overrides." ]
+		}
+	},
+	"RefactoringGuru-abstract_factory-example" : {
+		"WindowsButton" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Button" ],
+				"CLASSNAME" : "WindowsButton",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Demo" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Demo",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "app" ],
+				"VARIABLECOMMONTYPE" : "Application",
+				"VARIABLEELEMENTTYPE" : "Application"
+			}, {
+				"VARIABLEDECLARATION" : [ "factory" ],
+				"VARIABLECOMMONTYPE" : "GUIFactory",
+				"VARIABLEELEMENTTYPE" : "GUIFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "osName = System.getProperty(\"os.name\").toLowerCase()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "app = configureApplication()" ],
+				"VARIABLECOMMONTYPE" : "Application",
+				"VARIABLEELEMENTTYPE" : "Application"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "configureApplication",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Demo"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Demo"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "IF", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "Application",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "toLowerCase"
+				}, {
+					"CALLEECLASS" : "System",
+					"CALLEEMETHODNAME" : "getProperty"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "contains"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Demo",
+					"CALLEEMETHODNAME" : "configureApplication"
+				}, {
+					"CALLEECLASS" : "Demo",
+					"CALLEEMETHODNAME" : "configureApplication"
+				}, {
+					"CALLEECLASS" : "app",
+					"CALLEEMETHODNAME" : "paint"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Button" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Button",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Checkbox" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Checkbox",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MacOSFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "GUIFactory" ],
+				"CLASSNAME" : "MacOSFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createButton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Button",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createCheckbox",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Checkbox",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MacOSButton" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Button" ],
+				"CLASSNAME" : "MacOSButton",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"WindowsCheckbox" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Checkbox" ],
+				"CLASSNAME" : "WindowsCheckbox",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Application" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Button",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "button" ],
+				"FIELDDATATYPE" : "Button",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Checkbox",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "checkbox" ],
+				"FIELDDATATYPE" : "Checkbox",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Application",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "factory",
+					"PARAMETERTYPE" : "GUIFactory"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "button",
+					"CALLEEMETHODNAME" : "paint"
+				}, {
+					"CALLEECLASS" : "checkbox",
+					"CALLEEMETHODNAME" : "paint"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"WindowsFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "GUIFactory" ],
+				"CLASSNAME" : "WindowsFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createButton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Button",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createCheckbox",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Checkbox",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MacOSCheckbox" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Checkbox" ],
+				"CLASSNAME" : "MacOSCheckbox",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"GUIFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "GUIFactory",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createButton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Button",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createCheckbox",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Checkbox",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

@@ -1,0 +1,487 @@
+{
+	"final_summary" : "App.java: App does not have any design pattern.  It is a public class. The only method of App is main (void). No methods call main and main calls 12 methods : toString method of class billPughSingleton, toString method of class demandHolderIdiom2, getInstance method of class BillPughImplementation, toString method of class dcl1, toString method of class dcl2, toString method of class demandHolderIdiom, getInstance method of class IvoryTower, info method of class LOGGER, toString method of class billPughSingleton2, getInstance method of class ThreadSafeDoubleCheckLocking, getInstance method of class ThreadSafeLazyLoadedIvoryTower and getInstance method of class InitializingOnDemandHolderIdiom.\n\n\nThreadSafeDoubleCheckLocking.java: singleton: ThreadSafeDoubleCheckLocking acts as a singleton, which gets a ThreadSafeDoubleCheckLocking Instance to main method of App. It is a public final class. The only method of ThreadSafeDoubleCheckLocking is getInstance (ThreadSafeDoubleCheckLocking). Only one method ( main method of class App ) calls getInstance and getInstance calls no methods.\n\n memento: ThreadSafeDoubleCheckLocking acts as an originator for memento ThreadSafeDoubleCheckLocking, which gets a ThreadSafeDoubleCheckLocking Instance to. ThreadSafeDoubleCheckLocking acts as a memento, which gets Instance. ThreadSafeDoubleCheckLocking acts as a caretaker for memento ThreadSafeDoubleCheckLocking, which gets Instance. It is a public final class. The only method of ThreadSafeDoubleCheckLocking is getInstance (ThreadSafeDoubleCheckLocking). Only one method ( main method of class App ) calls getInstance and getInstance calls no methods.\n\n\nIvoryTower.java: singleton: IvoryTower acts as a singleton, which gets an IvoryTower Instance to main method of App. It is a public final class. The only method of IvoryTower is getInstance (IvoryTower). Only one method ( main method of class App ) calls getInstance and getInstance calls no methods.\n\n memento: IvoryTower acts as a caretaker for memento IvoryTower, which gets Instance. IvoryTower acts as an originator for memento IvoryTower, which gets an IvoryTower Instance to. IvoryTower acts as a memento, which gets Instance. It is a public final class. The only method of IvoryTower is getInstance (IvoryTower). Only one method ( main method of class App ) calls getInstance and getInstance calls no methods.\n\n\nThreadSafeLazyLoadedIvoryTower.java: singleton: ThreadSafeLazyLoadedIvoryTower acts as a singleton, which gets a ThreadSafeLazyLoadedIvoryTower Instance to main method of App. It is a public final class. The only method of ThreadSafeLazyLoadedIvoryTower is getInstance (ThreadSafeLazyLoadedIvoryTower). Only one method ( main method of class App ) calls getInstance and getInstance calls no methods.\n\n memento: ThreadSafeLazyLoadedIvoryTower acts as a caretaker for memento ThreadSafeLazyLoadedIvoryTower, which gets Instance. ThreadSafeLazyLoadedIvoryTower acts as a caretaker for memento IvoryTower, which gets Instance. ThreadSafeLazyLoadedIvoryTower acts as an originator for memento ThreadSafeLazyLoadedIvoryTower, which gets a ThreadSafeLazyLoadedIvoryTower Instance to. ThreadSafeLazyLoadedIvoryTower acts as a memento, which gets Instance. It is a public final class. The only method of ThreadSafeLazyLoadedIvoryTower is getInstance (ThreadSafeLazyLoadedIvoryTower). Only one method ( main method of class App ) calls getInstance and getInstance calls no methods.\n\n\nBillPughImplementation.java: singleton: BillPughImplementation acts as a singleton, which gets a BillPughImplementation Instance to main method of App. It is a public final class. The only method of BillPughImplementation is getInstance (BillPughImplementation). Only one method ( main method of class App ) calls getInstance and getInstance calls no methods.\n\n memento: BillPughImplementation acts as a caretaker for memento BillPughImplementation, which gets Instance. BillPughImplementation acts as an originator for memento BillPughImplementation, which gets a BillPughImplementation Instance to. BillPughImplementation acts as a memento, which gets Instance. It is a public final class. The only method of BillPughImplementation is getInstance (BillPughImplementation). Only one method ( main method of class App ) calls getInstance and getInstance calls no methods.\n\n\nInitializingOnDemandHolderIdiom.java: singleton: InitializingOnDemandHolderIdiom acts as a singleton, which gets an InitializingOnDemandHolderIdiom Instance to main method of App. It is a public final class. The only method of InitializingOnDemandHolderIdiom is getInstance (InitializingOnDemandHolderIdiom). Only one method ( main method of class App ) calls getInstance and getInstance calls no methods.\n\n memento: InitializingOnDemandHolderIdiom acts as an originator for memento InitializingOnDemandHolderIdiom, which gets an InitializingOnDemandHolderIdiom Instance to. InitializingOnDemandHolderIdiom acts as a memento, which gets Instance. InitializingOnDemandHolderIdiom acts as a caretaker for memento InitializingOnDemandHolderIdiom, which gets Instance. It is a public final class. The only method of InitializingOnDemandHolderIdiom is getInstance (InitializingOnDemandHolderIdiom). Only one method ( main method of class App ) calls getInstance and getInstance calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"singleton" : [ "ThreadSafeDoubleCheckLocking", "IvoryTower", "ThreadSafeLazyLoadedIvoryTower", "BillPughImplementation", "InitializingOnDemandHolderIdiom" ]
+	}, {
+		"memento" : {
+			"ThreadSafeDoubleCheckLocking" : {
+				"caretaker" : {
+					"ThreadSafeDoubleCheckLocking" : [ ]
+				},
+				"originator" : {
+					"ThreadSafeDoubleCheckLocking" : [ ]
+				},
+				"concrete_memento" : [ ]
+			},
+			"IvoryTower" : {
+				"caretaker" : {
+					"IvoryTower" : [ ],
+					"ThreadSafeLazyLoadedIvoryTower" : [ ]
+				},
+				"originator" : {
+					"IvoryTower" : [ ]
+				},
+				"concrete_memento" : [ ]
+			},
+			"ThreadSafeLazyLoadedIvoryTower" : {
+				"caretaker" : {
+					"ThreadSafeLazyLoadedIvoryTower" : [ ]
+				},
+				"originator" : {
+					"ThreadSafeLazyLoadedIvoryTower" : [ ]
+				},
+				"concrete_memento" : [ ]
+			},
+			"BillPughImplementation" : {
+				"caretaker" : {
+					"BillPughImplementation" : [ ]
+				},
+				"originator" : {
+					"BillPughImplementation" : [ ]
+				},
+				"concrete_memento" : [ ]
+			},
+			"InitializingOnDemandHolderIdiom" : {
+				"caretaker" : {
+					"InitializingOnDemandHolderIdiom" : [ ]
+				},
+				"originator" : {
+					"InitializingOnDemandHolderIdiom" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"singleton" : {
+			"ThreadSafeDoubleCheckLocking" : [ "ThreadSafeDoubleCheckLocking acts as a singleton, which gets a ThreadSafeDoubleCheckLocking Instance to main method of App." ],
+			"IvoryTower" : [ "IvoryTower acts as a singleton, which gets an IvoryTower Instance to main method of App." ],
+			"ThreadSafeLazyLoadedIvoryTower" : [ "ThreadSafeLazyLoadedIvoryTower acts as a singleton, which gets a ThreadSafeLazyLoadedIvoryTower Instance to main method of App." ],
+			"BillPughImplementation" : [ "BillPughImplementation acts as a singleton, which gets a BillPughImplementation Instance to main method of App." ],
+			"InitializingOnDemandHolderIdiom" : [ "InitializingOnDemandHolderIdiom acts as a singleton, which gets an InitializingOnDemandHolderIdiom Instance to main method of App." ]
+		},
+		"memento" : {
+			"ThreadSafeDoubleCheckLocking" : [ "ThreadSafeDoubleCheckLocking acts as an originator for memento ThreadSafeDoubleCheckLocking, which gets a ThreadSafeDoubleCheckLocking Instance to.", "ThreadSafeDoubleCheckLocking acts as a memento, which gets Instance.", "ThreadSafeDoubleCheckLocking acts as a caretaker for memento ThreadSafeDoubleCheckLocking, which gets Instance." ],
+			"IvoryTower" : [ "IvoryTower acts as a caretaker for memento IvoryTower, which gets Instance.", "IvoryTower acts as an originator for memento IvoryTower, which gets an IvoryTower Instance to.", "IvoryTower acts as a memento, which gets Instance." ],
+			"ThreadSafeLazyLoadedIvoryTower" : [ "ThreadSafeLazyLoadedIvoryTower acts as a caretaker for memento ThreadSafeLazyLoadedIvoryTower, which gets Instance.", "ThreadSafeLazyLoadedIvoryTower acts as a caretaker for memento IvoryTower, which gets Instance.", "ThreadSafeLazyLoadedIvoryTower acts as an originator for memento ThreadSafeLazyLoadedIvoryTower, which gets a ThreadSafeLazyLoadedIvoryTower Instance to.", "ThreadSafeLazyLoadedIvoryTower acts as a memento, which gets Instance." ],
+			"BillPughImplementation" : [ "BillPughImplementation acts as a caretaker for memento BillPughImplementation, which gets Instance.", "BillPughImplementation acts as an originator for memento BillPughImplementation, which gets a BillPughImplementation Instance to.", "BillPughImplementation acts as a memento, which gets Instance." ],
+			"InitializingOnDemandHolderIdiom" : [ "InitializingOnDemandHolderIdiom acts as an originator for memento InitializingOnDemandHolderIdiom, which gets an InitializingOnDemandHolderIdiom Instance to.", "InitializingOnDemandHolderIdiom acts as a memento, which gets Instance.", "InitializingOnDemandHolderIdiom acts as a caretaker for memento InitializingOnDemandHolderIdiom, which gets Instance." ]
+		}
+	},
+	"iluwatar-singleton" : {
+		"App" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 28,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "App",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "ivoryTower1 = IvoryTower.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "ivoryTower2 = IvoryTower.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "threadSafeIvoryTower1 = ThreadSafeLazyLoadedIvoryTower.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "threadSafeIvoryTower2 = ThreadSafeLazyLoadedIvoryTower.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "enumIvoryTower1 = EnumIvoryTower.INSTANCE" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "enumIvoryTower2 = EnumIvoryTower.INSTANCE" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "dcl1 = ThreadSafeDoubleCheckLocking.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "dcl2 = ThreadSafeDoubleCheckLocking.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "demandHolderIdiom = InitializingOnDemandHolderIdiom.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "demandHolderIdiom2 = InitializingOnDemandHolderIdiom.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "billPughSingleton = BillPughImplementation.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "billPughSingleton2 = BillPughImplementation.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 12,
+				"NUMBEROFOUTGOINGMETHODS" : 28,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "IvoryTower",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "IvoryTower",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "ThreadSafeLazyLoadedIvoryTower",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "ThreadSafeLazyLoadedIvoryTower",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "ThreadSafeDoubleCheckLocking",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "dcl1",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "ThreadSafeDoubleCheckLocking",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "dcl2",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "InitializingOnDemandHolderIdiom",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "demandHolderIdiom",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "InitializingOnDemandHolderIdiom",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "demandHolderIdiom2",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "BillPughImplementation",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "billPughSingleton",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "BillPughImplementation",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "billPughSingleton2",
+					"CALLEEMETHODNAME" : "toString"
+				} ],
+				"NUMBEROFMETHODLINES" : 24,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"ThreadSafeDoubleCheckLocking" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ThreadSafeDoubleCheckLocking",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "volatile" ],
+				"FIELDDECLARATION" : [ "instance" ],
+				"FIELDDATATYPE" : "ThreadSafeDoubleCheckLocking",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ThreadSafeDoubleCheckLocking",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "result = instance" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ThreadSafeDoubleCheckLocking",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"IvoryTower" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "IvoryTower",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "INSTANCE = new IvoryTower()" ],
+				"FIELDDATATYPE" : "IvoryTower",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "IvoryTower",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "IvoryTower",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ThreadSafeLazyLoadedIvoryTower" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ThreadSafeLazyLoadedIvoryTower",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "volatile" ],
+				"FIELDDECLARATION" : [ "instance" ],
+				"FIELDDATATYPE" : "ThreadSafeLazyLoadedIvoryTower",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ThreadSafeLazyLoadedIvoryTower",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static", "synchronized" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ThreadSafeLazyLoadedIvoryTower",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"BillPughImplementation" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "BillPughImplementation",
+				"FIELDMODIFIERTYPE" : [ "private", "static" ],
+				"FIELDDECLARATION" : [ "instance = new BillPughImplementation()" ],
+				"FIELDDATATYPE" : "BillPughImplementation",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "BillPughImplementation",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "BillPughImplementation",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"EnumIvoryTower" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"InitializingOnDemandHolderIdiom" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "InitializingOnDemandHolderIdiom",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "INSTANCE = new InitializingOnDemandHolderIdiom()" ],
+				"FIELDDATATYPE" : "InitializingOnDemandHolderIdiom",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "InitializingOnDemandHolderIdiom",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "InitializingOnDemandHolderIdiom",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

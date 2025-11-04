@@ -1,0 +1,653 @@
+{
+	"final_summary" : "App.java: App does not have any design pattern.  It is a public class. The only method of App is main (void). No methods call main and main calls 5 methods : addObserver method of class genericWeather, timePasses method of class weather, info method of class LOGGER, addObserver method of class weather and timePasses method of class genericWeather.\n\n\nGenWeather.java: GenWeather does not have any design pattern.  It is a public class that extends Observable<GenWeather, Race, WeatherType>. The only method of GenWeather is timePasses (void). No methods call timePasses and timePasses calls 4 methods : ordinal method of class currentWeather, notifyObservers method of class UNKNOWN, values method of class WeatherType and info method of class LOGGER.\n\n\nWeather.java: observer: Weather acts as a publisher for observer WeatherObserver, which is inherited by, which adds WeatherObserver parameter of obs Observer, which removes WeatherObserver parameter of obs Observer, which times Passes, which notifies Observers. It is a public class. The 4 methods of Weather are addObserver (void), removeObserver (void), timePasses (void) and notifyObservers (void). No methods call addObserver and addObserver calls only one method : add method of class observers. No methods call removeObserver and removeObserver calls only one method : remove method of class observers. No methods call timePasses and timePasses calls 4 methods : ordinal method of class currentWeather, notifyObservers method of class Weather, values method of class WeatherType and info method of class LOGGER. Only one method ( timePasses method of class Weather ) calls notifyObservers and notifyObservers calls only one method : update method of class obs.\n\n\nGenOrcs.java: GenOrcs does not have any design pattern.  It is a public class that implements Race. The only method of GenOrcs is update (void). No methods call update and update calls 2 methods : getDescription method of class weatherType and info method of class LOGGER.\n\n\nOrcs.java: observer: Orcs acts as an observer, which updates WeatherType parameter of currentWeather. It is a public class that implements WeatherObserver. The only method of Orcs is update (void). No methods call update and update calls 2 methods : info method of class LOGGER and getDescription method of class currentWeather.\n\n\nObserver.java: Observer does not have any design pattern.  It is a public interface. The only method of Observer is update (void). No methods call update and update calls no methods.\n\n\nRace.java: Race does not have any design pattern.  It is a public interface that extends Observer<GenWeather, Race, WeatherType>.\nWeatherObserver.java: observer: WeatherObserver acts as an observer for publisher Weather, which is inherited by Orcs, Hobbits, which updates WeatherType parameter of currentWeather. It is a public interface. The only method of WeatherObserver is update (void). No methods call update and update calls no methods.\n\n\nGenHobbits.java: GenHobbits does not have any design pattern.  It is a public class that implements Race. The only method of GenHobbits is update (void). No methods call update and update calls 2 methods : getDescription method of class weatherType and info method of class LOGGER.\n\n\nHobbits.java: observer: Hobbits acts as an observer, which updates WeatherType parameter of currentWeather. It is a public class that implements WeatherObserver. The only method of Hobbits is update (void). No methods call update and update calls 2 methods : info method of class LOGGER and getDescription method of class currentWeather.\n\n\nObservable.java: Observable does not have any design pattern.  It is a public abstract class. The 3 methods of Observable are addObserver (void), removeObserver (void) and notifyObservers (void). No methods call addObserver and addObserver calls only one method : add method of class observers. No methods call removeObserver and removeObserver calls only one method : remove method of class List. No methods call notifyObservers and notifyObservers calls only one method : update method of class observer.\n\n\n",
+	"design_pattern" : [ {
+		"observer" : {
+			"WeatherObserver" : {
+				"concrete_observer" : [ "Orcs", "Hobbits" ],
+				"publisher" : {
+					"Weather" : [ ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"Weather" : [ "Weather acts as a publisher for observer WeatherObserver, which is inherited by, which adds WeatherObserver parameter of obs Observer, which removes WeatherObserver parameter of obs Observer, which times Passes, which notifies Observers." ],
+			"Orcs" : [ "Orcs acts as an observer, which updates WeatherType parameter of currentWeather." ],
+			"WeatherObserver" : [ "WeatherObserver acts as an observer for publisher Weather, which is inherited by Orcs, Hobbits, which updates WeatherType parameter of currentWeather." ],
+			"Hobbits" : [ "Hobbits acts as an observer, which updates WeatherType parameter of currentWeather." ]
+		}
+	},
+	"iluwatar-observer" : {
+		"App" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 13,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "App",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "weather = new Weather()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "genericWeather = new GenWeather()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 13,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "weather",
+					"CALLEEMETHODNAME" : "addObserver"
+				}, {
+					"CALLEECLASS" : "weather",
+					"CALLEEMETHODNAME" : "addObserver"
+				}, {
+					"CALLEECLASS" : "weather",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "weather",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "weather",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "weather",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "genericWeather",
+					"CALLEEMETHODNAME" : "addObserver"
+				}, {
+					"CALLEECLASS" : "genericWeather",
+					"CALLEEMETHODNAME" : "addObserver"
+				}, {
+					"CALLEECLASS" : "genericWeather",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "genericWeather",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "genericWeather",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "genericWeather",
+					"CALLEEMETHODNAME" : "timePasses"
+				} ],
+				"NUMBEROFMETHODLINES" : 15,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"GenWeather" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "WeatherType",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "currentWeather" ],
+				"FIELDDATATYPE" : "WeatherType",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "Observable<GenWeather, Race, WeatherType>" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "GenWeather",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "enumValues = WeatherType.values()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "timePasses",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "WeatherType",
+					"CALLEEMETHODNAME" : "values"
+				}, {
+					"CALLEECLASS" : "currentWeather",
+					"CALLEEMETHODNAME" : "ordinal"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "notifyObservers"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Weather" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "WeatherType",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "currentWeather" ],
+				"FIELDDATATYPE" : "WeatherType",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "List<WeatherObserver>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "observers" ],
+				"FIELDDATATYPE" : "List<WeatherObserver>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Weather",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "enumValues = WeatherType.values()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "obs" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "obs",
+					"PARAMETERTYPE" : "WeatherObserver"
+				} ]
+			}, {
+				"METHODNAME" : "removeObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "remove"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "obs",
+					"PARAMETERTYPE" : "WeatherObserver"
+				} ]
+			}, {
+				"METHODNAME" : "timePasses",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Weather",
+					"CALLEEMETHODNAME" : "notifyObservers"
+				}, {
+					"CALLEECLASS" : "WeatherType",
+					"CALLEEMETHODNAME" : "values"
+				}, {
+					"CALLEECLASS" : "currentWeather",
+					"CALLEEMETHODNAME" : "ordinal"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "Weather",
+					"CALLEEMETHODNAME" : "notifyObservers"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "notifyObservers",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "timePasses",
+					"CALLEDCLASS" : "Weather"
+				}, {
+					"CALLEDMETHODNAME" : "timePasses",
+					"CALLEDCLASS" : "Weather"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "obs",
+					"CALLEEMETHODNAME" : "update"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"GenOrcs" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Race" ],
+				"CLASSNAME" : "GenOrcs",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "weatherType",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "weather",
+					"PARAMETERTYPE" : "GenWeather"
+				}, {
+					"PARAMETERNAME" : "weatherType",
+					"PARAMETERTYPE" : "WeatherType"
+				} ]
+			} ]
+		},
+		"Orcs" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "WeatherObserver" ],
+				"CLASSNAME" : "Orcs",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "currentWeather",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "currentWeather",
+					"PARAMETERTYPE" : "WeatherType"
+				} ]
+			} ]
+		},
+		"WeatherType" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "description" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "description",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Observer" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Observer",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ "S extends Observable<S, O, A>", "O extends Observer<S, O, A>", "A" ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "subject",
+					"PARAMETERTYPE" : "S"
+				}, {
+					"PARAMETERNAME" : "argument",
+					"PARAMETERTYPE" : "A"
+				} ]
+			} ]
+		},
+		"Race" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Observer<GenWeather, Race, WeatherType>" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Race",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"WeatherObserver" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "WeatherObserver",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "currentWeather",
+					"PARAMETERTYPE" : "WeatherType"
+				} ]
+			} ]
+		},
+		"GenHobbits" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Race" ],
+				"CLASSNAME" : "GenHobbits",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "weatherType",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "weather",
+					"PARAMETERTYPE" : "GenWeather"
+				}, {
+					"PARAMETERNAME" : "weatherType",
+					"PARAMETERTYPE" : "WeatherType"
+				} ]
+			} ]
+		},
+		"Hobbits" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "WeatherObserver" ],
+				"CLASSNAME" : "Hobbits",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "currentWeather",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "currentWeather",
+					"PARAMETERTYPE" : "WeatherType"
+				} ]
+			} ]
+		},
+		"Observable" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "List<O>",
+				"FIELDMODIFIERTYPE" : [ "protected", "final" ],
+				"FIELDDECLARATION" : [ "observers" ],
+				"FIELDDATATYPE" : "List<O>",
+				"FIELDACCESSSPECIFIER" : "PROTECTED"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Observable",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ "S extends Observable<S, O, A>", "O extends Observer<S, O, A>", "A" ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "observer" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "O"
+				} ]
+			}, {
+				"METHODNAME" : "removeObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "remove"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "O"
+				} ]
+			}, {
+				"METHODNAME" : "notifyObservers",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@SuppressWarnings(\"unchecked\")" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observer",
+					"CALLEEMETHODNAME" : "update"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "argument",
+					"PARAMETERTYPE" : "A"
+				} ]
+			} ]
+		}
+	}
+}

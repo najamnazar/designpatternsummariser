@@ -1,0 +1,280 @@
+{
+	"final_summary" : "Singleton1.java: singleton: Singleton1 acts as a singleton, which gets a Singleton1 Instance to. It is a public class. The only method of Singleton1 is getInstance (Singleton1). No methods call getInstance and getInstance calls no methods.\n\n memento: Singleton1 acts as a caretaker for memento Singleton1, which gets Instance. Singleton1 acts as an originator for memento Singleton1, which gets a Singleton1 Instance to. Singleton1 acts as a memento, which gets Instance. It is a public class. The only method of Singleton1 is getInstance (Singleton1). No methods call getInstance and getInstance calls no methods.\n\n\nSingletonClient.java: SingletonClient does not have any design pattern.  It is a public class. The only method of SingletonClient is run (void). No methods call run and run calls 3 methods : format method of class String, getInstance method of class Singleton5 and println method of class out.\n\n\nSingleton4.java: singleton: Singleton4 acts as a singleton, which gets a Singleton4 Instance to. It is a public class. The only method of Singleton4 is getInstance (Singleton4). No methods call getInstance and getInstance calls no methods.\n\n memento: Singleton4 acts as a memento, which gets Instance. Singleton4 acts as an originator for memento Singleton4, which gets a Singleton4 Instance to. Singleton4 acts as a caretaker for memento Singleton4, which gets Instance. It is a public class. The only method of Singleton4 is getInstance (Singleton4). No methods call getInstance and getInstance calls no methods.\n\n\nSingleton3.java: singleton: Singleton3 acts as a singleton, which gets a Singleton3 Instance to. It is a public class. The only method of Singleton3 is getInstance (Singleton3). No methods call getInstance and getInstance calls no methods.\n\n memento: Singleton3 acts as a caretaker for memento Singleton3, which gets Instance. Singleton3 acts as a memento, which gets Instance. Singleton3 acts as an originator for memento Singleton3, which gets a Singleton3 Instance to. It is a public class. The only method of Singleton3 is getInstance (Singleton3). No methods call getInstance and getInstance calls no methods.\n\n\nSingleton5.java: singleton: Singleton5 acts as a singleton, which gets a Singleton5 Instance to run method of SingletonClient. It is a public class. The only method of Singleton5 is getInstance (Singleton5). Only one method ( run method of class SingletonClient ) calls getInstance and getInstance calls no methods.\n\n memento: Singleton5 acts as a memento, which gets Instance. Singleton5 acts as an originator for memento Singleton5, which gets a Singleton5 Instance to. Singleton5 acts as a caretaker for memento Singleton5, which gets Instance. It is a public class. The only method of Singleton5 is getInstance (Singleton5). Only one method ( run method of class SingletonClient ) calls getInstance and getInstance calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"singleton" : [ "Singleton1", "Singleton4", "Singleton3", "Singleton5" ]
+	}, {
+		"memento" : {
+			"Singleton1" : {
+				"caretaker" : {
+					"Singleton1" : [ ]
+				},
+				"originator" : {
+					"Singleton1" : [ ]
+				},
+				"concrete_memento" : [ ]
+			},
+			"Singleton4" : {
+				"caretaker" : {
+					"Singleton4" : [ ]
+				},
+				"originator" : {
+					"Singleton4" : [ ]
+				},
+				"concrete_memento" : [ ]
+			},
+			"Singleton3" : {
+				"caretaker" : {
+					"Singleton3" : [ ]
+				},
+				"originator" : {
+					"Singleton3" : [ ]
+				},
+				"concrete_memento" : [ ]
+			},
+			"Singleton5" : {
+				"caretaker" : {
+					"Singleton5" : [ ]
+				},
+				"originator" : {
+					"Singleton5" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"shusheng007-singleton" : {
+		"Singleton1" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Singleton1",
+				"FIELDMODIFIERTYPE" : [ "private", "final", "static" ],
+				"FIELDDECLARATION" : [ "INSTANCE = new Singleton1()" ],
+				"FIELDDATATYPE" : "Singleton1",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Singleton1",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Singleton1",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"SingletonClient" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SingletonClient",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "instance1 = Singleton5.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Singleton5",
+				"VARIABLEELEMENTTYPE" : "Singleton5"
+			}, {
+				"VARIABLEDECLARATION" : [ "instance2 = Singleton5.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Singleton5",
+				"VARIABLEELEMENTTYPE" : "Singleton5"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "run",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Singleton5",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Singleton5",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Singleton4" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Singleton4",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "volatile" ],
+				"FIELDDECLARATION" : [ "instance" ],
+				"FIELDDATATYPE" : "Singleton4",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Singleton4",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Singleton4",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Singleton3" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Singleton3",
+				"FIELDMODIFIERTYPE" : [ "private", "static" ],
+				"FIELDDECLARATION" : [ "instance" ],
+				"FIELDDATATYPE" : "Singleton3",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Singleton3",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static", "synchronized" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Singleton3",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Singleton6" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"Singleton5" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Singleton5",
+				"FIELDMODIFIERTYPE" : [ "private", "final", "static" ],
+				"FIELDDECLARATION" : [ "INSTANCE = new Singleton5()" ],
+				"FIELDDATATYPE" : "Singleton5",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Singleton5",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "run",
+					"CALLEDCLASS" : "SingletonClient"
+				}, {
+					"CALLEDMETHODNAME" : "run",
+					"CALLEDCLASS" : "SingletonClient"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Singleton5",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"singleton" : {
+			"Singleton1" : [ "Singleton1 acts as a singleton, which gets a Singleton1 Instance to." ],
+			"Singleton4" : [ "Singleton4 acts as a singleton, which gets a Singleton4 Instance to." ],
+			"Singleton3" : [ "Singleton3 acts as a singleton, which gets a Singleton3 Instance to." ],
+			"Singleton5" : [ "Singleton5 acts as a singleton, which gets a Singleton5 Instance to run method of SingletonClient." ]
+		},
+		"memento" : {
+			"Singleton1" : [ "Singleton1 acts as a caretaker for memento Singleton1, which gets Instance.", "Singleton1 acts as an originator for memento Singleton1, which gets a Singleton1 Instance to.", "Singleton1 acts as a memento, which gets Instance." ],
+			"Singleton4" : [ "Singleton4 acts as a memento, which gets Instance.", "Singleton4 acts as an originator for memento Singleton4, which gets a Singleton4 Instance to.", "Singleton4 acts as a caretaker for memento Singleton4, which gets Instance." ],
+			"Singleton3" : [ "Singleton3 acts as a caretaker for memento Singleton3, which gets Instance.", "Singleton3 acts as a memento, which gets Instance.", "Singleton3 acts as an originator for memento Singleton3, which gets a Singleton3 Instance to." ],
+			"Singleton5" : [ "Singleton5 acts as a memento, which gets Instance.", "Singleton5 acts as an originator for memento Singleton5, which gets a Singleton5 Instance to.", "Singleton5 acts as a caretaker for memento Singleton5, which gets Instance." ]
+		}
+	}
+}

@@ -1,0 +1,227 @@
+{
+	"final_summary" : "DeliverySys.java: DeliverySys does not have any design pattern.  It is a public class. The only method of DeliverySys is getDeliveryTime (int). No methods call getDeliveryTime and getDeliveryTime calls only one method : println method of class PrintStream.\n\n\nOrderSys.java: OrderSys does not have any design pattern.  It is a public class. The only method of OrderSys is getOrderNum (String). No methods call getOrderNum and getOrderNum calls only one method : println method of class PrintStream.\n\n\nPaymentSys.java: PaymentSys does not have any design pattern.  It is a public class. The only method of PaymentSys is getOrderAccount (BigDecimal). No methods call getOrderAccount and getOrderAccount calls 3 methods : format method of class String, println method of class PrintStream and valueOf method of class BigDecimal.\n\n\nFacadeClient.java: FacadeClient does not have any design pattern.  It is a public class. The only method of FacadeClient is printReport (void). No methods call printReport and printReport calls only one method : generateReport method of class new ReportFacade.\n\n\nReportFacade.java: ReportFacade does not have any design pattern.  It is a public class. The only method of ReportFacade is generateReport (void). No methods call generateReport and generateReport calls 7 methods : getOrderAccount method of class paymentSys, getOrderNum method of class orderSys, format method of class String, valueOf method of class String, getDeliveryTime method of class deliverySys, println method of class out and toPlainString method of class getOrderAccount.\n\n\n",
+	"design_pattern" : [ ],
+	"shusheng007-facade" : {
+		"DeliverySys" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "DeliverySys",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDeliveryTime",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"OrderSys" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "OrderSys",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getOrderNum",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"PaymentSys" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "OrderSys",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "orderSys" ],
+				"FIELDDATATYPE" : "OrderSys",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "PaymentSys",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "orderSys",
+					"PARAMETERTYPE" : "OrderSys"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getOrderAccount",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "BigDecimal",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "BigDecimal",
+					"CALLEEMETHODNAME" : "valueOf"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "orderNum",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"FacadeClient" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "FacadeClient",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "printReport",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "new ReportFacade",
+					"CALLEEMETHODNAME" : "generateReport"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ReportFacade" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ReportFacade",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "orderSys = new OrderSys()" ],
+				"VARIABLECOMMONTYPE" : "OrderSys",
+				"VARIABLEELEMENTTYPE" : "OrderSys"
+			}, {
+				"VARIABLEDECLARATION" : [ "paymentSys = new PaymentSys(orderSys)" ],
+				"VARIABLECOMMONTYPE" : "PaymentSys",
+				"VARIABLEELEMENTTYPE" : "PaymentSys"
+			}, {
+				"VARIABLEDECLARATION" : [ "deliverySys = new DeliverySys()" ],
+				"VARIABLECOMMONTYPE" : "DeliverySys",
+				"VARIABLEELEMENTTYPE" : "DeliverySys"
+			}, {
+				"VARIABLEDECLARATION" : [ "orderNum = orderSys.getOrderNum()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "generateReport",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 4,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "orderSys",
+					"CALLEEMETHODNAME" : "getOrderNum"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "getOrderAccount",
+					"CALLEEMETHODNAME" : "toPlainString"
+				}, {
+					"CALLEECLASS" : "paymentSys",
+					"CALLEEMETHODNAME" : "getOrderAccount"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "valueOf"
+				}, {
+					"CALLEECLASS" : "deliverySys",
+					"CALLEEMETHODNAME" : "getDeliveryTime"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : { }
+}

@@ -1,0 +1,406 @@
+{
+	"final_summary" : "UFOEnemyShip.java: UFOEnemyShip does not have any design pattern.  It is a public class that extends EnemyShip.\nEnemyShipTesting.java: EnemyShipTesting does not have any design pattern.  It is a public class. The 2 methods of EnemyShipTesting are main (void) and doStuffEnemy (void). No methods call main and main calls 5 methods : hasNextLine method of class Scanner, doStuffEnemy method of class UNKNOWN, makeEnemyShip method of class shipFactory, nextLine method of class Scanner and print method of class PrintStream. No methods call doStuffEnemy and doStuffEnemy calls 3 methods : enemyShipShoots method of class anEnemyShip, displayEnemyShip method of class anEnemyShip and followHeroShip method of class anEnemyShip.\n\n\nEnemyShipFactory.java: EnemyShipFactory does not have any design pattern.  It is a public class. The only method of EnemyShipFactory is makeEnemyShip (EnemyShip). No methods call makeEnemyShip and makeEnemyShip calls only one method : equals method of class String.\n\n\nRocketEnemyShip.java: RocketEnemyShip does not have any design pattern.  It is a public class that extends EnemyShip.\nEnemyShip.java: EnemyShip does not have any design pattern.  It is a public abstract class. The 7 methods of EnemyShip are getName (String), setName (void), getDamage (double), setDamage (void), followHeroShip (void), displayEnemyShip (void) and enemyShipShoots (void). 3 methods ( followHeroShip method of class EnemyShip, displayEnemyShip method of class EnemyShip and enemyShipShoots method of class EnemyShip ) call getName and getName calls no methods. No methods call setName and setName calls no methods. Only one method ( enemyShipShoots method of class EnemyShip ) calls getDamage and getDamage calls no methods. No methods call setDamage and setDamage calls no methods. No methods call followHeroShip and followHeroShip calls 2 methods : getName method of class EnemyShip and println method of class PrintStream. No methods call displayEnemyShip and displayEnemyShip calls 2 methods : getName method of class EnemyShip and println method of class PrintStream. No methods call enemyShipShoots and enemyShipShoots calls 3 methods : getName method of class EnemyShip, getDamage method of class EnemyShip and println method of class PrintStream.\n\n\nBigUFOEnemyShip.java: BigUFOEnemyShip does not have any design pattern.  It is a public class that extends UFOEnemyShip.\n",
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"saeidzebardast-factory" : {
+		"UFOEnemyShip" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "EnemyShip" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UFOEnemyShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"EnemyShipTesting" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 9,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EnemyShipTesting",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "shipFactory = new EnemyShipFactory()" ],
+				"VARIABLECOMMONTYPE" : "EnemyShipFactory",
+				"VARIABLEELEMENTTYPE" : "EnemyShipFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "theEnemy = null" ],
+				"VARIABLECOMMONTYPE" : "EnemyShip",
+				"VARIABLEELEMENTTYPE" : "EnemyShip"
+			}, {
+				"VARIABLEDECLARATION" : [ "userInput = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "typeOfShip = userInput.nextLine()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "hasNextLine"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextLine"
+				}, {
+					"CALLEECLASS" : "shipFactory",
+					"CALLEEMETHODNAME" : "makeEnemyShip"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "doStuffEnemy"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			}, {
+				"METHODNAME" : "doStuffEnemy",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "anEnemyShip",
+					"CALLEEMETHODNAME" : "displayEnemyShip"
+				}, {
+					"CALLEECLASS" : "anEnemyShip",
+					"CALLEEMETHODNAME" : "followHeroShip"
+				}, {
+					"CALLEECLASS" : "anEnemyShip",
+					"CALLEEMETHODNAME" : "enemyShipShoots"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "anEnemyShip",
+					"PARAMETERTYPE" : "EnemyShip"
+				} ]
+			} ]
+		},
+		"EnemyShipFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EnemyShipFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "newShip = null" ],
+				"VARIABLECOMMONTYPE" : "EnemyShip",
+				"VARIABLEELEMENTTYPE" : "EnemyShip"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeEnemyShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "EnemyShip",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "newShipType",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"RocketEnemyShip" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "EnemyShip" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "RocketEnemyShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"EnemyShip" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "speed" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "directionX" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "directionY" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "amtDamage" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EnemyShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 6,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "followHeroShip",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "displayEnemyShip",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "enemyShipShoots",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "followHeroShip",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "enemyShipShoots",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "displayEnemyShip",
+					"CALLEDCLASS" : "EnemyShip"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "newName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getDamage",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "enemyShipShoots",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "enemyShipShoots",
+					"CALLEDCLASS" : "EnemyShip"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setDamage",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "newDamage",
+					"PARAMETERTYPE" : "double"
+				} ]
+			}, {
+				"METHODNAME" : "followHeroShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "displayEnemyShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "enemyShipShoots",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getDamage"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getDamage"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"BigUFOEnemyShip" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "UFOEnemyShip" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "BigUFOEnemyShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		}
+	}
+}

@@ -1,0 +1,330 @@
+{
+	"final_summary" : "App.java: App does not have any design pattern.  It is a public class. The only method of App is main (void). No methods call main and main calls 8 methods : toString method of class star, timePasses method of class star, info method of class LOGGER, pop method of class states, setMemento method of class star, getMemento method of class star, add method of class states and isEmpty method of class states.\n\n\nStar.java: Star does not have any design pattern.  It is a public class. The 4 methods of Star are timePasses (void), getMemento (StarMemento), setMemento (void) and toString (String). No methods call timePasses and timePasses calls no methods. No methods call getMemento and getMemento calls 3 methods : setType method of class state, setMassTons method of class state and setAgeYears method of class state. No methods call setMemento and setMemento calls 3 methods : getType method of class state, getAgeYears method of class state and getMassTons method of class state. No methods call toString and toString calls 2 methods : format method of class String and toString method of class type.\n\n\nStarMemento.java: StarMemento does not have any design pattern.  It is a public interface.\n",
+	"design_pattern" : [ ],
+	"iluwatar-memento" : {
+		"App" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 27,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "App",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "states = new Stack<StarMemento>()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "star = new Star(StarType.SUN, 10000000, 500000)" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 27,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "states",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "getMemento"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "states",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "getMemento"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "states",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "getMemento"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "states",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "getMemento"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "timePasses"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "states",
+					"CALLEEMETHODNAME" : "isEmpty"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "setMemento"
+				}, {
+					"CALLEECLASS" : "states",
+					"CALLEEMETHODNAME" : "pop"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "star",
+					"CALLEEMETHODNAME" : "toString"
+				} ],
+				"NUMBEROFMETHODLINES" : 16,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"StarType" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "title" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "title",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Star" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "StarType",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "type" ],
+				"FIELDDATATYPE" : "StarType",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "ageYears" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "massTons" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "StarType",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "type" ],
+				"FIELDDATATYPE" : "StarType",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "ageYears" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "massTons" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 8,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Star",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "startType",
+					"PARAMETERTYPE" : "StarType"
+				}, {
+					"PARAMETERNAME" : "startAge",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "startMass",
+					"PARAMETERTYPE" : "int"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "state = new StarMementoInternal()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "state = (StarMementoInternal) memento" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "timePasses",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "SWITCH" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "StarMemento",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "state",
+					"CALLEEMETHODNAME" : "setAgeYears"
+				}, {
+					"CALLEECLASS" : "state",
+					"CALLEEMETHODNAME" : "setMassTons"
+				}, {
+					"CALLEECLASS" : "state",
+					"CALLEEMETHODNAME" : "setType"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "state",
+					"CALLEEMETHODNAME" : "getType"
+				}, {
+					"CALLEECLASS" : "state",
+					"CALLEEMETHODNAME" : "getAgeYears"
+				}, {
+					"CALLEECLASS" : "state",
+					"CALLEEMETHODNAME" : "getMassTons"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "memento",
+					"PARAMETERTYPE" : "StarMemento"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "type",
+					"CALLEEMETHODNAME" : "toString"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"StarMemento" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "StarMemento",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		}
+	},
+	"summary_NLG" : { }
+}

@@ -1,0 +1,314 @@
+{
+	"final_summary" : "Decorator.java: decorator: Decorator acts as a decorator for component Component, which is inherited by ConcreteDecoratorTwo, ConcreteDecoratorOne. It is a public abstract class that extends Component and that implements Component. The only method of Decorator is doOperation (void). No methods call doOperation and doOperation calls only one method : doOperation method of class component.\n\n\nConcreteComponent.java: decorator: ConcreteComponent acts as a component for decorator Decorator, which overrides doOperationComponent. It is a public class that extends Component and that implements Component. The only method of ConcreteComponent is doOperation (void). No methods call doOperation and doOperation calls only one method : println method of class PrintStream.\n\n\nConcreteDecoratorTwo.java: decorator: ConcreteDecoratorTwo acts as a decorator for decorator Decorator, which overrides doOperation method of Decorator. It is a public class that extends Decorator. The 2 methods of ConcreteDecoratorTwo are doOperation (void) and doAdditionalOperation (void). No methods call doOperation and doOperation calls 2 methods : doOperation method of class super and doAdditionalOperation method of class ConcreteDecoratorTwo. Only one method ( doOperation method of class ConcreteDecoratorTwo ) calls doAdditionalOperation and doAdditionalOperation calls only one method : println method of class PrintStream.\n\n\nConcreteDecoratorOne.java: decorator: ConcreteDecoratorOne acts as a decorator for decorator Decorator, which overrides doOperation method of Decorator. It is a public class that extends Decorator. The 2 methods of ConcreteDecoratorOne are doOperation (void) and doAdditionalOperation (void). No methods call doOperation and doOperation calls 2 methods : doOperation method of class super and doAdditionalOperation method of class ConcreteDecoratorOne. Only one method ( doOperation method of class ConcreteDecoratorOne ) calls doAdditionalOperation and doAdditionalOperation calls only one method : println method of class PrintStream.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 2 methods : doOperation method of class component and println method of class PrintStream.\n\n\nComponent.java: decorator: Component acts as a component for Decorator, which is inherited by ConcreteComponent. It is a public interface. The only method of Component is doOperation (void). No methods call doOperation and doOperation calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"decorator" : {
+			"Decorator" : {
+				"component" : {
+					"Component" : {
+						"concrete_component" : [ "ConcreteComponent" ]
+					}
+				},
+				"concrete_decorator" : [ "ConcreteDecoratorTwo", "ConcreteDecoratorOne" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"decorator" : {
+			"Decorator" : [ "Decorator acts as a decorator for component Component, which is inherited by ConcreteDecoratorTwo, ConcreteDecoratorOne." ],
+			"ConcreteDecoratorTwo" : [ "ConcreteDecoratorTwo acts as a decorator for decorator Decorator, which overrides doOperation method of Decorator." ],
+			"ConcreteComponent" : [ "ConcreteComponent acts as a component for decorator Decorator, which overrides doOperationComponent." ],
+			"ConcreteDecoratorOne" : [ "ConcreteDecoratorOne acts as a decorator for decorator Decorator, which overrides doOperation method of Decorator." ],
+			"Component" : [ "Component acts as a component for Decorator, which is inherited by ConcreteComponent." ]
+		}
+	},
+	"luisburgos-decorator-pattern" : {
+		"Decorator" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Component",
+				"FIELDMODIFIERTYPE" : [ "protected" ],
+				"FIELDDECLARATION" : [ "component" ],
+				"FIELDDATATYPE" : "Component",
+				"FIELDACCESSSPECIFIER" : "PROTECTED"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Component" ],
+				"IMPLEMENTSFROM" : [ "Component" ],
+				"CLASSNAME" : "Decorator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "component",
+					"PARAMETERTYPE" : "Component"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "doOperation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "component",
+					"CALLEEMETHODNAME" : "doOperation"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ConcreteComponent" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Component" ],
+				"IMPLEMENTSFROM" : [ "Component" ],
+				"CLASSNAME" : "ConcreteComponent",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "doOperation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ConcreteDecoratorTwo" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ "Decorator" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ConcreteDecoratorTwo",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "component",
+					"PARAMETERTYPE" : "Component"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "doOperation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "doOperation"
+				}, {
+					"CALLEECLASS" : "ConcreteDecoratorTwo",
+					"CALLEEMETHODNAME" : "doAdditionalOperation"
+				}, {
+					"CALLEECLASS" : "ConcreteDecoratorTwo",
+					"CALLEEMETHODNAME" : "doAdditionalOperation"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "doAdditionalOperation",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "doOperation",
+					"CALLEDCLASS" : "ConcreteDecoratorTwo"
+				}, {
+					"CALLEDMETHODNAME" : "doOperation",
+					"CALLEDCLASS" : "ConcreteDecoratorTwo"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ConcreteDecoratorOne" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ "Decorator" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ConcreteDecoratorOne",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "component",
+					"PARAMETERTYPE" : "Component"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "doOperation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "doOperation"
+				}, {
+					"CALLEECLASS" : "ConcreteDecoratorOne",
+					"CALLEEMETHODNAME" : "doAdditionalOperation"
+				}, {
+					"CALLEECLASS" : "ConcreteDecoratorOne",
+					"CALLEEMETHODNAME" : "doAdditionalOperation"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "doAdditionalOperation",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "doOperation",
+					"CALLEDCLASS" : "ConcreteDecoratorOne"
+				}, {
+					"CALLEDMETHODNAME" : "doOperation",
+					"CALLEDCLASS" : "ConcreteDecoratorOne"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "component = new ConcreteDecoratorOne(new ConcreteComponent())" ],
+				"VARIABLECOMMONTYPE" : "Component",
+				"VARIABLEELEMENTTYPE" : "Component"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "component",
+					"CALLEEMETHODNAME" : "doOperation"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "component",
+					"CALLEEMETHODNAME" : "doOperation"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Component" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Component",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "doOperation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

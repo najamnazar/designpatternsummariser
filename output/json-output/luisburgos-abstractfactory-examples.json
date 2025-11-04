@@ -1,0 +1,1269 @@
+{
+	"final_summary" : "KingdomTestDrive.java: KingdomTestDrive does not have any design pattern.  It is a public class. The 2 methods of KingdomTestDrive are main (void) and createKingdom (void). No methods call main and main calls only one method : createKingdom method of class UNKNOWN. No methods call createKingdom and createKingdom calls 5 methods : makeArmy method of class factory, makeCastle method of class factory, makeKing method of class factory, println method of class PrintStream and println method of class out.\n\n\nUFOBossShipFactory.java: memento: UFOBossShipFactory acts as an originator for memento ShipWeapon, which makes a ShipWeapon Ship Gun to. UFOBossShipFactory acts as an originator for memento ShipEngine, which makes a ShipEngine Ship Engine to. It is a public class that extends ShipFactory. The 2 methods of UFOBossShipFactory are makeShipGun (ShipWeapon) and makeShipEngine (ShipEngine). No methods call makeShipGun and makeShipGun calls no methods. No methods call makeShipEngine and makeShipEngine calls no methods.\n\n factory_method: UFOBossShipFactory acts as a factory method for ShipWeapon, which is inherited by ShipFactory, ShipFactory, Ship, Ship. It is a public class that extends ShipFactory. The 2 methods of UFOBossShipFactory are makeShipGun (ShipWeapon) and makeShipEngine (ShipEngine). No methods call makeShipGun and makeShipGun calls no methods. No methods call makeShipEngine and makeShipEngine calls no methods.\n\n\nMenKingdomFactory.java: memento: MenKingdomFactory acts as an originator for memento Castle, which makes a Castle Castle to. MenKingdomFactory acts as an originator for memento Army, which makes an Army Army to. MenKingdomFactory acts as an originator for memento King, which makes a King King to. It is a public class that extends KingdomFactory. The 3 methods of MenKingdomFactory are makeCastle (Castle), makeKing (King) and makeArmy (Army). No methods call makeCastle and makeCastle calls no methods. No methods call makeKing and makeKing calls no methods. No methods call makeArmy and makeArmy calls no methods.\n\n factory_method: MenKingdomFactory acts as a factory method for Castle, which is inherited by KingdomFactory, KingdomFactory. It is a public class that extends KingdomFactory. The 3 methods of MenKingdomFactory are makeCastle (Castle), makeKing (King) and makeArmy (Army). No methods call makeCastle and makeCastle calls no methods. No methods call makeKing and makeKing calls no methods. No methods call makeArmy and makeArmy calls no methods.\n\n\nUFOGun.java: observer: UFOGun acts as an observer, which gets Ship Weapon Information. It is a public class that extends ShipWeapon and that implements ShipWeapon. The only method of UFOGun is getShipWeaponInformation (String). No methods call getShipWeaponInformation and getShipWeaponInformation calls no methods.\n\n memento: UFOGun acts as a memento, which gets Ship Weapon Information. It is a public class that extends ShipWeapon and that implements ShipWeapon. The only method of UFOGun is getShipWeaponInformation (String). No methods call getShipWeaponInformation and getShipWeaponInformation calls no methods.\n\n factory_method: UFOGun acts as a product for UFOBossShipFactory, which overrides getShipWeaponInformation method of ShipWeapon. It is a public class that extends ShipWeapon and that implements ShipWeapon. The only method of UFOGun is getShipWeaponInformation (String). No methods call getShipWeaponInformation and getShipWeaponInformation calls no methods.\n\n\nUFOShipFactory.java: memento: UFOShipFactory acts as an originator for memento ShipEngine, which makes a ShipEngine Ship Engine to. UFOShipFactory acts as an originator for memento ShipWeapon, which makes a ShipWeapon Ship Gun to. It is a public class that extends ShipFactory. The 2 methods of UFOShipFactory are makeShipGun (ShipWeapon) and makeShipEngine (ShipEngine). No methods call makeShipGun and makeShipGun calls no methods. No methods call makeShipEngine and makeShipEngine calls no methods.\n\n\nShipEngine.java: observer: ShipEngine acts as an observer for publisher Ship, UFOBossShip, UFOShip, which is inherited by UFOEngine, UFOBossEngine, which gets Ship Engine Information. It is a public interface. The only method of ShipEngine is getShipEngineInformation (String). No methods call getShipEngineInformation and getShipEngineInformation calls no methods.\n\n memento: ShipEngine acts as a memento, which is inherited by UFOEngine, UFOBossEngine, which gets Ship Engine Information. It is a public interface. The only method of ShipEngine is getShipEngineInformation (String). No methods call getShipEngineInformation and getShipEngineInformation calls no methods.\n\n\nKing.java: memento: King acts as a memento, which is inherited by MenKing, ElfKing. It is a public interface.\nUFOEngine.java: observer: UFOEngine acts as an observer, which gets Ship Engine Information. It is a public class that extends ShipEngine and that implements ShipEngine. The only method of UFOEngine is getShipEngineInformation (String). No methods call getShipEngineInformation and getShipEngineInformation calls no methods.\n\n memento: UFOEngine acts as a memento, which gets Ship Engine Information. It is a public class that extends ShipEngine and that implements ShipEngine. The only method of UFOEngine is getShipEngineInformation (String). No methods call getShipEngineInformation and getShipEngineInformation calls no methods.\n\n\nElfCastle.java: memento: ElfCastle acts as a memento, which tos String. It is a public class that implements Castle. The only method of ElfCastle is toString (String). No methods call toString and toString calls no methods.\n\n factory_method: ElfCastle acts as a product for MenKingdomFactory, which overrides. It is a public class that implements Castle. The only method of ElfCastle is toString (String). No methods call toString and toString calls no methods.\n\n\nShipsAbstractFactoryTestDrive.java: ShipsAbstractFactoryTestDrive does not have any design pattern.  It is a public class. The only method of ShipsAbstractFactoryTestDrive is main (void). No methods call main and main calls 4 methods : makeShip method of class ship, equalsIgnoreCase method of class String, println method of class out and toString method of class ship.\n\n\nUFOBossEngine.java: observer: UFOBossEngine acts as an observer, which gets Ship Engine Information. It is a public class that extends ShipEngine and that implements ShipEngine. The only method of UFOBossEngine is getShipEngineInformation (String). No methods call getShipEngineInformation and getShipEngineInformation calls no methods.\n\n memento: UFOBossEngine acts as a memento, which gets Ship Engine Information. It is a public class that extends ShipEngine and that implements ShipEngine. The only method of UFOBossEngine is getShipEngineInformation (String). No methods call getShipEngineInformation and getShipEngineInformation calls no methods.\n\n\nUFOShip.java: observer: UFOShip acts as a publisher for observer ShipWeapon, which makes Ship. UFOShip acts as a publisher for observer ShipEngine, which makes Ship. It is a public class that extends Ship. The only method of UFOShip is makeShip (void). No methods call makeShip and makeShip calls 6 methods : makeShipEngine method of class shipFactory, setShipEngine method of class UNKNOWN, getName method of class UNKNOWN, makeShipGun method of class shipFactory, println method of class out and setShipWeapon method of class UNKNOWN.\n\n memento: UFOShip acts as a caretaker for memento ShipEngine, which makes Ship. UFOShip acts as a caretaker for memento ShipWeapon, which makes Ship. It is a public class that extends Ship. The only method of UFOShip is makeShip (void). No methods call makeShip and makeShip calls 6 methods : makeShipEngine method of class shipFactory, setShipEngine method of class UNKNOWN, getName method of class UNKNOWN, makeShipGun method of class shipFactory, println method of class out and setShipWeapon method of class UNKNOWN.\n\n\nArmy.java: memento: Army acts as a memento, which is inherited by MenArmy, ElfArmy. It is a public interface.\nMenKing.java: memento: MenKing acts as a memento, which tos String. It is a public class that implements King. The only method of MenKing is toString (String). No methods call toString and toString calls no methods.\n\n\nElfArmy.java: memento: ElfArmy acts as a memento, which tos String. It is a public class that implements Army. The only method of ElfArmy is toString (String). No methods call toString and toString calls no methods.\n\n\nElfKing.java: memento: ElfKing acts as a memento, which tos String. It is a public class that implements King. The only method of ElfKing is toString (String). No methods call toString and toString calls no methods.\n\n\nKingdomFactory.java: memento: KingdomFactory acts as an originator for memento Castle, which is inherited by, which makes a Castle Castle to. KingdomFactory acts as an originator for memento King, which is inherited by, which makes a King King to. KingdomFactory acts as an originator for memento Army, which is inherited by, which makes an Army Army to. It is a public abstract class. The 3 methods of KingdomFactory are makeCastle (Castle), makeKing (King) and makeArmy (Army). No methods call makeCastle and makeCastle calls no methods. No methods call makeKing and makeKing calls no methods. No methods call makeArmy and makeArmy calls no methods.\n\n factory_method: KingdomFactory acts as a factory for MenKingdomFactory, which overrides. It is a public abstract class. The 3 methods of KingdomFactory are makeCastle (Castle), makeKing (King) and makeArmy (Army). No methods call makeCastle and makeCastle calls no methods. No methods call makeKing and makeKing calls no methods. No methods call makeArmy and makeArmy calls no methods.\n\n\nElfKingdomFactory.java: memento: ElfKingdomFactory acts as an originator for memento Castle, which makes a Castle Castle to. ElfKingdomFactory acts as an originator for memento Army, which makes an Army Army to. ElfKingdomFactory acts as an originator for memento King, which makes a King King to. It is a public class that extends KingdomFactory. The 3 methods of ElfKingdomFactory are makeCastle (Castle), makeKing (King) and makeArmy (Army). No methods call makeCastle and makeCastle calls no methods. No methods call makeKing and makeKing calls no methods. No methods call makeArmy and makeArmy calls no methods.\n\n\nUFOBossGun.java: observer: UFOBossGun acts as an observer, which gets Ship Weapon Information. It is a public class that extends ShipWeapon and that implements ShipWeapon. The only method of UFOBossGun is getShipWeaponInformation (String). No methods call getShipWeaponInformation and getShipWeaponInformation calls no methods.\n\n memento: UFOBossGun acts as a memento, which gets Ship Weapon Information. It is a public class that extends ShipWeapon and that implements ShipWeapon. The only method of UFOBossGun is getShipWeaponInformation (String). No methods call getShipWeaponInformation and getShipWeaponInformation calls no methods.\n\n factory_method: UFOBossGun acts as a product for UFOBossShipFactory, which overrides getShipWeaponInformation method of ShipWeapon. It is a public class that extends ShipWeapon and that implements ShipWeapon. The only method of UFOBossGun is getShipWeaponInformation (String). No methods call getShipWeaponInformation and getShipWeaponInformation calls no methods.\n\n\nMenArmy.java: memento: MenArmy acts as a memento, which tos String. It is a public class that implements Army. The only method of MenArmy is toString (String). No methods call toString and toString calls no methods.\n\n\nMenCastle.java: memento: MenCastle acts as a memento, which tos String. It is a public class that implements Castle. The only method of MenCastle is toString (String). No methods call toString and toString calls no methods.\n\n factory_method: MenCastle acts as a product for MenKingdomFactory, which overrides. It is a public class that implements Castle. The only method of MenCastle is toString (String). No methods call toString and toString calls no methods.\n\n\nCastle.java: memento: Castle acts as a memento, which is inherited by MenCastle, ElfCastle. It is a public interface. factory_method: Castle acts as an abstract product for MenKingdomFactory, which is inherited by ElfCastle, MenCastle. It is a public interface.\nShipFactory.java: memento: ShipFactory acts as an originator for memento ShipEngine, which is inherited by, which makes a ShipEngine Ship Engine to. ShipFactory acts as an originator for memento ShipWeapon, which is inherited by, which makes a ShipWeapon Ship Gun to. It is a public abstract class. The 2 methods of ShipFactory are makeShipGun (ShipWeapon) and makeShipEngine (ShipEngine). No methods call makeShipGun and makeShipGun calls no methods. No methods call makeShipEngine and makeShipEngine calls no methods.\n\n factory_method: ShipFactory acts as a factory for UFOBossShipFactory, which overrides. It is a public abstract class. The 2 methods of ShipFactory are makeShipGun (ShipWeapon) and makeShipEngine (ShipEngine). No methods call makeShipGun and makeShipGun calls no methods. No methods call makeShipEngine and makeShipEngine calls no methods.\n\n\nShip.java: observer: Ship acts as a publisher for observer ShipEngine, which is inherited by UFOBossShip, UFOShip, which gets Name, which sets String parameter of name Name, which gets Ship Engine, which sets ShipEngine parameter of shipEngine Ship Engine, which gets Ship Weapon, which sets ShipWeapon parameter of shipWeapon Ship Weapon, which tos String, which makes Ship. Ship acts as a publisher for observer ShipWeapon, which is inherited by UFOBossShip, UFOShip, which gets Name, which sets String parameter of name Name, which gets Ship Engine, which sets ShipEngine parameter of shipEngine Ship Engine, which gets Ship Weapon, which sets ShipWeapon parameter of shipWeapon Ship Weapon, which tos String, which makes Ship. It is a public abstract class. The 8 methods of Ship are getName (String), setName (void), getShipEngine (ShipEngine), setShipEngine (void), getShipWeapon (ShipWeapon), setShipWeapon (void), toString (String) and makeShip (void). Only one method ( toString method of class Ship ) calls getName and getName calls no methods. No methods call setName and setName calls no methods. No methods call getShipEngine and getShipEngine calls no methods. No methods call setShipEngine and setShipEngine calls no methods. No methods call getShipWeapon and getShipWeapon calls no methods. No methods call setShipWeapon and setShipWeapon calls no methods. No methods call toString and toString calls 3 methods : getShipEngineInformation method of class shipEngine, getShipWeaponInformation method of class shipWeapon and getName method of class Ship. No methods call makeShip and makeShip calls no methods.\n\n memento: Ship acts as a caretaker for memento ShipEngine, which is inherited by, which gets Name, which sets String parameter of name Name, which gets Ship Engine, which sets ShipEngine parameter of shipEngine Ship Engine, which gets Ship Weapon, which sets ShipWeapon parameter of shipWeapon Ship Weapon, which tos String, which makes Ship. Ship acts as a caretaker for memento ShipWeapon, which is inherited by, which gets Name, which sets String parameter of name Name, which gets Ship Engine, which sets ShipEngine parameter of shipEngine Ship Engine, which gets Ship Weapon, which sets ShipWeapon parameter of shipWeapon Ship Weapon, which tos String, which makes Ship. It is a public abstract class. The 8 methods of Ship are getName (String), setName (void), getShipEngine (ShipEngine), setShipEngine (void), getShipWeapon (ShipWeapon), setShipWeapon (void), toString (String) and makeShip (void). Only one method ( toString method of class Ship ) calls getName and getName calls no methods. No methods call setName and setName calls no methods. No methods call getShipEngine and getShipEngine calls no methods. No methods call setShipEngine and setShipEngine calls no methods. No methods call getShipWeapon and getShipWeapon calls no methods. No methods call setShipWeapon and setShipWeapon calls no methods. No methods call toString and toString calls 3 methods : getShipEngineInformation method of class shipEngine, getShipWeaponInformation method of class shipWeapon and getName method of class Ship. No methods call makeShip and makeShip calls no methods.\n\n factory_method: Ship acts as a factory for UFOBossShipFactory, which overrides. It is a public abstract class. The 8 methods of Ship are getName (String), setName (void), getShipEngine (ShipEngine), setShipEngine (void), getShipWeapon (ShipWeapon), setShipWeapon (void), toString (String) and makeShip (void). Only one method ( toString method of class Ship ) calls getName and getName calls no methods. No methods call setName and setName calls no methods. No methods call getShipEngine and getShipEngine calls no methods. No methods call setShipEngine and setShipEngine calls no methods. No methods call getShipWeapon and getShipWeapon calls no methods. No methods call setShipWeapon and setShipWeapon calls no methods. No methods call toString and toString calls 3 methods : getShipEngineInformation method of class shipEngine, getShipWeaponInformation method of class shipWeapon and getName method of class Ship. No methods call makeShip and makeShip calls no methods.\n\n\nUFOBossShip.java: observer: UFOBossShip acts as a publisher for observer ShipWeapon, which makes Ship. UFOBossShip acts as a publisher for observer ShipEngine, which makes Ship. It is a public class that extends Ship. The only method of UFOBossShip is makeShip (void). No methods call makeShip and makeShip calls 6 methods : makeShipEngine method of class shipFactory, setShipEngine method of class UNKNOWN, getName method of class UNKNOWN, makeShipGun method of class shipFactory, println method of class out and setShipWeapon method of class UNKNOWN.\n\n memento: UFOBossShip acts as a caretaker for memento ShipEngine, which makes Ship. UFOBossShip acts as a caretaker for memento ShipWeapon, which makes Ship. It is a public class that extends Ship. The only method of UFOBossShip is makeShip (void). No methods call makeShip and makeShip calls 6 methods : makeShipEngine method of class shipFactory, setShipEngine method of class UNKNOWN, getName method of class UNKNOWN, makeShipGun method of class shipFactory, println method of class out and setShipWeapon method of class UNKNOWN.\n\n\nShipWeapon.java: observer: ShipWeapon acts as an observer for publisher Ship, UFOBossShip, UFOShip, which is inherited by UFOBossGun, UFOGun, which gets Ship Weapon Information. It is a public interface. The only method of ShipWeapon is getShipWeaponInformation (String). No methods call getShipWeaponInformation and getShipWeaponInformation calls no methods.\n\n memento: ShipWeapon acts as a memento, which is inherited by UFOBossGun, UFOGun, which gets Ship Weapon Information. It is a public interface. The only method of ShipWeapon is getShipWeaponInformation (String). No methods call getShipWeaponInformation and getShipWeaponInformation calls no methods.\n\n factory_method: ShipWeapon acts as an abstract product for UFOBossShipFactory, which is inherited by UFOGun, UFOBossGun. It is a public interface. The only method of ShipWeapon is getShipWeaponInformation (String). No methods call getShipWeaponInformation and getShipWeaponInformation calls no methods.\n\n\n",
+	"luisburgos-abstractfactory-examples" : {
+		"KingdomTestDrive" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 9,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "KingdomTestDrive",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "king = factory.makeKing()" ],
+				"VARIABLECOMMONTYPE" : "King",
+				"VARIABLEELEMENTTYPE" : "King"
+			}, {
+				"VARIABLEDECLARATION" : [ "castle = factory.makeCastle()" ],
+				"VARIABLECOMMONTYPE" : "Castle",
+				"VARIABLEELEMENTTYPE" : "Castle"
+			}, {
+				"VARIABLEDECLARATION" : [ "army = factory.makeArmy()" ],
+				"VARIABLECOMMONTYPE" : "Army",
+				"VARIABLEELEMENTTYPE" : "Army"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "createKingdom"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "createKingdom"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			}, {
+				"METHODNAME" : "createKingdom",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "factory",
+					"CALLEEMETHODNAME" : "makeKing"
+				}, {
+					"CALLEECLASS" : "factory",
+					"CALLEEMETHODNAME" : "makeCastle"
+				}, {
+					"CALLEECLASS" : "factory",
+					"CALLEEMETHODNAME" : "makeArmy"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 7,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "factory",
+					"PARAMETERTYPE" : "KingdomFactory"
+				} ]
+			} ]
+		},
+		"UFOBossShipFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "ShipFactory" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UFOBossShipFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeShipGun",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ShipWeapon",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeShipEngine",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ShipEngine",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MenKingdomFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "KingdomFactory" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "MenKingdomFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeCastle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Castle",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeKing",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "King",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeArmy",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Army",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UFOGun" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "ShipWeapon" ],
+				"IMPLEMENTSFROM" : [ "ShipWeapon" ],
+				"CLASSNAME" : "UFOGun",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getShipWeaponInformation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UFOShipFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "ShipFactory" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UFOShipFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeShipGun",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ShipWeapon",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeShipEngine",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ShipEngine",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ShipEngine" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ShipEngine",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getShipEngineInformation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"King" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "King",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"UFOEngine" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "ShipEngine" ],
+				"IMPLEMENTSFROM" : [ "ShipEngine" ],
+				"CLASSNAME" : "UFOEngine",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getShipEngineInformation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ElfCastle" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Castle" ],
+				"CLASSNAME" : "ElfCastle",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ShipsAbstractFactoryTestDrive" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 8,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ShipsAbstractFactoryTestDrive",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "ship" ],
+				"VARIABLECOMMONTYPE" : "Ship",
+				"VARIABLEELEMENTTYPE" : "Ship"
+			}, {
+				"VARIABLEDECLARATION" : [ "typeShip" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "IF", "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 8,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equalsIgnoreCase"
+				}, {
+					"CALLEECLASS" : "ship",
+					"CALLEEMETHODNAME" : "makeShip"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "ship",
+					"CALLEEMETHODNAME" : "toString"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equalsIgnoreCase"
+				}, {
+					"CALLEECLASS" : "ship",
+					"CALLEEMETHODNAME" : "makeShip"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "ship",
+					"CALLEEMETHODNAME" : "toString"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"UFOBossEngine" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "ShipEngine" ],
+				"IMPLEMENTSFROM" : [ "ShipEngine" ],
+				"CLASSNAME" : "UFOBossEngine",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getShipEngineInformation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UFOShip" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ShipFactory",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "shipFactory" ],
+				"FIELDDATATYPE" : "ShipFactory",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ "Ship" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UFOShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "setShipEngine"
+				}, {
+					"CALLEECLASS" : "shipFactory",
+					"CALLEEMETHODNAME" : "makeShipEngine"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "setShipWeapon"
+				}, {
+					"CALLEECLASS" : "shipFactory",
+					"CALLEEMETHODNAME" : "makeShipGun"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Army" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Army",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"MenKing" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "King" ],
+				"CLASSNAME" : "MenKing",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ElfArmy" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Army" ],
+				"CLASSNAME" : "ElfArmy",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ElfKing" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "King" ],
+				"CLASSNAME" : "ElfKing",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"KingdomFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "KingdomFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeCastle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Castle",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeKing",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "King",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeArmy",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Army",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ElfKingdomFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "KingdomFactory" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ElfKingdomFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeCastle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Castle",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeKing",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "King",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeArmy",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Army",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UFOBossGun" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "ShipWeapon" ],
+				"IMPLEMENTSFROM" : [ "ShipWeapon" ],
+				"CLASSNAME" : "UFOBossGun",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getShipWeaponInformation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MenArmy" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Army" ],
+				"CLASSNAME" : "MenArmy",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MenCastle" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Castle" ],
+				"CLASSNAME" : "MenCastle",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Castle" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Castle",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"ShipFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ShipFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeShipGun",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ShipWeapon",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeShipEngine",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ShipEngine",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Ship" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "ShipWeapon",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "shipWeapon" ],
+				"FIELDDATATYPE" : "ShipWeapon",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "ShipEngine",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "shipEngine" ],
+				"FIELDDATATYPE" : "ShipEngine",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Ship",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "Ship"
+				}, {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "Ship"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getShipEngine",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ShipEngine",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setShipEngine",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shipEngine",
+					"PARAMETERTYPE" : "ShipEngine"
+				} ]
+			}, {
+				"METHODNAME" : "getShipWeapon",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ShipWeapon",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setShipWeapon",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shipWeapon",
+					"PARAMETERTYPE" : "ShipWeapon"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Ship",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "Ship",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "shipEngine",
+					"CALLEEMETHODNAME" : "getShipEngineInformation"
+				}, {
+					"CALLEECLASS" : "shipWeapon",
+					"CALLEEMETHODNAME" : "getShipWeaponInformation"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UFOBossShip" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ShipFactory",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "shipFactory" ],
+				"FIELDDATATYPE" : "ShipFactory",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ "Ship" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UFOBossShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "setShipEngine"
+				}, {
+					"CALLEECLASS" : "shipFactory",
+					"CALLEEMETHODNAME" : "makeShipEngine"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "setShipWeapon"
+				}, {
+					"CALLEECLASS" : "shipFactory",
+					"CALLEEMETHODNAME" : "makeShipGun"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ShipWeapon" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ShipWeapon",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getShipWeaponInformation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"design_pattern" : [ {
+		"factory_method" : {
+			"UFOBossShipFactory" : {
+				"concrete_product" : [ "UFOGun", "UFOBossGun" ],
+				"abstract_product" : "ShipWeapon",
+				"concrete_factory" : [ "ShipFactory", "ShipFactory", "Ship", "Ship" ]
+			},
+			"MenKingdomFactory" : {
+				"concrete_product" : [ "ElfCastle", "MenCastle" ],
+				"abstract_product" : "Castle",
+				"concrete_factory" : [ "KingdomFactory", "KingdomFactory" ]
+			}
+		}
+	}, {
+		"observer" : {
+			"ShipEngine" : {
+				"concrete_observer" : [ "UFOEngine", "UFOBossEngine" ],
+				"publisher" : {
+					"Ship" : [ "UFOBossShip", "UFOShip" ]
+				}
+			},
+			"ShipWeapon" : {
+				"concrete_observer" : [ "UFOBossGun", "UFOGun" ],
+				"publisher" : {
+					"Ship" : [ "UFOBossShip", "UFOShip" ]
+				}
+			}
+		}
+	}, {
+		"memento" : {
+			"ShipEngine" : {
+				"caretaker" : {
+					"Ship" : [ "UFOBossShip", "UFOShip" ]
+				},
+				"originator" : {
+					"ShipFactory" : [ "UFOBossShipFactory", "UFOShipFactory" ]
+				},
+				"concrete_memento" : [ "UFOEngine", "UFOBossEngine" ]
+			},
+			"Army" : {
+				"caretaker" : { },
+				"originator" : {
+					"KingdomFactory" : [ "ElfKingdomFactory", "MenKingdomFactory" ]
+				},
+				"concrete_memento" : [ "MenArmy", "ElfArmy" ]
+			},
+			"King" : {
+				"caretaker" : { },
+				"originator" : {
+					"KingdomFactory" : [ "ElfKingdomFactory", "MenKingdomFactory" ]
+				},
+				"concrete_memento" : [ "MenKing", "ElfKing" ]
+			},
+			"Castle" : {
+				"caretaker" : { },
+				"originator" : {
+					"KingdomFactory" : [ "ElfKingdomFactory", "MenKingdomFactory" ]
+				},
+				"concrete_memento" : [ "MenCastle", "ElfCastle" ]
+			},
+			"ShipWeapon" : {
+				"caretaker" : {
+					"Ship" : [ "UFOBossShip", "UFOShip" ]
+				},
+				"originator" : {
+					"ShipFactory" : [ "UFOBossShipFactory", "UFOShipFactory" ]
+				},
+				"concrete_memento" : [ "UFOBossGun", "UFOGun" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"ShipEngine" : [ "ShipEngine acts as an observer for publisher Ship, UFOBossShip, UFOShip, which is inherited by UFOEngine, UFOBossEngine, which gets Ship Engine Information." ],
+			"UFOBossGun" : [ "UFOBossGun acts as an observer, which gets Ship Weapon Information." ],
+			"UFOEngine" : [ "UFOEngine acts as an observer, which gets Ship Engine Information." ],
+			"UFOGun" : [ "UFOGun acts as an observer, which gets Ship Weapon Information." ],
+			"UFOBossShip" : [ "UFOBossShip acts as a publisher for observer ShipWeapon, which makes Ship.", "UFOBossShip acts as a publisher for observer ShipEngine, which makes Ship." ],
+			"Ship" : [ "Ship acts as a publisher for observer ShipEngine, which is inherited by UFOBossShip, UFOShip, which gets Name, which sets String parameter of name Name, which gets Ship Engine, which sets ShipEngine parameter of shipEngine Ship Engine, which gets Ship Weapon, which sets ShipWeapon parameter of shipWeapon Ship Weapon, which tos String, which makes Ship.", "Ship acts as a publisher for observer ShipWeapon, which is inherited by UFOBossShip, UFOShip, which gets Name, which sets String parameter of name Name, which gets Ship Engine, which sets ShipEngine parameter of shipEngine Ship Engine, which gets Ship Weapon, which sets ShipWeapon parameter of shipWeapon Ship Weapon, which tos String, which makes Ship." ],
+			"ShipWeapon" : [ "ShipWeapon acts as an observer for publisher Ship, UFOBossShip, UFOShip, which is inherited by UFOBossGun, UFOGun, which gets Ship Weapon Information." ],
+			"UFOBossEngine" : [ "UFOBossEngine acts as an observer, which gets Ship Engine Information." ],
+			"UFOShip" : [ "UFOShip acts as a publisher for observer ShipWeapon, which makes Ship.", "UFOShip acts as a publisher for observer ShipEngine, which makes Ship." ]
+		},
+		"memento" : {
+			"Army" : [ "Army acts as a memento, which is inherited by MenArmy, ElfArmy." ],
+			"UFOBossShipFactory" : [ "UFOBossShipFactory acts as an originator for memento ShipWeapon, which makes a ShipWeapon Ship Gun to.", "UFOBossShipFactory acts as an originator for memento ShipEngine, which makes a ShipEngine Ship Engine to." ],
+			"MenKing" : [ "MenKing acts as a memento, which tos String." ],
+			"ElfArmy" : [ "ElfArmy acts as a memento, which tos String." ],
+			"MenKingdomFactory" : [ "MenKingdomFactory acts as an originator for memento Castle, which makes a Castle Castle to.", "MenKingdomFactory acts as an originator for memento Army, which makes an Army Army to.", "MenKingdomFactory acts as an originator for memento King, which makes a King King to." ],
+			"UFOGun" : [ "UFOGun acts as a memento, which gets Ship Weapon Information." ],
+			"ElfKing" : [ "ElfKing acts as a memento, which tos String." ],
+			"UFOShipFactory" : [ "UFOShipFactory acts as an originator for memento ShipEngine, which makes a ShipEngine Ship Engine to.", "UFOShipFactory acts as an originator for memento ShipWeapon, which makes a ShipWeapon Ship Gun to." ],
+			"KingdomFactory" : [ "KingdomFactory acts as an originator for memento Castle, which is inherited by, which makes a Castle Castle to.", "KingdomFactory acts as an originator for memento King, which is inherited by, which makes a King King to.", "KingdomFactory acts as an originator for memento Army, which is inherited by, which makes an Army Army to." ],
+			"ShipEngine" : [ "ShipEngine acts as a memento, which is inherited by UFOEngine, UFOBossEngine, which gets Ship Engine Information." ],
+			"ElfKingdomFactory" : [ "ElfKingdomFactory acts as an originator for memento Castle, which makes a Castle Castle to.", "ElfKingdomFactory acts as an originator for memento Army, which makes an Army Army to.", "ElfKingdomFactory acts as an originator for memento King, which makes a King King to." ],
+			"UFOBossGun" : [ "UFOBossGun acts as a memento, which gets Ship Weapon Information." ],
+			"UFOEngine" : [ "UFOEngine acts as a memento, which gets Ship Engine Information." ],
+			"King" : [ "King acts as a memento, which is inherited by MenKing, ElfKing." ],
+			"MenArmy" : [ "MenArmy acts as a memento, which tos String." ],
+			"MenCastle" : [ "MenCastle acts as a memento, which tos String." ],
+			"ElfCastle" : [ "ElfCastle acts as a memento, which tos String." ],
+			"Castle" : [ "Castle acts as a memento, which is inherited by MenCastle, ElfCastle." ],
+			"ShipFactory" : [ "ShipFactory acts as an originator for memento ShipEngine, which is inherited by, which makes a ShipEngine Ship Engine to.", "ShipFactory acts as an originator for memento ShipWeapon, which is inherited by, which makes a ShipWeapon Ship Gun to." ],
+			"UFOBossShip" : [ "UFOBossShip acts as a caretaker for memento ShipEngine, which makes Ship.", "UFOBossShip acts as a caretaker for memento ShipWeapon, which makes Ship." ],
+			"Ship" : [ "Ship acts as a caretaker for memento ShipEngine, which is inherited by, which gets Name, which sets String parameter of name Name, which gets Ship Engine, which sets ShipEngine parameter of shipEngine Ship Engine, which gets Ship Weapon, which sets ShipWeapon parameter of shipWeapon Ship Weapon, which tos String, which makes Ship.", "Ship acts as a caretaker for memento ShipWeapon, which is inherited by, which gets Name, which sets String parameter of name Name, which gets Ship Engine, which sets ShipEngine parameter of shipEngine Ship Engine, which gets Ship Weapon, which sets ShipWeapon parameter of shipWeapon Ship Weapon, which tos String, which makes Ship." ],
+			"ShipWeapon" : [ "ShipWeapon acts as a memento, which is inherited by UFOBossGun, UFOGun, which gets Ship Weapon Information." ],
+			"UFOBossEngine" : [ "UFOBossEngine acts as a memento, which gets Ship Engine Information." ],
+			"UFOShip" : [ "UFOShip acts as a caretaker for memento ShipEngine, which makes Ship.", "UFOShip acts as a caretaker for memento ShipWeapon, which makes Ship." ]
+		},
+		"factory_method" : {
+			"UFOBossGun" : [ "UFOBossGun acts as a product for UFOBossShipFactory, which overrides getShipWeaponInformation method of ShipWeapon." ],
+			"UFOBossShipFactory" : [ "UFOBossShipFactory acts as a factory method for ShipWeapon, which is inherited by ShipFactory, ShipFactory, Ship, Ship." ],
+			"MenCastle" : [ "MenCastle acts as a product for MenKingdomFactory, which overrides." ],
+			"UFOGun" : [ "UFOGun acts as a product for UFOBossShipFactory, which overrides getShipWeaponInformation method of ShipWeapon." ],
+			"ElfCastle" : [ "ElfCastle acts as a product for MenKingdomFactory, which overrides." ],
+			"Castle" : [ "Castle acts as an abstract product for MenKingdomFactory, which is inherited by ElfCastle, MenCastle." ],
+			"MenKingdomFactory" : [ "MenKingdomFactory acts as a factory method for Castle, which is inherited by KingdomFactory, KingdomFactory." ],
+			"ShipFactory" : [ "ShipFactory acts as a factory for UFOBossShipFactory, which overrides." ],
+			"Ship" : [ "Ship acts as a factory for UFOBossShipFactory, which overrides." ],
+			"ShipWeapon" : [ "ShipWeapon acts as an abstract product for UFOBossShipFactory, which is inherited by UFOGun, UFOBossGun." ],
+			"KingdomFactory" : [ "KingdomFactory acts as a factory for MenKingdomFactory, which overrides." ]
+		}
+	}
+}

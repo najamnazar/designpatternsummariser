@@ -1,0 +1,664 @@
+{
+	"final_summary" : "Fan.java: facade: Fan acts as a subsystem for facade GeneralSwitchFacade, which on method of GeneralSwitchFacade calls on, which off method of GeneralSwitchFacade calls off. It is a public class. The 2 methods of Fan are on (void) and off (void). Only one method ( on method of class GeneralSwitchFacade ) calls on and on calls only one method : println method of class PrintStream. Only one method ( off method of class GeneralSwitchFacade ) calls off and off calls only one method : println method of class PrintStream.\n\n\nTelevision.java: facade: Television acts as a subsystem for facade GeneralSwitchFacade, which on method of GeneralSwitchFacade calls on, which off method of GeneralSwitchFacade calls off. It is a public class. The 2 methods of Television are on (void) and off (void). Only one method ( on method of class GeneralSwitchFacade ) calls on and on calls only one method : println method of class PrintStream. Only one method ( off method of class GeneralSwitchFacade ) calls off and off calls only one method : println method of class PrintStream.\n\n\nLight.java: facade: Light acts as a subsystem for facade GeneralSwitchFacade, which on method of GeneralSwitchFacade calls on, which off method of GeneralSwitchFacade calls off. It is a public class. The 2 methods of Light are on (void) and off (void). Only one method ( on method of class GeneralSwitchFacade ) calls on and on calls only one method : println method of class PrintStream. Only one method ( off method of class GeneralSwitchFacade ) calls off and off calls only one method : println method of class PrintStream.\n\n\nJDBCFacade.java: JDBCFacade does not have any design pattern.  It is a public class. The 4 methods of JDBCFacade are open (void), executeUpdate (int), executeQuery (ResultSet) and close (void). No methods call open and open calls 5 methods : newInstance method of class Class, printStackTrace method of class Throwable, createStatement method of class Connection, forName method of class Class and getConnection method of class DriverManager. No methods call executeUpdate and executeUpdate calls 2 methods : executeUpdate method of class Statement and printStackTrace method of class Throwable. No methods call executeQuery and executeQuery calls 2 methods : executeQuery method of class Statement and printStackTrace method of class Throwable. No methods call close and close calls 3 methods : close method of class Statement, printStackTrace method of class Throwable and close method of class Connection.\n\n\nAirConditioner.java: facade: AirConditioner acts as a subsystem for facade GeneralSwitchFacade, which on method of GeneralSwitchFacade calls on, which off method of GeneralSwitchFacade calls off. It is a public class. The 2 methods of AirConditioner are on (void) and off (void). Only one method ( on method of class GeneralSwitchFacade ) calls on and on calls only one method : println method of class PrintStream. Only one method ( off method of class GeneralSwitchFacade ) calls off and off calls only one method : println method of class PrintStream.\n\n\nGeneralSwitchFacade.java: facade: GeneralSwitchFacade acts as a facade for subsystem Fan, Television, Light, AirConditioner, which on calls on method of Light, on method of Fan, on method of AirConditioner, on method of Television, which off calls off method of Light, off method of Fan, off method of AirConditioner, off method of Television. It is a public class. The 2 methods of GeneralSwitchFacade are on (void) and off (void). Only one method ( main method of class Client ) calls on and on calls 4 methods : on method of class Television, on method of class Light, on method of class Fan and on method of class AirConditioner. Only one method ( main method of class Client ) calls off and off calls 4 methods : off method of class Light, off method of class AirConditioner, off method of class Fan and off method of class Television.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 3 methods : println method of class PrintStream, off method of class GeneralSwitchFacade and on method of class GeneralSwitchFacade.\n\n\n",
+	"quanke-Chapter 14 Facade" : {
+		"Fan" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Fan",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "on",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "off",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Television" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Television",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "on",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "off",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Light" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "position" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Light",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "position",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "on",
+				"NUMBEROFINCOMINGMETHODS" : 8,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "off",
+				"NUMBEROFINCOMINGMETHODS" : 8,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"JDBCFacade" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Connection",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "conn = null" ],
+				"FIELDDATATYPE" : "Connection",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Statement",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "statement = null" ],
+				"FIELDDATATYPE" : "Statement",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 12,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "JDBCFacade",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "open",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "forName"
+				}, {
+					"CALLEECLASS" : "DriverManager",
+					"CALLEEMETHODNAME" : "getConnection"
+				}, {
+					"CALLEECLASS" : "Connection",
+					"CALLEEMETHODNAME" : "createStatement"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "driver",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "jdbcUrl",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "userName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "userPwd",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "executeUpdate",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Statement",
+					"CALLEEMETHODNAME" : "executeUpdate"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "sql",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "executeQuery",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "ResultSet",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Statement",
+					"CALLEEMETHODNAME" : "executeQuery"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "sql",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "close",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Connection",
+					"CALLEEMETHODNAME" : "close"
+				}, {
+					"CALLEECLASS" : "Statement",
+					"CALLEEMETHODNAME" : "close"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"AirConditioner" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AirConditioner",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "on",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "on",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "off",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				}, {
+					"CALLEDMETHODNAME" : "off",
+					"CALLEDCLASS" : "GeneralSwitchFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"GeneralSwitchFacade" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Light[]",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "lights = new Light[4]" ],
+				"FIELDDATATYPE" : "Light",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Fan",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "fan" ],
+				"FIELDDATATYPE" : "Fan",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "AirConditioner",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "ac" ],
+				"FIELDDATATYPE" : "AirConditioner",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Television",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "tv" ],
+				"FIELDDATATYPE" : "Television",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 14,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "GeneralSwitchFacade",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "on",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Fan",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "AirConditioner",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Television",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Fan",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "AirConditioner",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "Television",
+					"CALLEEMETHODNAME" : "on"
+				} ],
+				"NUMBEROFMETHODLINES" : 7,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "off",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Fan",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "AirConditioner",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Television",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Light",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Fan",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "AirConditioner",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "Television",
+					"CALLEEMETHODNAME" : "off"
+				} ],
+				"NUMBEROFMETHODLINES" : 7,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "gsf = new GeneralSwitchFacade()" ],
+				"VARIABLECOMMONTYPE" : "GeneralSwitchFacade",
+				"VARIABLEELEMENTTYPE" : "GeneralSwitchFacade"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "GeneralSwitchFacade",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "GeneralSwitchFacade",
+					"CALLEEMETHODNAME" : "off"
+				}, {
+					"CALLEECLASS" : "GeneralSwitchFacade",
+					"CALLEEMETHODNAME" : "on"
+				}, {
+					"CALLEECLASS" : "GeneralSwitchFacade",
+					"CALLEEMETHODNAME" : "off"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	},
+	"design_pattern" : [ {
+		"facade" : {
+			"GeneralSwitchFacade" : [ "Fan", "Television", "Light", "AirConditioner" ]
+		}
+	} ],
+	"summary_NLG" : {
+		"facade" : {
+			"Fan" : [ "Fan acts as a subsystem for facade GeneralSwitchFacade, which on method of GeneralSwitchFacade calls on, which off method of GeneralSwitchFacade calls off." ],
+			"Television" : [ "Television acts as a subsystem for facade GeneralSwitchFacade, which on method of GeneralSwitchFacade calls on, which off method of GeneralSwitchFacade calls off." ],
+			"Light" : [ "Light acts as a subsystem for facade GeneralSwitchFacade, which on method of GeneralSwitchFacade calls on, which off method of GeneralSwitchFacade calls off." ],
+			"AirConditioner" : [ "AirConditioner acts as a subsystem for facade GeneralSwitchFacade, which on method of GeneralSwitchFacade calls on, which off method of GeneralSwitchFacade calls off." ],
+			"GeneralSwitchFacade" : [ "GeneralSwitchFacade acts as a facade for subsystem Fan, Television, Light, AirConditioner, which on calls on method of Light, on method of Fan, on method of AirConditioner, on method of Television, which off calls off method of Light, off method of Fan, off method of AirConditioner, off method of Television." ]
+		}
+	}
+}

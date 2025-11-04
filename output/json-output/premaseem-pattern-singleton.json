@@ -1,0 +1,164 @@
+{
+	"final_summary" : "Cook.java: singleton: Cook acts as a singleton, which gets a Cook Instance to main method of Client. It is a public class. The 2 methods of Cook are getInstance (Cook) and makeBroth (void). Only one method ( main method of class Client ) calls getInstance and getInstance calls no methods. No methods call makeBroth and makeBroth calls only one method : println method of class PrintStream.\n\n memento: Cook acts as an originator for memento Cook, which gets a Cook Instance to. Cook acts as a memento, which makes Broth, which makes Broth. Cook acts as a caretaker for memento Cook, which gets Instance, which makes Broth. It is a public class. The 2 methods of Cook are getInstance (Cook) and makeBroth (void). Only one method ( main method of class Client ) calls getInstance and getInstance calls no methods. No methods call makeBroth and makeBroth calls only one method : println method of class PrintStream.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 5 methods : makeBroth method of class cook1, makeBroth method of class cook3, println method of class PrintStream, getInstance method of class Cook and makeBroth method of class cook2.\n\n\n",
+	"design_pattern" : [ {
+		"singleton" : [ "Cook" ]
+	}, {
+		"memento" : {
+			"Cook" : {
+				"caretaker" : {
+					"Cook" : [ ]
+				},
+				"originator" : {
+					"Cook" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"singleton" : {
+			"Cook" : [ "Cook acts as a singleton, which gets a Cook Instance to main method of Client." ]
+		},
+		"memento" : {
+			"Cook" : [ "Cook acts as an originator for memento Cook, which gets a Cook Instance to.", "Cook acts as a memento, which makes Broth, which makes Broth.", "Cook acts as a caretaker for memento Cook, which gets Instance, which makes Broth." ]
+		}
+	},
+	"premaseem-pattern-singleton" : {
+		"Cook" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Cook",
+				"FIELDMODIFIERTYPE" : [ "private", "static" ],
+				"FIELDDECLARATION" : [ "uniqueInstance = null" ],
+				"FIELDDATATYPE" : "Cook",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "boolean",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "saltAdded = false" ],
+				"FIELDDATATYPE" : "boolean",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Cook",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 3,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Cook",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeBroth",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "cook1 = Cook.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Cook",
+				"VARIABLEELEMENTTYPE" : "Cook"
+			}, {
+				"VARIABLEDECLARATION" : [ "cook2 = Cook.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Cook",
+				"VARIABLEELEMENTTYPE" : "Cook"
+			}, {
+				"VARIABLEDECLARATION" : [ "cook3 = Cook.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Cook",
+				"VARIABLEELEMENTTYPE" : "Cook"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Cook",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Cook",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Cook",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "cook1",
+					"CALLEEMETHODNAME" : "makeBroth"
+				}, {
+					"CALLEECLASS" : "cook2",
+					"CALLEEMETHODNAME" : "makeBroth"
+				}, {
+					"CALLEECLASS" : "cook3",
+					"CALLEEMETHODNAME" : "makeBroth"
+				} ],
+				"NUMBEROFMETHODLINES" : 7,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	}
+}

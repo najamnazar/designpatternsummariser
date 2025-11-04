@@ -1,0 +1,946 @@
+{
+	"final_summary" : "DataOperation.java: DataOperation does not have any design pattern.  It is a public abstract class. The 3 methods of DataOperation are setPassword (void), getPassword (String) and doEncrypt (String). Only one method ( main method of class Client ) calls setPassword and setPassword calls no methods. Only one method ( main method of class Client ) calls getPassword and getPassword calls no methods. Only one method ( main method of class Client ) calls doEncrypt and doEncrypt calls no methods.\n\n\nBird.java: adapter: Bird acts as an adaptee for adapter BirdAdapter, which adapts tweedle method of Bird, tweedle method of Bird to Robot, which adapts fly method of Bird, fly method of Bird to Robot. It is a public class. The 2 methods of Bird are tweedle (void) and fly (void). Only one method ( cry method of class BirdAdapter ) calls tweedle and tweedle calls only one method : println method of class PrintStream. Only one method ( move method of class BirdAdapter ) calls fly and fly calls only one method : println method of class PrintStream.\n\n facade: Bird acts as a subsystem for facade BirdAdapter, which cry method of BirdAdapter calls tweedle, which move method of BirdAdapter calls fly. It is a public class. The 2 methods of Bird are tweedle (void) and fly (void). Only one method ( cry method of class BirdAdapter ) calls tweedle and tweedle calls only one method : println method of class PrintStream. Only one method ( move method of class BirdAdapter ) calls fly and fly calls only one method : println method of class PrintStream.\n\n\nCaesar.java: facade: Caesar acts as a subsystem for facade CipherAdapter, which doEncrypt method of CipherAdapter calls doEncrypt. It is a public final class. The only method of Caesar is doEncrypt (String). Only one method ( doEncrypt method of class CipherAdapter ) calls doEncrypt and doEncrypt calls 2 methods : charAt method of class String and length method of class String.\n\n\nAdapter.java: Adapter does not have any design pattern.  It is a public class that extends Target. The only method of Adapter is request (void). No methods call request and request calls only one method : specificRequest method of class adaptee.\n\n\nNewCipher.java: facade: NewCipher acts as a subsystem for facade NewCipherAdapter, which doEncrypt method of NewCipherAdapter calls doEncrypt. It is a public final class. The only method of NewCipher is doEncrypt (String). Only one method ( doEncrypt method of class NewCipherAdapter ) calls doEncrypt and doEncrypt calls 3 methods : valueOf method of class String, charAt method of class String and length method of class String.\n\n\nCipherAdapter.java: facade: CipherAdapter acts as a facade for subsystem Caesar, which doEncrypt calls doEncrypt method of Caesar. It is a public class that extends DataOperation. The only method of CipherAdapter is doEncrypt (String). No methods call doEncrypt and doEncrypt calls only one method : doEncrypt method of class Caesar.\n\n\nNewCipherAdapter.java: facade: NewCipherAdapter acts as a facade for subsystem NewCipher, which doEncrypt calls doEncrypt method of NewCipher. It is a public class that extends DataOperation. The only method of NewCipherAdapter is doEncrypt (String). No methods call doEncrypt and doEncrypt calls only one method : doEncrypt method of class NewCipher.\n\n\nXMLUtil.java: XMLUtil does not have any design pattern.  It is a public class. The only method of XMLUtil is getBean (Object). Only one method ( main method of class Client ) calls getBean and getBean calls 10 methods : newInstance method of class Class, printStackTrace method of class Throwable, newDocumentBuilder method of class DocumentBuilderFactory, parse method of class DocumentBuilder, getFirstChild method of class Node, newInstance method of class DocumentBuilderFactory, item method of class NodeList, getNodeValue method of class Node, getElementsByTagName method of class Document and forName method of class Class.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 5 methods : getBean method of class XMLUtil, setPassword method of class DataOperation, doEncrypt method of class DataOperation, println method of class PrintStream and getPassword method of class DataOperation.\n\n\nDog.java: adapter: Dog acts as an adaptee for adapter DogAdapter, which adapts wang method of Dog, wang method of Dog to Robot, which adapts run method of Dog, run method of Dog to Robot. It is a public class. The 2 methods of Dog are wang (void) and run (void). Only one method ( cry method of class DogAdapter ) calls wang and wang calls only one method : println method of class PrintStream. Only one method ( move method of class DogAdapter ) calls run and run calls only one method : println method of class PrintStream.\n\n facade: Dog acts as a subsystem for facade DogAdapter, which cry method of DogAdapter calls wang, which move method of DogAdapter calls run. It is a public class. The 2 methods of Dog are wang (void) and run (void). Only one method ( cry method of class DogAdapter ) calls wang and wang calls only one method : println method of class PrintStream. Only one method ( move method of class DogAdapter ) calls run and run calls only one method : println method of class PrintStream.\n\n\nRobot.java: adapter: Robot acts as a target for adapter DogAdapter, which adapts to Robot, which adapts to Robot. Robot acts as a target for adapter BirdAdapter, which adapts to Robot, which adapts to Robot. It is a public interface. The 2 methods of Robot are cry (void) and move (void). No methods call cry and cry calls no methods. No methods call move and move calls no methods.\n\n\nBirdAdapter.java: adapter: BirdAdapter acts as an adapter, which adapts to Robot, which adapts to Robot. It is a public class that extends Bird and that implements Robot. The 2 methods of BirdAdapter are cry (void) and move (void). No methods call cry and cry calls 2 methods : tweedle method of class Bird and print method of class PrintStream. No methods call move and move calls 2 methods : fly method of class Bird and print method of class PrintStream.\n\n facade: BirdAdapter acts as a facade for subsystem Bird, which cry calls tweedle method of Bird, print method of PrintStream, which move calls fly method of Bird, print method of PrintStream. It is a public class that extends Bird and that implements Robot. The 2 methods of BirdAdapter are cry (void) and move (void). No methods call cry and cry calls 2 methods : tweedle method of class Bird and print method of class PrintStream. No methods call move and move calls 2 methods : fly method of class Bird and print method of class PrintStream.\n\n\nDogAdapter.java: adapter: DogAdapter acts as an adapter, which adapts to Robot, which adapts to Robot. It is a public class that extends Dog and that implements Robot. The 2 methods of DogAdapter are cry (void) and move (void). No methods call cry and cry calls 2 methods : wang method of class Dog and print method of class PrintStream. No methods call move and move calls 2 methods : run method of class Dog and print method of class PrintStream.\n\n facade: DogAdapter acts as a facade for subsystem Dog, which cry calls wang method of Dog, print method of PrintStream, which move calls run method of Dog, print method of PrintStream. It is a public class that extends Dog and that implements Robot. The 2 methods of DogAdapter are cry (void) and move (void). No methods call cry and cry calls 2 methods : wang method of class Dog and print method of class PrintStream. No methods call move and move calls 2 methods : run method of class Dog and print method of class PrintStream.\n\n\n",
+	"design_pattern" : [ {
+		"adapter" : {
+			"BirdAdapter" : {
+				"adaptee" : [ "Bird" ],
+				"target" : [ "Robot" ]
+			},
+			"DogAdapter" : {
+				"adaptee" : [ "Dog" ],
+				"target" : [ "Robot" ]
+			}
+		}
+	}, {
+		"facade" : {
+			"CipherAdapter" : [ "Caesar" ],
+			"NewCipherAdapter" : [ "NewCipher" ],
+			"BirdAdapter" : [ "Bird" ],
+			"DogAdapter" : [ "Dog" ]
+		}
+	} ],
+	"quanke-Chapter 10 Adapter" : {
+		"DataOperation" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "password" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "DataOperation",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "setPassword",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "password",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getPassword",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "doEncrypt",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "key",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "ps",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"Bird" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Bird",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "tweedle",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "cry",
+					"CALLEDCLASS" : "BirdAdapter"
+				}, {
+					"CALLEDMETHODNAME" : "cry",
+					"CALLEDCLASS" : "BirdAdapter"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "fly",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "move",
+					"CALLEDCLASS" : "BirdAdapter"
+				}, {
+					"CALLEDMETHODNAME" : "move",
+					"CALLEDCLASS" : "BirdAdapter"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Caesar" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Caesar",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "es = \"\"" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "c = ps.charAt(i)" ],
+				"VARIABLECOMMONTYPE" : "char",
+				"VARIABLEELEMENTTYPE" : "char"
+			}, {
+				"VARIABLEDECLARATION" : [ "i = 0" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "doEncrypt",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "doEncrypt",
+					"CALLEDCLASS" : "CipherAdapter"
+				}, {
+					"CALLEDMETHODNAME" : "doEncrypt",
+					"CALLEDCLASS" : "CipherAdapter"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "length"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "charAt"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "key",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "ps",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"Adapter" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Adaptee",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "adaptee" ],
+				"FIELDDATATYPE" : "Adaptee",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Target" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Adapter",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "adaptee",
+					"PARAMETERTYPE" : "Adaptee"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "request",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "adaptee",
+					"CALLEEMETHODNAME" : "specificRequest"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"NewCipher" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "NewCipher",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "es = \"\"" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "c = String.valueOf(ps.charAt(i) % key)" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "i = 0" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "doEncrypt",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "doEncrypt",
+					"CALLEDCLASS" : "NewCipherAdapter"
+				}, {
+					"CALLEDMETHODNAME" : "doEncrypt",
+					"CALLEDCLASS" : "NewCipherAdapter"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "length"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "valueOf"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "charAt"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "key",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "ps",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"CipherAdapter" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Caesar",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "cipher" ],
+				"FIELDDATATYPE" : "Caesar",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "DataOperation" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CipherAdapter",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "doEncrypt",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Caesar",
+					"CALLEEMETHODNAME" : "doEncrypt"
+				}, {
+					"CALLEECLASS" : "Caesar",
+					"CALLEEMETHODNAME" : "doEncrypt"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "key",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "ps",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"NewCipherAdapter" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "NewCipher",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "cipher" ],
+				"FIELDDATATYPE" : "NewCipher",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "DataOperation" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "NewCipherAdapter",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "doEncrypt",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "NewCipher",
+					"CALLEEMETHODNAME" : "doEncrypt"
+				}, {
+					"CALLEECLASS" : "NewCipher",
+					"CALLEEMETHODNAME" : "doEncrypt"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "key",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "ps",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"XMLUtil" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 10,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "XMLUtil",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "dFactory = DocumentBuilderFactory.newInstance()" ],
+				"VARIABLECOMMONTYPE" : "DocumentBuilderFactory",
+				"VARIABLEELEMENTTYPE" : "DocumentBuilderFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "builder = dFactory.newDocumentBuilder()" ],
+				"VARIABLECOMMONTYPE" : "DocumentBuilder",
+				"VARIABLEELEMENTTYPE" : "DocumentBuilder"
+			}, {
+				"VARIABLEDECLARATION" : [ "doc" ],
+				"VARIABLECOMMONTYPE" : "Document",
+				"VARIABLEELEMENTTYPE" : "Document"
+			}, {
+				"VARIABLEDECLARATION" : [ "nl = doc.getElementsByTagName(\"className\")" ],
+				"VARIABLECOMMONTYPE" : "NodeList",
+				"VARIABLEELEMENTTYPE" : "NodeList"
+			}, {
+				"VARIABLEDECLARATION" : [ "classNode = nl.item(0).getFirstChild()" ],
+				"VARIABLECOMMONTYPE" : "Node",
+				"VARIABLEELEMENTTYPE" : "Node"
+			}, {
+				"VARIABLEDECLARATION" : [ "cName = classNode.getNodeValue()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "c = Class.forName(cName)" ],
+				"VARIABLECOMMONTYPE" : "Class",
+				"VARIABLEELEMENTTYPE" : "Class"
+			}, {
+				"VARIABLEDECLARATION" : [ "obj = c.newInstance()" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getBean",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 10,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DocumentBuilderFactory",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "DocumentBuilderFactory",
+					"CALLEEMETHODNAME" : "newDocumentBuilder"
+				}, {
+					"CALLEECLASS" : "DocumentBuilder",
+					"CALLEEMETHODNAME" : "parse"
+				}, {
+					"CALLEECLASS" : "Document",
+					"CALLEEMETHODNAME" : "getElementsByTagName"
+				}, {
+					"CALLEECLASS" : "Node",
+					"CALLEEMETHODNAME" : "getFirstChild"
+				}, {
+					"CALLEECLASS" : "NodeList",
+					"CALLEEMETHODNAME" : "item"
+				}, {
+					"CALLEECLASS" : "Node",
+					"CALLEEMETHODNAME" : "getNodeValue"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "forName"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				}, {
+					"CALLEECLASS" : "DocumentBuilderFactory",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "DocumentBuilderFactory",
+					"CALLEEMETHODNAME" : "newDocumentBuilder"
+				}, {
+					"CALLEECLASS" : "DocumentBuilder",
+					"CALLEEMETHODNAME" : "parse"
+				}, {
+					"CALLEECLASS" : "Document",
+					"CALLEEMETHODNAME" : "getElementsByTagName"
+				}, {
+					"CALLEECLASS" : "Node",
+					"CALLEEMETHODNAME" : "getFirstChild"
+				}, {
+					"CALLEECLASS" : "NodeList",
+					"CALLEEMETHODNAME" : "item"
+				}, {
+					"CALLEECLASS" : "Node",
+					"CALLEEMETHODNAME" : "getNodeValue"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "forName"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "dao = (DataOperation) XMLUtil.getBean()" ],
+				"VARIABLECOMMONTYPE" : "DataOperation",
+				"VARIABLEELEMENTTYPE" : "DataOperation"
+			}, {
+				"VARIABLEDECLARATION" : [ "ps = dao.getPassword()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "es = dao.doEncrypt(6, ps)" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "XMLUtil",
+					"CALLEEMETHODNAME" : "getBean"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "setPassword"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "getPassword"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "doEncrypt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "XMLUtil",
+					"CALLEEMETHODNAME" : "getBean"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "setPassword"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "getPassword"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "doEncrypt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "XMLUtil",
+					"CALLEEMETHODNAME" : "getBean"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "setPassword"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "getPassword"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "doEncrypt"
+				}, {
+					"CALLEECLASS" : "XMLUtil",
+					"CALLEEMETHODNAME" : "getBean"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "setPassword"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "getPassword"
+				}, {
+					"CALLEECLASS" : "DataOperation",
+					"CALLEEMETHODNAME" : "doEncrypt"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Dog" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Dog",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "wang",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "cry",
+					"CALLEDCLASS" : "DogAdapter"
+				}, {
+					"CALLEDMETHODNAME" : "cry",
+					"CALLEDCLASS" : "DogAdapter"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "run",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "move",
+					"CALLEDCLASS" : "DogAdapter"
+				}, {
+					"CALLEDMETHODNAME" : "move",
+					"CALLEDCLASS" : "DogAdapter"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Robot" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Robot",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "cry",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "move",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"BirdAdapter" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "Bird", "Robot" ],
+				"IMPLEMENTSFROM" : [ "Robot" ],
+				"CLASSNAME" : "BirdAdapter",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "cry",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Bird",
+					"CALLEEMETHODNAME" : "tweedle"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				}, {
+					"CALLEECLASS" : "Bird",
+					"CALLEEMETHODNAME" : "tweedle"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "move",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Bird",
+					"CALLEEMETHODNAME" : "fly"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				}, {
+					"CALLEECLASS" : "Bird",
+					"CALLEEMETHODNAME" : "fly"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"DogAdapter" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "Dog", "Robot" ],
+				"IMPLEMENTSFROM" : [ "Robot" ],
+				"CLASSNAME" : "DogAdapter",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "cry",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Dog",
+					"CALLEEMETHODNAME" : "wang"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				}, {
+					"CALLEECLASS" : "Dog",
+					"CALLEEMETHODNAME" : "wang"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "move",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Dog",
+					"CALLEEMETHODNAME" : "run"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				}, {
+					"CALLEECLASS" : "Dog",
+					"CALLEEMETHODNAME" : "run"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"adapter" : {
+			"Bird" : [ "Bird acts as an adaptee for adapter BirdAdapter, which adapts tweedle method of Bird, tweedle method of Bird to Robot, which adapts fly method of Bird, fly method of Bird to Robot." ],
+			"Robot" : [ "Robot acts as a target for adapter DogAdapter, which adapts to Robot, which adapts to Robot.", "Robot acts as a target for adapter BirdAdapter, which adapts to Robot, which adapts to Robot." ],
+			"Dog" : [ "Dog acts as an adaptee for adapter DogAdapter, which adapts wang method of Dog, wang method of Dog to Robot, which adapts run method of Dog, run method of Dog to Robot." ],
+			"BirdAdapter" : [ "BirdAdapter acts as an adapter, which adapts to Robot, which adapts to Robot." ],
+			"DogAdapter" : [ "DogAdapter acts as an adapter, which adapts to Robot, which adapts to Robot." ]
+		},
+		"facade" : {
+			"CipherAdapter" : [ "CipherAdapter acts as a facade for subsystem Caesar, which doEncrypt calls doEncrypt method of Caesar." ],
+			"NewCipherAdapter" : [ "NewCipherAdapter acts as a facade for subsystem NewCipher, which doEncrypt calls doEncrypt method of NewCipher." ],
+			"Caesar" : [ "Caesar acts as a subsystem for facade CipherAdapter, which doEncrypt method of CipherAdapter calls doEncrypt." ],
+			"Bird" : [ "Bird acts as a subsystem for facade BirdAdapter, which cry method of BirdAdapter calls tweedle, which move method of BirdAdapter calls fly." ],
+			"NewCipher" : [ "NewCipher acts as a subsystem for facade NewCipherAdapter, which doEncrypt method of NewCipherAdapter calls doEncrypt." ],
+			"Dog" : [ "Dog acts as a subsystem for facade DogAdapter, which cry method of DogAdapter calls wang, which move method of DogAdapter calls run." ],
+			"BirdAdapter" : [ "BirdAdapter acts as a facade for subsystem Bird, which cry calls tweedle method of Bird, print method of PrintStream, which move calls fly method of Bird, print method of PrintStream." ],
+			"DogAdapter" : [ "DogAdapter acts as a facade for subsystem Dog, which cry calls wang method of Dog, print method of PrintStream, which move calls run method of Dog, print method of PrintStream." ]
+		}
+	}
+}

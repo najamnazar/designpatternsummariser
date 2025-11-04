@@ -1,0 +1,477 @@
+{
+	"final_summary" : "StrawberryIceCream.java: memento: StrawberryIceCream acts as a memento, which gets Ice Cream Name, which gets Ice Cream Name, which gets Ice Cream Name, which gets Ice Cream Name. It is a public class that implements IceCream. The 4 methods of StrawberryIceCream are toString (String), getCalories (Integer), getCost (Integer) and getIceCreamName (String). No methods call toString and toString calls 4 methods : getCost method of class StrawberryIceCream, getCalories method of class StrawberryIceCream, getClass method of class Object and getSimpleName method of class Class. Only one method ( toString method of class StrawberryIceCream ) calls getCalories and getCalories calls no methods. Only one method ( toString method of class StrawberryIceCream ) calls getCost and getCost calls no methods. No methods call getIceCreamName and getIceCreamName calls 2 methods : getClass method of class Object and getSimpleName method of class Class.\n\n\nIceCreamFactory.java: memento: IceCreamFactory acts as an originator for memento IceCream, which creates an IceCream Ice Cream to. It is a public class. The only method of IceCreamFactory is createIceCream (IceCream). Only one method ( main method of class Client ) calls createIceCream and createIceCream calls only one method : equalsIgnoreCase method of class String.\n\n\nIceCream.java: memento: IceCream acts as a memento, which is inherited by StrawberryIceCream, ChocolateIceCream, which gets Ice Cream Name, which gets Ice Cream Name, which gets Ice Cream Name. It is a public interface. The 3 methods of IceCream are getCalories (Integer), getCost (Integer) and getIceCreamName (String). No methods call getCalories and getCalories calls no methods. No methods call getCost and getCost calls no methods. No methods call getIceCreamName and getIceCreamName calls no methods.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 6 methods : getIceCreamName method of class iceCream, createIceCream method of class IceCreamFactory, next method of class Scanner, println method of class PrintStream, print method of class out and println method of class out.\n\n\nChocolateIceCream.java: memento: ChocolateIceCream acts as a memento, which gets Ice Cream Name, which gets Ice Cream Name, which gets Ice Cream Name, which gets Ice Cream Name. It is a public class that implements IceCream. The 4 methods of ChocolateIceCream are toString (String), getCalories (Integer), getCost (Integer) and getIceCreamName (String). No methods call toString and toString calls 4 methods : getCost method of class ChocolateIceCream, getClass method of class Object, getCalories method of class ChocolateIceCream and getSimpleName method of class Class. Only one method ( toString method of class ChocolateIceCream ) calls getCalories and getCalories calls no methods. Only one method ( toString method of class ChocolateIceCream ) calls getCost and getCost calls no methods. No methods call getIceCreamName and getIceCreamName calls 2 methods : getClass method of class Object and getSimpleName method of class Class.\n\n\n",
+	"design_pattern" : [ {
+		"memento" : {
+			"IceCream" : {
+				"caretaker" : { },
+				"originator" : {
+					"IceCreamFactory" : [ ]
+				},
+				"concrete_memento" : [ "StrawberryIceCream", "ChocolateIceCream" ]
+			}
+		}
+	} ],
+	"premaseem-pattern-factory" : {
+		"StrawberryIceCream" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "brand = \"\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Integer",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "cost = 0" ],
+				"FIELDDATATYPE" : "Integer",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Integer",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "calories = 0" ],
+				"FIELDDATATYPE" : "Integer",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "IceCream" ],
+				"CLASSNAME" : "StrawberryIceCream",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "cost",
+					"PARAMETERTYPE" : "Integer"
+				}, {
+					"PARAMETERNAME" : "calories",
+					"PARAMETERTYPE" : "Integer"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "StrawberryIceCream",
+					"CALLEEMETHODNAME" : "getCalories"
+				}, {
+					"CALLEECLASS" : "StrawberryIceCream",
+					"CALLEEMETHODNAME" : "getCost"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "getSimpleName"
+				}, {
+					"CALLEECLASS" : "Object",
+					"CALLEEMETHODNAME" : "getClass"
+				}, {
+					"CALLEECLASS" : "StrawberryIceCream",
+					"CALLEEMETHODNAME" : "getCalories"
+				}, {
+					"CALLEECLASS" : "StrawberryIceCream",
+					"CALLEEMETHODNAME" : "getCost"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCalories",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "StrawberryIceCream"
+				}, {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "StrawberryIceCream"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "StrawberryIceCream"
+				}, {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "StrawberryIceCream"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getIceCreamName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "getSimpleName"
+				}, {
+					"CALLEECLASS" : "Object",
+					"CALLEEMETHODNAME" : "getClass"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"IceCreamFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "IceCreamFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "iceCream = null" ],
+				"VARIABLECOMMONTYPE" : "IceCream",
+				"VARIABLEELEMENTTYPE" : "IceCream"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createIceCream",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "static", "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "IceCream",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equalsIgnoreCase"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equalsIgnoreCase"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "iceCreamChoice",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"IceCream" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "IceCream",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getCalories",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getIceCreamName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 14,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "iceCreamChoice = scan.next()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "iceCream = null" ],
+				"VARIABLECOMMONTYPE" : "IceCream",
+				"VARIABLEELEMENTTYPE" : "IceCream"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 14,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "next"
+				}, {
+					"CALLEECLASS" : "IceCreamFactory",
+					"CALLEEMETHODNAME" : "createIceCream"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "print"
+				}, {
+					"CALLEECLASS" : "iceCream",
+					"CALLEEMETHODNAME" : "getIceCreamName"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 15,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"ChocolateIceCream" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "brand = \"\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Integer",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "cost = 0" ],
+				"FIELDDATATYPE" : "Integer",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Integer",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "calories = 0" ],
+				"FIELDDATATYPE" : "Integer",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "IceCream" ],
+				"CLASSNAME" : "ChocolateIceCream",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "cost",
+					"PARAMETERTYPE" : "Integer"
+				}, {
+					"PARAMETERNAME" : "calories",
+					"PARAMETERTYPE" : "Integer"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "getSimpleName"
+				}, {
+					"CALLEECLASS" : "Object",
+					"CALLEEMETHODNAME" : "getClass"
+				}, {
+					"CALLEECLASS" : "ChocolateIceCream",
+					"CALLEEMETHODNAME" : "getCalories"
+				}, {
+					"CALLEECLASS" : "ChocolateIceCream",
+					"CALLEEMETHODNAME" : "getCost"
+				}, {
+					"CALLEECLASS" : "ChocolateIceCream",
+					"CALLEEMETHODNAME" : "getCalories"
+				}, {
+					"CALLEECLASS" : "ChocolateIceCream",
+					"CALLEEMETHODNAME" : "getCost"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCalories",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "ChocolateIceCream"
+				}, {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "ChocolateIceCream"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "ChocolateIceCream"
+				}, {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "ChocolateIceCream"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getIceCreamName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "getSimpleName"
+				}, {
+					"CALLEECLASS" : "Object",
+					"CALLEEMETHODNAME" : "getClass"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"memento" : {
+			"StrawberryIceCream" : [ "StrawberryIceCream acts as a memento, which gets Ice Cream Name, which gets Ice Cream Name, which gets Ice Cream Name, which gets Ice Cream Name." ],
+			"IceCreamFactory" : [ "IceCreamFactory acts as an originator for memento IceCream, which creates an IceCream Ice Cream to." ],
+			"IceCream" : [ "IceCream acts as a memento, which is inherited by StrawberryIceCream, ChocolateIceCream, which gets Ice Cream Name, which gets Ice Cream Name, which gets Ice Cream Name." ],
+			"ChocolateIceCream" : [ "ChocolateIceCream acts as a memento, which gets Ice Cream Name, which gets Ice Cream Name, which gets Ice Cream Name, which gets Ice Cream Name." ]
+		}
+	}
+}

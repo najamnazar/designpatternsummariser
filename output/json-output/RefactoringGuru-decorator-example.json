@@ -1,0 +1,647 @@
+{
+	"RefactoringGuru-decorator-example" : {
+		"DataSourceDecorator" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "DataSource",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "wrappee" ],
+				"FIELDDATATYPE" : "DataSource",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "DataSource" ],
+				"CLASSNAME" : "DataSourceDecorator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "source",
+					"PARAMETERTYPE" : "DataSource"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "writeData",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "wrappee",
+					"CALLEEMETHODNAME" : "writeData"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "data",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "readData",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "wrappee",
+					"CALLEEMETHODNAME" : "readData"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Demo" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 9,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Demo",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "salaryRecords = \"Name,Salary\\nJohn Smith,100000\\nSteven Jobs,912000\"" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "encoded = new CompressionDecorator(new EncryptionDecorator(new FileDataSource(\"out/OutputDemo.txt\")))" ],
+				"VARIABLECOMMONTYPE" : "DataSourceDecorator",
+				"VARIABLEELEMENTTYPE" : "DataSourceDecorator"
+			}, {
+				"VARIABLEDECLARATION" : [ "plain = new FileDataSource(\"out/OutputDemo.txt\")" ],
+				"VARIABLECOMMONTYPE" : "DataSource",
+				"VARIABLEELEMENTTYPE" : "DataSource"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 9,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "encoded",
+					"CALLEEMETHODNAME" : "writeData"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "plain",
+					"CALLEEMETHODNAME" : "readData"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "encoded",
+					"CALLEEMETHODNAME" : "readData"
+				} ],
+				"NUMBEROFMETHODLINES" : 10,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"EncryptionDecorator" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 9,
+				"EXTENDSFROM" : [ "DataSourceDecorator" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EncryptionDecorator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "source",
+					"PARAMETERTYPE" : "DataSource"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "result = data.getBytes()" ],
+				"VARIABLECOMMONTYPE" : "byte[]",
+				"VARIABLEELEMENTTYPE" : "byte"
+			}, {
+				"VARIABLEDECLARATION" : [ "i = 0" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "result = Base64.getDecoder().decode(data)" ],
+				"VARIABLECOMMONTYPE" : "byte[]",
+				"VARIABLEELEMENTTYPE" : "byte"
+			}, {
+				"VARIABLEDECLARATION" : [ "i = 0" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "writeData",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "writeData"
+				}, {
+					"CALLEECLASS" : "EncryptionDecorator",
+					"CALLEEMETHODNAME" : "encode"
+				}, {
+					"CALLEECLASS" : "EncryptionDecorator",
+					"CALLEEMETHODNAME" : "encode"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "data",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "readData",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "decode"
+				}, {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "readData"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "encode",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "writeData",
+					"CALLEDCLASS" : "EncryptionDecorator"
+				}, {
+					"CALLEDMETHODNAME" : "writeData",
+					"CALLEDCLASS" : "EncryptionDecorator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "getBytes"
+				}, {
+					"CALLEECLASS" : "Encoder",
+					"CALLEEMETHODNAME" : "encodeToString"
+				}, {
+					"CALLEECLASS" : "Base64",
+					"CALLEEMETHODNAME" : "getEncoder"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "data",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "decode",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Decoder",
+					"CALLEEMETHODNAME" : "decode"
+				}, {
+					"CALLEECLASS" : "Base64",
+					"CALLEEMETHODNAME" : "getDecoder"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "data",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"CompressionDecorator" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "compLevel = 6" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 19,
+				"EXTENDSFROM" : [ "DataSourceDecorator" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CompressionDecorator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "source",
+					"PARAMETERTYPE" : "DataSource"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "data = stringData.getBytes()" ],
+				"VARIABLECOMMONTYPE" : "byte[]",
+				"VARIABLEELEMENTTYPE" : "byte"
+			}, {
+				"VARIABLEDECLARATION" : [ "bout = new ByteArrayOutputStream(512)" ],
+				"VARIABLECOMMONTYPE" : "ByteArrayOutputStream",
+				"VARIABLEELEMENTTYPE" : "ByteArrayOutputStream"
+			}, {
+				"VARIABLEDECLARATION" : [ "dos = new DeflaterOutputStream(bout, new Deflater(compLevel))" ],
+				"VARIABLECOMMONTYPE" : "DeflaterOutputStream",
+				"VARIABLEELEMENTTYPE" : "DeflaterOutputStream"
+			}, {
+				"VARIABLEDECLARATION" : [ "data = Base64.getDecoder().decode(stringData)" ],
+				"VARIABLECOMMONTYPE" : "byte[]",
+				"VARIABLEELEMENTTYPE" : "byte"
+			}, {
+				"VARIABLEDECLARATION" : [ "in = new ByteArrayInputStream(data)" ],
+				"VARIABLECOMMONTYPE" : "InputStream",
+				"VARIABLEELEMENTTYPE" : "InputStream"
+			}, {
+				"VARIABLEDECLARATION" : [ "iin = new InflaterInputStream(in)" ],
+				"VARIABLECOMMONTYPE" : "InflaterInputStream",
+				"VARIABLEELEMENTTYPE" : "InflaterInputStream"
+			}, {
+				"VARIABLEDECLARATION" : [ "bout = new ByteArrayOutputStream(512)" ],
+				"VARIABLECOMMONTYPE" : "ByteArrayOutputStream",
+				"VARIABLEELEMENTTYPE" : "ByteArrayOutputStream"
+			}, {
+				"VARIABLEDECLARATION" : [ "b" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getCompressionLevel",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setCompressionLevel",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "value",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "writeData",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CompressionDecorator",
+					"CALLEEMETHODNAME" : "compress"
+				}, {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "writeData"
+				}, {
+					"CALLEECLASS" : "CompressionDecorator",
+					"CALLEEMETHODNAME" : "compress"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "data",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "readData",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "decompress"
+				}, {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "readData"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "compress",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "writeData",
+					"CALLEDCLASS" : "CompressionDecorator"
+				}, {
+					"CALLEDMETHODNAME" : "writeData",
+					"CALLEDCLASS" : "CompressionDecorator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "getBytes"
+				}, {
+					"CALLEECLASS" : "FilterOutputStream",
+					"CALLEEMETHODNAME" : "write"
+				}, {
+					"CALLEECLASS" : "DeflaterOutputStream",
+					"CALLEEMETHODNAME" : "close"
+				}, {
+					"CALLEECLASS" : "ByteArrayOutputStream",
+					"CALLEEMETHODNAME" : "close"
+				}, {
+					"CALLEECLASS" : "Encoder",
+					"CALLEEMETHODNAME" : "encodeToString"
+				}, {
+					"CALLEECLASS" : "Base64",
+					"CALLEEMETHODNAME" : "getEncoder"
+				}, {
+					"CALLEECLASS" : "ByteArrayOutputStream",
+					"CALLEEMETHODNAME" : "toByteArray"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "stringData",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "decompress",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 8,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Decoder",
+					"CALLEEMETHODNAME" : "decode"
+				}, {
+					"CALLEECLASS" : "Base64",
+					"CALLEEMETHODNAME" : "getDecoder"
+				}, {
+					"CALLEECLASS" : "InflaterInputStream",
+					"CALLEEMETHODNAME" : "read"
+				}, {
+					"CALLEECLASS" : "ByteArrayOutputStream",
+					"CALLEEMETHODNAME" : "write"
+				}, {
+					"CALLEECLASS" : "InputStream",
+					"CALLEEMETHODNAME" : "close"
+				}, {
+					"CALLEECLASS" : "InflaterInputStream",
+					"CALLEEMETHODNAME" : "close"
+				}, {
+					"CALLEECLASS" : "ByteArrayOutputStream",
+					"CALLEEMETHODNAME" : "close"
+				}, {
+					"CALLEECLASS" : "ByteArrayOutputStream",
+					"CALLEEMETHODNAME" : "toByteArray"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "stringData",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"FileDataSource" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 9,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "DataSource" ],
+				"CLASSNAME" : "FileDataSource",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "file = new File(name)" ],
+				"VARIABLECOMMONTYPE" : "File",
+				"VARIABLEELEMENTTYPE" : "File"
+			}, {
+				"VARIABLEDECLARATION" : [ "fos = new FileOutputStream(file)" ],
+				"VARIABLECOMMONTYPE" : "OutputStream",
+				"VARIABLEELEMENTTYPE" : "OutputStream"
+			}, {
+				"VARIABLEDECLARATION" : [ "buffer = null" ],
+				"VARIABLECOMMONTYPE" : "char[]",
+				"VARIABLEELEMENTTYPE" : "char"
+			}, {
+				"VARIABLEDECLARATION" : [ "file = new File(name)" ],
+				"VARIABLECOMMONTYPE" : "File",
+				"VARIABLEELEMENTTYPE" : "File"
+			}, {
+				"VARIABLEDECLARATION" : [ "reader = new FileReader(file)" ],
+				"VARIABLECOMMONTYPE" : "FileReader",
+				"VARIABLEELEMENTTYPE" : "FileReader"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "writeData",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "OutputStream",
+					"CALLEEMETHODNAME" : "write"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "getBytes"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "length"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "getMessage"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "data",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "readData",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "OTHER", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "File",
+					"CALLEEMETHODNAME" : "length"
+				}, {
+					"CALLEECLASS" : "Reader",
+					"CALLEEMETHODNAME" : "read"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "getMessage"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"DataSource" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "DataSource",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "writeData",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "data",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "readData",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"final_summary" : "DataSourceDecorator.java: DataSourceDecorator does not have any design pattern.  It is a public abstract class that implements DataSource. The 2 methods of DataSourceDecorator are writeData (void) and readData (String). No methods call writeData and writeData calls only one method : writeData method of class wrappee. No methods call readData and readData calls only one method : readData method of class wrappee.\n\n\nDemo.java: Demo does not have any design pattern.  It is a public class. The only method of Demo is main (void). No methods call main and main calls 5 methods : readData method of class plain, writeData method of class encoded, println method of class PrintStream, println method of class out and readData method of class encoded.\n\n\nEncryptionDecorator.java: EncryptionDecorator does not have any design pattern.  It is a public class that extends DataSourceDecorator. The 4 methods of EncryptionDecorator are writeData (void), readData (String), encode (String) and decode (String). No methods call writeData and writeData calls 2 methods : writeData method of class super and encode method of class EncryptionDecorator. No methods call readData and readData calls 2 methods : readData method of class super and decode method of class UNKNOWN. Only one method ( writeData method of class EncryptionDecorator ) calls encode and encode calls 3 methods : encodeToString method of class Encoder, getEncoder method of class Base64 and getBytes method of class String. No methods call decode and decode calls 2 methods : getDecoder method of class Base64 and decode method of class Decoder.\n\n\nCompressionDecorator.java: CompressionDecorator does not have any design pattern.  It is a public class that extends DataSourceDecorator. The 6 methods of CompressionDecorator are getCompressionLevel (int), setCompressionLevel (void), writeData (void), readData (String), compress (String) and decompress (String). No methods call getCompressionLevel and getCompressionLevel calls no methods. No methods call setCompressionLevel and setCompressionLevel calls no methods. No methods call writeData and writeData calls 2 methods : writeData method of class super and compress method of class CompressionDecorator. No methods call readData and readData calls 2 methods : readData method of class super and decompress method of class UNKNOWN. Only one method ( writeData method of class CompressionDecorator ) calls compress and compress calls 7 methods : encodeToString method of class Encoder, getEncoder method of class Base64, getBytes method of class String, close method of class DeflaterOutputStream, toByteArray method of class ByteArrayOutputStream, write method of class FilterOutputStream and close method of class ByteArrayOutputStream. No methods call decompress and decompress calls 8 methods : close method of class InflaterInputStream, read method of class InflaterInputStream, getDecoder method of class Base64, write method of class ByteArrayOutputStream, close method of class InputStream, decode method of class Decoder, toByteArray method of class ByteArrayOutputStream and close method of class ByteArrayOutputStream.\n\n\nFileDataSource.java: FileDataSource does not have any design pattern.  It is a public class that implements DataSource. The 2 methods of FileDataSource are writeData (void) and readData (String). No methods call writeData and writeData calls 5 methods : write method of class OutputStream, getBytes method of class String, getMessage method of class Throwable, println method of class PrintStream and length method of class String. No methods call readData and readData calls 4 methods : length method of class File, read method of class Reader, getMessage method of class Throwable and println method of class PrintStream.\n\n\nDataSource.java: DataSource does not have any design pattern.  It is a public interface. The 2 methods of DataSource are writeData (void) and readData (String). No methods call writeData and writeData calls no methods. No methods call readData and readData calls no methods.\n\n\n",
+	"design_pattern" : [ ],
+	"summary_NLG" : { }
+}

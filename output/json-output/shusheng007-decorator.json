@@ -1,0 +1,317 @@
+{
+	"final_summary" : "ICoffee.java: decorator: ICoffee acts as a component for CoffeeDecorator, which is inherited by OriginalCoffee. It is a public interface. The only method of ICoffee is makeCoffee (void). No methods call makeCoffee and makeCoffee calls no methods.\n\n\nOriginalCoffee.java: decorator: OriginalCoffee acts as a component for decorator CoffeeDecorator, which overrides makeCoffeeICoffee. It is a public class that implements ICoffee. The only method of OriginalCoffee is makeCoffee (void). No methods call makeCoffee and makeCoffee calls only one method : print method of class PrintStream.\n\n\nCoffeeDecorator.java: decorator: CoffeeDecorator acts as a decorator for component ICoffee, which is inherited by MilkDecorator, SugarDecorator. It is a public abstract class that implements ICoffee. The only method of CoffeeDecorator is makeCoffee (void). No methods call makeCoffee and makeCoffee calls only one method : makeCoffee method of class coffee.\n\n\nMilkDecorator.java: decorator: MilkDecorator acts as a decorator for decorator CoffeeDecorator, which overrides makeCoffee method of CoffeeDecorator. It is a public class that extends CoffeeDecorator. The 2 methods of MilkDecorator are makeCoffee (void) and addMilk (void). No methods call makeCoffee and makeCoffee calls 2 methods : makeCoffee method of class super and addMilk method of class MilkDecorator. Only one method ( makeCoffee method of class MilkDecorator ) calls addMilk and addMilk calls only one method : print method of class PrintStream.\n\n\nSugarDecorator.java: decorator: SugarDecorator acts as a decorator for decorator CoffeeDecorator, which overrides makeCoffee method of CoffeeDecorator. It is a public class that extends CoffeeDecorator. The 2 methods of SugarDecorator are makeCoffee (void) and addSugar (void). No methods call makeCoffee and makeCoffee calls 2 methods : makeCoffee method of class super and addSugar method of class SugarDecorator. Only one method ( makeCoffee method of class SugarDecorator ) calls addSugar and addSugar calls only one method : print method of class PrintStream.\n\n\nDecoratorClient.java: DecoratorClient does not have any design pattern.  It is a public class. The only method of DecoratorClient is makeCoffee (void). No methods call makeCoffee and makeCoffee calls 2 methods : makeCoffee method of class coffee and println method of class PrintStream.\n\n\n",
+	"design_pattern" : [ {
+		"decorator" : {
+			"CoffeeDecorator" : {
+				"component" : {
+					"ICoffee" : {
+						"concrete_component" : [ "OriginalCoffee" ]
+					}
+				},
+				"concrete_decorator" : [ "MilkDecorator", "SugarDecorator" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"decorator" : {
+			"ICoffee" : [ "ICoffee acts as a component for CoffeeDecorator, which is inherited by OriginalCoffee." ],
+			"OriginalCoffee" : [ "OriginalCoffee acts as a component for decorator CoffeeDecorator, which overrides makeCoffeeICoffee." ],
+			"CoffeeDecorator" : [ "CoffeeDecorator acts as a decorator for component ICoffee, which is inherited by MilkDecorator, SugarDecorator." ],
+			"MilkDecorator" : [ "MilkDecorator acts as a decorator for decorator CoffeeDecorator, which overrides makeCoffee method of CoffeeDecorator." ],
+			"SugarDecorator" : [ "SugarDecorator acts as a decorator for decorator CoffeeDecorator, which overrides makeCoffee method of CoffeeDecorator." ]
+		}
+	},
+	"shusheng007-decorator" : {
+		"ICoffee" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ICoffee",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeCoffee",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"OriginalCoffee" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "ICoffee" ],
+				"CLASSNAME" : "OriginalCoffee",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeCoffee",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"CoffeeDecorator" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ICoffee",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "coffee" ],
+				"FIELDDATATYPE" : "ICoffee",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "ICoffee" ],
+				"CLASSNAME" : "CoffeeDecorator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "coffee",
+					"PARAMETERTYPE" : "ICoffee"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeCoffee",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "makeCoffee"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MilkDecorator" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ "CoffeeDecorator" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "MilkDecorator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "coffee",
+					"PARAMETERTYPE" : "ICoffee"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeCoffee",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "MilkDecorator",
+					"CALLEEMETHODNAME" : "addMilk"
+				}, {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "makeCoffee"
+				}, {
+					"CALLEECLASS" : "MilkDecorator",
+					"CALLEEMETHODNAME" : "addMilk"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "addMilk",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "makeCoffee",
+					"CALLEDCLASS" : "MilkDecorator"
+				}, {
+					"CALLEDMETHODNAME" : "makeCoffee",
+					"CALLEDCLASS" : "MilkDecorator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"SugarDecorator" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ "CoffeeDecorator" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SugarDecorator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "coffee",
+					"PARAMETERTYPE" : "ICoffee"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeCoffee",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "SugarDecorator",
+					"CALLEEMETHODNAME" : "addSugar"
+				}, {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "makeCoffee"
+				}, {
+					"CALLEECLASS" : "SugarDecorator",
+					"CALLEEMETHODNAME" : "addSugar"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "addSugar",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "makeCoffee",
+					"CALLEDCLASS" : "SugarDecorator"
+				}, {
+					"CALLEDMETHODNAME" : "makeCoffee",
+					"CALLEDCLASS" : "SugarDecorator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"DecoratorClient" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "DecoratorClient",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "coffee = new OriginalCoffee()" ],
+				"VARIABLECOMMONTYPE" : "ICoffee",
+				"VARIABLEELEMENTTYPE" : "ICoffee"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeCoffee",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "makeCoffee"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "makeCoffee"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "coffee",
+					"CALLEEMETHODNAME" : "makeCoffee"
+				} ],
+				"NUMBEROFMETHODLINES" : 8,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

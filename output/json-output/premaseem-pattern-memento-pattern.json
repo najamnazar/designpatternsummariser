@@ -1,0 +1,640 @@
+{
+	"final_summary" : "Memento.java: memento: Memento acts as a memento, which gets Player Snap Shot. It is a public class. The only method of Memento is getPlayerSnapShot (GamePlayer). No methods call getPlayerSnapShot and getPlayerSnapShot calls no methods.\n\n\nCareTaker.java: memento: CareTaker acts as a caretaker for memento Memento, which saves String parameter of restorePointName, GamePlayer parameter of player Game, which restores String parameter of restorePointName, GamePlayer parameter of player Game. It is a public class. The 2 methods of CareTaker are saveGame (void) and restoreGame (void). No methods call saveGame and saveGame calls 2 methods : put method of class restorePoints and saveMemento method of class Originator. No methods call restoreGame and restoreGame calls 4 methods : get method of class restorePoints, restorePlayerSnapshot method of class Originator, printf method of class PrintStream and getPlayerSnapShot method of class memento.\n\n\nOriginator.java: observer: Originator acts as a publisher for observer GamePlayer, which is inherited by, which saves GamePlayer parameter of player Memento, which creates GamePlayer parameter of player Player Snapshot, which restores GamePlayer parameter of playerSnapShot, GamePlayer parameter of player Player Snapshot. It is a public class. The 3 methods of Originator are saveMemento (Memento), createPlayerSnapshot (GamePlayer) and restorePlayerSnapshot (void). Only one method ( saveGame method of class CareTaker ) calls saveMemento and saveMemento calls only one method : createPlayerSnapshot method of class UNKNOWN. No methods call createPlayerSnapshot and createPlayerSnapshot calls 2 methods : clone method of class player and printStackTrace method of class Throwable. Only one method ( restoreGame method of class CareTaker ) calls restorePlayerSnapshot and restorePlayerSnapshot calls 8 methods : getLevel method of class player, getPlayerName method of class player, getTotalPoints method of class player, setLevel method of class playerSnapShot, setTotalPoints method of class playerSnapShot, setPlayerName method of class playerSnapShot, setMaskPicked method of class playerSnapShot and getMaskPicked method of class player.\n\n memento: Originator acts as an originator for memento Memento, which saves a Memento Memento to. It is a public class. The 3 methods of Originator are saveMemento (Memento), createPlayerSnapshot (GamePlayer) and restorePlayerSnapshot (void). Only one method ( saveGame method of class CareTaker ) calls saveMemento and saveMemento calls only one method : createPlayerSnapshot method of class UNKNOWN. No methods call createPlayerSnapshot and createPlayerSnapshot calls 2 methods : clone method of class player and printStackTrace method of class Throwable. Only one method ( restoreGame method of class CareTaker ) calls restorePlayerSnapshot and restorePlayerSnapshot calls 8 methods : getLevel method of class player, getPlayerName method of class player, getTotalPoints method of class player, setLevel method of class playerSnapShot, setTotalPoints method of class playerSnapShot, setPlayerName method of class playerSnapShot, setMaskPicked method of class playerSnapShot and getMaskPicked method of class player.\n\n\nClientFile.java: ClientFile does not have any design pattern.  It is a public class. The only method of ClientFile is main (void). No methods call main and main calls 9 methods : next method of class Scanner, equalsIgnoreCase method of class String, println method of class out, setPlayerName method of class player, saveGame method of class careTaker, restoreGame method of class careTaker, setMaskPicked method of class player, println method of class PrintStream and increase100Points method of class player.\n\n\nGamePlayer.java: observer: GamePlayer acts as an observer for publisher Originator, which is inherited by, which gets Player Name, which sets String parameter of playerName Player Name, which gets Mask Picked, which sets String parameter of maskPicked Mask Picked, which gets Level, which sets Integer parameter of level Level, which gets Total Points, which sets Integer parameter of totalPoints Total Points, which increase100Pointses, which clones, which tos String. It is a public class that implements Cloneable. The 11 methods of GamePlayer are getPlayerName (String), setPlayerName (void), getMaskPicked (String), setMaskPicked (void), getLevel (Integer), setLevel (void), getTotalPoints (Integer), setTotalPoints (void), increase100Points (void), clone (Object) and toString (String). No methods call getPlayerName and getPlayerName calls no methods. No methods call setPlayerName and setPlayerName calls no methods. No methods call getMaskPicked and getMaskPicked calls no methods. No methods call setMaskPicked and setMaskPicked calls no methods. No methods call getLevel and getLevel calls no methods. No methods call setLevel and setLevel calls no methods. No methods call getTotalPoints and getTotalPoints calls no methods. No methods call setTotalPoints and setTotalPoints calls no methods. No methods call increase100Points and increase100Points calls no methods. No methods call clone and clone calls only one method : clone method of class Object. No methods call toString and toString calls 2 methods : printf method of class PrintStream and toString method of class Object.\n\n\n",
+	"design_pattern" : [ {
+		"observer" : {
+			"GamePlayer" : {
+				"concrete_observer" : [ ],
+				"publisher" : {
+					"Originator" : [ ]
+				}
+			}
+		}
+	}, {
+		"memento" : {
+			"Memento" : {
+				"caretaker" : {
+					"CareTaker" : [ ]
+				},
+				"originator" : {
+					"Originator" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"Originator" : [ "Originator acts as a publisher for observer GamePlayer, which is inherited by, which saves GamePlayer parameter of player Memento, which creates GamePlayer parameter of player Player Snapshot, which restores GamePlayer parameter of playerSnapShot, GamePlayer parameter of player Player Snapshot." ],
+			"GamePlayer" : [ "GamePlayer acts as an observer for publisher Originator, which is inherited by, which gets Player Name, which sets String parameter of playerName Player Name, which gets Mask Picked, which sets String parameter of maskPicked Mask Picked, which gets Level, which sets Integer parameter of level Level, which gets Total Points, which sets Integer parameter of totalPoints Total Points, which increase100Pointses, which clones, which tos String." ]
+		},
+		"memento" : {
+			"Memento" : [ "Memento acts as a memento, which gets Player Snap Shot." ],
+			"CareTaker" : [ "CareTaker acts as a caretaker for memento Memento, which saves String parameter of restorePointName, GamePlayer parameter of player Game, which restores String parameter of restorePointName, GamePlayer parameter of player Game." ],
+			"Originator" : [ "Originator acts as an originator for memento Memento, which saves a Memento Memento to." ]
+		}
+	},
+	"premaseem-pattern-memento-pattern" : {
+		"Memento" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "GamePlayer",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "player" ],
+				"FIELDDATATYPE" : "GamePlayer",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Memento",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "player",
+					"PARAMETERTYPE" : "GamePlayer"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getPlayerSnapShot",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "GamePlayer",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"CareTaker" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Map<String, Memento>",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "restorePoints = new HashMap<String, Memento>()" ],
+				"FIELDDATATYPE" : "Map<String, Memento>",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Originator",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "Originator = new Originator()" ],
+				"FIELDDATATYPE" : "Originator",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CareTaker",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "memento = Originator.saveMemento(player)" ],
+				"VARIABLECOMMONTYPE" : "Memento",
+				"VARIABLEELEMENTTYPE" : "Memento"
+			}, {
+				"VARIABLEDECLARATION" : [ "playerSnapShot = null" ],
+				"VARIABLECOMMONTYPE" : "GamePlayer",
+				"VARIABLEELEMENTTYPE" : "GamePlayer"
+			}, {
+				"VARIABLEDECLARATION" : [ "memento = restorePoints.get(restorePointName)" ],
+				"VARIABLECOMMONTYPE" : "Memento",
+				"VARIABLEELEMENTTYPE" : "Memento"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "saveGame",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Originator",
+					"CALLEEMETHODNAME" : "saveMemento"
+				}, {
+					"CALLEECLASS" : "restorePoints",
+					"CALLEEMETHODNAME" : "put"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "restorePointName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "player",
+					"PARAMETERTYPE" : "GamePlayer"
+				} ]
+			}, {
+				"METHODNAME" : "restoreGame",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "restorePoints",
+					"CALLEEMETHODNAME" : "get"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "printf"
+				}, {
+					"CALLEECLASS" : "memento",
+					"CALLEEMETHODNAME" : "getPlayerSnapShot"
+				}, {
+					"CALLEECLASS" : "Originator",
+					"CALLEEMETHODNAME" : "restorePlayerSnapshot"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "printf"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "restorePointName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "player",
+					"PARAMETERTYPE" : "GamePlayer"
+				} ]
+			} ]
+		},
+		"Originator" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "GamePlayer",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "player" ],
+				"FIELDDATATYPE" : "GamePlayer",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 11,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Originator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "playerSnapShot = createPlayerSnapshot(player)" ],
+				"VARIABLECOMMONTYPE" : "GamePlayer",
+				"VARIABLEELEMENTTYPE" : "GamePlayer"
+			}, {
+				"VARIABLEDECLARATION" : [ "memento = new Memento(playerSnapShot)" ],
+				"VARIABLECOMMONTYPE" : "Memento",
+				"VARIABLEELEMENTTYPE" : "Memento"
+			}, {
+				"VARIABLEDECLARATION" : [ "playerSnapShot = null" ],
+				"VARIABLECOMMONTYPE" : "GamePlayer",
+				"VARIABLEELEMENTTYPE" : "GamePlayer"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "saveMemento",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "saveGame",
+					"CALLEDCLASS" : "CareTaker"
+				} ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Memento",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "createPlayerSnapshot"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "player",
+					"PARAMETERTYPE" : "GamePlayer"
+				} ]
+			}, {
+				"METHODNAME" : "createPlayerSnapshot",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "OTHER", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "GamePlayer",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "player",
+					"CALLEEMETHODNAME" : "clone"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "player",
+					"PARAMETERTYPE" : "GamePlayer"
+				} ]
+			}, {
+				"METHODNAME" : "restorePlayerSnapshot",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "restoreGame",
+					"CALLEDCLASS" : "CareTaker"
+				} ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 8,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "playerSnapShot",
+					"CALLEEMETHODNAME" : "setMaskPicked"
+				}, {
+					"CALLEECLASS" : "player",
+					"CALLEEMETHODNAME" : "getMaskPicked"
+				}, {
+					"CALLEECLASS" : "playerSnapShot",
+					"CALLEEMETHODNAME" : "setLevel"
+				}, {
+					"CALLEECLASS" : "player",
+					"CALLEEMETHODNAME" : "getLevel"
+				}, {
+					"CALLEECLASS" : "playerSnapShot",
+					"CALLEEMETHODNAME" : "setTotalPoints"
+				}, {
+					"CALLEECLASS" : "player",
+					"CALLEEMETHODNAME" : "getTotalPoints"
+				}, {
+					"CALLEECLASS" : "playerSnapShot",
+					"CALLEEMETHODNAME" : "setPlayerName"
+				}, {
+					"CALLEECLASS" : "player",
+					"CALLEEMETHODNAME" : "getPlayerName"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "playerSnapShot",
+					"PARAMETERTYPE" : "GamePlayer"
+				}, {
+					"PARAMETERNAME" : "player",
+					"PARAMETERTYPE" : "GamePlayer"
+				} ]
+			} ]
+		},
+		"ClientFile" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 27,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientFile",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "careTaker = new CareTaker()" ],
+				"VARIABLECOMMONTYPE" : "CareTaker",
+				"VARIABLEELEMENTTYPE" : "CareTaker"
+			}, {
+				"VARIABLEDECLARATION" : [ "player = new GamePlayer()" ],
+				"VARIABLECOMMONTYPE" : "GamePlayer",
+				"VARIABLEELEMENTTYPE" : "GamePlayer"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = \"yes\"" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "LOOP", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 4,
+				"NUMBEROFOUTGOINGMETHODS" : 27,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "player",
+					"CALLEEMETHODNAME" : "setPlayerName"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "next"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equalsIgnoreCase"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "player",
+					"CALLEEMETHODNAME" : "setMaskPicked"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "next"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "player",
+					"CALLEEMETHODNAME" : "increase100Points"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "careTaker",
+					"CALLEEMETHODNAME" : "saveGame"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "next"
+				}, {
+					"CALLEECLASS" : "player",
+					"CALLEEMETHODNAME" : "increase100Points"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "careTaker",
+					"CALLEEMETHODNAME" : "restoreGame"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "next"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "next"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 10,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"GamePlayer" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "playerName" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "maskPicked = \"premAseem\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Integer",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "level = 1" ],
+				"FIELDDATATYPE" : "Integer",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Integer",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "totalPoints = 100" ],
+				"FIELDDATATYPE" : "Integer",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Cloneable" ],
+				"CLASSNAME" : "GamePlayer",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getPlayerName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setPlayerName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "playerName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getMaskPicked",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setMaskPicked",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "maskPicked",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getLevel",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setLevel",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "level",
+					"PARAMETERTYPE" : "Integer"
+				} ]
+			}, {
+				"METHODNAME" : "getTotalPoints",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setTotalPoints",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "totalPoints",
+					"PARAMETERTYPE" : "Integer"
+				} ]
+			}, {
+				"METHODNAME" : "increase100Points",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "clone",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Object",
+					"CALLEEMETHODNAME" : "clone"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "printf"
+				}, {
+					"CALLEECLASS" : "Object",
+					"CALLEEMETHODNAME" : "toString"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

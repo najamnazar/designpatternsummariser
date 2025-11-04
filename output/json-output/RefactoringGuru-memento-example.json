@@ -1,0 +1,3047 @@
+{
+	"final_summary" : "Circle.java: Circle does not have any design pattern.  It is a public class that extends BaseShape. The 3 methods of Circle are getWidth (int), getHeight (int) and paint (void). Only one method ( paint method of class Circle ) calls getWidth and getWidth calls no methods. Only one method ( paint method of class Circle ) calls getHeight and getHeight calls no methods. No methods call paint and paint calls 4 methods : paint method of class super, getHeight method of class Circle, drawOval method of class graphics and getWidth method of class Circle.\n\n\nDemo.java: Demo does not have any design pattern.  It is a public class. The only method of Demo is main (void). No methods call main and main calls only one method : loadShapes method of class editor.\n\n\nShape.java: observer: Shape acts as an observer for publisher CompoundShape, which is inherited by BaseShape, which gets X, which gets Y, which gets Width, which gets Height, which drags, which drops, which moves int parameter of x, int parameter of y To, which moves int parameter of x, int parameter of y By, which is int parameter of x, int parameter of y Inside Bounds, which gets Color, which sets Color parameter of color Color, which selects, which uns Select, which is Selected, which paints Graphics parameter of graphics. It is a public interface that extends Serializable. The 15 methods of Shape are getX (int), getY (int), getWidth (int), getHeight (int), drag (void), drop (void), moveTo (void), moveBy (void), isInsideBounds (boolean), getColor (Color), setColor (void), select (void), unSelect (void), isSelected (boolean) and paint (void). No methods call getX and getX calls no methods. No methods call getY and getY calls no methods. No methods call getWidth and getWidth calls no methods. No methods call getHeight and getHeight calls no methods. No methods call drag and drag calls no methods. No methods call drop and drop calls no methods. No methods call moveTo and moveTo calls no methods. No methods call moveBy and moveBy calls no methods. No methods call isInsideBounds and isInsideBounds calls no methods. No methods call getColor and getColor calls no methods. No methods call setColor and setColor calls no methods. No methods call select and select calls no methods. No methods call unSelect and unSelect calls no methods. No methods call isSelected and isSelected calls no methods. No methods call paint and paint calls no methods.\n\n\nCanvas.java: Canvas does not have any design pattern.  It is a class that extends java.awt.Canvas. The 8 methods of Canvas are createFrame (void), attachKeyboardListeners (void), attachMouseListeners (void), getWidth (int), getHeight (int), refresh (void), update (void) and paint (void). No methods call createFrame and createFrame calls 9 methods : setBorder method of class JComponent, setBackground method of class JComponent, setVisible method of class Window, setContentPane method of class JFrame, createEmptyBorder method of class BorderFactory, setDefaultCloseOperation method of class JFrame, add method of class Container, setLayout method of class Container and setLocationRelativeTo method of class Window. No methods call attachKeyboardListeners and attachKeyboardListeners calls 5 methods : addKeyListener method of class Component, redo method of class editor, undo method of class editor, getModifiers method of class InputEvent and getKeyCode method of class KeyEvent. No methods call attachMouseListeners and attachMouseListeners calls 19 methods : addMouseMotionListener method of class Component, getX method of class MouseEvent, getY method of class MouseEvent, select method of class target, getModifiersEx method of class MouseEvent, repaint method of class Component, addMouseListener method of class Component, random method of class Math, unSelect method of class target, unSelect method of class getShapes, getButton method of class MouseEvent, start method of class moveCommand, getModifiers method of class InputEvent, stop method of class moveCommand, move method of class moveCommand, isSelected method of class target, execute method of class editor, getChildAt method of class getShapes and getShapes method of class editor. 2 methods ( refresh method of class Canvas and paint method of class Canvas ) call getWidth and getWidth calls 3 methods : getWidth method of class getShapes, getX method of class getShapes and getShapes method of class editor. 2 methods ( refresh method of class Canvas and paint method of class Canvas ) call getHeight and getHeight calls 3 methods : getHeight method of class getShapes, getY method of class getShapes and getShapes method of class editor. No methods call refresh and refresh calls 4 methods : setSize method of class Component, pack method of class Window, getHeight method of class Canvas and getWidth method of class Canvas. No methods call update and update calls only one method : paint method of class Canvas. Only one method ( update method of class Canvas ) calls paint and paint calls 9 methods : clearRect method of class Graphics, createGraphics method of class BufferedImage, paint method of class getShapes, getGraphics method of class BufferedImage, getWidth method of class Canvas, setBackground method of class Graphics2D, getHeight method of class Canvas, drawImage method of class Graphics and getShapes method of class editor.\n\n\nDot.java: Dot does not have any design pattern.  It is a public class that extends BaseShape. The 3 methods of Dot are getWidth (int), getHeight (int) and paint (void). Only one method ( paint method of class Dot ) calls getWidth and getWidth calls no methods. Only one method ( paint method of class Dot ) calls getHeight and getHeight calls no methods. No methods call paint and paint calls 4 methods : paint method of class super, fillRect method of class graphics, getWidth method of class Dot and getHeight method of class Dot.\n\n\nRectangle.java: Rectangle does not have any design pattern.  It is a public class that extends BaseShape. The 3 methods of Rectangle are getWidth (int), getHeight (int) and paint (void). Only one method ( paint method of class Rectangle ) calls getWidth and getWidth calls no methods. Only one method ( paint method of class Rectangle ) calls getHeight and getHeight calls no methods. No methods call paint and paint calls 4 methods : paint method of class super, getWidth method of class Rectangle, getHeight method of class Rectangle and drawRect method of class graphics.\n\n\nCompoundShape.java: observer: CompoundShape acts as a publisher for observer Shape, which is inherited by, which adds Shape parameter of component, which adds Shape... parameter of components, which removes Shape parameter of child, which removes Shape... parameter of components, which clears, which gets X, which gets Y, which gets Width, which gets Height, which drags, which drops, which moves int parameter of x, int parameter of y To, which moves int parameter of x, int parameter of y By, which is int parameter of x, int parameter of y Inside Bounds, which sets Color parameter of color Color, which uns Select, which gets int parameter of x, int parameter of y Child At, which selects int parameter of x, int parameter of y Child At, which gets Selected, which paints Graphics parameter of graphics. It is a public class that extends BaseShape. The 20 methods of CompoundShape are add (void), add (void), remove (void), remove (void), clear (void), getX (int), getY (int), getWidth (int), getHeight (int), drag (void), drop (void), moveTo (void), moveBy (void), isInsideBounds (boolean), setColor (void), unSelect (void), getChildAt (Shape), selectChildAt (boolean), getSelected (List<Shape>) and paint (void). No methods call add and add calls 2 methods : asList method of class Arrays and addAll method of class List. No methods call add and add calls 2 methods : asList method of class Arrays and addAll method of class List. No methods call remove and remove calls 2 methods : removeAll method of class List and asList method of class Arrays. No methods call remove and remove calls 2 methods : removeAll method of class List and asList method of class Arrays. No methods call clear and clear calls only one method : clear method of class List. 2 methods ( paint method of class CompoundShape and getWidth method of class CompoundShape ) call getX and getX calls 4 methods : getX method of class child, get method of class List, getX method of class get and size method of class List. 2 methods ( paint method of class CompoundShape and getHeight method of class CompoundShape ) call getY and getY calls 4 methods : getY method of class child, get method of class List, getY method of class get and size method of class List. Only one method ( paint method of class CompoundShape ) calls getWidth and getWidth calls 3 methods : getX method of class child, getWidth method of class child and getX method of class CompoundShape. Only one method ( paint method of class CompoundShape ) calls getHeight and getHeight calls 3 methods : getY method of class child, getHeight method of class child and getY method of class CompoundShape. No methods call drag and drag calls only one method : drag method of class child. No methods call drop and drop calls only one method : drop method of class child. No methods call moveTo and moveTo calls only one method : moveTo method of class child. No methods call moveBy and moveBy calls only one method : moveBy method of class child. No methods call isInsideBounds and isInsideBounds calls only one method : isInsideBounds method of class child. No methods call setColor and setColor calls 2 methods : setColor method of class super and setColor method of class child. No methods call unSelect and unSelect calls 2 methods : unSelect method of class super and unSelect method of class child. Only one method ( selectChildAt method of class CompoundShape ) calls getChildAt and getChildAt calls only one method : isInsideBounds method of class child. No methods call selectChildAt and selectChildAt calls 2 methods : select method of class child and getChildAt method of class CompoundShape. No methods call getSelected and getSelected calls 2 methods : isSelected method of class child and add method of class List. No methods call paint and paint calls 9 methods : getHeight method of class CompoundShape, enableSelectionStyle method of class UNKNOWN, paint method of class child, isSelected method of class UNKNOWN, drawRect method of class Graphics, getWidth method of class CompoundShape, disableSelectionStyle method of class UNKNOWN, getY method of class CompoundShape and getX method of class CompoundShape.\n\n\nHistory.java: observer: History acts as a publisher for observer Command, which is inherited by, which gets Command, which gets Memento, which pushes Command parameter of c, Memento parameter of m, which undos, which redos, which gets Undo, which gets Redo. History acts as a publisher for observer Memento, which is inherited by, which gets Command, which gets Memento, which pushes Command parameter of c, Memento parameter of m, which undos, which redos, which gets Undo, which gets Redo. It is a public class. The 7 methods of History are getCommand (Command), getMemento (Memento), push (void), undo (boolean), redo (boolean), getUndo (Pair) and getRedo (Pair). No methods call getCommand and getCommand calls no methods. No methods call getMemento and getMemento calls no methods. No methods call push and push calls 3 methods : add method of class List, size method of class List and subList method of class List. No methods call undo and undo calls 6 methods : getMemento method of class Pair, restore method of class getMemento, getCommand method of class Pair, getUndo method of class History, getName method of class getCommand and println method of class out. No methods call redo and redo calls 7 methods : getMemento method of class Pair, restore method of class getMemento, execute method of class getCommand, getCommand method of class Pair, getName method of class getCommand, println method of class out and getRedo method of class History. Only one method ( undo method of class History ) calls getUndo and getUndo calls 2 methods : max method of class Math and get method of class List. Only one method ( redo method of class History ) calls getRedo and getRedo calls 3 methods : get method of class List, min method of class Math and size method of class List.\n\n\nBaseShape.java: observer: BaseShape acts as an observer, which gets X, which gets Y, which gets Width, which gets Height, which drags, which moves int parameter of x, int parameter of y To, which moves int parameter of x, int parameter of y By, which drops, which is int parameter of x, int parameter of y Inside Bounds, which gets Color, which sets Color parameter of color Color, which selects, which uns Select, which is Selected, which enables Graphics parameter of graphics Selection Style, which disables Graphics parameter of graphics Selection Style, which paints Graphics parameter of graphics. It is a public abstract class that implements Shape. The 17 methods of BaseShape are getX (int), getY (int), getWidth (int), getHeight (int), drag (void), moveTo (void), moveBy (void), drop (void), isInsideBounds (boolean), getColor (Color), setColor (void), select (void), unSelect (void), isSelected (boolean), enableSelectionStyle (void), disableSelectionStyle (void) and paint (void). Only one method ( isInsideBounds method of class BaseShape ) calls getX and getX calls no methods. Only one method ( isInsideBounds method of class BaseShape ) calls getY and getY calls no methods. Only one method ( isInsideBounds method of class BaseShape ) calls getWidth and getWidth calls no methods. Only one method ( isInsideBounds method of class BaseShape ) calls getHeight and getHeight calls no methods. No methods call drag and drag calls no methods. No methods call moveTo and moveTo calls no methods. No methods call moveBy and moveBy calls no methods. No methods call drop and drop calls no methods. No methods call isInsideBounds and isInsideBounds calls 4 methods : getHeight method of class BaseShape, getWidth method of class BaseShape, getY method of class BaseShape and getX method of class BaseShape. No methods call getColor and getColor calls no methods. No methods call setColor and setColor calls no methods. No methods call select and select calls no methods. No methods call unSelect and unSelect calls no methods. Only one method ( paint method of class BaseShape ) calls isSelected and isSelected calls no methods. Only one method ( paint method of class BaseShape ) calls enableSelectionStyle and enableSelectionStyle calls 2 methods : setColor method of class Graphics and setStroke method of class Graphics2D. Only one method ( paint method of class BaseShape ) calls disableSelectionStyle and disableSelectionStyle calls 2 methods : setColor method of class Graphics and setStroke method of class Graphics2D. No methods call paint and paint calls 3 methods : enableSelectionStyle method of class BaseShape, disableSelectionStyle method of class BaseShape and isSelected method of class BaseShape.\n\n\nMemento.java: observer: Memento acts as an observer for publisher History, which is inherited by, which restores. It is a public class. The only method of Memento is restore (void). No methods call restore and restore calls only one method : restore method of class editor.\n\n\nCommand.java: observer: Command acts as an observer for publisher History, which is inherited by MoveCommand, ColorCommand, which gets Name, which executes. It is a public interface. The 2 methods of Command are getName (String) and execute (void). No methods call getName and getName calls no methods. No methods call execute and execute calls no methods.\n\n\nMoveCommand.java: observer: MoveCommand acts as an observer, which gets Name, which starts int parameter of x, int parameter of y, which moves int parameter of x, int parameter of y, which stops int parameter of x, int parameter of y, which executes. It is a public class that implements Command. The 5 methods of MoveCommand are getName (String), start (void), move (void), stop (void) and execute (void). No methods call getName and getName calls no methods. No methods call start and start calls 3 methods : drag method of class child, getSelected method of class getShapes and getShapes method of class editor. No methods call move and move calls 3 methods : getSelected method of class getShapes, moveTo method of class child and getShapes method of class editor. No methods call stop and stop calls 3 methods : getSelected method of class getShapes, getShapes method of class editor and drop method of class child. No methods call execute and execute calls 3 methods : getSelected method of class getShapes, moveBy method of class child and getShapes method of class editor.\n\n\nColorCommand.java: observer: ColorCommand acts as an observer, which gets Name, which executes. It is a public class that implements Command. The 2 methods of ColorCommand are getName (String) and execute (void). No methods call getName and getName calls only one method : toString method of class Color. No methods call execute and execute calls 3 methods : getSelected method of class getShapes, setColor method of class child and getShapes method of class editor.\n\n\nEditor.java: Editor does not have any design pattern.  It is a public class that extends JComponent. The 7 methods of Editor are loadShapes (void), getShapes (CompoundShape), execute (void), undo (void), redo (void), backup (String) and restore (void). No methods call loadShapes and loadShapes calls 3 methods : refresh method of class canvas, add method of class allShapes and clear method of class allShapes. No methods call getShapes and getShapes calls no methods. No methods call execute and execute calls 2 methods : push method of class history and execute method of class c. No methods call undo and undo calls 2 methods : repaint method of class canvas and undo method of class history. No methods call redo and redo calls 2 methods : redo method of class history and repaint method of class canvas. No methods call backup and backup calls 5 methods : encodeToString method of class Encoder, getEncoder method of class Base64, writeObject method of class oos, close method of class ObjectOutputStream and toByteArray method of class ByteArrayOutputStream. No methods call restore and restore calls 5 methods : close method of class ObjectInputStream, getDecoder method of class Base64, decode method of class Decoder, print method of class PrintStream and readObject method of class ObjectInputStream.\n\n\n",
+	"design_pattern" : [ {
+		"observer" : {
+			"Memento" : {
+				"concrete_observer" : [ ],
+				"publisher" : {
+					"History" : [ ]
+				}
+			},
+			"Shape" : {
+				"concrete_observer" : [ "BaseShape" ],
+				"publisher" : {
+					"CompoundShape" : [ ]
+				}
+			},
+			"Command" : {
+				"concrete_observer" : [ "MoveCommand", "ColorCommand" ],
+				"publisher" : {
+					"History" : [ ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"Memento" : [ "Memento acts as an observer for publisher History, which is inherited by, which restores." ],
+			"Shape" : [ "Shape acts as an observer for publisher CompoundShape, which is inherited by BaseShape, which gets X, which gets Y, which gets Width, which gets Height, which drags, which drops, which moves int parameter of x, int parameter of y To, which moves int parameter of x, int parameter of y By, which is int parameter of x, int parameter of y Inside Bounds, which gets Color, which sets Color parameter of color Color, which selects, which uns Select, which is Selected, which paints Graphics parameter of graphics." ],
+			"Command" : [ "Command acts as an observer for publisher History, which is inherited by MoveCommand, ColorCommand, which gets Name, which executes." ],
+			"MoveCommand" : [ "MoveCommand acts as an observer, which gets Name, which starts int parameter of x, int parameter of y, which moves int parameter of x, int parameter of y, which stops int parameter of x, int parameter of y, which executes." ],
+			"CompoundShape" : [ "CompoundShape acts as a publisher for observer Shape, which is inherited by, which adds Shape parameter of component, which adds Shape... parameter of components, which removes Shape parameter of child, which removes Shape... parameter of components, which clears, which gets X, which gets Y, which gets Width, which gets Height, which drags, which drops, which moves int parameter of x, int parameter of y To, which moves int parameter of x, int parameter of y By, which is int parameter of x, int parameter of y Inside Bounds, which sets Color parameter of color Color, which uns Select, which gets int parameter of x, int parameter of y Child At, which selects int parameter of x, int parameter of y Child At, which gets Selected, which paints Graphics parameter of graphics." ],
+			"History" : [ "History acts as a publisher for observer Command, which is inherited by, which gets Command, which gets Memento, which pushes Command parameter of c, Memento parameter of m, which undos, which redos, which gets Undo, which gets Redo.", "History acts as a publisher for observer Memento, which is inherited by, which gets Command, which gets Memento, which pushes Command parameter of c, Memento parameter of m, which undos, which redos, which gets Undo, which gets Redo." ],
+			"ColorCommand" : [ "ColorCommand acts as an observer, which gets Name, which executes." ],
+			"BaseShape" : [ "BaseShape acts as an observer, which gets X, which gets Y, which gets Width, which gets Height, which drags, which moves int parameter of x, int parameter of y To, which moves int parameter of x, int parameter of y By, which drops, which is int parameter of x, int parameter of y Inside Bounds, which gets Color, which sets Color parameter of color Color, which selects, which uns Select, which is Selected, which enables Graphics parameter of graphics Selection Style, which disables Graphics parameter of graphics Selection Style, which paints Graphics parameter of graphics." ]
+		}
+	},
+	"RefactoringGuru-memento-example" : {
+		"Circle" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "radius" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "BaseShape" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Circle",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "radius",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "color",
+					"PARAMETERTYPE" : "Color"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getWidth",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Circle"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Circle"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getHeight",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Circle"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Circle"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Circle",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Circle",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "paint"
+				}, {
+					"CALLEECLASS" : "graphics",
+					"CALLEEMETHODNAME" : "drawOval"
+				}, {
+					"CALLEECLASS" : "Circle",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Circle",
+					"CALLEEMETHODNAME" : "getHeight"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "graphics",
+					"PARAMETERTYPE" : "Graphics"
+				} ]
+			} ]
+		},
+		"Demo" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Demo",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "editor = new Editor()" ],
+				"VARIABLECOMMONTYPE" : "Editor",
+				"VARIABLEELEMENTTYPE" : "Editor"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "loadShapes"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Shape" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Serializable" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Shape",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getX",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getY",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getWidth",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getHeight",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "drag",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "drop",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "moveTo",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "moveBy",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "isInsideBounds",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "getColor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Color",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setColor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "color",
+					"PARAMETERTYPE" : "Color"
+				} ]
+			}, {
+				"METHODNAME" : "select",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "unSelect",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "isSelected",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "graphics",
+					"PARAMETERTYPE" : "Graphics"
+				} ]
+			} ]
+		},
+		"Canvas" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Editor",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "editor" ],
+				"FIELDDATATYPE" : "Editor",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "JFrame",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "frame" ],
+				"FIELDDATATYPE" : "JFrame",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "PADDING = 10" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "MoveCommand",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "moveCommand" ],
+				"FIELDDATATYPE" : "MoveCommand",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 87,
+				"EXTENDSFROM" : [ "java.awt.Canvas" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Canvas",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "editor",
+					"PARAMETERTYPE" : "Editor"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "contentPanel = new JPanel()" ],
+				"VARIABLECOMMONTYPE" : "JPanel",
+				"VARIABLEELEMENTTYPE" : "JPanel"
+			}, {
+				"VARIABLEDECLARATION" : [ "padding = BorderFactory.createEmptyBorder(PADDING, PADDING, PADDING, PADDING)" ],
+				"VARIABLECOMMONTYPE" : "Border",
+				"VARIABLEELEMENTTYPE" : "Border"
+			}, {
+				"VARIABLEDECLARATION" : [ "colorizer = new MouseAdapter() {\r\n\r\n    @Override\r\n    public void mousePressed(MouseEvent e) {\r\n        if (e.getButton() != MouseEvent.BUTTON3) {\r\n            return;\r\n        }\r\n        Shape target = editor.getShapes().getChildAt(e.getX(), e.getY());\r\n        if (target != null) {\r\n            editor.execute(new ColorCommand(editor, new Color((int) (Math.random() * 0x1000000))));\r\n            repaint();\r\n        }\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "MouseAdapter",
+				"VARIABLEELEMENTTYPE" : "MouseAdapter"
+			}, {
+				"VARIABLEDECLARATION" : [ "selector = new MouseAdapter() {\r\n\r\n    @Override\r\n    public void mousePressed(MouseEvent e) {\r\n        if (e.getButton() != MouseEvent.BUTTON1) {\r\n            return;\r\n        }\r\n        Shape target = editor.getShapes().getChildAt(e.getX(), e.getY());\r\n        boolean ctrl = (e.getModifiers() & ActionEvent.CTRL_MASK) == ActionEvent.CTRL_MASK;\r\n        if (target == null) {\r\n            if (!ctrl) {\r\n                editor.getShapes().unSelect();\r\n            }\r\n        } else {\r\n            if (ctrl) {\r\n                if (target.isSelected()) {\r\n                    target.unSelect();\r\n                } else {\r\n                    target.select();\r\n                }\r\n            } else {\r\n                if (!target.isSelected()) {\r\n                    editor.getShapes().unSelect();\r\n                }\r\n                target.select();\r\n            }\r\n        }\r\n        repaint();\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "MouseAdapter",
+				"VARIABLEELEMENTTYPE" : "MouseAdapter"
+			}, {
+				"VARIABLEDECLARATION" : [ "dragger = new MouseAdapter() {\r\n\r\n    MoveCommand moveCommand;\r\n\r\n    @Override\r\n    public void mouseDragged(MouseEvent e) {\r\n        if ((e.getModifiersEx() & MouseEvent.BUTTON1_DOWN_MASK) != MouseEvent.BUTTON1_DOWN_MASK) {\r\n            return;\r\n        }\r\n        if (moveCommand == null) {\r\n            moveCommand = new MoveCommand(editor);\r\n            moveCommand.start(e.getX(), e.getY());\r\n        }\r\n        moveCommand.move(e.getX(), e.getY());\r\n        repaint();\r\n    }\r\n\r\n    @Override\r\n    public void mouseReleased(MouseEvent e) {\r\n        if (e.getButton() != MouseEvent.BUTTON1 || moveCommand == null) {\r\n            return;\r\n        }\r\n        moveCommand.stop(e.getX(), e.getY());\r\n        editor.execute(moveCommand);\r\n        this.moveCommand = null;\r\n        repaint();\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "MouseAdapter",
+				"VARIABLEELEMENTTYPE" : "MouseAdapter"
+			}, {
+				"VARIABLEDECLARATION" : [ "buffer = new BufferedImage(this.getWidth(), this.getHeight(), BufferedImage.TYPE_INT_RGB)" ],
+				"VARIABLECOMMONTYPE" : "BufferedImage",
+				"VARIABLEELEMENTTYPE" : "BufferedImage"
+			}, {
+				"VARIABLEDECLARATION" : [ "ig2 = buffer.createGraphics()" ],
+				"VARIABLECOMMONTYPE" : "Graphics2D",
+				"VARIABLEELEMENTTYPE" : "Graphics2D"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createFrame",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 12,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "JFrame",
+					"CALLEEMETHODNAME" : "setDefaultCloseOperation"
+				}, {
+					"CALLEECLASS" : "Window",
+					"CALLEEMETHODNAME" : "setLocationRelativeTo"
+				}, {
+					"CALLEECLASS" : "BorderFactory",
+					"CALLEEMETHODNAME" : "createEmptyBorder"
+				}, {
+					"CALLEECLASS" : "JComponent",
+					"CALLEEMETHODNAME" : "setBorder"
+				}, {
+					"CALLEECLASS" : "Container",
+					"CALLEEMETHODNAME" : "setLayout"
+				}, {
+					"CALLEECLASS" : "JFrame",
+					"CALLEEMETHODNAME" : "setContentPane"
+				}, {
+					"CALLEECLASS" : "Container",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "Container",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "Container",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "Container",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "Window",
+					"CALLEEMETHODNAME" : "setVisible"
+				}, {
+					"CALLEECLASS" : "JComponent",
+					"CALLEEMETHODNAME" : "setBackground"
+				} ],
+				"NUMBEROFMETHODLINES" : 14,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "attachKeyboardListeners",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Component",
+					"CALLEEMETHODNAME" : "addKeyListener"
+				}, {
+					"CALLEECLASS" : "InputEvent",
+					"CALLEEMETHODNAME" : "getModifiers"
+				}, {
+					"CALLEECLASS" : "KeyEvent",
+					"CALLEEMETHODNAME" : "getKeyCode"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "undo"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "redo"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "attachMouseListeners",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 42,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getButton"
+				}, {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getChildAt"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "execute"
+				}, {
+					"CALLEECLASS" : "Math",
+					"CALLEEMETHODNAME" : "random"
+				}, {
+					"CALLEECLASS" : "Component",
+					"CALLEEMETHODNAME" : "repaint"
+				}, {
+					"CALLEECLASS" : "Component",
+					"CALLEEMETHODNAME" : "addMouseListener"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getButton"
+				}, {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getChildAt"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "InputEvent",
+					"CALLEEMETHODNAME" : "getModifiers"
+				}, {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "unSelect"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "target",
+					"CALLEEMETHODNAME" : "isSelected"
+				}, {
+					"CALLEECLASS" : "target",
+					"CALLEEMETHODNAME" : "unSelect"
+				}, {
+					"CALLEECLASS" : "target",
+					"CALLEEMETHODNAME" : "select"
+				}, {
+					"CALLEECLASS" : "target",
+					"CALLEEMETHODNAME" : "isSelected"
+				}, {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "unSelect"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "target",
+					"CALLEEMETHODNAME" : "select"
+				}, {
+					"CALLEECLASS" : "Component",
+					"CALLEEMETHODNAME" : "repaint"
+				}, {
+					"CALLEECLASS" : "Component",
+					"CALLEEMETHODNAME" : "addMouseListener"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getModifiersEx"
+				}, {
+					"CALLEECLASS" : "moveCommand",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "moveCommand",
+					"CALLEEMETHODNAME" : "move"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "Component",
+					"CALLEEMETHODNAME" : "repaint"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getButton"
+				}, {
+					"CALLEECLASS" : "moveCommand",
+					"CALLEEMETHODNAME" : "stop"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "MouseEvent",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "execute"
+				}, {
+					"CALLEECLASS" : "Component",
+					"CALLEEMETHODNAME" : "repaint"
+				}, {
+					"CALLEECLASS" : "Component",
+					"CALLEEMETHODNAME" : "addMouseListener"
+				}, {
+					"CALLEECLASS" : "Component",
+					"CALLEEMETHODNAME" : "addMouseMotionListener"
+				} ],
+				"NUMBEROFMETHODLINES" : 7,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getWidth",
+				"NUMBEROFINCOMINGMETHODS" : 6,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "refresh",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "refresh",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Canvas"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getHeight",
+				"NUMBEROFINCOMINGMETHODS" : 6,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "refresh",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "refresh",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Canvas"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "refresh",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "Component",
+					"CALLEEMETHODNAME" : "setSize"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "Window",
+					"CALLEEMETHODNAME" : "pack"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "paint"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "paint"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "g",
+					"PARAMETERTYPE" : "Graphics"
+				} ]
+			}, {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "update",
+					"CALLEDCLASS" : "Canvas"
+				}, {
+					"CALLEDMETHODNAME" : "update",
+					"CALLEDCLASS" : "Canvas"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 11,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "BufferedImage",
+					"CALLEEMETHODNAME" : "createGraphics"
+				}, {
+					"CALLEECLASS" : "Graphics2D",
+					"CALLEEMETHODNAME" : "setBackground"
+				}, {
+					"CALLEECLASS" : "Graphics",
+					"CALLEEMETHODNAME" : "clearRect"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "paint"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "BufferedImage",
+					"CALLEEMETHODNAME" : "getGraphics"
+				}, {
+					"CALLEECLASS" : "Graphics",
+					"CALLEEMETHODNAME" : "drawImage"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Canvas",
+					"CALLEEMETHODNAME" : "getHeight"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "graphics",
+					"PARAMETERTYPE" : "Graphics"
+				} ]
+			} ]
+		},
+		"Dot" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "DOT_SIZE = 3" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "BaseShape" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Dot",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "color",
+					"PARAMETERTYPE" : "Color"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getWidth",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Dot"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Dot"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getHeight",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Dot"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Dot"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "paint"
+				}, {
+					"CALLEECLASS" : "graphics",
+					"CALLEEMETHODNAME" : "fillRect"
+				}, {
+					"CALLEECLASS" : "Dot",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Dot",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "Dot",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Dot",
+					"CALLEEMETHODNAME" : "getHeight"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "graphics",
+					"PARAMETERTYPE" : "Graphics"
+				} ]
+			} ]
+		},
+		"Rectangle" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "width" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "height" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "BaseShape" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Rectangle",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "width",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "height",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "color",
+					"PARAMETERTYPE" : "Color"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getWidth",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Rectangle"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Rectangle"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getHeight",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Rectangle"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "Rectangle"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "paint"
+				}, {
+					"CALLEECLASS" : "graphics",
+					"CALLEEMETHODNAME" : "drawRect"
+				}, {
+					"CALLEECLASS" : "Rectangle",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Rectangle",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "Rectangle",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "Rectangle",
+					"CALLEEMETHODNAME" : "getHeight"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "graphics",
+					"PARAMETERTYPE" : "Graphics"
+				} ]
+			} ]
+		},
+		"CompoundShape" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "List<Shape>",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "children = new ArrayList<>()" ],
+				"FIELDDATATYPE" : "List<Shape>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 47,
+				"EXTENDSFROM" : [ "BaseShape" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CompoundShape",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "components",
+					"PARAMETERTYPE" : "Shape..."
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "x = children.get(0).getX()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "y = children.get(0).getY()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "maxWidth = 0" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "x = getX()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "childsRelativeX = child.getX() - x" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "childWidth = childsRelativeX + child.getWidth()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "maxHeight = 0" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "y = getY()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "childsRelativeY = child.getY() - y" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "childHeight = childsRelativeY + child.getHeight()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child = getChildAt(x, y)" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "selected = new ArrayList<>()" ],
+				"VARIABLECOMMONTYPE" : "List<Shape>",
+				"VARIABLEELEMENTTYPE" : "List<Shape>"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "add",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "addAll"
+				}, {
+					"CALLEECLASS" : "Arrays",
+					"CALLEEMETHODNAME" : "asList"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "component",
+					"PARAMETERTYPE" : "Shape"
+				} ]
+			}, {
+				"METHODNAME" : "add",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "addAll"
+				}, {
+					"CALLEECLASS" : "Arrays",
+					"CALLEEMETHODNAME" : "asList"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "components",
+					"PARAMETERTYPE" : "Shape..."
+				} ]
+			}, {
+				"METHODNAME" : "remove",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "removeAll"
+				}, {
+					"CALLEECLASS" : "Arrays",
+					"CALLEEMETHODNAME" : "asList"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "child",
+					"PARAMETERTYPE" : "Shape"
+				} ]
+			}, {
+				"METHODNAME" : "remove",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "removeAll"
+				}, {
+					"CALLEECLASS" : "Arrays",
+					"CALLEEMETHODNAME" : "asList"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "components",
+					"PARAMETERTYPE" : "Shape..."
+				} ]
+			}, {
+				"METHODNAME" : "clear",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "clear"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getX",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "getWidth",
+					"CALLEDCLASS" : "CompoundShape"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "CompoundShape"
+				}, {
+					"CALLEDMETHODNAME" : "getWidth",
+					"CALLEDCLASS" : "CompoundShape"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "CompoundShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF", "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "size"
+				}, {
+					"CALLEECLASS" : "get",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "get"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "getX"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getY",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "getHeight",
+					"CALLEDCLASS" : "CompoundShape"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "CompoundShape"
+				}, {
+					"CALLEDMETHODNAME" : "getHeight",
+					"CALLEDCLASS" : "CompoundShape"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "CompoundShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF", "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "size"
+				}, {
+					"CALLEECLASS" : "get",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "get"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "getY"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getWidth",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "CompoundShape"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "CompoundShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getX"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getHeight",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "CompoundShape"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "CompoundShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getY"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "drag",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "drag"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "drop",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "drop"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "moveTo",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "moveTo"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "moveBy",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "moveBy"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "isInsideBounds",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "isInsideBounds"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "setColor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "setColor"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "setColor"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "color",
+					"PARAMETERTYPE" : "Color"
+				} ]
+			}, {
+				"METHODNAME" : "unSelect",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "super",
+					"CALLEEMETHODNAME" : "unSelect"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "unSelect"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getChildAt",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "selectChildAt",
+					"CALLEDCLASS" : "CompoundShape"
+				}, {
+					"CALLEDMETHODNAME" : "selectChildAt",
+					"CALLEDCLASS" : "CompoundShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Shape",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "isInsideBounds"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "selectChildAt",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getChildAt"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getChildAt"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "select"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "getSelected",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "List<Shape>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "isSelected"
+				}, {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 9,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "isSelected"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "enableSelectionStyle"
+				}, {
+					"CALLEECLASS" : "Graphics",
+					"CALLEEMETHODNAME" : "drawRect"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "disableSelectionStyle"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "paint"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "CompoundShape",
+					"CALLEEMETHODNAME" : "getHeight"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "graphics",
+					"PARAMETERTYPE" : "Graphics"
+				} ]
+			} ]
+		},
+		"History" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "List<Pair>",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "history = new ArrayList<Pair>()" ],
+				"FIELDDATATYPE" : "List<Pair>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "virtualSize = 0" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Command",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "command" ],
+				"FIELDDATATYPE" : "Command",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Memento",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "memento" ],
+				"FIELDDATATYPE" : "Memento",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 24,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "History",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "c",
+					"PARAMETERTYPE" : "Command"
+				}, {
+					"PARAMETERNAME" : "m",
+					"PARAMETERTYPE" : "Memento"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "pair = getUndo()" ],
+				"VARIABLECOMMONTYPE" : "Pair",
+				"VARIABLEELEMENTTYPE" : "Pair"
+			}, {
+				"VARIABLEDECLARATION" : [ "pair = getRedo()" ],
+				"VARIABLECOMMONTYPE" : "Pair",
+				"VARIABLEELEMENTTYPE" : "Pair"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getCommand",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Command",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Memento",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "push",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "size"
+				}, {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "subList"
+				}, {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "size"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "c",
+					"PARAMETERTYPE" : "Command"
+				}, {
+					"PARAMETERNAME" : "m",
+					"PARAMETERTYPE" : "Memento"
+				} ]
+			}, {
+				"METHODNAME" : "undo",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "History",
+					"CALLEEMETHODNAME" : "getUndo"
+				}, {
+					"CALLEECLASS" : "Pair",
+					"CALLEEMETHODNAME" : "getCommand"
+				}, {
+					"CALLEECLASS" : "History",
+					"CALLEEMETHODNAME" : "getUndo"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getCommand",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "Pair",
+					"CALLEEMETHODNAME" : "getCommand"
+				}, {
+					"CALLEECLASS" : "getMemento",
+					"CALLEEMETHODNAME" : "restore"
+				}, {
+					"CALLEECLASS" : "Pair",
+					"CALLEEMETHODNAME" : "getMemento"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "redo",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "EXPRESSION", "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 8,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "History",
+					"CALLEEMETHODNAME" : "getRedo"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getCommand",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "Pair",
+					"CALLEEMETHODNAME" : "getCommand"
+				}, {
+					"CALLEECLASS" : "getMemento",
+					"CALLEEMETHODNAME" : "restore"
+				}, {
+					"CALLEECLASS" : "Pair",
+					"CALLEEMETHODNAME" : "getMemento"
+				}, {
+					"CALLEECLASS" : "getCommand",
+					"CALLEEMETHODNAME" : "execute"
+				}, {
+					"CALLEECLASS" : "Pair",
+					"CALLEEMETHODNAME" : "getCommand"
+				}, {
+					"CALLEECLASS" : "History",
+					"CALLEEMETHODNAME" : "getRedo"
+				}, {
+					"CALLEECLASS" : "Pair",
+					"CALLEEMETHODNAME" : "getCommand"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getUndo",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "undo",
+					"CALLEDCLASS" : "History"
+				}, {
+					"CALLEDMETHODNAME" : "undo",
+					"CALLEDCLASS" : "History"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "IF", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "Pair",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Math",
+					"CALLEEMETHODNAME" : "max"
+				}, {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getRedo",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "redo",
+					"CALLEDCLASS" : "History"
+				}, {
+					"CALLEDMETHODNAME" : "redo",
+					"CALLEDCLASS" : "History"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "IF", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "Pair",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "size"
+				}, {
+					"CALLEECLASS" : "Math",
+					"CALLEEMETHODNAME" : "min"
+				}, {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "size"
+				}, {
+					"CALLEECLASS" : "List",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"BaseShape" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "x", "y" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "dx = 0", "dy = 0" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Color",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "color" ],
+				"FIELDDATATYPE" : "Color",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "boolean",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "selected = false" ],
+				"FIELDDATATYPE" : "boolean",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 13,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Shape" ],
+				"CLASSNAME" : "BaseShape",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "color",
+					"PARAMETERTYPE" : "Color"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "g2 = (Graphics2D) graphics" ],
+				"VARIABLECOMMONTYPE" : "Graphics2D",
+				"VARIABLEELEMENTTYPE" : "Graphics2D"
+			}, {
+				"VARIABLEDECLARATION" : [ "dash1 = { 2.0f }" ],
+				"VARIABLECOMMONTYPE" : "float[]",
+				"VARIABLEELEMENTTYPE" : "float"
+			}, {
+				"VARIABLEDECLARATION" : [ "g2 = (Graphics2D) graphics" ],
+				"VARIABLECOMMONTYPE" : "Graphics2D",
+				"VARIABLEELEMENTTYPE" : "Graphics2D"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getX",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getY",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getWidth",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getHeight",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "isInsideBounds",
+					"CALLEDCLASS" : "BaseShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "drag",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "moveTo",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "moveBy",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "drop",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "isInsideBounds",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getX"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getWidth"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getY"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "getHeight"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "getColor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Color",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setColor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "color",
+					"PARAMETERTYPE" : "Color"
+				} ]
+			}, {
+				"METHODNAME" : "select",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "unSelect",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "isSelected",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "BaseShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "enableSelectionStyle",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "BaseShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Graphics",
+					"CALLEEMETHODNAME" : "setColor"
+				}, {
+					"CALLEECLASS" : "Graphics2D",
+					"CALLEEMETHODNAME" : "setStroke"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "graphics",
+					"PARAMETERTYPE" : "Graphics"
+				} ]
+			}, {
+				"METHODNAME" : "disableSelectionStyle",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "BaseShape"
+				}, {
+					"CALLEDMETHODNAME" : "paint",
+					"CALLEDCLASS" : "BaseShape"
+				} ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Graphics",
+					"CALLEEMETHODNAME" : "setColor"
+				}, {
+					"CALLEECLASS" : "Graphics2D",
+					"CALLEEMETHODNAME" : "setStroke"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "graphics",
+					"PARAMETERTYPE" : "Graphics"
+				} ]
+			}, {
+				"METHODNAME" : "paint",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "isSelected"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "enableSelectionStyle"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "disableSelectionStyle"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "isSelected"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "disableSelectionStyle"
+				}, {
+					"CALLEECLASS" : "BaseShape",
+					"CALLEEMETHODNAME" : "enableSelectionStyle"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "graphics",
+					"PARAMETERTYPE" : "Graphics"
+				} ]
+			} ]
+		},
+		"Memento" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "backup" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Editor",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "editor" ],
+				"FIELDDATATYPE" : "Editor",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Memento",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "editor",
+					"PARAMETERTYPE" : "Editor"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "restore",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "restore"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Command" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Command",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "execute",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MoveCommand" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Editor",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "editor" ],
+				"FIELDDATATYPE" : "Editor",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "startX", "startY" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "endX", "endY" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 12,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Command" ],
+				"CLASSNAME" : "MoveCommand",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "editor",
+					"PARAMETERTYPE" : "Editor"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			}, {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "start",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getSelected"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "drag"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "move",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getSelected"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "moveTo"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "stop",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getSelected"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "drop"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "x",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "y",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "execute",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getSelected"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "moveBy"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ColorCommand" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Editor",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "editor" ],
+				"FIELDDATATYPE" : "Editor",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Color",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "color" ],
+				"FIELDDATATYPE" : "Color",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Command" ],
+				"CLASSNAME" : "ColorCommand",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "editor",
+					"PARAMETERTYPE" : "Editor"
+				}, {
+					"PARAMETERNAME" : "color",
+					"PARAMETERTYPE" : "Color"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "child" ],
+				"VARIABLECOMMONTYPE" : "Shape",
+				"VARIABLEELEMENTTYPE" : "Shape"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Color",
+					"CALLEEMETHODNAME" : "toString"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "execute",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getShapes",
+					"CALLEEMETHODNAME" : "getSelected"
+				}, {
+					"CALLEECLASS" : "editor",
+					"CALLEEMETHODNAME" : "getShapes"
+				}, {
+					"CALLEECLASS" : "child",
+					"CALLEEMETHODNAME" : "setColor"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Editor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Canvas",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "canvas" ],
+				"FIELDDATATYPE" : "Canvas",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "CompoundShape",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "allShapes = new CompoundShape()" ],
+				"FIELDDATATYPE" : "CompoundShape",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "History",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "history" ],
+				"FIELDDATATYPE" : "History",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 20,
+				"EXTENDSFROM" : [ "JComponent" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Editor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "baos = new ByteArrayOutputStream()" ],
+				"VARIABLECOMMONTYPE" : "ByteArrayOutputStream",
+				"VARIABLEELEMENTTYPE" : "ByteArrayOutputStream"
+			}, {
+				"VARIABLEDECLARATION" : [ "oos = new ObjectOutputStream(baos)" ],
+				"VARIABLECOMMONTYPE" : "ObjectOutputStream",
+				"VARIABLEELEMENTTYPE" : "ObjectOutputStream"
+			}, {
+				"VARIABLEDECLARATION" : [ "data = Base64.getDecoder().decode(state)" ],
+				"VARIABLECOMMONTYPE" : "byte[]",
+				"VARIABLEELEMENTTYPE" : "byte"
+			}, {
+				"VARIABLEDECLARATION" : [ "ois = new ObjectInputStream(new ByteArrayInputStream(data))" ],
+				"VARIABLECOMMONTYPE" : "ObjectInputStream",
+				"VARIABLEELEMENTTYPE" : "ObjectInputStream"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "loadShapes",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "allShapes",
+					"CALLEEMETHODNAME" : "clear"
+				}, {
+					"CALLEECLASS" : "allShapes",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "canvas",
+					"CALLEEMETHODNAME" : "refresh"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shapes",
+					"PARAMETERTYPE" : "Shape..."
+				} ]
+			}, {
+				"METHODNAME" : "getShapes",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "CompoundShape",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "execute",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "history",
+					"CALLEEMETHODNAME" : "push"
+				}, {
+					"CALLEECLASS" : "c",
+					"CALLEEMETHODNAME" : "execute"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "c",
+					"PARAMETERTYPE" : "Command"
+				} ]
+			}, {
+				"METHODNAME" : "undo",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "history",
+					"CALLEEMETHODNAME" : "undo"
+				}, {
+					"CALLEECLASS" : "canvas",
+					"CALLEEMETHODNAME" : "repaint"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "redo",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "history",
+					"CALLEEMETHODNAME" : "redo"
+				}, {
+					"CALLEECLASS" : "canvas",
+					"CALLEEMETHODNAME" : "repaint"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "backup",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "oos",
+					"CALLEEMETHODNAME" : "writeObject"
+				}, {
+					"CALLEECLASS" : "ObjectOutputStream",
+					"CALLEEMETHODNAME" : "close"
+				}, {
+					"CALLEECLASS" : "Encoder",
+					"CALLEEMETHODNAME" : "encodeToString"
+				}, {
+					"CALLEECLASS" : "Base64",
+					"CALLEEMETHODNAME" : "getEncoder"
+				}, {
+					"CALLEECLASS" : "ByteArrayOutputStream",
+					"CALLEEMETHODNAME" : "toByteArray"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "restore",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Decoder",
+					"CALLEEMETHODNAME" : "decode"
+				}, {
+					"CALLEECLASS" : "Base64",
+					"CALLEEMETHODNAME" : "getDecoder"
+				}, {
+					"CALLEECLASS" : "ObjectInputStream",
+					"CALLEEMETHODNAME" : "readObject"
+				}, {
+					"CALLEECLASS" : "ObjectInputStream",
+					"CALLEEMETHODNAME" : "close"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "print"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "state",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		}
+	}
+}

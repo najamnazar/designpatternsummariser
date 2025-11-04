@@ -1,0 +1,441 @@
+{
+	"final_summary" : "ClientForEntertainmentUnitFacade.java: ClientForEntertainmentUnitFacade does not have any design pattern.  It is a public class. The only method of ClientForEntertainmentUnitFacade is main (void). No methods call main and main calls 7 methods : playGame method of class entertainmentFacade, playMovie method of class entertainmentFacade, next method of class Scanner, nextInt method of class Scanner, masterPowerOff method of class entertainmentFacade, println method of class PrintStream and playMusic method of class entertainmentFacade.\n\n\nEntertainmentDevice.java: EntertainmentDevice does not have any design pattern.  It is a public class. The 9 methods of EntertainmentDevice are downloadmedia (void), powerOn (void), powerOff (void), attachAmplifierForMusic (void), attachAmplifierForHomeTheater (void), powerOn (void), powerOff (void), adjustProjectorForMovie (void) and adjustProjectorForGame (void). No methods call downloadmedia and downloadmedia calls no methods. No methods call powerOn and powerOn calls no methods. No methods call powerOff and powerOff calls no methods. No methods call attachAmplifierForMusic and attachAmplifierForMusic calls no methods. No methods call attachAmplifierForHomeTheater and attachAmplifierForHomeTheater calls no methods. No methods call powerOn and powerOn calls no methods. No methods call powerOff and powerOff calls no methods. No methods call adjustProjectorForMovie and adjustProjectorForMovie calls no methods. No methods call adjustProjectorForGame and adjustProjectorForGame calls no methods.\n\n\nEntertainmentFacade.java: EntertainmentFacade does not have any design pattern.  It is a public class. The 5 methods of EntertainmentFacade are playMovie (void), playMusic (void), playGame (void), masterPowerOff (void) and masterPowerOn (void). No methods call playMovie and playMovie calls 4 methods : masterPowerOn method of class EntertainmentFacade, downloadmedia method of class nexus, attachAmplifierForHomeTheater method of class amplifier and adjustProjectorForMovie method of class projector. No methods call playMusic and playMusic calls 3 methods : attachAmplifierForMusic method of class amplifier, downloadmedia method of class nexus and powerOn method of class amplifier. No methods call playGame and playGame calls 4 methods : masterPowerOn method of class EntertainmentFacade, adjustProjectorForGame method of class projector, attachAmplifierForMusic method of class amplifier and downloadmedia method of class nexus. No methods call masterPowerOff and masterPowerOff calls 2 methods : powerOff method of class amplifier and powerOff method of class projector. 2 methods ( playMovie method of class EntertainmentFacade and playGame method of class EntertainmentFacade ) call masterPowerOn and masterPowerOn calls 2 methods : powerOn method of class projector and powerOn method of class amplifier.\n\n\n",
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"premaseem-patternBonus-facade-pattern" : {
+		"ClientForEntertainmentUnitFacade" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 14,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientForEntertainmentUnitFacade",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "entertainmentFacade = new EntertainmentFacade()" ],
+				"VARIABLECOMMONTYPE" : "EntertainmentFacade",
+				"VARIABLEELEMENTTYPE" : "EntertainmentFacade"
+			}, {
+				"VARIABLEDECLARATION" : [ "entType = scan.nextInt()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "name = scan.next()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 14,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "next"
+				}, {
+					"CALLEECLASS" : "entertainmentFacade",
+					"CALLEEMETHODNAME" : "playMovie"
+				}, {
+					"CALLEECLASS" : "entertainmentFacade",
+					"CALLEEMETHODNAME" : "playMusic"
+				}, {
+					"CALLEECLASS" : "entertainmentFacade",
+					"CALLEEMETHODNAME" : "playGame"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "entertainmentFacade",
+					"CALLEEMETHODNAME" : "masterPowerOff"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"EntertainmentDevice" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EntertainmentDevice",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Nexus",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Amplifier",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Projector",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "downloadmedia",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "powerOn",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "powerOff",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "attachAmplifierForMusic",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "attachAmplifierForHomeTheater",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "powerOn",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "powerOff",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "adjustProjectorForMovie",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "adjustProjectorForGame",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"EntertainmentFacade" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Nexus",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "nexus = new Nexus()" ],
+				"FIELDDATATYPE" : "Nexus",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Amplifier",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "amplifier = new Amplifier()" ],
+				"FIELDDATATYPE" : "Amplifier",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Projector",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "projector = new Projector()" ],
+				"FIELDDATATYPE" : "Projector",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 15,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EntertainmentFacade",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "playMovie",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "EntertainmentFacade",
+					"CALLEEMETHODNAME" : "masterPowerOn"
+				}, {
+					"CALLEECLASS" : "nexus",
+					"CALLEEMETHODNAME" : "downloadmedia"
+				}, {
+					"CALLEECLASS" : "EntertainmentFacade",
+					"CALLEEMETHODNAME" : "masterPowerOn"
+				}, {
+					"CALLEECLASS" : "amplifier",
+					"CALLEEMETHODNAME" : "attachAmplifierForHomeTheater"
+				}, {
+					"CALLEECLASS" : "projector",
+					"CALLEEMETHODNAME" : "adjustProjectorForMovie"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "playMusic",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "nexus",
+					"CALLEEMETHODNAME" : "downloadmedia"
+				}, {
+					"CALLEECLASS" : "amplifier",
+					"CALLEEMETHODNAME" : "powerOn"
+				}, {
+					"CALLEECLASS" : "amplifier",
+					"CALLEEMETHODNAME" : "attachAmplifierForMusic"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "playGame",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "nexus",
+					"CALLEEMETHODNAME" : "downloadmedia"
+				}, {
+					"CALLEECLASS" : "EntertainmentFacade",
+					"CALLEEMETHODNAME" : "masterPowerOn"
+				}, {
+					"CALLEECLASS" : "amplifier",
+					"CALLEEMETHODNAME" : "attachAmplifierForMusic"
+				}, {
+					"CALLEECLASS" : "projector",
+					"CALLEEMETHODNAME" : "adjustProjectorForGame"
+				}, {
+					"CALLEECLASS" : "EntertainmentFacade",
+					"CALLEEMETHODNAME" : "masterPowerOn"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "masterPowerOff",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "amplifier",
+					"CALLEEMETHODNAME" : "powerOff"
+				}, {
+					"CALLEECLASS" : "projector",
+					"CALLEEMETHODNAME" : "powerOff"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "masterPowerOn",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "playGame",
+					"CALLEDCLASS" : "EntertainmentFacade"
+				}, {
+					"CALLEDMETHODNAME" : "playMovie",
+					"CALLEDCLASS" : "EntertainmentFacade"
+				}, {
+					"CALLEDMETHODNAME" : "playGame",
+					"CALLEDCLASS" : "EntertainmentFacade"
+				}, {
+					"CALLEDMETHODNAME" : "playMovie",
+					"CALLEDCLASS" : "EntertainmentFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "amplifier",
+					"CALLEEMETHODNAME" : "powerOn"
+				}, {
+					"CALLEECLASS" : "projector",
+					"CALLEEMETHODNAME" : "powerOn"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

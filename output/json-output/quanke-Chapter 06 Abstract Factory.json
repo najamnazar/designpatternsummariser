@@ -1,0 +1,595 @@
+{
+	"final_summary" : "EFactory.java: abstract_factory: EFactory acts as an abstract factory for Television, AirConditioner, which is inherited by TCLFactory, HaierFactory. It is a public interface. The 2 methods of EFactory are produceTelevision (Television) and produceAirConditioner (AirConditioner). Only one method ( main method of class Client ) calls produceTelevision and produceTelevision calls no methods. Only one method ( main method of class Client ) calls produceAirConditioner and produceAirConditioner calls no methods.\n\n memento: EFactory acts as an originator for memento AirConditioner, which is inherited by, which produces an AirConditioner Air Conditioner to. EFactory acts as an originator for memento Television, which is inherited by, which produces a Television Television to. It is a public interface. The 2 methods of EFactory are produceTelevision (Television) and produceAirConditioner (AirConditioner). Only one method ( main method of class Client ) calls produceTelevision and produceTelevision calls no methods. Only one method ( main method of class Client ) calls produceAirConditioner and produceAirConditioner calls no methods.\n\n factory_method: EFactory acts as a factory for EFactory, which overrides. EFactory acts as a factory method for AirConditioner, which is inherited by EFactory, EFactory. It is a public interface. The 2 methods of EFactory are produceTelevision (Television) and produceAirConditioner (AirConditioner). Only one method ( main method of class Client ) calls produceTelevision and produceTelevision calls no methods. Only one method ( main method of class Client ) calls produceAirConditioner and produceAirConditioner calls no methods.\n\n\nTCLFactory.java: abstract_factory: TCLFactory acts as a factory for EFactory, which overrides. It is a public class that extends EFactory and that implements EFactory. The 2 methods of TCLFactory are produceTelevision (Television) and produceAirConditioner (AirConditioner). No methods call produceTelevision and produceTelevision calls no methods. No methods call produceAirConditioner and produceAirConditioner calls no methods.\n\n memento: TCLFactory acts as an originator for memento AirConditioner, which produces an AirConditioner Air Conditioner to. TCLFactory acts as an originator for memento Television, which produces a Television Television to. It is a public class that extends EFactory and that implements EFactory. The 2 methods of TCLFactory are produceTelevision (Television) and produceAirConditioner (AirConditioner). No methods call produceTelevision and produceTelevision calls no methods. No methods call produceAirConditioner and produceAirConditioner calls no methods.\n\n\nHairAirConditioner.java: abstract_factory: HairAirConditioner acts as a product for EFactory, which overrides. It is a public class that extends AirConditioner and that implements AirConditioner. The only method of HairAirConditioner is changeTemperature (void). No methods call changeTemperature and changeTemperature calls only one method : println method of class PrintStream.\n\n memento: HairAirConditioner acts as a memento, which changes Temperature. It is a public class that extends AirConditioner and that implements AirConditioner. The only method of HairAirConditioner is changeTemperature (void). No methods call changeTemperature and changeTemperature calls only one method : println method of class PrintStream.\n\n factory_method: HairAirConditioner acts as a product for EFactory, which overrides. It is a public class that extends AirConditioner and that implements AirConditioner. The only method of HairAirConditioner is changeTemperature (void). No methods call changeTemperature and changeTemperature calls only one method : println method of class PrintStream.\n\n\nTelevision.java: abstract_factory: Television acts as an abstract product for Television, which is inherited by TCLTelevision, HaierTelevision. It is a public interface. The only method of Television is play (void). Only one method ( main method of class Client ) calls play and play calls no methods.\n\n memento: Television acts as a memento, which is inherited by TCLTelevision, HaierTelevision, which plays. It is a public interface. The only method of Television is play (void). Only one method ( main method of class Client ) calls play and play calls no methods.\n\n\nTCLTelevision.java: abstract_factory: TCLTelevision acts as a product for EFactory, which overrides. It is a public class that extends Television and that implements Television. The only method of TCLTelevision is play (void). No methods call play and play calls only one method : println method of class PrintStream.\n\n memento: TCLTelevision acts as a memento, which plays. It is a public class that extends Television and that implements Television. The only method of TCLTelevision is play (void). No methods call play and play calls only one method : println method of class PrintStream.\n\n\nTCLAirConditioner.java: abstract_factory: TCLAirConditioner acts as a product for EFactory, which overrides. It is a public class that extends AirConditioner and that implements AirConditioner. The only method of TCLAirConditioner is changeTemperature (void). No methods call changeTemperature and changeTemperature calls only one method : println method of class PrintStream.\n\n memento: TCLAirConditioner acts as a memento, which changes Temperature. It is a public class that extends AirConditioner and that implements AirConditioner. The only method of TCLAirConditioner is changeTemperature (void). No methods call changeTemperature and changeTemperature calls only one method : println method of class PrintStream.\n\n factory_method: TCLAirConditioner acts as a product for EFactory, which overrides. It is a public class that extends AirConditioner and that implements AirConditioner. The only method of TCLAirConditioner is changeTemperature (void). No methods call changeTemperature and changeTemperature calls only one method : println method of class PrintStream.\n\n\nXMLUtil.java: XMLUtil does not have any design pattern.  It is a public class. The only method of XMLUtil is getBean (Object). Only one method ( main method of class Client ) calls getBean and getBean calls 10 methods : newInstance method of class DocumentBuilderFactory, item method of class NodeList, newInstance method of class Class, getNodeValue method of class Node, printStackTrace method of class Throwable, getElementsByTagName method of class Document, forName method of class Class, newDocumentBuilder method of class DocumentBuilderFactory, parse method of class DocumentBuilder and getFirstChild method of class Node.\n\n\nHaierFactory.java: abstract_factory: HaierFactory acts as a factory for EFactory, which overrides. It is a public class that extends EFactory and that implements EFactory. The 2 methods of HaierFactory are produceTelevision (Television) and produceAirConditioner (AirConditioner). No methods call produceTelevision and produceTelevision calls no methods. No methods call produceAirConditioner and produceAirConditioner calls no methods.\n\n memento: HaierFactory acts as an originator for memento AirConditioner, which produces an AirConditioner Air Conditioner to. HaierFactory acts as an originator for memento Television, which produces a Television Television to. It is a public class that extends EFactory and that implements EFactory. The 2 methods of HaierFactory are produceTelevision (Television) and produceAirConditioner (AirConditioner). No methods call produceTelevision and produceTelevision calls no methods. No methods call produceAirConditioner and produceAirConditioner calls no methods.\n\n\nAirConditioner.java: abstract_factory: AirConditioner acts as an abstract product for AirConditioner, which is inherited by HairAirConditioner, TCLAirConditioner. It is a public interface. The only method of AirConditioner is changeTemperature (void). Only one method ( main method of class Client ) calls changeTemperature and changeTemperature calls no methods.\n\n memento: AirConditioner acts as a memento, which is inherited by HairAirConditioner, TCLAirConditioner, which changes Temperature. It is a public interface. The only method of AirConditioner is changeTemperature (void). Only one method ( main method of class Client ) calls changeTemperature and changeTemperature calls no methods.\n\n factory_method: AirConditioner acts as an abstract product for EFactory, which is inherited by HairAirConditioner, TCLAirConditioner. It is a public interface. The only method of AirConditioner is changeTemperature (void). Only one method ( main method of class Client ) calls changeTemperature and changeTemperature calls no methods.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 7 methods : getBean method of class XMLUtil, changeTemperature method of class AirConditioner, produceTelevision method of class EFactory, getMessage method of class Throwable, play method of class Television, println method of class PrintStream and produceAirConditioner method of class EFactory.\n\n\nHaierTelevision.java: abstract_factory: HaierTelevision acts as a product for EFactory, which overrides. It is a public class that extends Television and that implements Television. The only method of HaierTelevision is play (void). No methods call play and play calls only one method : println method of class PrintStream.\n\n memento: HaierTelevision acts as a memento, which plays. It is a public class that extends Television and that implements Television. The only method of HaierTelevision is play (void). No methods call play and play calls only one method : println method of class PrintStream.\n\n\n",
+	"design_pattern" : [ {
+		"factory_method" : {
+			"EFactory" : {
+				"concrete_product" : [ "HairAirConditioner", "TCLAirConditioner" ],
+				"abstract_product" : "AirConditioner",
+				"concrete_factory" : [ "EFactory", "EFactory" ]
+			}
+		}
+	}, {
+		"abstract_factory" : {
+			"EFactory" : {
+				"abstract_product" : {
+					"Television" : [ "TCLTelevision", "HaierTelevision" ],
+					"AirConditioner" : [ "HairAirConditioner", "TCLAirConditioner" ]
+				},
+				"concrete_factory" : [ "TCLFactory", "HaierFactory" ]
+			}
+		}
+	}, {
+		"memento" : {
+			"Television" : {
+				"caretaker" : { },
+				"originator" : {
+					"EFactory" : [ "TCLFactory", "HaierFactory" ]
+				},
+				"concrete_memento" : [ "TCLTelevision", "HaierTelevision" ]
+			},
+			"AirConditioner" : {
+				"caretaker" : { },
+				"originator" : {
+					"EFactory" : [ "TCLFactory", "HaierFactory" ]
+				},
+				"concrete_memento" : [ "HairAirConditioner", "TCLAirConditioner" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"abstract_factory" : {
+			"EFactory" : [ "EFactory acts as an abstract factory for Television, AirConditioner, which is inherited by TCLFactory, HaierFactory." ],
+			"TCLFactory" : [ "TCLFactory acts as a factory for EFactory, which overrides." ],
+			"HairAirConditioner" : [ "HairAirConditioner acts as a product for EFactory, which overrides." ],
+			"Television" : [ "Television acts as an abstract product for Television, which is inherited by TCLTelevision, HaierTelevision." ],
+			"TCLTelevision" : [ "TCLTelevision acts as a product for EFactory, which overrides." ],
+			"TCLAirConditioner" : [ "TCLAirConditioner acts as a product for EFactory, which overrides." ],
+			"HaierFactory" : [ "HaierFactory acts as a factory for EFactory, which overrides." ],
+			"AirConditioner" : [ "AirConditioner acts as an abstract product for AirConditioner, which is inherited by HairAirConditioner, TCLAirConditioner." ],
+			"HaierTelevision" : [ "HaierTelevision acts as a product for EFactory, which overrides." ]
+		},
+		"memento" : {
+			"EFactory" : [ "EFactory acts as an originator for memento AirConditioner, which is inherited by, which produces an AirConditioner Air Conditioner to.", "EFactory acts as an originator for memento Television, which is inherited by, which produces a Television Television to." ],
+			"TCLFactory" : [ "TCLFactory acts as an originator for memento AirConditioner, which produces an AirConditioner Air Conditioner to.", "TCLFactory acts as an originator for memento Television, which produces a Television Television to." ],
+			"HairAirConditioner" : [ "HairAirConditioner acts as a memento, which changes Temperature." ],
+			"Television" : [ "Television acts as a memento, which is inherited by TCLTelevision, HaierTelevision, which plays." ],
+			"TCLTelevision" : [ "TCLTelevision acts as a memento, which plays." ],
+			"TCLAirConditioner" : [ "TCLAirConditioner acts as a memento, which changes Temperature." ],
+			"HaierFactory" : [ "HaierFactory acts as an originator for memento AirConditioner, which produces an AirConditioner Air Conditioner to.", "HaierFactory acts as an originator for memento Television, which produces a Television Television to." ],
+			"AirConditioner" : [ "AirConditioner acts as a memento, which is inherited by HairAirConditioner, TCLAirConditioner, which changes Temperature." ],
+			"HaierTelevision" : [ "HaierTelevision acts as a memento, which plays." ]
+		},
+		"factory_method" : {
+			"EFactory" : [ "EFactory acts as a factory for EFactory, which overrides.", "EFactory acts as a factory method for AirConditioner, which is inherited by EFactory, EFactory." ],
+			"HairAirConditioner" : [ "HairAirConditioner acts as a product for EFactory, which overrides." ],
+			"TCLAirConditioner" : [ "TCLAirConditioner acts as a product for EFactory, which overrides." ],
+			"AirConditioner" : [ "AirConditioner acts as an abstract product for EFactory, which is inherited by HairAirConditioner, TCLAirConditioner." ]
+		}
+	},
+	"quanke-Chapter 06 Abstract Factory" : {
+		"EFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EFactory",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "produceTelevision",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Television",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "produceAirConditioner",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "AirConditioner",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"TCLFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "EFactory" ],
+				"IMPLEMENTSFROM" : [ "EFactory" ],
+				"CLASSNAME" : "TCLFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "produceTelevision",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Television",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "produceAirConditioner",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "AirConditioner",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"HairAirConditioner" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "AirConditioner" ],
+				"IMPLEMENTSFROM" : [ "AirConditioner" ],
+				"CLASSNAME" : "HairAirConditioner",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "changeTemperature",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Television" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Television",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "play",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"TCLTelevision" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Television" ],
+				"IMPLEMENTSFROM" : [ "Television" ],
+				"CLASSNAME" : "TCLTelevision",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "play",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"TCLAirConditioner" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "AirConditioner" ],
+				"IMPLEMENTSFROM" : [ "AirConditioner" ],
+				"CLASSNAME" : "TCLAirConditioner",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "changeTemperature",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"XMLUtil" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 10,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "XMLUtil",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "dFactory = DocumentBuilderFactory.newInstance()" ],
+				"VARIABLECOMMONTYPE" : "DocumentBuilderFactory",
+				"VARIABLEELEMENTTYPE" : "DocumentBuilderFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "builder = dFactory.newDocumentBuilder()" ],
+				"VARIABLECOMMONTYPE" : "DocumentBuilder",
+				"VARIABLEELEMENTTYPE" : "DocumentBuilder"
+			}, {
+				"VARIABLEDECLARATION" : [ "doc" ],
+				"VARIABLECOMMONTYPE" : "Document",
+				"VARIABLEELEMENTTYPE" : "Document"
+			}, {
+				"VARIABLEDECLARATION" : [ "nl = doc.getElementsByTagName(\"className\")" ],
+				"VARIABLECOMMONTYPE" : "NodeList",
+				"VARIABLEELEMENTTYPE" : "NodeList"
+			}, {
+				"VARIABLEDECLARATION" : [ "classNode = nl.item(0).getFirstChild()" ],
+				"VARIABLECOMMONTYPE" : "Node",
+				"VARIABLEELEMENTTYPE" : "Node"
+			}, {
+				"VARIABLEDECLARATION" : [ "cName = classNode.getNodeValue()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "c = Class.forName(cName)" ],
+				"VARIABLECOMMONTYPE" : "Class",
+				"VARIABLEELEMENTTYPE" : "Class"
+			}, {
+				"VARIABLEDECLARATION" : [ "obj = c.newInstance()" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getBean",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 10,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DocumentBuilderFactory",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "DocumentBuilderFactory",
+					"CALLEEMETHODNAME" : "newDocumentBuilder"
+				}, {
+					"CALLEECLASS" : "DocumentBuilder",
+					"CALLEEMETHODNAME" : "parse"
+				}, {
+					"CALLEECLASS" : "Document",
+					"CALLEEMETHODNAME" : "getElementsByTagName"
+				}, {
+					"CALLEECLASS" : "Node",
+					"CALLEEMETHODNAME" : "getFirstChild"
+				}, {
+					"CALLEECLASS" : "NodeList",
+					"CALLEEMETHODNAME" : "item"
+				}, {
+					"CALLEECLASS" : "Node",
+					"CALLEEMETHODNAME" : "getNodeValue"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "forName"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"HaierFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "EFactory" ],
+				"IMPLEMENTSFROM" : [ "EFactory" ],
+				"CLASSNAME" : "HaierFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "produceTelevision",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Television",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "produceAirConditioner",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "AirConditioner",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"AirConditioner" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AirConditioner",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "changeTemperature",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "factory" ],
+				"VARIABLECOMMONTYPE" : "EFactory",
+				"VARIABLEELEMENTTYPE" : "EFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "tv" ],
+				"VARIABLECOMMONTYPE" : "Television",
+				"VARIABLEELEMENTTYPE" : "Television"
+			}, {
+				"VARIABLEDECLARATION" : [ "ac" ],
+				"VARIABLECOMMONTYPE" : "AirConditioner",
+				"VARIABLEELEMENTTYPE" : "AirConditioner"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "XMLUtil",
+					"CALLEEMETHODNAME" : "getBean"
+				}, {
+					"CALLEECLASS" : "EFactory",
+					"CALLEEMETHODNAME" : "produceTelevision"
+				}, {
+					"CALLEECLASS" : "Television",
+					"CALLEEMETHODNAME" : "play"
+				}, {
+					"CALLEECLASS" : "EFactory",
+					"CALLEEMETHODNAME" : "produceAirConditioner"
+				}, {
+					"CALLEECLASS" : "AirConditioner",
+					"CALLEEMETHODNAME" : "changeTemperature"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "getMessage"
+				}, {
+					"CALLEECLASS" : "XMLUtil",
+					"CALLEEMETHODNAME" : "getBean"
+				}, {
+					"CALLEECLASS" : "EFactory",
+					"CALLEEMETHODNAME" : "produceTelevision"
+				}, {
+					"CALLEECLASS" : "Television",
+					"CALLEEMETHODNAME" : "play"
+				}, {
+					"CALLEECLASS" : "EFactory",
+					"CALLEEMETHODNAME" : "produceAirConditioner"
+				}, {
+					"CALLEECLASS" : "AirConditioner",
+					"CALLEEMETHODNAME" : "changeTemperature"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"HaierTelevision" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Television" ],
+				"IMPLEMENTSFROM" : [ "Television" ],
+				"CLASSNAME" : "HaierTelevision",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "play",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

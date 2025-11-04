@@ -1,0 +1,937 @@
+{
+	"final_summary" : "LoginEventListener.java: observer: LoginEventListener acts as an observer for publisher LoginBean, which is inherited by LoginValidatorA, LoginValidatorB, which validates LoginEvent parameter of event Login. It is a public interface that extends EventListener. The only method of LoginEventListener is validateLogin (void). Only one method ( fireLoginEvent method of class LoginBean ) calls validateLogin and validateLogin calls no methods.\n\n adapter: LoginEventListener acts as a target for adapter LoginValidatorA, which adapts to LoginEventListener. LoginEventListener acts as a target for adapter LoginValidatorB, which adapts to LoginEventListener. It is a public interface that extends EventListener. The only method of LoginEventListener is validateLogin (void). Only one method ( fireLoginEvent method of class LoginBean ) calls validateLogin and validateLogin calls no methods.\n\n\nMyObserver.java: MyObserver does not have any design pattern.  It is a public interface. The only method of MyObserver is response (void). Only one method ( cry method of class Cat ) calls response and response calls no methods.\n\n\nMouse.java: Mouse does not have any design pattern.  It is a public class that implements MyObserver. The only method of Mouse is response (void). No methods call response and response calls only one method : println method of class PrintStream.\n\n\nMySubject.java: MySubject does not have any design pattern.  It is a public abstract class. The 3 methods of MySubject are attach (void), detach (void) and cry (void). Only one method ( main method of class Client ) calls attach and attach calls only one method : add method of class ArrayList. No methods call detach and detach calls only one method : remove method of class ArrayList. Only one method ( main method of class Client ) calls cry and cry calls no methods.\n\n\nLoginBean.java: observer: LoginBean acts as a publisher for observer LoginEventListener, which is inherited by, which adds LoginEventListener parameter of lel Login Event Listener, which fires Object parameter of object, String parameter of userName, String parameter of password Login Event, which actions ActionEvent parameter of event Performed. It is a public class that extends JPanel and that implements ActionListener. The 3 methods of LoginBean are addLoginEventListener (void), fireLoginEvent (void) and actionPerformed (void). No methods call addLoginEventListener and addLoginEventListener calls no methods. Only one method ( actionPerformed method of class LoginBean ) calls fireLoginEvent and fireLoginEvent calls only one method : validateLogin method of class LoginEventListener. No methods call actionPerformed and actionPerformed calls 6 methods : getText method of class JPasswordField, fireLoginEvent method of class LoginBean, setText method of class JPasswordField, setText method of class JTextComponent, getText method of class JTextComponent and getSource method of class EventObject.\n\n adapter: LoginBean acts as an adaptee for adapter LoginValidatorB, which adapts to LoginEventListener, which adapts to LoginEventListener, which adapts to LoginEventListener. LoginBean acts as an adaptee for adapter LoginValidatorA, which adapts to LoginEventListener, which adapts to LoginEventListener, which adapts to LoginEventListener. It is a public class that extends JPanel and that implements ActionListener. The 3 methods of LoginBean are addLoginEventListener (void), fireLoginEvent (void) and actionPerformed (void). No methods call addLoginEventListener and addLoginEventListener calls no methods. Only one method ( actionPerformed method of class LoginBean ) calls fireLoginEvent and fireLoginEvent calls only one method : validateLogin method of class LoginEventListener. No methods call actionPerformed and actionPerformed calls 6 methods : getText method of class JPasswordField, fireLoginEvent method of class LoginBean, setText method of class JPasswordField, setText method of class JTextComponent, getText method of class JTextComponent and getSource method of class EventObject.\n\n\nCat.java: Cat does not have any design pattern.  It is a public class that extends MySubject. The only method of Cat is cry (void). No methods call cry and cry calls 2 methods : response method of class MyObserver and println method of class PrintStream.\n\n\nLoginEvent.java: LoginEvent does not have any design pattern.  It is a public class that extends EventObject. The 4 methods of LoginEvent are setUserName (void), getUserName (String), setPassword (void) and getPassword (String). No methods call setUserName and setUserName calls no methods. 2 methods ( validateLogin method of class LoginValidatorA and validateLogin method of class LoginValidatorB ) call getUserName and getUserName calls no methods. No methods call setPassword and setPassword calls no methods. 2 methods ( validateLogin method of class LoginValidatorA and validateLogin method of class LoginValidatorB ) call getPassword and getPassword calls no methods.\n\n\nLoginValidatorA.java: observer: LoginValidatorA acts as an observer, which validates LoginEvent parameter of event Login, which mains String[] parameter of args. It is a public class that extends JFrame and that implements LoginEventListener. The 2 methods of LoginValidatorA are validateLogin (void) and main (void). No methods call validateLogin and validateLogin calls 5 methods : showMessageDialog method of class JOptionPane, trim method of class String, getUserName method of class LoginEvent, getPassword method of class LoginEvent and length method of class String. No methods call main and main calls only one method : setVisible method of class Window.\n\n adapter: LoginValidatorA acts as an adapter, which adapts to LoginEventListener, which adapts to LoginEventListener. It is a public class that extends JFrame and that implements LoginEventListener. The 2 methods of LoginValidatorA are validateLogin (void) and main (void). No methods call validateLogin and validateLogin calls 5 methods : showMessageDialog method of class JOptionPane, trim method of class String, getUserName method of class LoginEvent, getPassword method of class LoginEvent and length method of class String. No methods call main and main calls only one method : setVisible method of class Window.\n\n\nLoginValidatorB.java: observer: LoginValidatorB acts as an observer, which validates LoginEvent parameter of event Login, which mains String[] parameter of args. It is a public class that extends JFrame and that implements LoginEventListener. The 2 methods of LoginValidatorB are validateLogin (void) and main (void). No methods call validateLogin and validateLogin calls 4 methods : showMessageDialog method of class JOptionPane, getUserName method of class LoginEvent, equals method of class String and getPassword method of class LoginEvent. No methods call main and main calls only one method : setVisible method of class Window.\n\n adapter: LoginValidatorB acts as an adapter, which adapts to LoginEventListener, which adapts to LoginEventListener. It is a public class that extends JFrame and that implements LoginEventListener. The 2 methods of LoginValidatorB are validateLogin (void) and main (void). No methods call validateLogin and validateLogin calls 4 methods : showMessageDialog method of class JOptionPane, getUserName method of class LoginEvent, equals method of class String and getPassword method of class LoginEvent. No methods call main and main calls only one method : setVisible method of class Window.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 2 methods : cry method of class MySubject and attach method of class MySubject.\n\n\nDog.java: Dog does not have any design pattern.  It is a public class that implements MyObserver. The only method of Dog is response (void). No methods call response and response calls only one method : println method of class PrintStream.\n\n\nPig.java: Pig does not have any design pattern.  It is a public class that implements MyObserver. The only method of Pig is response (void). No methods call response and response calls only one method : println method of class PrintStream.\n\n\n",
+	"design_pattern" : [ {
+		"adapter" : {
+			"LoginValidatorA" : {
+				"adaptee" : [ "LoginBean" ],
+				"target" : [ "LoginEventListener" ]
+			},
+			"LoginValidatorB" : {
+				"adaptee" : [ "LoginBean" ],
+				"target" : [ "LoginEventListener" ]
+			}
+		}
+	}, {
+		"observer" : {
+			"LoginEventListener" : {
+				"concrete_observer" : [ "LoginValidatorA", "LoginValidatorB" ],
+				"publisher" : {
+					"LoginBean" : [ ]
+				}
+			}
+		}
+	} ],
+	"quanke-Chapter 23 Observer" : {
+		"LoginEventListener" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "EventListener" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "LoginEventListener",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "validateLogin",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "fireLoginEvent",
+					"CALLEDCLASS" : "LoginBean"
+				}, {
+					"CALLEDMETHODNAME" : "fireLoginEvent",
+					"CALLEDCLASS" : "LoginBean"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "LoginEvent"
+				} ]
+			} ]
+		},
+		"MyObserver" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "MyObserver",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "response",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "cry",
+					"CALLEDCLASS" : "Cat"
+				}, {
+					"CALLEDMETHODNAME" : "cry",
+					"CALLEDCLASS" : "Cat"
+				} ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Mouse" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "MyObserver" ],
+				"CLASSNAME" : "Mouse",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "response",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MySubject" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ArrayList",
+				"FIELDMODIFIERTYPE" : [ "protected" ],
+				"FIELDDECLARATION" : [ "observers = new ArrayList()" ],
+				"FIELDDATATYPE" : "ArrayList",
+				"FIELDACCESSSPECIFIER" : "PROTECTED"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "MySubject",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "attach",
+				"NUMBEROFINCOMINGMETHODS" : 8,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ArrayList",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "MyObserver"
+				} ]
+			}, {
+				"METHODNAME" : "detach",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ArrayList",
+					"CALLEEMETHODNAME" : "remove"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "MyObserver"
+				} ]
+			}, {
+				"METHODNAME" : "cry",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"LoginBean" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "JLabel",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "labUserName", "labPassword" ],
+				"FIELDDATATYPE" : "JLabel",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "JTextField",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "txtUserName" ],
+				"FIELDDATATYPE" : "JTextField",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "JPasswordField",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "txtPassword" ],
+				"FIELDDATATYPE" : "JPasswordField",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "JButton",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "btnLogin", "btnClear" ],
+				"FIELDDATATYPE" : "JButton",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "LoginEventListener",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "lel" ],
+				"FIELDDATATYPE" : "LoginEventListener",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "LoginEvent",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "le" ],
+				"FIELDDATATYPE" : "LoginEvent",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 17,
+				"EXTENDSFROM" : [ "JPanel", "ActionListener" ],
+				"IMPLEMENTSFROM" : [ "ActionListener" ],
+				"CLASSNAME" : "LoginBean",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "userName = this.txtUserName.getText()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "password = this.txtPassword.getText()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addLoginEventListener",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "lel",
+					"PARAMETERTYPE" : "LoginEventListener"
+				} ]
+			}, {
+				"METHODNAME" : "fireLoginEvent",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "actionPerformed",
+					"CALLEDCLASS" : "LoginBean"
+				}, {
+					"CALLEDMETHODNAME" : "actionPerformed",
+					"CALLEDCLASS" : "LoginBean"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LoginEventListener",
+					"CALLEEMETHODNAME" : "validateLogin"
+				}, {
+					"CALLEECLASS" : "LoginEventListener",
+					"CALLEEMETHODNAME" : "validateLogin"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "object",
+					"PARAMETERTYPE" : "Object"
+				}, {
+					"PARAMETERNAME" : "userName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "password",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "actionPerformed",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "EventObject",
+					"CALLEEMETHODNAME" : "getSource"
+				}, {
+					"CALLEECLASS" : "JTextComponent",
+					"CALLEEMETHODNAME" : "getText"
+				}, {
+					"CALLEECLASS" : "JPasswordField",
+					"CALLEEMETHODNAME" : "getText"
+				}, {
+					"CALLEECLASS" : "LoginBean",
+					"CALLEEMETHODNAME" : "fireLoginEvent"
+				}, {
+					"CALLEECLASS" : "EventObject",
+					"CALLEEMETHODNAME" : "getSource"
+				}, {
+					"CALLEECLASS" : "JTextComponent",
+					"CALLEEMETHODNAME" : "setText"
+				}, {
+					"CALLEECLASS" : "JPasswordField",
+					"CALLEEMETHODNAME" : "setText"
+				}, {
+					"CALLEECLASS" : "LoginBean",
+					"CALLEEMETHODNAME" : "fireLoginEvent"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "ActionEvent"
+				} ]
+			} ]
+		},
+		"Cat" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ "MySubject" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Cat",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "obs" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "cry",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "MyObserver",
+					"CALLEEMETHODNAME" : "response"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "MyObserver",
+					"CALLEEMETHODNAME" : "response"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"LoginEvent" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "userName" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "password" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "EventObject" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "LoginEvent",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "source",
+					"PARAMETERTYPE" : "Object"
+				}, {
+					"PARAMETERNAME" : "userName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "password",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "setUserName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "userName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getUserName",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "validateLogin",
+					"CALLEDCLASS" : "LoginValidatorA"
+				}, {
+					"CALLEDMETHODNAME" : "validateLogin",
+					"CALLEDCLASS" : "LoginValidatorA"
+				}, {
+					"CALLEDMETHODNAME" : "validateLogin",
+					"CALLEDCLASS" : "LoginValidatorB"
+				}, {
+					"CALLEDMETHODNAME" : "validateLogin",
+					"CALLEDCLASS" : "LoginValidatorB"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setPassword",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "password",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getPassword",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "validateLogin",
+					"CALLEDCLASS" : "LoginValidatorA"
+				}, {
+					"CALLEDMETHODNAME" : "validateLogin",
+					"CALLEDCLASS" : "LoginValidatorA"
+				}, {
+					"CALLEDMETHODNAME" : "validateLogin",
+					"CALLEDCLASS" : "LoginValidatorB"
+				}, {
+					"CALLEDMETHODNAME" : "validateLogin",
+					"CALLEDCLASS" : "LoginValidatorB"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"LoginValidatorA" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "JPanel",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "p" ],
+				"FIELDDATATYPE" : "JPanel",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "LoginBean",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "lb" ],
+				"FIELDDATATYPE" : "LoginBean",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "JLabel",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "lblLogo" ],
+				"FIELDDATATYPE" : "JLabel",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 20,
+				"EXTENDSFROM" : [ "JFrame", "LoginEventListener" ],
+				"IMPLEMENTSFROM" : [ "LoginEventListener" ],
+				"CLASSNAME" : "LoginValidatorA",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "f = new Font(\"Times New Roman\", Font.BOLD, 30)" ],
+				"VARIABLECOMMONTYPE" : "Font",
+				"VARIABLEELEMENTTYPE" : "Font"
+			}, {
+				"VARIABLEDECLARATION" : [ "userName = event.getUserName()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "password = event.getPassword()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "validateLogin",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 8,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LoginEvent",
+					"CALLEEMETHODNAME" : "getUserName"
+				}, {
+					"CALLEECLASS" : "LoginEvent",
+					"CALLEEMETHODNAME" : "getPassword"
+				}, {
+					"CALLEECLASS" : "LoginEvent",
+					"CALLEEMETHODNAME" : "getUserName"
+				}, {
+					"CALLEECLASS" : "LoginEvent",
+					"CALLEEMETHODNAME" : "getPassword"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "length"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "trim"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "length"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "trim"
+				}, {
+					"CALLEECLASS" : "JOptionPane",
+					"CALLEEMETHODNAME" : "showMessageDialog"
+				}, {
+					"CALLEECLASS" : "JOptionPane",
+					"CALLEEMETHODNAME" : "showMessageDialog"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "LoginEvent"
+				} ]
+			}, {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Window",
+					"CALLEEMETHODNAME" : "setVisible"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"LoginValidatorB" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "JPanel",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "p" ],
+				"FIELDDATATYPE" : "JPanel",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "LoginBean",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "lb" ],
+				"FIELDDATATYPE" : "LoginBean",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "JLabel",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "lblLogo" ],
+				"FIELDDATATYPE" : "JLabel",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 17,
+				"EXTENDSFROM" : [ "JFrame", "LoginEventListener" ],
+				"IMPLEMENTSFROM" : [ "LoginEventListener" ],
+				"CLASSNAME" : "LoginValidatorB",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "f = new Font(\"Times New Roman\", Font.BOLD, 30)" ],
+				"VARIABLECOMMONTYPE" : "Font",
+				"VARIABLEELEMENTTYPE" : "Font"
+			}, {
+				"VARIABLEDECLARATION" : [ "userName = event.getUserName()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "password = event.getPassword()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "validateLogin",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LoginEvent",
+					"CALLEEMETHODNAME" : "getUserName"
+				}, {
+					"CALLEECLASS" : "LoginEvent",
+					"CALLEEMETHODNAME" : "getPassword"
+				}, {
+					"CALLEECLASS" : "LoginEvent",
+					"CALLEEMETHODNAME" : "getUserName"
+				}, {
+					"CALLEECLASS" : "LoginEvent",
+					"CALLEEMETHODNAME" : "getPassword"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				}, {
+					"CALLEECLASS" : "JOptionPane",
+					"CALLEEMETHODNAME" : "showMessageDialog"
+				}, {
+					"CALLEECLASS" : "JOptionPane",
+					"CALLEEMETHODNAME" : "showMessageDialog"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "LoginEvent"
+				} ]
+			}, {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Window",
+					"CALLEEMETHODNAME" : "setVisible"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "subject = new Cat()" ],
+				"VARIABLECOMMONTYPE" : "MySubject",
+				"VARIABLEELEMENTTYPE" : "MySubject"
+			}, {
+				"VARIABLEDECLARATION" : [ "obs1", "obs2", "obs3" ],
+				"VARIABLECOMMONTYPE" : "MyObserver",
+				"VARIABLEELEMENTTYPE" : "MyObserver"
+			}, {
+				"VARIABLEDECLARATION" : [ "obs4" ],
+				"VARIABLECOMMONTYPE" : "MyObserver",
+				"VARIABLEELEMENTTYPE" : "MyObserver"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 5,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "MySubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "MySubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "MySubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "MySubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "MySubject",
+					"CALLEEMETHODNAME" : "cry"
+				}, {
+					"CALLEECLASS" : "MySubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "MySubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "MySubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "MySubject",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "MySubject",
+					"CALLEEMETHODNAME" : "cry"
+				} ],
+				"NUMBEROFMETHODLINES" : 12,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "a",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Dog" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "MyObserver" ],
+				"CLASSNAME" : "Dog",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "response",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Pig" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "MyObserver" ],
+				"CLASSNAME" : "Pig",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "response",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"observer" : {
+			"LoginEventListener" : [ "LoginEventListener acts as an observer for publisher LoginBean, which is inherited by LoginValidatorA, LoginValidatorB, which validates LoginEvent parameter of event Login." ],
+			"LoginBean" : [ "LoginBean acts as a publisher for observer LoginEventListener, which is inherited by, which adds LoginEventListener parameter of lel Login Event Listener, which fires Object parameter of object, String parameter of userName, String parameter of password Login Event, which actions ActionEvent parameter of event Performed." ],
+			"LoginValidatorA" : [ "LoginValidatorA acts as an observer, which validates LoginEvent parameter of event Login, which mains String[] parameter of args." ],
+			"LoginValidatorB" : [ "LoginValidatorB acts as an observer, which validates LoginEvent parameter of event Login, which mains String[] parameter of args." ]
+		},
+		"adapter" : {
+			"LoginEventListener" : [ "LoginEventListener acts as a target for adapter LoginValidatorA, which adapts to LoginEventListener.", "LoginEventListener acts as a target for adapter LoginValidatorB, which adapts to LoginEventListener." ],
+			"LoginBean" : [ "LoginBean acts as an adaptee for adapter LoginValidatorB, which adapts to LoginEventListener, which adapts to LoginEventListener, which adapts to LoginEventListener.", "LoginBean acts as an adaptee for adapter LoginValidatorA, which adapts to LoginEventListener, which adapts to LoginEventListener, which adapts to LoginEventListener." ],
+			"LoginValidatorA" : [ "LoginValidatorA acts as an adapter, which adapts to LoginEventListener, which adapts to LoginEventListener." ],
+			"LoginValidatorB" : [ "LoginValidatorB acts as an adapter, which adapts to LoginEventListener, which adapts to LoginEventListener." ]
+		}
+	}
+}

@@ -1,0 +1,744 @@
+{
+	"final_summary" : "GoogleShares.java: observer: GoogleShares acts as a publisher for observer ShareTraderObserver, which adds ShareTraderObserver parameter of shareTraderObserver Observer, which removes ShareTraderObserver parameter of shareTraderObserver Observer, which notifies Observers, which gets Current Market Price, which sets Integer parameter of currentMarketPrice Current Market Price. GoogleShares acts as a publisher for observer ShareTraderObserver, which is inherited by, which adds ShareTraderObserver parameter of shareTraderObserver Observer, which removes ShareTraderObserver parameter of shareTraderObserver Observer, which notifies Observers, which gets Current Market Price, which sets Integer parameter of currentMarketPrice Current Market Price. It is a public class that extends SharePriceObservable and that implements SharePriceObservable. The 5 methods of GoogleShares are addObserver (void), removeObserver (void), notifyObservers (void), getCurrentMarketPrice (Integer) and setCurrentMarketPrice (void). No methods call addObserver and addObserver calls only one method : add method of class shareTraders. No methods call removeObserver and removeObserver calls only one method : remove method of class shareTraders. Only one method ( setCurrentMarketPrice method of class GoogleShares ) calls notifyObservers and notifyObservers calls 2 methods : notifyCurrentPrice method of class shareBroker and getCurrentMarketPrice method of class GoogleShares. Only one method ( notifyObservers method of class GoogleShares ) calls getCurrentMarketPrice and getCurrentMarketPrice calls no methods. No methods call setCurrentMarketPrice and setCurrentMarketPrice calls only one method : notifyObservers method of class GoogleShares.\n\n\nClientForShareTrading.java: ClientForShareTrading does not have any design pattern.  It is a public class. The 2 methods of ClientForShareTrading are main (void) and simulateSharePriceChange (void). No methods call main and main calls 7 methods : removeObserver method of class googleShares, simulateSharePriceChange method of class UNKNOWN, addObserver method of class googleShares, nextInt method of class Scanner, removeObserver method of class appleShares, println method of class PrintStream and addObserver method of class appleShares. No methods call simulateSharePriceChange and simulateSharePriceChange calls 2 methods : setCurrentMarketPrice method of class sharePriceObservable and nextInt method of class Random.\n\n\nShareTrader2.java: observer: ShareTrader2 acts as an observer, which notifies Integer parameter of shareLatestPrice, String parameter of shareCompanyName Current Price. It is a public class that extends ShareTraderObserver and that implements ShareTraderObserver. The only method of ShareTrader2 is notifyCurrentPrice (void). No methods call notifyCurrentPrice and notifyCurrentPrice calls 4 methods : printf method of class PrintStream, getClass method of class Object, println method of class PrintStream and getSimpleName method of class Class.\n\n visitor: ShareTrader2 acts as a visitor for element SharePriceObservable, which overrides, which notifies a Current Price to. It is a public class that extends ShareTraderObserver and that implements ShareTraderObserver. The only method of ShareTrader2 is notifyCurrentPrice (void). No methods call notifyCurrentPrice and notifyCurrentPrice calls 4 methods : printf method of class PrintStream, getClass method of class Object, println method of class PrintStream and getSimpleName method of class Class.\n\n\nSharePriceObservable.java: observer: SharePriceObservable acts as a publisher for observer ShareTraderObserver, which is inherited by GoogleShares, AppleShares, which adds ShareTraderObserver parameter of shareTraderObserver Observer, which removes ShareTraderObserver parameter of shareTraderObserver Observer, which notifies Observers, which sets Integer parameter of currentMarketPrice Current Market Price. It is a public interface. The 4 methods of SharePriceObservable are addObserver (void), removeObserver (void), notifyObservers (void) and setCurrentMarketPrice (void). No methods call addObserver and addObserver calls no methods. No methods call removeObserver and removeObserver calls no methods. No methods call notifyObservers and notifyObservers calls no methods. No methods call setCurrentMarketPrice and setCurrentMarketPrice calls no methods.\n\n visitor: SharePriceObservable acts as a visitor for element SharePriceObservable, which is inherited by ShareTrader2, ShareTrader1, ShareTrader, which adds a Observer to, which removes a Observer to, which notifies a Observers to, which sets a Current Market Price to. SharePriceObservable acts as an element for visitor SharePriceObservable, which is inherited by GoogleShares, AppleShares, which adds a Observer to, which removes a Observer to, which notifies a Observers to, which sets a Current Market Price to. It is a public interface. The 4 methods of SharePriceObservable are addObserver (void), removeObserver (void), notifyObservers (void) and setCurrentMarketPrice (void). No methods call addObserver and addObserver calls no methods. No methods call removeObserver and removeObserver calls no methods. No methods call notifyObservers and notifyObservers calls no methods. No methods call setCurrentMarketPrice and setCurrentMarketPrice calls no methods.\n\n\nShareTrader1.java: observer: ShareTrader1 acts as an observer, which notifies Integer parameter of shareLatestPrice, String parameter of shareCompanyName Current Price. It is a public class that extends ShareTraderObserver and that implements ShareTraderObserver. The only method of ShareTrader1 is notifyCurrentPrice (void). No methods call notifyCurrentPrice and notifyCurrentPrice calls 4 methods : printf method of class PrintStream, getClass method of class Object, println method of class PrintStream and getSimpleName method of class Class.\n\n visitor: ShareTrader1 acts as a visitor for element SharePriceObservable, which overrides, which notifies a Current Price to. It is a public class that extends ShareTraderObserver and that implements ShareTraderObserver. The only method of ShareTrader1 is notifyCurrentPrice (void). No methods call notifyCurrentPrice and notifyCurrentPrice calls 4 methods : printf method of class PrintStream, getClass method of class Object, println method of class PrintStream and getSimpleName method of class Class.\n\n\nShareTrader.java: observer: ShareTrader acts as an observer, which notifies Integer parameter of shareLatestPrice, String parameter of shareCompanyName Current Price. It is a public class that extends ShareTraderObserver and that implements ShareTraderObserver. The only method of ShareTrader is notifyCurrentPrice (void). No methods call notifyCurrentPrice and notifyCurrentPrice calls 4 methods : printf method of class PrintStream, getClass method of class Object, println method of class PrintStream and getSimpleName method of class Class.\n\n visitor: ShareTrader acts as a visitor for element SharePriceObservable, which overrides, which notifies a Current Price to. It is a public class that extends ShareTraderObserver and that implements ShareTraderObserver. The only method of ShareTrader is notifyCurrentPrice (void). No methods call notifyCurrentPrice and notifyCurrentPrice calls 4 methods : printf method of class PrintStream, getClass method of class Object, println method of class PrintStream and getSimpleName method of class Class.\n\n\nShareTraderObserver.java: observer: ShareTraderObserver acts as an observer for publisher AppleShares, which is inherited by ShareTrader2, ShareTrader1, ShareTrader, which notifies Integer parameter of shareLatestPrice, String parameter of shareCompanyName Current Price. It is a public interface. The only method of ShareTraderObserver is notifyCurrentPrice (void). No methods call notifyCurrentPrice and notifyCurrentPrice calls no methods.\n\n\nAppleShares.java: observer: AppleShares acts as a publisher for observer ShareTraderObserver, which adds ShareTraderObserver parameter of shareTraderObserver Observer, which removes ShareTraderObserver parameter of shareTraderObserver Observer, which notifies Observers, which gets Current Market Price, which sets Integer parameter of currentMarketPrice Current Market Price. AppleShares acts as a publisher for observer ShareTraderObserver, which is inherited by, which adds ShareTraderObserver parameter of shareTraderObserver Observer, which removes ShareTraderObserver parameter of shareTraderObserver Observer, which notifies Observers, which gets Current Market Price, which sets Integer parameter of currentMarketPrice Current Market Price. It is a public class that extends SharePriceObservable and that implements SharePriceObservable. The 5 methods of AppleShares are addObserver (void), removeObserver (void), notifyObservers (void), getCurrentMarketPrice (Integer) and setCurrentMarketPrice (void). No methods call addObserver and addObserver calls only one method : add method of class shareTraders. No methods call removeObserver and removeObserver calls only one method : remove method of class shareTraders. Only one method ( setCurrentMarketPrice method of class AppleShares ) calls notifyObservers and notifyObservers calls 2 methods : notifyCurrentPrice method of class shareBroker and getCurrentMarketPrice method of class AppleShares. Only one method ( notifyObservers method of class AppleShares ) calls getCurrentMarketPrice and getCurrentMarketPrice calls no methods. No methods call setCurrentMarketPrice and setCurrentMarketPrice calls only one method : notifyObservers method of class AppleShares.\n\n\n",
+	"design_pattern" : [ {
+		"visitor" : {
+			"SharePriceObservable" : {
+				"concrete_element" : [ "GoogleShares", "AppleShares" ],
+				"visitor" : {
+					"ShareTraderObserver" : [ "ShareTrader2", "ShareTrader1", "ShareTrader" ]
+				}
+			}
+		}
+	}, {
+		"observer" : {
+			"ShareTraderObserver" : {
+				"concrete_observer" : [ "ShareTrader2", "ShareTrader1", "ShareTrader" ],
+				"publisher" : {
+					"GoogleShares" : [ ],
+					"SharePriceObservable" : [ "GoogleShares", "AppleShares" ],
+					"AppleShares" : [ ]
+				}
+			}
+		}
+	} ],
+	"premaseem-pattern-observer-pattern" : {
+		"GoogleShares" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ArrayList<ShareTraderObserver>",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "shareTraders = new ArrayList<ShareTraderObserver>()" ],
+				"FIELDDATATYPE" : "ArrayList<ShareTraderObserver>",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			}, {
+				"FIELDCOMMONTYPE" : "Integer",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "currentMarketPrice = 0" ],
+				"FIELDDATATYPE" : "Integer",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ "SharePriceObservable", "SharePriceObservable", "SharePriceObservable" ],
+				"IMPLEMENTSFROM" : [ "SharePriceObservable" ],
+				"CLASSNAME" : "GoogleShares",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "shareBroker" ],
+				"VARIABLECOMMONTYPE" : "ShareTraderObserver",
+				"VARIABLEELEMENTTYPE" : "ShareTraderObserver"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "shareTraders",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shareTraderObserver",
+					"PARAMETERTYPE" : "ShareTraderObserver"
+				} ]
+			}, {
+				"METHODNAME" : "removeObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "shareTraders",
+					"CALLEEMETHODNAME" : "remove"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shareTraderObserver",
+					"PARAMETERTYPE" : "ShareTraderObserver"
+				} ]
+			}, {
+				"METHODNAME" : "notifyObservers",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "setCurrentMarketPrice",
+					"CALLEDCLASS" : "GoogleShares"
+				}, {
+					"CALLEDMETHODNAME" : "setCurrentMarketPrice",
+					"CALLEDCLASS" : "GoogleShares"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "shareBroker",
+					"CALLEEMETHODNAME" : "notifyCurrentPrice"
+				}, {
+					"CALLEECLASS" : "GoogleShares",
+					"CALLEEMETHODNAME" : "getCurrentMarketPrice"
+				}, {
+					"CALLEECLASS" : "GoogleShares",
+					"CALLEEMETHODNAME" : "getCurrentMarketPrice"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCurrentMarketPrice",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "notifyObservers",
+					"CALLEDCLASS" : "GoogleShares"
+				}, {
+					"CALLEDMETHODNAME" : "notifyObservers",
+					"CALLEDCLASS" : "GoogleShares"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setCurrentMarketPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "GoogleShares",
+					"CALLEEMETHODNAME" : "notifyObservers"
+				}, {
+					"CALLEECLASS" : "GoogleShares",
+					"CALLEEMETHODNAME" : "notifyObservers"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "currentMarketPrice",
+					"PARAMETERTYPE" : "Integer"
+				} ]
+			} ]
+		},
+		"ClientForShareTrading" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 20,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientForShareTrading",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "shareTrader = new ShareTrader()" ],
+				"VARIABLECOMMONTYPE" : "ShareTraderObserver",
+				"VARIABLEELEMENTTYPE" : "ShareTraderObserver"
+			}, {
+				"VARIABLEDECLARATION" : [ "appleShares = new AppleShares()" ],
+				"VARIABLECOMMONTYPE" : "SharePriceObservable",
+				"VARIABLEELEMENTTYPE" : "SharePriceObservable"
+			}, {
+				"VARIABLEDECLARATION" : [ "googleShares = new GoogleShares()" ],
+				"VARIABLECOMMONTYPE" : "SharePriceObservable",
+				"VARIABLEELEMENTTYPE" : "SharePriceObservable"
+			}, {
+				"VARIABLEDECLARATION" : [ "appleShareWatch = scan.nextInt()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "googleShareWatch = scan.nextInt()" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "rnd = new Random()" ],
+				"VARIABLECOMMONTYPE" : "Random",
+				"VARIABLEELEMENTTYPE" : "Random"
+			}, {
+				"VARIABLEDECLARATION" : [ "i = 0" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 18,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "appleShares",
+					"CALLEEMETHODNAME" : "addObserver"
+				}, {
+					"CALLEECLASS" : "appleShares",
+					"CALLEEMETHODNAME" : "removeObserver"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				}, {
+					"CALLEECLASS" : "googleShares",
+					"CALLEEMETHODNAME" : "addObserver"
+				}, {
+					"CALLEECLASS" : "googleShares",
+					"CALLEEMETHODNAME" : "removeObserver"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "simulateSharePriceChange"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "simulateSharePriceChange"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			}, {
+				"METHODNAME" : "simulateSharePriceChange",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "sharePriceObservable",
+					"CALLEEMETHODNAME" : "setCurrentMarketPrice"
+				}, {
+					"CALLEECLASS" : "Random",
+					"CALLEEMETHODNAME" : "nextInt"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "sharePriceObservable",
+					"PARAMETERTYPE" : "SharePriceObservable"
+				} ]
+			} ]
+		},
+		"ShareTrader2" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ "ShareTraderObserver" ],
+				"IMPLEMENTSFROM" : [ "ShareTraderObserver" ],
+				"CLASSNAME" : "ShareTrader2",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "notifyCurrentPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "getSimpleName"
+				}, {
+					"CALLEECLASS" : "Object",
+					"CALLEEMETHODNAME" : "getClass"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "printf"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shareLatestPrice",
+					"PARAMETERTYPE" : "Integer"
+				}, {
+					"PARAMETERNAME" : "shareCompanyName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"SharePriceObservable" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SharePriceObservable",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shareTraderObserver",
+					"PARAMETERTYPE" : "ShareTraderObserver"
+				} ]
+			}, {
+				"METHODNAME" : "removeObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shareTraderObserver",
+					"PARAMETERTYPE" : "ShareTraderObserver"
+				} ]
+			}, {
+				"METHODNAME" : "notifyObservers",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setCurrentMarketPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "currentMarketPrice",
+					"PARAMETERTYPE" : "Integer"
+				} ]
+			} ]
+		},
+		"ShareTrader1" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ "ShareTraderObserver" ],
+				"IMPLEMENTSFROM" : [ "ShareTraderObserver" ],
+				"CLASSNAME" : "ShareTrader1",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "notifyCurrentPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "getSimpleName"
+				}, {
+					"CALLEECLASS" : "Object",
+					"CALLEEMETHODNAME" : "getClass"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "printf"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shareLatestPrice",
+					"PARAMETERTYPE" : "Integer"
+				}, {
+					"PARAMETERNAME" : "shareCompanyName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"ShareTrader" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ "ShareTraderObserver" ],
+				"IMPLEMENTSFROM" : [ "ShareTraderObserver" ],
+				"CLASSNAME" : "ShareTrader",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "notifyCurrentPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "getSimpleName"
+				}, {
+					"CALLEECLASS" : "Object",
+					"CALLEEMETHODNAME" : "getClass"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "printf"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shareLatestPrice",
+					"PARAMETERTYPE" : "Integer"
+				}, {
+					"PARAMETERNAME" : "shareCompanyName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"ShareTraderObserver" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ShareTraderObserver",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "notifyCurrentPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shareLatestPrice",
+					"PARAMETERTYPE" : "Integer"
+				}, {
+					"PARAMETERNAME" : "shareCompanyName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"AppleShares" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ArrayList<ShareTraderObserver>",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "shareTraders = new ArrayList<ShareTraderObserver>()" ],
+				"FIELDDATATYPE" : "ArrayList<ShareTraderObserver>",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			}, {
+				"FIELDCOMMONTYPE" : "Integer",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "currentMarketPrice = 0" ],
+				"FIELDDATATYPE" : "Integer",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ "SharePriceObservable", "SharePriceObservable", "SharePriceObservable" ],
+				"IMPLEMENTSFROM" : [ "SharePriceObservable" ],
+				"CLASSNAME" : "AppleShares",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "shareBroker" ],
+				"VARIABLECOMMONTYPE" : "ShareTraderObserver",
+				"VARIABLEELEMENTTYPE" : "ShareTraderObserver"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "shareTraders",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shareTraderObserver",
+					"PARAMETERTYPE" : "ShareTraderObserver"
+				} ]
+			}, {
+				"METHODNAME" : "removeObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "shareTraders",
+					"CALLEEMETHODNAME" : "remove"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "shareTraderObserver",
+					"PARAMETERTYPE" : "ShareTraderObserver"
+				} ]
+			}, {
+				"METHODNAME" : "notifyObservers",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "setCurrentMarketPrice",
+					"CALLEDCLASS" : "AppleShares"
+				}, {
+					"CALLEDMETHODNAME" : "setCurrentMarketPrice",
+					"CALLEDCLASS" : "AppleShares"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "shareBroker",
+					"CALLEEMETHODNAME" : "notifyCurrentPrice"
+				}, {
+					"CALLEECLASS" : "AppleShares",
+					"CALLEEMETHODNAME" : "getCurrentMarketPrice"
+				}, {
+					"CALLEECLASS" : "AppleShares",
+					"CALLEEMETHODNAME" : "getCurrentMarketPrice"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCurrentMarketPrice",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "notifyObservers",
+					"CALLEDCLASS" : "AppleShares"
+				}, {
+					"CALLEDMETHODNAME" : "notifyObservers",
+					"CALLEDCLASS" : "AppleShares"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Integer",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setCurrentMarketPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "AppleShares",
+					"CALLEEMETHODNAME" : "notifyObservers"
+				}, {
+					"CALLEECLASS" : "AppleShares",
+					"CALLEEMETHODNAME" : "notifyObservers"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "currentMarketPrice",
+					"PARAMETERTYPE" : "Integer"
+				} ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"observer" : {
+			"GoogleShares" : [ "GoogleShares acts as a publisher for observer ShareTraderObserver, which adds ShareTraderObserver parameter of shareTraderObserver Observer, which removes ShareTraderObserver parameter of shareTraderObserver Observer, which notifies Observers, which gets Current Market Price, which sets Integer parameter of currentMarketPrice Current Market Price.", "GoogleShares acts as a publisher for observer ShareTraderObserver, which is inherited by, which adds ShareTraderObserver parameter of shareTraderObserver Observer, which removes ShareTraderObserver parameter of shareTraderObserver Observer, which notifies Observers, which gets Current Market Price, which sets Integer parameter of currentMarketPrice Current Market Price." ],
+			"ShareTrader2" : [ "ShareTrader2 acts as an observer, which notifies Integer parameter of shareLatestPrice, String parameter of shareCompanyName Current Price." ],
+			"SharePriceObservable" : [ "SharePriceObservable acts as a publisher for observer ShareTraderObserver, which is inherited by GoogleShares, AppleShares, which adds ShareTraderObserver parameter of shareTraderObserver Observer, which removes ShareTraderObserver parameter of shareTraderObserver Observer, which notifies Observers, which sets Integer parameter of currentMarketPrice Current Market Price." ],
+			"ShareTrader1" : [ "ShareTrader1 acts as an observer, which notifies Integer parameter of shareLatestPrice, String parameter of shareCompanyName Current Price." ],
+			"ShareTrader" : [ "ShareTrader acts as an observer, which notifies Integer parameter of shareLatestPrice, String parameter of shareCompanyName Current Price." ],
+			"ShareTraderObserver" : [ "ShareTraderObserver acts as an observer for publisher AppleShares, which is inherited by ShareTrader2, ShareTrader1, ShareTrader, which notifies Integer parameter of shareLatestPrice, String parameter of shareCompanyName Current Price." ],
+			"AppleShares" : [ "AppleShares acts as a publisher for observer ShareTraderObserver, which adds ShareTraderObserver parameter of shareTraderObserver Observer, which removes ShareTraderObserver parameter of shareTraderObserver Observer, which notifies Observers, which gets Current Market Price, which sets Integer parameter of currentMarketPrice Current Market Price.", "AppleShares acts as a publisher for observer ShareTraderObserver, which is inherited by, which adds ShareTraderObserver parameter of shareTraderObserver Observer, which removes ShareTraderObserver parameter of shareTraderObserver Observer, which notifies Observers, which gets Current Market Price, which sets Integer parameter of currentMarketPrice Current Market Price." ]
+		},
+		"visitor" : {
+			"ShareTrader2" : [ "ShareTrader2 acts as a visitor for element SharePriceObservable, which overrides, which notifies a Current Price to." ],
+			"ShareTrader1" : [ "ShareTrader1 acts as a visitor for element SharePriceObservable, which overrides, which notifies a Current Price to." ],
+			"SharePriceObservable" : [ "SharePriceObservable acts as a visitor for element SharePriceObservable, which is inherited by ShareTrader2, ShareTrader1, ShareTrader, which adds a Observer to, which removes a Observer to, which notifies a Observers to, which sets a Current Market Price to.", "SharePriceObservable acts as an element for visitor SharePriceObservable, which is inherited by GoogleShares, AppleShares, which adds a Observer to, which removes a Observer to, which notifies a Observers to, which sets a Current Market Price to." ],
+			"ShareTrader" : [ "ShareTrader acts as a visitor for element SharePriceObservable, which overrides, which notifies a Current Price to." ]
+		}
+	}
+}

@@ -1,0 +1,882 @@
+{
+	"luisburgos-facade-examples" : {
+		"FundsCheck" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "cashInAccount = 1000.00" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 10,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "FundsCheck",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getCashInAccount",
+				"NUMBEROFINCOMINGMETHODS" : 8,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "makeDeposit",
+					"CALLEDCLASS" : "FundsCheck"
+				}, {
+					"CALLEDMETHODNAME" : "haveEnoughMoney",
+					"CALLEDCLASS" : "FundsCheck"
+				}, {
+					"CALLEDMETHODNAME" : "haveEnoughMoney",
+					"CALLEDCLASS" : "FundsCheck"
+				}, {
+					"CALLEDMETHODNAME" : "haveEnoughMoney",
+					"CALLEDCLASS" : "FundsCheck"
+				}, {
+					"CALLEDMETHODNAME" : "haveEnoughMoney",
+					"CALLEDCLASS" : "FundsCheck"
+				}, {
+					"CALLEDMETHODNAME" : "haveEnoughMoney",
+					"CALLEDCLASS" : "FundsCheck"
+				}, {
+					"CALLEDMETHODNAME" : "haveEnoughMoney",
+					"CALLEDCLASS" : "FundsCheck"
+				}, {
+					"CALLEDMETHODNAME" : "makeDeposit",
+					"CALLEDCLASS" : "FundsCheck"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "decreaseCashInAccount",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "haveEnoughMoney",
+					"CALLEDCLASS" : "FundsCheck"
+				}, {
+					"CALLEDMETHODNAME" : "haveEnoughMoney",
+					"CALLEDCLASS" : "FundsCheck"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "cashWithdrawn",
+					"PARAMETERTYPE" : "double"
+				} ]
+			}, {
+				"METHODNAME" : "increaseCashInAccount",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "makeDeposit",
+					"CALLEDCLASS" : "FundsCheck"
+				}, {
+					"CALLEDMETHODNAME" : "makeDeposit",
+					"CALLEDCLASS" : "FundsCheck"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "cashDeposited",
+					"PARAMETERTYPE" : "double"
+				} ]
+			}, {
+				"METHODNAME" : "haveEnoughMoney",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "getCashInAccount"
+				}, {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "decreaseCashInAccount"
+				}, {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "getCashInAccount"
+				}, {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "getCashInAccount"
+				}, {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "getCashInAccount"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "getCashInAccount"
+				}, {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "decreaseCashInAccount"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "getCashInAccount"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "cashToWithdrawal",
+					"PARAMETERTYPE" : "double"
+				} ]
+			}, {
+				"METHODNAME" : "makeDeposit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "increaseCashInAccount"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "getCashInAccount"
+				}, {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "increaseCashInAccount"
+				}, {
+					"CALLEECLASS" : "FundsCheck",
+					"CALLEEMETHODNAME" : "getCashInAccount"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "cashToDeposit",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ]
+		},
+		"ComputerFacade" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "CPU",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "cpu" ],
+				"FIELDDATATYPE" : "CPU",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "HardDrive",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "hardDrive" ],
+				"FIELDDATATYPE" : "HardDrive",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Memory",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "memory" ],
+				"FIELDDATATYPE" : "Memory",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ComputerFacade",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "start",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "cpu",
+					"CALLEEMETHODNAME" : "freeze"
+				}, {
+					"CALLEECLASS" : "memory",
+					"CALLEEMETHODNAME" : "load"
+				}, {
+					"CALLEECLASS" : "hardDrive",
+					"CALLEEMETHODNAME" : "read"
+				}, {
+					"CALLEECLASS" : "cpu",
+					"CALLEEMETHODNAME" : "jump"
+				}, {
+					"CALLEECLASS" : "cpu",
+					"CALLEEMETHODNAME" : "execute"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"HardDrive" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "HardDrive",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "read",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"SecurityCodeCheck" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "securityCode = 1234" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SecurityCodeCheck",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getSecurityCode",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "isCodeCorrect",
+					"CALLEDCLASS" : "SecurityCodeCheck"
+				}, {
+					"CALLEDMETHODNAME" : "isCodeCorrect",
+					"CALLEDCLASS" : "SecurityCodeCheck"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "isCodeCorrect",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "SecurityCodeCheck",
+					"CALLEEMETHODNAME" : "getSecurityCode"
+				}, {
+					"CALLEECLASS" : "SecurityCodeCheck",
+					"CALLEEMETHODNAME" : "getSecurityCode"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "securityCode",
+					"PARAMETERTYPE" : "int"
+				} ]
+			} ]
+		},
+		"User" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "User",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "computer = new ComputerFacade()" ],
+				"VARIABLECOMMONTYPE" : "ComputerFacade",
+				"VARIABLEELEMENTTYPE" : "ComputerFacade"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "computer",
+					"CALLEEMETHODNAME" : "start"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"AccountNumberCheck" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "accountNumber = 1234567890" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AccountNumberCheck",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getAccountNumber",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "isAccountActive",
+					"CALLEDCLASS" : "AccountNumberCheck"
+				}, {
+					"CALLEDMETHODNAME" : "isAccountActive",
+					"CALLEDCLASS" : "AccountNumberCheck"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "isAccountActive",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "AccountNumberCheck",
+					"CALLEEMETHODNAME" : "getAccountNumber"
+				}, {
+					"CALLEECLASS" : "AccountNumberCheck",
+					"CALLEEMETHODNAME" : "getAccountNumber"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "accountNumberToCheck",
+					"PARAMETERTYPE" : "int"
+				} ]
+			} ]
+		},
+		"Memory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Memory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "load",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"BankFacade" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "accountNumber" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "securityCode" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "AccountNumberCheck",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "accountChecker" ],
+				"FIELDDATATYPE" : "AccountNumberCheck",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "SecurityCodeCheck",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "codeChecker" ],
+				"FIELDDATATYPE" : "SecurityCodeCheck",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "FundsCheck",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "fundsChecker" ],
+				"FIELDDATATYPE" : "FundsCheck",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "WelcomeMessage",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "bankWelcome" ],
+				"FIELDDATATYPE" : "WelcomeMessage",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 16,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "BankFacade",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "accountNumber",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "securityCode",
+					"PARAMETERTYPE" : "int"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getAccountNumber",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "canWithdraw",
+					"CALLEDCLASS" : "BankFacade"
+				}, {
+					"CALLEDMETHODNAME" : "canDeposit",
+					"CALLEDCLASS" : "BankFacade"
+				}, {
+					"CALLEDMETHODNAME" : "canWithdraw",
+					"CALLEDCLASS" : "BankFacade"
+				}, {
+					"CALLEDMETHODNAME" : "canDeposit",
+					"CALLEDCLASS" : "BankFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getSecurityCode",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "canWithdraw",
+					"CALLEDCLASS" : "BankFacade"
+				}, {
+					"CALLEDMETHODNAME" : "canDeposit",
+					"CALLEDCLASS" : "BankFacade"
+				}, {
+					"CALLEDMETHODNAME" : "canWithdraw",
+					"CALLEDCLASS" : "BankFacade"
+				}, {
+					"CALLEDMETHODNAME" : "canDeposit",
+					"CALLEDCLASS" : "BankFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "withdrawCash",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "canWithdraw"
+				}, {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "canWithdraw"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "cashAmount",
+					"PARAMETERTYPE" : "double"
+				} ]
+			}, {
+				"METHODNAME" : "depositCash",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "canDeposit"
+				}, {
+					"CALLEECLASS" : "fundsChecker",
+					"CALLEEMETHODNAME" : "makeDeposit"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "canDeposit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "cashAmount",
+					"PARAMETERTYPE" : "double"
+				} ]
+			}, {
+				"METHODNAME" : "canWithdraw",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "withdrawCash",
+					"CALLEDCLASS" : "BankFacade"
+				}, {
+					"CALLEDMETHODNAME" : "withdrawCash",
+					"CALLEDCLASS" : "BankFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "getAccountNumber"
+				}, {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "getSecurityCode"
+				}, {
+					"CALLEECLASS" : "accountChecker",
+					"CALLEEMETHODNAME" : "isAccountActive"
+				}, {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "getAccountNumber"
+				}, {
+					"CALLEECLASS" : "codeChecker",
+					"CALLEEMETHODNAME" : "isCodeCorrect"
+				}, {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "getSecurityCode"
+				}, {
+					"CALLEECLASS" : "fundsChecker",
+					"CALLEEMETHODNAME" : "haveEnoughMoney"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "cashAmount",
+					"PARAMETERTYPE" : "double"
+				} ]
+			}, {
+				"METHODNAME" : "canDeposit",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "depositCash",
+					"CALLEDCLASS" : "BankFacade"
+				}, {
+					"CALLEDMETHODNAME" : "depositCash",
+					"CALLEDCLASS" : "BankFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "accountChecker",
+					"CALLEEMETHODNAME" : "isAccountActive"
+				}, {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "getAccountNumber"
+				}, {
+					"CALLEECLASS" : "codeChecker",
+					"CALLEEMETHODNAME" : "isCodeCorrect"
+				}, {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "getSecurityCode"
+				}, {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "getAccountNumber"
+				}, {
+					"CALLEECLASS" : "BankFacade",
+					"CALLEEMETHODNAME" : "getSecurityCode"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "cashAmount",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ]
+		},
+		"CPU" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CPU",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "freeze",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "execute",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "jump",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "accesingBank = new BankFacade(1234567890, 1234)" ],
+				"VARIABLECOMMONTYPE" : "BankFacade",
+				"VARIABLEELEMENTTYPE" : "BankFacade"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "accesingBank",
+					"CALLEEMETHODNAME" : "withdrawCash"
+				}, {
+					"CALLEECLASS" : "accesingBank",
+					"CALLEEMETHODNAME" : "withdrawCash"
+				}, {
+					"CALLEECLASS" : "accesingBank",
+					"CALLEEMETHODNAME" : "depositCash"
+				}, {
+					"CALLEECLASS" : "accesingBank",
+					"CALLEEMETHODNAME" : "withdrawCash"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"WelcomeMessage" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "WelcomeMessage",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		}
+	},
+	"final_summary" : "FundsCheck.java: FundsCheck does not have any design pattern.  It is a public class. The 5 methods of FundsCheck are getCashInAccount (double), decreaseCashInAccount (void), increaseCashInAccount (void), haveEnoughMoney (boolean) and makeDeposit (void). 2 methods ( makeDeposit method of class FundsCheck and haveEnoughMoney method of class FundsCheck ) call getCashInAccount and getCashInAccount calls no methods. Only one method ( haveEnoughMoney method of class FundsCheck ) calls decreaseCashInAccount and decreaseCashInAccount calls no methods. Only one method ( makeDeposit method of class FundsCheck ) calls increaseCashInAccount and increaseCashInAccount calls no methods. No methods call haveEnoughMoney and haveEnoughMoney calls 3 methods : decreaseCashInAccount method of class FundsCheck, println method of class PrintStream and getCashInAccount method of class FundsCheck. No methods call makeDeposit and makeDeposit calls 3 methods : increaseCashInAccount method of class FundsCheck, println method of class PrintStream and getCashInAccount method of class FundsCheck.\n\n\nComputerFacade.java: ComputerFacade does not have any design pattern.  It is a public class. The only method of ComputerFacade is start (void). No methods call start and start calls 6 methods : freeze method of class cpu, jump method of class cpu, execute method of class cpu, load method of class memory, read method of class hardDrive and println method of class PrintStream.\n\n\nHardDrive.java: HardDrive does not have any design pattern.  It is a public class. The only method of HardDrive is read (void). No methods call read and read calls only one method : println method of class PrintStream.\n\n\nSecurityCodeCheck.java: SecurityCodeCheck does not have any design pattern.  It is a public class. The 2 methods of SecurityCodeCheck are getSecurityCode (int) and isCodeCorrect (boolean). Only one method ( isCodeCorrect method of class SecurityCodeCheck ) calls getSecurityCode and getSecurityCode calls no methods. No methods call isCodeCorrect and isCodeCorrect calls only one method : getSecurityCode method of class SecurityCodeCheck.\n\n\nUser.java: User does not have any design pattern.  It is a public class. The only method of User is main (void). No methods call main and main calls only one method : start method of class computer.\n\n\nAccountNumberCheck.java: AccountNumberCheck does not have any design pattern.  It is a public class. The 2 methods of AccountNumberCheck are getAccountNumber (int) and isAccountActive (boolean). Only one method ( isAccountActive method of class AccountNumberCheck ) calls getAccountNumber and getAccountNumber calls no methods. No methods call isAccountActive and isAccountActive calls only one method : getAccountNumber method of class AccountNumberCheck.\n\n\nMemory.java: Memory does not have any design pattern.  It is a public class. The only method of Memory is load (void). No methods call load and load calls only one method : println method of class PrintStream.\n\n\nBankFacade.java: BankFacade does not have any design pattern.  It is a public class. The 6 methods of BankFacade are getAccountNumber (int), getSecurityCode (int), withdrawCash (void), depositCash (void), canWithdraw (boolean) and canDeposit (boolean). 2 methods ( canWithdraw method of class BankFacade and canDeposit method of class BankFacade ) call getAccountNumber and getAccountNumber calls no methods. 2 methods ( canWithdraw method of class BankFacade and canDeposit method of class BankFacade ) call getSecurityCode and getSecurityCode calls no methods. No methods call withdrawCash and withdrawCash calls 2 methods : println method of class PrintStream and canWithdraw method of class BankFacade. No methods call depositCash and depositCash calls 3 methods : makeDeposit method of class fundsChecker, canDeposit method of class BankFacade and println method of class PrintStream. Only one method ( withdrawCash method of class BankFacade ) calls canWithdraw and canWithdraw calls 5 methods : isCodeCorrect method of class codeChecker, isAccountActive method of class accountChecker, haveEnoughMoney method of class fundsChecker, getSecurityCode method of class BankFacade and getAccountNumber method of class BankFacade. Only one method ( depositCash method of class BankFacade ) calls canDeposit and canDeposit calls 4 methods : isCodeCorrect method of class codeChecker, isAccountActive method of class accountChecker, getSecurityCode method of class BankFacade and getAccountNumber method of class BankFacade.\n\n\nCPU.java: CPU does not have any design pattern.  It is a public class. The 3 methods of CPU are freeze (void), execute (void) and jump (void). No methods call freeze and freeze calls only one method : println method of class PrintStream. No methods call execute and execute calls only one method : println method of class PrintStream. No methods call jump and jump calls only one method : println method of class PrintStream.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 2 methods : depositCash method of class accesingBank and withdrawCash method of class accesingBank.\n\n\nWelcomeMessage.java: WelcomeMessage does not have any design pattern.  It is a public class.\n",
+	"design_pattern" : [ ],
+	"summary_NLG" : { }
+}

@@ -1,0 +1,815 @@
+{
+	"final_summary" : "App.java: memento: App acts as a caretaker for memento King, which mains String[] parameter of args, which runs, which creates final parameter of Kingdom.FactoryMaker.KingdomType Kingdom. It is a public class that implements Runnable. The 3 methods of App are main (void), run (void) and createKingdom (void). No methods call main and main calls only one method : run method of class App. Only one method ( main method of class App ) calls run and run calls 8 methods : getDescription method of class getCastle, getKing method of class kingdom, getCastle method of class kingdom, getDescription method of class getKing, info method of class LOGGER, getArmy method of class kingdom, getDescription method of class getArmy and createKingdom method of class App. Only one method ( run method of class App ) calls createKingdom and createKingdom calls 7 methods : setKing method of class kingdom, createKing method of class kingdomFactory, makeFactory method of class FactoryMaker, createCastle method of class kingdomFactory, createArmy method of class kingdomFactory, setCastle method of class kingdom and setArmy method of class kingdom.\n\n\nArmy.java: abstract_factory: Army acts as an abstract product for Army, which is inherited by ElfArmy, OrcArmy. It is a public interface. The only method of Army is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n memento: Army acts as a memento, which is inherited by ElfArmy, OrcArmy, which gets Description. It is a public interface. The only method of Army is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nElfArmy.java: abstract_factory: ElfArmy acts as a product for KingdomFactory, which overrides getDescription method of Army. It is a public class that implements Army. The only method of ElfArmy is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n memento: ElfArmy acts as a memento, which gets Description. It is a public class that implements Army. The only method of ElfArmy is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nElfKing.java: abstract_factory: ElfKing acts as a product for KingdomFactory, which overrides getDescription method of King. It is a public class that implements King. The only method of ElfKing is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n memento: ElfKing acts as a memento, which gets Description. It is a public class that implements King. The only method of ElfKing is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nKingdomFactory.java: abstract_factory: KingdomFactory acts as an abstract factory for Army, King, Castle, which is inherited by ElfKingdomFactory, OrcKingdomFactory. It is a public interface. The 3 methods of KingdomFactory are createCastle (Castle), createKing (King) and createArmy (Army). No methods call createCastle and createCastle calls no methods. No methods call createKing and createKing calls no methods. No methods call createArmy and createArmy calls no methods.\n\n memento: KingdomFactory acts as an originator for memento King, which is inherited by, which creates a King King to. KingdomFactory acts as an originator for memento Army, which is inherited by, which creates an Army Army to. KingdomFactory acts as an originator for memento Castle, which is inherited by, which creates a Castle Castle to. It is a public interface. The 3 methods of KingdomFactory are createCastle (Castle), createKing (King) and createArmy (Army). No methods call createCastle and createCastle calls no methods. No methods call createKing and createKing calls no methods. No methods call createArmy and createArmy calls no methods.\n\n factory_method: KingdomFactory acts as a factory for KingdomFactory, which overrides. KingdomFactory acts as a factory method for Castle, which is inherited by KingdomFactory, KingdomFactory. It is a public interface. The 3 methods of KingdomFactory are createCastle (Castle), createKing (King) and createArmy (Army). No methods call createCastle and createCastle calls no methods. No methods call createKing and createKing calls no methods. No methods call createArmy and createArmy calls no methods.\n\n\nElfKingdomFactory.java: abstract_factory: ElfKingdomFactory acts as a factory for KingdomFactory, which overrides createCastle method of KingdomFactory, createKing method of KingdomFactory, createArmy method of KingdomFactory. It is a public class that implements KingdomFactory. The 3 methods of ElfKingdomFactory are createCastle (Castle), createKing (King) and createArmy (Army). No methods call createCastle and createCastle calls no methods. No methods call createKing and createKing calls no methods. No methods call createArmy and createArmy calls no methods.\n\n memento: ElfKingdomFactory acts as an originator for memento King, which creates a King King to. ElfKingdomFactory acts as an originator for memento Army, which creates an Army Army to. ElfKingdomFactory acts as an originator for memento Castle, which creates a Castle Castle to. It is a public class that implements KingdomFactory. The 3 methods of ElfKingdomFactory are createCastle (Castle), createKing (King) and createArmy (Army). No methods call createCastle and createCastle calls no methods. No methods call createKing and createKing calls no methods. No methods call createArmy and createArmy calls no methods.\n\n\nKing.java: abstract_factory: King acts as an abstract product for King, which is inherited by ElfKing, OrcKing. It is a public interface. The only method of King is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n memento: King acts as a memento, which is inherited by ElfKing, OrcKing, which gets Description. It is a public interface. The only method of King is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nOrcKingdomFactory.java: abstract_factory: OrcKingdomFactory acts as a factory for KingdomFactory, which overrides createCastle method of KingdomFactory, createKing method of KingdomFactory, createArmy method of KingdomFactory. It is a public class that implements KingdomFactory. The 3 methods of OrcKingdomFactory are createCastle (Castle), createKing (King) and createArmy (Army). No methods call createCastle and createCastle calls no methods. No methods call createKing and createKing calls no methods. No methods call createArmy and createArmy calls no methods.\n\n memento: OrcKingdomFactory acts as an originator for memento Army, which creates an Army Army to. OrcKingdomFactory acts as an originator for memento Castle, which creates a Castle Castle to. OrcKingdomFactory acts as an originator for memento King, which creates a King King to. It is a public class that implements KingdomFactory. The 3 methods of OrcKingdomFactory are createCastle (Castle), createKing (King) and createArmy (Army). No methods call createCastle and createCastle calls no methods. No methods call createKing and createKing calls no methods. No methods call createArmy and createArmy calls no methods.\n\n\nKingdom.java: memento: Kingdom acts as a caretaker for memento Castle, which makes KingdomType parameter of type Factory. Kingdom acts as a caretaker for memento Army, which makes KingdomType parameter of type Factory. Kingdom acts as a caretaker for memento King, which makes KingdomType parameter of type Factory. It is a public class. The only method of Kingdom is makeFactory (KingdomFactory). No methods call makeFactory and makeFactory calls no methods.\n\n\nOrcCastle.java: abstract_factory: OrcCastle acts as a product for KingdomFactory, which overrides getDescription method of Castle. It is a public class that implements Castle. The only method of OrcCastle is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n memento: OrcCastle acts as a memento, which gets Description. It is a public class that implements Castle. The only method of OrcCastle is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n factory_method: OrcCastle acts as a product for KingdomFactory, which overrides getDescription method of Castle. It is a public class that implements Castle. The only method of OrcCastle is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nCastle.java: abstract_factory: Castle acts as an abstract product for Castle, which is inherited by OrcCastle, ElfCastle. It is a public interface. The only method of Castle is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n memento: Castle acts as a memento, which is inherited by OrcCastle, ElfCastle, which gets Description. It is a public interface. The only method of Castle is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n factory_method: Castle acts as an abstract product for KingdomFactory, which is inherited by OrcCastle, ElfCastle. It is a public interface. The only method of Castle is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nElfCastle.java: abstract_factory: ElfCastle acts as a product for KingdomFactory, which overrides getDescription method of Castle. It is a public class that implements Castle. The only method of ElfCastle is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n memento: ElfCastle acts as a memento, which gets Description. It is a public class that implements Castle. The only method of ElfCastle is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n factory_method: ElfCastle acts as a product for KingdomFactory, which overrides getDescription method of Castle. It is a public class that implements Castle. The only method of ElfCastle is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nOrcArmy.java: abstract_factory: OrcArmy acts as a product for KingdomFactory, which overrides getDescription method of Army. It is a public class that implements Army. The only method of OrcArmy is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n memento: OrcArmy acts as a memento, which gets Description. It is a public class that implements Army. The only method of OrcArmy is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nOrcKing.java: abstract_factory: OrcKing acts as a product for KingdomFactory, which overrides getDescription method of King. It is a public class that implements King. The only method of OrcKing is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n memento: OrcKing acts as a memento, which gets Description. It is a public class that implements King. The only method of OrcKing is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"factory_method" : {
+			"KingdomFactory" : {
+				"concrete_product" : [ "OrcCastle", "ElfCastle" ],
+				"abstract_product" : "Castle",
+				"concrete_factory" : [ "KingdomFactory", "KingdomFactory" ]
+			}
+		}
+	}, {
+		"abstract_factory" : {
+			"KingdomFactory" : {
+				"abstract_product" : {
+					"Army" : [ "ElfArmy", "OrcArmy" ],
+					"King" : [ "ElfKing", "OrcKing" ],
+					"Castle" : [ "OrcCastle", "ElfCastle" ]
+				},
+				"concrete_factory" : [ "ElfKingdomFactory", "OrcKingdomFactory" ]
+			}
+		}
+	}, {
+		"memento" : {
+			"Army" : {
+				"caretaker" : {
+					"Kingdom" : [ ]
+				},
+				"originator" : {
+					"KingdomFactory" : [ "ElfKingdomFactory", "OrcKingdomFactory" ]
+				},
+				"concrete_memento" : [ "ElfArmy", "OrcArmy" ]
+			},
+			"King" : {
+				"caretaker" : {
+					"App" : [ ],
+					"Kingdom" : [ ]
+				},
+				"originator" : {
+					"KingdomFactory" : [ "ElfKingdomFactory", "OrcKingdomFactory" ]
+				},
+				"concrete_memento" : [ "ElfKing", "OrcKing" ]
+			},
+			"Castle" : {
+				"caretaker" : {
+					"Kingdom" : [ ]
+				},
+				"originator" : {
+					"KingdomFactory" : [ "ElfKingdomFactory", "OrcKingdomFactory" ]
+				},
+				"concrete_memento" : [ "OrcCastle", "ElfCastle" ]
+			}
+		}
+	} ],
+	"iluwatar-abstract-factory" : {
+		"App" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Kingdom",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "kingdom = new Kingdom()" ],
+				"FIELDDATATYPE" : "Kingdom",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 30,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Runnable" ],
+				"CLASSNAME" : "App",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "app = new App()" ],
+				"VARIABLECOMMONTYPE" : "var",
+				"VARIABLEELEMENTTYPE" : "var"
+			}, {
+				"VARIABLEDECLARATION" : [ "kingdomFactory = Kingdom.FactoryMaker.makeFactory(kingdomType)" ],
+				"VARIABLECOMMONTYPE" : "KingdomFactory",
+				"VARIABLEELEMENTTYPE" : "KingdomFactory"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "App",
+					"CALLEEMETHODNAME" : "run"
+				}, {
+					"CALLEECLASS" : "App",
+					"CALLEEMETHODNAME" : "run"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			}, {
+				"METHODNAME" : "run",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "App"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 22,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "App",
+					"CALLEEMETHODNAME" : "createKingdom"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "getArmy",
+					"CALLEEMETHODNAME" : "getDescription"
+				}, {
+					"CALLEECLASS" : "kingdom",
+					"CALLEEMETHODNAME" : "getArmy"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "getCastle",
+					"CALLEEMETHODNAME" : "getDescription"
+				}, {
+					"CALLEECLASS" : "kingdom",
+					"CALLEEMETHODNAME" : "getCastle"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "getKing",
+					"CALLEEMETHODNAME" : "getDescription"
+				}, {
+					"CALLEECLASS" : "kingdom",
+					"CALLEEMETHODNAME" : "getKing"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "App",
+					"CALLEEMETHODNAME" : "createKingdom"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "getArmy",
+					"CALLEEMETHODNAME" : "getDescription"
+				}, {
+					"CALLEECLASS" : "kingdom",
+					"CALLEEMETHODNAME" : "getArmy"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "getCastle",
+					"CALLEEMETHODNAME" : "getDescription"
+				}, {
+					"CALLEECLASS" : "kingdom",
+					"CALLEEMETHODNAME" : "getCastle"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "getKing",
+					"CALLEEMETHODNAME" : "getDescription"
+				}, {
+					"CALLEECLASS" : "kingdom",
+					"CALLEEMETHODNAME" : "getKing"
+				}, {
+					"CALLEECLASS" : "App",
+					"CALLEEMETHODNAME" : "createKingdom"
+				}, {
+					"CALLEECLASS" : "App",
+					"CALLEEMETHODNAME" : "createKingdom"
+				} ],
+				"NUMBEROFMETHODLINES" : 10,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createKingdom",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "run",
+					"CALLEDCLASS" : "App"
+				}, {
+					"CALLEDMETHODNAME" : "run",
+					"CALLEDCLASS" : "App"
+				}, {
+					"CALLEDMETHODNAME" : "run",
+					"CALLEDCLASS" : "App"
+				}, {
+					"CALLEDMETHODNAME" : "run",
+					"CALLEDCLASS" : "App"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "FactoryMaker",
+					"CALLEEMETHODNAME" : "makeFactory"
+				}, {
+					"CALLEECLASS" : "kingdom",
+					"CALLEEMETHODNAME" : "setKing"
+				}, {
+					"CALLEECLASS" : "kingdomFactory",
+					"CALLEEMETHODNAME" : "createKing"
+				}, {
+					"CALLEECLASS" : "kingdom",
+					"CALLEEMETHODNAME" : "setCastle"
+				}, {
+					"CALLEECLASS" : "kingdomFactory",
+					"CALLEEMETHODNAME" : "createCastle"
+				}, {
+					"CALLEECLASS" : "kingdom",
+					"CALLEEMETHODNAME" : "setArmy"
+				}, {
+					"CALLEECLASS" : "kingdomFactory",
+					"CALLEEMETHODNAME" : "createArmy"
+				}, {
+					"CALLEECLASS" : "FactoryMaker",
+					"CALLEEMETHODNAME" : "makeFactory"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "Kingdom.FactoryMaker.KingdomType",
+					"PARAMETERTYPE" : "final"
+				} ]
+			} ]
+		},
+		"Army" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Army",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ElfArmy" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"This is the elven army!\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Army" ],
+				"CLASSNAME" : "ElfArmy",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ElfKing" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"This is the elven king!\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "King" ],
+				"CLASSNAME" : "ElfKing",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"KingdomFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "KingdomFactory",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createCastle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Castle",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createKing",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "King",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createArmy",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Army",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ElfKingdomFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "KingdomFactory" ],
+				"CLASSNAME" : "ElfKingdomFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createCastle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Castle",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createKing",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "King",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createArmy",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Army",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"King" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "King",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"OrcKingdomFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "KingdomFactory" ],
+				"CLASSNAME" : "OrcKingdomFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createCastle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Castle",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createKing",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "King",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createArmy",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Army",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Kingdom" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "King",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "king" ],
+				"FIELDDATATYPE" : "King",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Castle",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "castle" ],
+				"FIELDDATATYPE" : "Castle",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Army",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "army" ],
+				"FIELDDATATYPE" : "Army",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Kingdom",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeFactory",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "KingdomFactory",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "type",
+					"PARAMETERTYPE" : "KingdomType"
+				} ]
+			} ]
+		},
+		"OrcCastle" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"This is the orc castle!\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Castle" ],
+				"CLASSNAME" : "OrcCastle",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Castle" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Castle",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ElfCastle" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"This is the elven castle!\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Castle" ],
+				"CLASSNAME" : "ElfCastle",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"OrcArmy" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"This is the orc army!\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Army" ],
+				"CLASSNAME" : "OrcArmy",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"OrcKing" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"This is the orc king!\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "King" ],
+				"CLASSNAME" : "OrcKing",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"abstract_factory" : {
+			"ElfKingdomFactory" : [ "ElfKingdomFactory acts as a factory for KingdomFactory, which overrides createCastle method of KingdomFactory, createKing method of KingdomFactory, createArmy method of KingdomFactory." ],
+			"Army" : [ "Army acts as an abstract product for Army, which is inherited by ElfArmy, OrcArmy." ],
+			"King" : [ "King acts as an abstract product for King, which is inherited by ElfKing, OrcKing." ],
+			"OrcKingdomFactory" : [ "OrcKingdomFactory acts as a factory for KingdomFactory, which overrides createCastle method of KingdomFactory, createKing method of KingdomFactory, createArmy method of KingdomFactory." ],
+			"OrcCastle" : [ "OrcCastle acts as a product for KingdomFactory, which overrides getDescription method of Castle." ],
+			"ElfArmy" : [ "ElfArmy acts as a product for KingdomFactory, which overrides getDescription method of Army." ],
+			"ElfCastle" : [ "ElfCastle acts as a product for KingdomFactory, which overrides getDescription method of Castle." ],
+			"Castle" : [ "Castle acts as an abstract product for Castle, which is inherited by OrcCastle, ElfCastle." ],
+			"OrcArmy" : [ "OrcArmy acts as a product for KingdomFactory, which overrides getDescription method of Army." ],
+			"ElfKing" : [ "ElfKing acts as a product for KingdomFactory, which overrides getDescription method of King." ],
+			"OrcKing" : [ "OrcKing acts as a product for KingdomFactory, which overrides getDescription method of King." ],
+			"KingdomFactory" : [ "KingdomFactory acts as an abstract factory for Army, King, Castle, which is inherited by ElfKingdomFactory, OrcKingdomFactory." ]
+		},
+		"memento" : {
+			"App" : [ "App acts as a caretaker for memento King, which mains String[] parameter of args, which runs, which creates final parameter of Kingdom.FactoryMaker.KingdomType Kingdom." ],
+			"Army" : [ "Army acts as a memento, which is inherited by ElfArmy, OrcArmy, which gets Description." ],
+			"ElfArmy" : [ "ElfArmy acts as a memento, which gets Description." ],
+			"ElfKing" : [ "ElfKing acts as a memento, which gets Description." ],
+			"KingdomFactory" : [ "KingdomFactory acts as an originator for memento King, which is inherited by, which creates a King King to.", "KingdomFactory acts as an originator for memento Army, which is inherited by, which creates an Army Army to.", "KingdomFactory acts as an originator for memento Castle, which is inherited by, which creates a Castle Castle to." ],
+			"ElfKingdomFactory" : [ "ElfKingdomFactory acts as an originator for memento King, which creates a King King to.", "ElfKingdomFactory acts as an originator for memento Army, which creates an Army Army to.", "ElfKingdomFactory acts as an originator for memento Castle, which creates a Castle Castle to." ],
+			"OrcKingdomFactory" : [ "OrcKingdomFactory acts as an originator for memento Army, which creates an Army Army to.", "OrcKingdomFactory acts as an originator for memento Castle, which creates a Castle Castle to.", "OrcKingdomFactory acts as an originator for memento King, which creates a King King to." ],
+			"King" : [ "King acts as a memento, which is inherited by ElfKing, OrcKing, which gets Description." ],
+			"Kingdom" : [ "Kingdom acts as a caretaker for memento Castle, which makes KingdomType parameter of type Factory.", "Kingdom acts as a caretaker for memento Army, which makes KingdomType parameter of type Factory.", "Kingdom acts as a caretaker for memento King, which makes KingdomType parameter of type Factory." ],
+			"OrcCastle" : [ "OrcCastle acts as a memento, which gets Description." ],
+			"ElfCastle" : [ "ElfCastle acts as a memento, which gets Description." ],
+			"Castle" : [ "Castle acts as a memento, which is inherited by OrcCastle, ElfCastle, which gets Description." ],
+			"OrcArmy" : [ "OrcArmy acts as a memento, which gets Description." ],
+			"OrcKing" : [ "OrcKing acts as a memento, which gets Description." ]
+		},
+		"factory_method" : {
+			"OrcCastle" : [ "OrcCastle acts as a product for KingdomFactory, which overrides getDescription method of Castle." ],
+			"ElfCastle" : [ "ElfCastle acts as a product for KingdomFactory, which overrides getDescription method of Castle." ],
+			"Castle" : [ "Castle acts as an abstract product for KingdomFactory, which is inherited by OrcCastle, ElfCastle." ],
+			"KingdomFactory" : [ "KingdomFactory acts as a factory for KingdomFactory, which overrides.", "KingdomFactory acts as a factory method for Castle, which is inherited by KingdomFactory, KingdomFactory." ]
+		}
+	}
+}

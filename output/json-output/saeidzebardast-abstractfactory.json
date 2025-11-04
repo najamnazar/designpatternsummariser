@@ -1,0 +1,864 @@
+{
+	"final_summary" : "ESUFOBossEngine.java: abstract_factory: ESUFOBossEngine acts as a product for EnemyShipFactory, which overrides. It is a public class that extends ESEngine and that implements ESEngine. The only method of ESUFOBossEngine is toString (String). No methods call toString and toString calls no methods.\n\n memento: ESUFOBossEngine acts as a memento, which tos String. It is a public class that extends ESEngine and that implements ESEngine. The only method of ESUFOBossEngine is toString (String). No methods call toString and toString calls no methods.\n\n factory_method: ESUFOBossEngine acts as a product for EnemyShipFactory, which overrides. It is a public class that extends ESEngine and that implements ESEngine. The only method of ESUFOBossEngine is toString (String). No methods call toString and toString calls no methods.\n\n\nUFOEnemyShip.java: memento: UFOEnemyShip acts as a caretaker for memento ESEngine, which makes Ship. UFOEnemyShip acts as a caretaker for memento ESWeapon, which makes Ship. It is a public class that extends EnemyShip. The only method of UFOEnemyShip is makeShip (void). No methods call makeShip and makeShip calls 4 methods : addESGun method of class shipFactory, getName method of class UNKNOWN, println method of class out and addESEngine method of class shipFactory.\n\n\nESWeapon.java: abstract_factory: ESWeapon acts as an abstract product for ESWeapon, which is inherited by ESUFOBossGun, ESUFOGun. It is a public interface. The only method of ESWeapon is toString (String). No methods call toString and toString calls no methods.\n\n memento: ESWeapon acts as a memento, which is inherited by ESUFOGun, ESUFOBossGun, which tos String. It is a public interface. The only method of ESWeapon is toString (String). No methods call toString and toString calls no methods.\n\n\nESEngine.java: abstract_factory: ESEngine acts as an abstract product for ESEngine, which is inherited by ESUFOBossEngine, ESUFOEngine. It is a public interface. The only method of ESEngine is toString (String). No methods call toString and toString calls no methods.\n\n memento: ESEngine acts as a memento, which is inherited by ESUFOBossEngine, ESUFOEngine, which tos String. It is a public interface. The only method of ESEngine is toString (String). No methods call toString and toString calls no methods.\n\n factory_method: ESEngine acts as an abstract product for EnemyShipFactory, which is inherited by ESUFOBossEngine, ESUFOEngine. It is a public interface. The only method of ESEngine is toString (String). No methods call toString and toString calls no methods.\n\n\nEnemyShipFactory.java: abstract_factory: EnemyShipFactory acts as an abstract factory for ESWeapon, ESEngine, which is inherited by UFOBossEnemyShipFactory, UFOEnemyShipFactory. It is a public interface. The 2 methods of EnemyShipFactory are addESGun (ESWeapon) and addESEngine (ESEngine). No methods call addESGun and addESGun calls no methods. No methods call addESEngine and addESEngine calls no methods.\n\n memento: EnemyShipFactory acts as an originator for memento ESWeapon, which is inherited by, which adds an ESWeapon ESGun to. EnemyShipFactory acts as an originator for memento ESEngine, which is inherited by, which adds an ESEngine ESEngine to. It is a public interface. The 2 methods of EnemyShipFactory are addESGun (ESWeapon) and addESEngine (ESEngine). No methods call addESGun and addESGun calls no methods. No methods call addESEngine and addESEngine calls no methods.\n\n factory_method: EnemyShipFactory acts as a factory for EnemyShipFactory, which overrides. EnemyShipFactory acts as a factory method for ESEngine, which is inherited by EnemyShipFactory, EnemyShipFactory. It is a public interface. The 2 methods of EnemyShipFactory are addESGun (ESWeapon) and addESEngine (ESEngine). No methods call addESGun and addESGun calls no methods. No methods call addESEngine and addESEngine calls no methods.\n\n\nUFOBossEnemyShipFactory.java: abstract_factory: UFOBossEnemyShipFactory acts as a factory for EnemyShipFactory, which overrides. It is a public class that extends EnemyShipFactory and that implements EnemyShipFactory. The 2 methods of UFOBossEnemyShipFactory are addESGun (ESWeapon) and addESEngine (ESEngine). No methods call addESGun and addESGun calls no methods. No methods call addESEngine and addESEngine calls no methods.\n\n memento: UFOBossEnemyShipFactory acts as an originator for memento ESEngine, which adds an ESEngine ESEngine to. UFOBossEnemyShipFactory acts as an originator for memento ESWeapon, which adds an ESWeapon ESGun to. It is a public class that extends EnemyShipFactory and that implements EnemyShipFactory. The 2 methods of UFOBossEnemyShipFactory are addESGun (ESWeapon) and addESEngine (ESEngine). No methods call addESGun and addESGun calls no methods. No methods call addESEngine and addESEngine calls no methods.\n\n\nESUFOBossGun.java: abstract_factory: ESUFOBossGun acts as a product for EnemyShipFactory, which overrides. It is a public class that extends ESWeapon and that implements ESWeapon. The only method of ESUFOBossGun is toString (String). No methods call toString and toString calls no methods.\n\n memento: ESUFOBossGun acts as a memento, which tos String. It is a public class that extends ESWeapon and that implements ESWeapon. The only method of ESUFOBossGun is toString (String). No methods call toString and toString calls no methods.\n\n\nEnemyShipBuilding.java: EnemyShipBuilding does not have any design pattern.  It is a public abstract class. The 2 methods of EnemyShipBuilding are makeEnemyShip (EnemyShip) and orderTheShip (EnemyShip). Only one method ( orderTheShip method of class EnemyShipBuilding ) calls makeEnemyShip and makeEnemyShip calls no methods. No methods call orderTheShip and orderTheShip calls 5 methods : enemyShipShoots method of class theEnemyShip, displayEnemyShip method of class theEnemyShip, makeEnemyShip method of class EnemyShipBuilding, makeShip method of class theEnemyShip and followHeroShip method of class theEnemyShip.\n\n\nESUFOGun.java: abstract_factory: ESUFOGun acts as a product for EnemyShipFactory, which overrides. It is a public class that extends ESWeapon and that implements ESWeapon. The only method of ESUFOGun is toString (String). No methods call toString and toString calls no methods.\n\n memento: ESUFOGun acts as a memento, which tos String. It is a public class that extends ESWeapon and that implements ESWeapon. The only method of ESUFOGun is toString (String). No methods call toString and toString calls no methods.\n\n\nUFOEnemyShipFactory.java: abstract_factory: UFOEnemyShipFactory acts as a factory for EnemyShipFactory, which overrides. It is a public class that extends EnemyShipFactory and that implements EnemyShipFactory. The 2 methods of UFOEnemyShipFactory are addESGun (ESWeapon) and addESEngine (ESEngine). No methods call addESGun and addESGun calls no methods. No methods call addESEngine and addESEngine calls no methods.\n\n memento: UFOEnemyShipFactory acts as an originator for memento ESWeapon, which adds an ESWeapon ESGun to. UFOEnemyShipFactory acts as an originator for memento ESEngine, which adds an ESEngine ESEngine to. It is a public class that extends EnemyShipFactory and that implements EnemyShipFactory. The 2 methods of UFOEnemyShipFactory are addESGun (ESWeapon) and addESEngine (ESEngine). No methods call addESGun and addESGun calls no methods. No methods call addESEngine and addESEngine calls no methods.\n\n\nEnemyShipTesting.java: EnemyShipTesting does not have any design pattern.  It is a public class. The only method of EnemyShipTesting is main (void). No methods call main and main calls 2 methods : orderTheShip method of class MakeUFOs and println method of class out.\n\n\nUFOBossEnemyShip.java: memento: UFOBossEnemyShip acts as a caretaker for memento ESWeapon, which makes Ship. UFOBossEnemyShip acts as a caretaker for memento ESEngine, which makes Ship. It is a public class that extends EnemyShip. The only method of UFOBossEnemyShip is makeShip (void). No methods call makeShip and makeShip calls 4 methods : addESGun method of class shipFactory, getName method of class UNKNOWN, println method of class out and addESEngine method of class shipFactory.\n\n\nESUFOEngine.java: abstract_factory: ESUFOEngine acts as a product for EnemyShipFactory, which overrides. It is a public class that extends ESEngine and that implements ESEngine. The only method of ESUFOEngine is toString (String). No methods call toString and toString calls no methods.\n\n memento: ESUFOEngine acts as a memento, which tos String. It is a public class that extends ESEngine and that implements ESEngine. The only method of ESUFOEngine is toString (String). No methods call toString and toString calls no methods.\n\n factory_method: ESUFOEngine acts as a product for EnemyShipFactory, which overrides. It is a public class that extends ESEngine and that implements ESEngine. The only method of ESUFOEngine is toString (String). No methods call toString and toString calls no methods.\n\n\nUFOEnemyShipBuilding.java: UFOEnemyShipBuilding does not have any design pattern.  It is a public class that extends EnemyShipBuilding. The only method of UFOEnemyShipBuilding is makeEnemyShip (EnemyShip). No methods call makeEnemyShip and makeEnemyShip calls 2 methods : setName method of class theEnemyShip and equals method of class String.\n\n\nEnemyShip.java: memento: EnemyShip acts as a caretaker for memento ESWeapon, which is inherited by, which gets Name, which sets String parameter of newName Name, which makes Ship, which follows Hero Ship, which displays Enemy Ship, which enemies Ship Shoots, which tos String. EnemyShip acts as a caretaker for memento ESEngine, which is inherited by, which gets Name, which sets String parameter of newName Name, which makes Ship, which follows Hero Ship, which displays Enemy Ship, which enemies Ship Shoots, which tos String. It is a public abstract class. The 7 methods of EnemyShip are getName (String), setName (void), makeShip (void), followHeroShip (void), displayEnemyShip (void), enemyShipShoots (void) and toString (String). 3 methods ( followHeroShip method of class EnemyShip, displayEnemyShip method of class EnemyShip and enemyShipShoots method of class EnemyShip ) call getName and getName calls no methods. No methods call setName and setName calls no methods. No methods call makeShip and makeShip calls no methods. No methods call followHeroShip and followHeroShip calls 2 methods : getName method of class EnemyShip and println method of class out. No methods call displayEnemyShip and displayEnemyShip calls 2 methods : getName method of class EnemyShip and println method of class PrintStream. No methods call enemyShipShoots and enemyShipShoots calls 2 methods : getName method of class EnemyShip and println method of class out. No methods call toString and toString calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"factory_method" : {
+			"EnemyShipFactory" : {
+				"concrete_product" : [ "ESUFOBossEngine", "ESUFOEngine" ],
+				"abstract_product" : "ESEngine",
+				"concrete_factory" : [ "EnemyShipFactory", "EnemyShipFactory" ]
+			}
+		}
+	}, {
+		"abstract_factory" : {
+			"EnemyShipFactory" : {
+				"abstract_product" : {
+					"ESWeapon" : [ "ESUFOBossGun", "ESUFOGun" ],
+					"ESEngine" : [ "ESUFOBossEngine", "ESUFOEngine" ]
+				},
+				"concrete_factory" : [ "UFOBossEnemyShipFactory", "UFOEnemyShipFactory" ]
+			}
+		}
+	}, {
+		"memento" : {
+			"ESWeapon" : {
+				"caretaker" : {
+					"EnemyShip" : [ "UFOEnemyShip", "UFOBossEnemyShip" ]
+				},
+				"originator" : {
+					"EnemyShipFactory" : [ "UFOEnemyShipFactory", "UFOBossEnemyShipFactory" ]
+				},
+				"concrete_memento" : [ "ESUFOGun", "ESUFOBossGun" ]
+			},
+			"ESEngine" : {
+				"caretaker" : {
+					"EnemyShip" : [ "UFOEnemyShip", "UFOBossEnemyShip" ]
+				},
+				"originator" : {
+					"EnemyShipFactory" : [ "UFOEnemyShipFactory", "UFOBossEnemyShipFactory" ]
+				},
+				"concrete_memento" : [ "ESUFOBossEngine", "ESUFOEngine" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"abstract_factory" : {
+			"ESUFOBossEngine" : [ "ESUFOBossEngine acts as a product for EnemyShipFactory, which overrides." ],
+			"ESUFOGun" : [ "ESUFOGun acts as a product for EnemyShipFactory, which overrides." ],
+			"ESWeapon" : [ "ESWeapon acts as an abstract product for ESWeapon, which is inherited by ESUFOBossGun, ESUFOGun." ],
+			"ESEngine" : [ "ESEngine acts as an abstract product for ESEngine, which is inherited by ESUFOBossEngine, ESUFOEngine." ],
+			"UFOEnemyShipFactory" : [ "UFOEnemyShipFactory acts as a factory for EnemyShipFactory, which overrides." ],
+			"EnemyShipFactory" : [ "EnemyShipFactory acts as an abstract factory for ESWeapon, ESEngine, which is inherited by UFOBossEnemyShipFactory, UFOEnemyShipFactory." ],
+			"ESUFOEngine" : [ "ESUFOEngine acts as a product for EnemyShipFactory, which overrides." ],
+			"UFOBossEnemyShipFactory" : [ "UFOBossEnemyShipFactory acts as a factory for EnemyShipFactory, which overrides." ],
+			"ESUFOBossGun" : [ "ESUFOBossGun acts as a product for EnemyShipFactory, which overrides." ]
+		},
+		"memento" : {
+			"ESUFOBossEngine" : [ "ESUFOBossEngine acts as a memento, which tos String." ],
+			"ESUFOGun" : [ "ESUFOGun acts as a memento, which tos String." ],
+			"UFOEnemyShip" : [ "UFOEnemyShip acts as a caretaker for memento ESEngine, which makes Ship.", "UFOEnemyShip acts as a caretaker for memento ESWeapon, which makes Ship." ],
+			"ESWeapon" : [ "ESWeapon acts as a memento, which is inherited by ESUFOGun, ESUFOBossGun, which tos String." ],
+			"ESEngine" : [ "ESEngine acts as a memento, which is inherited by ESUFOBossEngine, ESUFOEngine, which tos String." ],
+			"UFOEnemyShipFactory" : [ "UFOEnemyShipFactory acts as an originator for memento ESWeapon, which adds an ESWeapon ESGun to.", "UFOEnemyShipFactory acts as an originator for memento ESEngine, which adds an ESEngine ESEngine to." ],
+			"EnemyShipFactory" : [ "EnemyShipFactory acts as an originator for memento ESWeapon, which is inherited by, which adds an ESWeapon ESGun to.", "EnemyShipFactory acts as an originator for memento ESEngine, which is inherited by, which adds an ESEngine ESEngine to." ],
+			"UFOBossEnemyShip" : [ "UFOBossEnemyShip acts as a caretaker for memento ESWeapon, which makes Ship.", "UFOBossEnemyShip acts as a caretaker for memento ESEngine, which makes Ship." ],
+			"ESUFOEngine" : [ "ESUFOEngine acts as a memento, which tos String." ],
+			"EnemyShip" : [ "EnemyShip acts as a caretaker for memento ESWeapon, which is inherited by, which gets Name, which sets String parameter of newName Name, which makes Ship, which follows Hero Ship, which displays Enemy Ship, which enemies Ship Shoots, which tos String.", "EnemyShip acts as a caretaker for memento ESEngine, which is inherited by, which gets Name, which sets String parameter of newName Name, which makes Ship, which follows Hero Ship, which displays Enemy Ship, which enemies Ship Shoots, which tos String." ],
+			"UFOBossEnemyShipFactory" : [ "UFOBossEnemyShipFactory acts as an originator for memento ESEngine, which adds an ESEngine ESEngine to.", "UFOBossEnemyShipFactory acts as an originator for memento ESWeapon, which adds an ESWeapon ESGun to." ],
+			"ESUFOBossGun" : [ "ESUFOBossGun acts as a memento, which tos String." ]
+		},
+		"factory_method" : {
+			"ESUFOBossEngine" : [ "ESUFOBossEngine acts as a product for EnemyShipFactory, which overrides." ],
+			"ESEngine" : [ "ESEngine acts as an abstract product for EnemyShipFactory, which is inherited by ESUFOBossEngine, ESUFOEngine." ],
+			"EnemyShipFactory" : [ "EnemyShipFactory acts as a factory for EnemyShipFactory, which overrides.", "EnemyShipFactory acts as a factory method for ESEngine, which is inherited by EnemyShipFactory, EnemyShipFactory." ],
+			"ESUFOEngine" : [ "ESUFOEngine acts as a product for EnemyShipFactory, which overrides." ]
+		}
+	},
+	"saeidzebardast-abstractfactory" : {
+		"ESUFOBossEngine" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "ESEngine" ],
+				"IMPLEMENTSFROM" : [ "ESEngine" ],
+				"CLASSNAME" : "ESUFOBossEngine",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UFOEnemyShip" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "EnemyShipFactory",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "shipFactory" ],
+				"FIELDDATATYPE" : "EnemyShipFactory",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "EnemyShip" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UFOEnemyShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "shipFactory",
+					"PARAMETERTYPE" : "EnemyShipFactory"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "shipFactory",
+					"CALLEEMETHODNAME" : "addESGun"
+				}, {
+					"CALLEECLASS" : "shipFactory",
+					"CALLEEMETHODNAME" : "addESEngine"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ESWeapon" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ESWeapon",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ESEngine" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ESEngine",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"EnemyShipFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EnemyShipFactory",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addESGun",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ESWeapon",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "addESEngine",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ESEngine",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UFOBossEnemyShipFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "EnemyShipFactory" ],
+				"IMPLEMENTSFROM" : [ "EnemyShipFactory" ],
+				"CLASSNAME" : "UFOBossEnemyShipFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addESGun",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ESWeapon",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "addESEngine",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ESEngine",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ESUFOBossGun" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "ESWeapon" ],
+				"IMPLEMENTSFROM" : [ "ESWeapon" ],
+				"CLASSNAME" : "ESUFOBossGun",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"EnemyShipBuilding" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EnemyShipBuilding",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "theEnemyShip = makeEnemyShip(typeOfShip)" ],
+				"VARIABLECOMMONTYPE" : "EnemyShip",
+				"VARIABLEELEMENTTYPE" : "EnemyShip"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeEnemyShip",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "orderTheShip",
+					"CALLEDCLASS" : "EnemyShipBuilding"
+				}, {
+					"CALLEDMETHODNAME" : "orderTheShip",
+					"CALLEDCLASS" : "EnemyShipBuilding"
+				} ],
+				"METHODMODIFIERTYPE" : [ "protected", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "EnemyShip",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "typeOfShip",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "orderTheShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "EnemyShip",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "EnemyShipBuilding",
+					"CALLEEMETHODNAME" : "makeEnemyShip"
+				}, {
+					"CALLEECLASS" : "EnemyShipBuilding",
+					"CALLEEMETHODNAME" : "makeEnemyShip"
+				}, {
+					"CALLEECLASS" : "theEnemyShip",
+					"CALLEEMETHODNAME" : "makeShip"
+				}, {
+					"CALLEECLASS" : "theEnemyShip",
+					"CALLEEMETHODNAME" : "displayEnemyShip"
+				}, {
+					"CALLEECLASS" : "theEnemyShip",
+					"CALLEEMETHODNAME" : "followHeroShip"
+				}, {
+					"CALLEECLASS" : "theEnemyShip",
+					"CALLEEMETHODNAME" : "enemyShipShoots"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "typeOfShip",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"ESUFOGun" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "ESWeapon" ],
+				"IMPLEMENTSFROM" : [ "ESWeapon" ],
+				"CLASSNAME" : "ESUFOGun",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UFOEnemyShipFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "EnemyShipFactory" ],
+				"IMPLEMENTSFROM" : [ "EnemyShipFactory" ],
+				"CLASSNAME" : "UFOEnemyShipFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addESGun",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ESWeapon",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "addESEngine",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ESEngine",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"EnemyShipTesting" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EnemyShipTesting",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "MakeUFOs = new UFOEnemyShipBuilding()" ],
+				"VARIABLECOMMONTYPE" : "EnemyShipBuilding",
+				"VARIABLEELEMENTTYPE" : "EnemyShipBuilding"
+			}, {
+				"VARIABLEDECLARATION" : [ "theGrunt = MakeUFOs.orderTheShip(\"UFO\")" ],
+				"VARIABLECOMMONTYPE" : "EnemyShip",
+				"VARIABLEELEMENTTYPE" : "EnemyShip"
+			}, {
+				"VARIABLEDECLARATION" : [ "theBoss = MakeUFOs.orderTheShip(\"UFO BOSS\")" ],
+				"VARIABLECOMMONTYPE" : "EnemyShip",
+				"VARIABLEELEMENTTYPE" : "EnemyShip"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "MakeUFOs",
+					"CALLEEMETHODNAME" : "orderTheShip"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "MakeUFOs",
+					"CALLEEMETHODNAME" : "orderTheShip"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"UFOBossEnemyShip" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "EnemyShipFactory",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "shipFactory" ],
+				"FIELDDATATYPE" : "EnemyShipFactory",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "EnemyShip" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UFOBossEnemyShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "shipFactory",
+					"PARAMETERTYPE" : "EnemyShipFactory"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "UNKNOWN",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "shipFactory",
+					"CALLEEMETHODNAME" : "addESGun"
+				}, {
+					"CALLEECLASS" : "shipFactory",
+					"CALLEEMETHODNAME" : "addESEngine"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ESUFOEngine" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "ESEngine" ],
+				"IMPLEMENTSFROM" : [ "ESEngine" ],
+				"CLASSNAME" : "ESUFOEngine",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UFOEnemyShipBuilding" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "EnemyShipBuilding" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UFOEnemyShipBuilding",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "theEnemyShip = null" ],
+				"VARIABLECOMMONTYPE" : "EnemyShip",
+				"VARIABLEELEMENTTYPE" : "EnemyShip"
+			}, {
+				"VARIABLEDECLARATION" : [ "shipPartsFactory = new UFOBossEnemyShipFactory()" ],
+				"VARIABLECOMMONTYPE" : "EnemyShipFactory",
+				"VARIABLEELEMENTTYPE" : "EnemyShipFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "shipPartsFactory = new UFOEnemyShipFactory()" ],
+				"VARIABLECOMMONTYPE" : "EnemyShipFactory",
+				"VARIABLEELEMENTTYPE" : "EnemyShipFactory"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeEnemyShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "EnemyShip",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				}, {
+					"CALLEECLASS" : "theEnemyShip",
+					"CALLEEMETHODNAME" : "setName"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equals"
+				}, {
+					"CALLEECLASS" : "theEnemyShip",
+					"CALLEEMETHODNAME" : "setName"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "typeOfShip",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"EnemyShip" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "ESWeapon",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "weapon" ],
+				"FIELDDATATYPE" : "ESWeapon",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "ESEngine",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "engine" ],
+				"FIELDDATATYPE" : "ESEngine",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EnemyShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "infoOnShip = \"The \" + name + \" has a top speed of \" + engine + \" and an attack power of \" + weapon" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 6,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "displayEnemyShip",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "followHeroShip",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "followHeroShip",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "displayEnemyShip",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "enemyShipShoots",
+					"CALLEDCLASS" : "EnemyShip"
+				}, {
+					"CALLEDMETHODNAME" : "enemyShipShoots",
+					"CALLEDCLASS" : "EnemyShip"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "newName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "makeShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "followHeroShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "displayEnemyShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "enemyShipShoots",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "EnemyShip",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

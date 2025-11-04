@@ -1,0 +1,643 @@
+{
+	"final_summary" : "StockGrabber.java: observer: StockGrabber acts as a publisher for observer Observer, which is inherited by, which registers Observer parameter of newObserver, which unregisters Observer parameter of deleteObserver, which notifies Observer, which sets double parameter of newIBMPrice IBMPrice, which sets double parameter of newAAPLPrice AAPLPrice, which sets double parameter of newGOOGPrice GOOGPrice. StockGrabber acts as a publisher for observer Observer, which registers Observer parameter of newObserver, which unregisters Observer parameter of deleteObserver, which notifies Observer, which sets double parameter of newIBMPrice IBMPrice, which sets double parameter of newAAPLPrice AAPLPrice, which sets double parameter of newGOOGPrice GOOGPrice. It is a public class that extends Subject and that implements Subject. The 6 methods of StockGrabber are register (void), unregister (void), notifyObserver (void), setIBMPrice (void), setAAPLPrice (void) and setGOOGPrice (void). No methods call register and register calls only one method : add method of class observers. No methods call unregister and unregister calls 3 methods : indexOf method of class observers, println method of class PrintStream and remove method of class observers. 3 methods ( setIBMPrice method of class StockGrabber, setGOOGPrice method of class StockGrabber and setAAPLPrice method of class StockGrabber ) call notifyObserver and notifyObserver calls only one method : update method of class observer. No methods call setIBMPrice and setIBMPrice calls only one method : notifyObserver method of class StockGrabber. No methods call setAAPLPrice and setAAPLPrice calls only one method : notifyObserver method of class StockGrabber. No methods call setGOOGPrice and setGOOGPrice calls only one method : notifyObserver method of class StockGrabber.\n\n\nObserver.java: observer: Observer acts as an observer for publisher Subject, StockGrabber, which is inherited by StockObserver, which updates double parameter of ibmPrice, double parameter of aaplPrice, double parameter of googPrice. It is a public interface. The only method of Observer is update (void). No methods call update and update calls no methods.\n\n adapter: Observer acts as a target for adapter StockObserver, which adapts to Observer. It is a public interface. The only method of Observer is update (void). No methods call update and update calls no methods.\n\n\nStockObserver.java: observer: StockObserver acts as an observer, which updates double parameter of ibmPrice, double parameter of aaplPrice, double parameter of googPrice, which prints The Prices. It is a public class that extends Observer and that implements Observer. The 2 methods of StockObserver are update (void) and printThePrices (void). No methods call update and update calls only one method : printThePrices method of class StockObserver. Only one method ( update method of class StockObserver ) calls printThePrices and printThePrices calls only one method : println method of class PrintStream.\n\n adapter: StockObserver acts as an adapter, which adapts to Observer, which adapts printThePrices method of Subject, printThePrices method of Subject to Observer. It is a public class that extends Observer and that implements Observer. The 2 methods of StockObserver are update (void) and printThePrices (void). No methods call update and update calls only one method : printThePrices method of class StockObserver. Only one method ( update method of class StockObserver ) calls printThePrices and printThePrices calls only one method : println method of class PrintStream.\n\n\nGrabStocks.java: GrabStocks does not have any design pattern.  It is a public class. The only method of GrabStocks is main (void). No methods call main and main calls 4 methods : setIBMPrice method of class stockGrabber, start method of class Thread, setAAPLPrice method of class stockGrabber and setGOOGPrice method of class stockGrabber.\n\n\nGetTheStock.java: GetTheStock does not have any design pattern.  It is a public class that implements Runnable. The only method of GetTheStock is run (void). No methods call run and run calls 8 methods : setAAPLPrice method of class, format method of class NumberFormat, setGOOGPrice method of class, valueOf method of class Double, println method of class PrintStream, setIBMPrice method of class, random method of class Math and sleep method of class Thread.\n\n\nSubject.java: observer: Subject acts as a publisher for observer Observer, which is inherited by StockGrabber, which registers Observer parameter of o, which unregisters Observer parameter of o, which notifies Observer. It is a public interface. The 3 methods of Subject are register (void), unregister (void) and notifyObserver (void). No methods call register and register calls no methods. No methods call unregister and unregister calls no methods. No methods call notifyObserver and notifyObserver calls no methods.\n\n adapter: Subject acts as an adaptee for adapter StockObserver, which adapts to Observer, which adapts to Observer, which adapts to Observer. It is a public interface. The 3 methods of Subject are register (void), unregister (void) and notifyObserver (void). No methods call register and register calls no methods. No methods call unregister and unregister calls no methods. No methods call notifyObserver and notifyObserver calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"adapter" : {
+			"StockObserver" : {
+				"adaptee" : [ "Subject" ],
+				"target" : [ "Observer" ]
+			}
+		}
+	}, {
+		"observer" : {
+			"Observer" : {
+				"concrete_observer" : [ "StockObserver" ],
+				"publisher" : {
+					"StockGrabber" : [ ],
+					"Subject" : [ "StockGrabber" ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"StockGrabber" : [ "StockGrabber acts as a publisher for observer Observer, which is inherited by, which registers Observer parameter of newObserver, which unregisters Observer parameter of deleteObserver, which notifies Observer, which sets double parameter of newIBMPrice IBMPrice, which sets double parameter of newAAPLPrice AAPLPrice, which sets double parameter of newGOOGPrice GOOGPrice.", "StockGrabber acts as a publisher for observer Observer, which registers Observer parameter of newObserver, which unregisters Observer parameter of deleteObserver, which notifies Observer, which sets double parameter of newIBMPrice IBMPrice, which sets double parameter of newAAPLPrice AAPLPrice, which sets double parameter of newGOOGPrice GOOGPrice." ],
+			"Observer" : [ "Observer acts as an observer for publisher Subject, StockGrabber, which is inherited by StockObserver, which updates double parameter of ibmPrice, double parameter of aaplPrice, double parameter of googPrice." ],
+			"StockObserver" : [ "StockObserver acts as an observer, which updates double parameter of ibmPrice, double parameter of aaplPrice, double parameter of googPrice, which prints The Prices." ],
+			"Subject" : [ "Subject acts as a publisher for observer Observer, which is inherited by StockGrabber, which registers Observer parameter of o, which unregisters Observer parameter of o, which notifies Observer." ]
+		},
+		"adapter" : {
+			"Observer" : [ "Observer acts as a target for adapter StockObserver, which adapts to Observer." ],
+			"StockObserver" : [ "StockObserver acts as an adapter, which adapts to Observer, which adapts printThePrices method of Subject, printThePrices method of Subject to Observer." ],
+			"Subject" : [ "Subject acts as an adaptee for adapter StockObserver, which adapts to Observer, which adapts to Observer, which adapts to Observer." ]
+		}
+	},
+	"saeidzebardast-observer" : {
+		"StockGrabber" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ArrayList<Observer>",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "observers" ],
+				"FIELDDATATYPE" : "ArrayList<Observer>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "ibmPrice" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "aaplPrice" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "googPrice" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 8,
+				"EXTENDSFROM" : [ "Subject", "Subject", "Subject" ],
+				"IMPLEMENTSFROM" : [ "Subject" ],
+				"CLASSNAME" : "StockGrabber",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "observerIndex = observers.indexOf(deleteObserver)" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "observer" ],
+				"VARIABLECOMMONTYPE" : "Observer",
+				"VARIABLEELEMENTTYPE" : "Observer"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "register",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "newObserver",
+					"PARAMETERTYPE" : "Observer"
+				} ]
+			}, {
+				"METHODNAME" : "unregister",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "indexOf"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "remove"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "deleteObserver",
+					"PARAMETERTYPE" : "Observer"
+				} ]
+			}, {
+				"METHODNAME" : "notifyObserver",
+				"NUMBEROFINCOMINGMETHODS" : 6,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "setGOOGPrice",
+					"CALLEDCLASS" : "StockGrabber"
+				}, {
+					"CALLEDMETHODNAME" : "setAAPLPrice",
+					"CALLEDCLASS" : "StockGrabber"
+				}, {
+					"CALLEDMETHODNAME" : "setGOOGPrice",
+					"CALLEDCLASS" : "StockGrabber"
+				}, {
+					"CALLEDMETHODNAME" : "setIBMPrice",
+					"CALLEDCLASS" : "StockGrabber"
+				}, {
+					"CALLEDMETHODNAME" : "setIBMPrice",
+					"CALLEDCLASS" : "StockGrabber"
+				}, {
+					"CALLEDMETHODNAME" : "setAAPLPrice",
+					"CALLEDCLASS" : "StockGrabber"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observer",
+					"CALLEEMETHODNAME" : "update"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setIBMPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "StockGrabber",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				}, {
+					"CALLEECLASS" : "StockGrabber",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "newIBMPrice",
+					"PARAMETERTYPE" : "double"
+				} ]
+			}, {
+				"METHODNAME" : "setAAPLPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "StockGrabber",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				}, {
+					"CALLEECLASS" : "StockGrabber",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "newAAPLPrice",
+					"PARAMETERTYPE" : "double"
+				} ]
+			}, {
+				"METHODNAME" : "setGOOGPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "StockGrabber",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				}, {
+					"CALLEECLASS" : "StockGrabber",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "newGOOGPrice",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ]
+		},
+		"Observer" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Observer",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "ibmPrice",
+					"PARAMETERTYPE" : "double"
+				}, {
+					"PARAMETERNAME" : "aaplPrice",
+					"PARAMETERTYPE" : "double"
+				}, {
+					"PARAMETERNAME" : "googPrice",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ]
+		},
+		"StockObserver" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "ibmPrice" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "aaplPrice" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "googPrice" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private", "static" ],
+				"FIELDDECLARATION" : [ "observerIDTracker = 0" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "observerID" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Subject",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "stockGrabber" ],
+				"FIELDDATATYPE" : "Subject",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "Observer" ],
+				"IMPLEMENTSFROM" : [ "Observer" ],
+				"CLASSNAME" : "StockObserver",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "stockGrabber",
+					"PARAMETERTYPE" : "Subject"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "StockObserver",
+					"CALLEEMETHODNAME" : "printThePrices"
+				}, {
+					"CALLEECLASS" : "StockObserver",
+					"CALLEEMETHODNAME" : "printThePrices"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "ibmPrice",
+					"PARAMETERTYPE" : "double"
+				}, {
+					"PARAMETERNAME" : "aaplPrice",
+					"PARAMETERTYPE" : "double"
+				}, {
+					"PARAMETERNAME" : "googPrice",
+					"PARAMETERTYPE" : "double"
+				} ]
+			}, {
+				"METHODNAME" : "printThePrices",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "update",
+					"CALLEDCLASS" : "StockObserver"
+				}, {
+					"CALLEDMETHODNAME" : "update",
+					"CALLEDCLASS" : "StockObserver"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"GrabStocks" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 12,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "GrabStocks",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "stockGrabber = new StockGrabber()" ],
+				"VARIABLECOMMONTYPE" : "StockGrabber",
+				"VARIABLEELEMENTTYPE" : "StockGrabber"
+			}, {
+				"VARIABLEDECLARATION" : [ "observer1 = new StockObserver(stockGrabber)" ],
+				"VARIABLECOMMONTYPE" : "StockObserver",
+				"VARIABLEELEMENTTYPE" : "StockObserver"
+			}, {
+				"VARIABLEDECLARATION" : [ "observer2 = new StockObserver(stockGrabber)" ],
+				"VARIABLECOMMONTYPE" : "StockObserver",
+				"VARIABLEELEMENTTYPE" : "StockObserver"
+			}, {
+				"VARIABLEDECLARATION" : [ "getIBM = new GetTheStock(stockGrabber, 2, \"IBM\", 197.00)" ],
+				"VARIABLECOMMONTYPE" : "Runnable",
+				"VARIABLEELEMENTTYPE" : "Runnable"
+			}, {
+				"VARIABLEDECLARATION" : [ "getAAPL = new GetTheStock(stockGrabber, 2, \"AAPL\", 677.60)" ],
+				"VARIABLECOMMONTYPE" : "Runnable",
+				"VARIABLEELEMENTTYPE" : "Runnable"
+			}, {
+				"VARIABLEDECLARATION" : [ "getGOOG = new GetTheStock(stockGrabber, 2, \"GOOG\", 676.40)" ],
+				"VARIABLECOMMONTYPE" : "Runnable",
+				"VARIABLEELEMENTTYPE" : "Runnable"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 6,
+				"NUMBEROFOUTGOINGMETHODS" : 12,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "stockGrabber",
+					"CALLEEMETHODNAME" : "setIBMPrice"
+				}, {
+					"CALLEECLASS" : "stockGrabber",
+					"CALLEEMETHODNAME" : "setAAPLPrice"
+				}, {
+					"CALLEECLASS" : "stockGrabber",
+					"CALLEEMETHODNAME" : "setGOOGPrice"
+				}, {
+					"CALLEECLASS" : "stockGrabber",
+					"CALLEEMETHODNAME" : "setIBMPrice"
+				}, {
+					"CALLEECLASS" : "stockGrabber",
+					"CALLEEMETHODNAME" : "setAAPLPrice"
+				}, {
+					"CALLEECLASS" : "stockGrabber",
+					"CALLEEMETHODNAME" : "setGOOGPrice"
+				}, {
+					"CALLEECLASS" : "stockGrabber",
+					"CALLEEMETHODNAME" : "setIBMPrice"
+				}, {
+					"CALLEECLASS" : "stockGrabber",
+					"CALLEEMETHODNAME" : "setAAPLPrice"
+				}, {
+					"CALLEECLASS" : "stockGrabber",
+					"CALLEEMETHODNAME" : "setGOOGPrice"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				} ],
+				"NUMBEROFMETHODLINES" : 18,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"GetTheStock" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "stock" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "price" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Subject",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "stockGrabber" ],
+				"FIELDDATATYPE" : "Subject",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 11,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Runnable" ],
+				"CLASSNAME" : "GetTheStock",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "stockGrabber",
+					"PARAMETERTYPE" : "Subject"
+				}, {
+					"PARAMETERNAME" : "newStartTime",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "newStock",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "newPrice",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "randNum = (Math.random() * (.06)) - .03" ],
+				"VARIABLECOMMONTYPE" : "double",
+				"VARIABLEELEMENTTYPE" : "double"
+			}, {
+				"VARIABLEDECLARATION" : [ "df = new DecimalFormat(\"#.##\")" ],
+				"VARIABLECOMMONTYPE" : "DecimalFormat",
+				"VARIABLEELEMENTTYPE" : "DecimalFormat"
+			}, {
+				"VARIABLEDECLARATION" : [ "i = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "run",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 11,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "sleep"
+				}, {
+					"CALLEECLASS" : "Math",
+					"CALLEEMETHODNAME" : "random"
+				}, {
+					"CALLEECLASS" : "Double",
+					"CALLEEMETHODNAME" : "valueOf"
+				}, {
+					"CALLEECLASS" : "NumberFormat",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "",
+					"CALLEEMETHODNAME" : "setIBMPrice"
+				}, {
+					"CALLEECLASS" : "",
+					"CALLEEMETHODNAME" : "setAAPLPrice"
+				}, {
+					"CALLEECLASS" : "",
+					"CALLEEMETHODNAME" : "setGOOGPrice"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "NumberFormat",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "NumberFormat",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Subject" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Subject",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "register",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "o",
+					"PARAMETERTYPE" : "Observer"
+				} ]
+			}, {
+				"METHODNAME" : "unregister",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "o",
+					"PARAMETERTYPE" : "Observer"
+				} ]
+			}, {
+				"METHODNAME" : "notifyObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

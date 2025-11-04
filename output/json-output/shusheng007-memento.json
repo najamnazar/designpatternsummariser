@@ -1,0 +1,302 @@
+{
+	"final_summary" : "GameCareTaker.java: observer: GameCareTaker acts as a publisher for observer GameProgressMemento, which is inherited by, which saves GameProgressMemento parameter of memento Memento, which gets int parameter of index Memento. It is a public class. The 2 methods of GameCareTaker are saveMemento (void) and getMemento (GameProgressMemento). No methods call saveMemento and saveMemento calls only one method : add method of class memento. No methods call getMemento and getMemento calls only one method : get method of class memento.\n\n memento: GameCareTaker acts as a caretaker for memento GameProgressMemento, which saves GameProgressMemento parameter of memento Memento, which gets int parameter of index Memento. It is a public class. The 2 methods of GameCareTaker are saveMemento (void) and getMemento (GameProgressMemento). No methods call saveMemento and saveMemento calls only one method : add method of class memento. No methods call getMemento and getMemento calls only one method : get method of class memento.\n\n\nMementoClient.java: MementoClient does not have any design pattern.  It is a public class. The only method of MementoClient is replayGame (void). No methods call replayGame and replayGame calls 6 methods : restoreProcess method of class originator, exitGame method of class originator, playGame method of class originator, saveMemento method of class careTaker, saveProcess method of class originator and getMemento method of class careTaker.\n\n\nGameOriginator.java: memento: GameOriginator acts as an originator for memento GameProgressMemento, which saves a GameProgressMemento Process to, which restores GameProgressMemento parameter of memento Process. It is a public class. The 4 methods of GameOriginator are saveProcess (GameProgressMemento), restoreProcess (void), playGame (void) and exitGame (void). No methods call saveProcess and saveProcess calls no methods. No methods call restoreProcess and restoreProcess calls only one method : getScore method of class memento. No methods call playGame and playGame calls 2 methods : format method of class String and println method of class PrintStream. No methods call exitGame and exitGame calls only one method : println method of class PrintStream.\n\n\nGameProgressMemento.java: observer: GameProgressMemento acts as an observer for publisher GameCareTaker, which is inherited by, which gets Score. It is a public class. The only method of GameProgressMemento is getScore (int). No methods call getScore and getScore calls no methods.\n\n memento: GameProgressMemento acts as a memento, which gets Score. It is a public class. The only method of GameProgressMemento is getScore (int). No methods call getScore and getScore calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"observer" : {
+			"GameProgressMemento" : {
+				"concrete_observer" : [ ],
+				"publisher" : {
+					"GameCareTaker" : [ ]
+				}
+			}
+		}
+	}, {
+		"memento" : {
+			"GameProgressMemento" : {
+				"caretaker" : {
+					"GameCareTaker" : [ ]
+				},
+				"originator" : {
+					"GameOriginator" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"shusheng007-memento" : {
+		"GameCareTaker" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "List<GameProgressMemento>",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "memento = new ArrayList<>()" ],
+				"FIELDDATATYPE" : "List<GameProgressMemento>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "GameCareTaker",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "saveMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "memento",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "memento",
+					"PARAMETERTYPE" : "GameProgressMemento"
+				} ]
+			}, {
+				"METHODNAME" : "getMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "GameProgressMemento",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "memento",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "index",
+					"PARAMETERTYPE" : "int"
+				} ]
+			} ]
+		},
+		"MementoClient" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "MementoClient",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "originator = new GameOriginator()" ],
+				"VARIABLECOMMONTYPE" : "GameOriginator",
+				"VARIABLEELEMENTTYPE" : "GameOriginator"
+			}, {
+				"VARIABLEDECLARATION" : [ "careTaker = new GameCareTaker()" ],
+				"VARIABLECOMMONTYPE" : "GameCareTaker",
+				"VARIABLEELEMENTTYPE" : "GameCareTaker"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "replayGame",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "originator",
+					"CALLEEMETHODNAME" : "playGame"
+				}, {
+					"CALLEECLASS" : "careTaker",
+					"CALLEEMETHODNAME" : "saveMemento"
+				}, {
+					"CALLEECLASS" : "originator",
+					"CALLEEMETHODNAME" : "saveProcess"
+				}, {
+					"CALLEECLASS" : "originator",
+					"CALLEEMETHODNAME" : "exitGame"
+				}, {
+					"CALLEECLASS" : "originator",
+					"CALLEEMETHODNAME" : "restoreProcess"
+				}, {
+					"CALLEECLASS" : "careTaker",
+					"CALLEEMETHODNAME" : "getMemento"
+				}, {
+					"CALLEECLASS" : "originator",
+					"CALLEEMETHODNAME" : "playGame"
+				} ],
+				"NUMBEROFMETHODLINES" : 7,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"GameOriginator" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "currentScore" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 8,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "GameOriginator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "saveProcess",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "GameProgressMemento",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "restoreProcess",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "memento",
+					"CALLEEMETHODNAME" : "getScore"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "memento",
+					"PARAMETERTYPE" : "GameProgressMemento"
+				} ]
+			}, {
+				"METHODNAME" : "playGame",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "exitGame",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"GameProgressMemento" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "score" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "GameProgressMemento",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "score",
+					"PARAMETERTYPE" : "int"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getScore",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"observer" : {
+			"GameCareTaker" : [ "GameCareTaker acts as a publisher for observer GameProgressMemento, which is inherited by, which saves GameProgressMemento parameter of memento Memento, which gets int parameter of index Memento." ],
+			"GameProgressMemento" : [ "GameProgressMemento acts as an observer for publisher GameCareTaker, which is inherited by, which gets Score." ]
+		},
+		"memento" : {
+			"GameCareTaker" : [ "GameCareTaker acts as a caretaker for memento GameProgressMemento, which saves GameProgressMemento parameter of memento Memento, which gets int parameter of index Memento." ],
+			"GameOriginator" : [ "GameOriginator acts as an originator for memento GameProgressMemento, which saves a GameProgressMemento Process to, which restores GameProgressMemento parameter of memento Process." ],
+			"GameProgressMemento" : [ "GameProgressMemento acts as a memento, which gets Score." ]
+		}
+	}
+}

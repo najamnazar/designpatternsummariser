@@ -1,0 +1,874 @@
+{
+	"final_summary" : "SingletonDoubleLock.java: memento: SingletonDoubleLock acts as a caretaker for memento SingletonDoubleLock, which gets Instance, which does Counting. SingletonDoubleLock acts as an originator for memento SingletonDoubleLock, which gets a SingletonDoubleLock Instance to. SingletonDoubleLock acts as a memento, which does Counting, which does Counting. It is a public class. The 2 methods of SingletonDoubleLock are getInstance (SingletonDoubleLock) and doCounting (void). Only one method ( main method of class ClientForSingletonThreadDoubleLock ) calls getInstance and getInstance calls 3 methods : printStackTrace method of class Throwable, println method of class PrintStream and sleep method of class Thread. No methods call doCounting and doCounting calls only one method : println method of class PrintStream.\n\n\nClientForSingletonThreadDoubleLock.java: ClientForSingletonThreadDoubleLock does not have any design pattern.  It is a public class. The only method of ClientForSingletonThreadDoubleLock is main (void). No methods call main and main calls 5 methods : start method of class Thread, doCounting method of class getInstance, getInstance method of class SingletonDoubleLock, nextInt method of class Scanner and println method of class PrintStream.\n\n\nSingletonEagerInstance.java: SingletonEagerInstance does not have any design pattern.  It is a public class. The only method of SingletonEagerInstance is doCounting (void). No methods call doCounting and doCounting calls only one method : println method of class PrintStream.\n\n\nClientForSingletonLazyInstance.java: ClientForSingletonLazyInstance does not have any design pattern.  It is a public class. The only method of ClientForSingletonLazyInstance is main (void). No methods call main and main calls 4 methods : nextInt method of class Scanner, getInstance method of class SingletonLazyInstance, doCounting method of class instance and println method of class PrintStream.\n\n\nClientForSingletonThreadIssue.java: ClientForSingletonThreadIssue does not have any design pattern.  It is a public class. The only method of ClientForSingletonThreadIssue is main (void). No methods call main and main calls 5 methods : start method of class Thread, getInstance method of class SingletonThreadissueInstance, doCounting method of class getInstance, nextInt method of class Scanner and println method of class PrintStream.\n\n\nClientForSingletonEagerInstance.java: ClientForSingletonEagerInstance does not have any design pattern.  It is a public class. The only method of ClientForSingletonEagerInstance is main (void). No methods call main and main calls 3 methods : doCounting method of class uniqueInstance, nextInt method of class Scanner and println method of class PrintStream.\n\n\nSingletonThreadissueInstance.java: memento: SingletonThreadissueInstance acts as a caretaker for memento SingletonThreadissueInstance, which gets Instance, which does Counting. SingletonThreadissueInstance acts as a memento, which does Counting, which does Counting. SingletonThreadissueInstance acts as an originator for memento SingletonThreadissueInstance, which gets a SingletonThreadissueInstance Instance to. It is a public class. The 2 methods of SingletonThreadissueInstance are getInstance (SingletonThreadissueInstance) and doCounting (void). Only one method ( main method of class ClientForSingletonThreadIssue ) calls getInstance and getInstance calls 3 methods : printStackTrace method of class Throwable, println method of class PrintStream and sleep method of class Thread. No methods call doCounting and doCounting calls only one method : println method of class PrintStream.\n\n\nSingletonSyncInstance.java: memento: SingletonSyncInstance acts as an originator for memento SingletonSyncInstance, which gets a SingletonSyncInstance Instance to. SingletonSyncInstance acts as a caretaker for memento SingletonSyncInstance, which gets Instance, which does Counting. SingletonSyncInstance acts as a memento, which does Counting, which does Counting. It is a public class. The 2 methods of SingletonSyncInstance are getInstance (SingletonSyncInstance) and doCounting (void). Only one method ( main method of class ClientForSingletonThreadSyncIssue ) calls getInstance and getInstance calls 3 methods : printStackTrace method of class Throwable, println method of class PrintStream and sleep method of class Thread. No methods call doCounting and doCounting calls only one method : println method of class PrintStream.\n\n\nClientForSingletonThreadSyncIssue.java: ClientForSingletonThreadSyncIssue does not have any design pattern.  It is a public class. The only method of ClientForSingletonThreadSyncIssue is main (void). No methods call main and main calls 5 methods : getInstance method of class SingletonSyncInstance, start method of class Thread, doCounting method of class getInstance, nextInt method of class Scanner and println method of class PrintStream.\n\n\nSingletonLazyInstance.java: memento: SingletonLazyInstance acts as a caretaker for memento SingletonLazyInstance, which gets Instance, which does Counting. SingletonLazyInstance acts as a memento, which does Counting, which does Counting. SingletonLazyInstance acts as an originator for memento SingletonLazyInstance, which gets a SingletonLazyInstance Instance to. It is a public class. The 2 methods of SingletonLazyInstance are getInstance (SingletonLazyInstance) and doCounting (void). Only one method ( main method of class ClientForSingletonLazyInstance ) calls getInstance and getInstance calls only one method : println method of class PrintStream. No methods call doCounting and doCounting calls only one method : println method of class PrintStream.\n\n\n",
+	"design_pattern" : [ {
+		"memento" : {
+			"SingletonDoubleLock" : {
+				"caretaker" : {
+					"SingletonDoubleLock" : [ ]
+				},
+				"originator" : {
+					"SingletonDoubleLock" : [ ]
+				},
+				"concrete_memento" : [ ]
+			},
+			"SingletonThreadissueInstance" : {
+				"caretaker" : {
+					"SingletonThreadissueInstance" : [ ]
+				},
+				"originator" : {
+					"SingletonThreadissueInstance" : [ ]
+				},
+				"concrete_memento" : [ ]
+			},
+			"SingletonSyncInstance" : {
+				"caretaker" : {
+					"SingletonSyncInstance" : [ ]
+				},
+				"originator" : {
+					"SingletonSyncInstance" : [ ]
+				},
+				"concrete_memento" : [ ]
+			},
+			"SingletonLazyInstance" : {
+				"caretaker" : {
+					"SingletonLazyInstance" : [ ]
+				},
+				"originator" : {
+					"SingletonLazyInstance" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"premaseem-patternBonus-singleton" : {
+		"SingletonDoubleLock" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "SingletonDoubleLock",
+				"FIELDMODIFIERTYPE" : [ "public", "static", "volatile" ],
+				"FIELDDECLARATION" : [ "uniqueInstance = null" ],
+				"FIELDDATATYPE" : "SingletonDoubleLock",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "stateholder = 1" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SingletonDoubleLock",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "i = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 3,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ClientForSingletonThreadDoubleLock"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ClientForSingletonThreadDoubleLock"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ClientForSingletonThreadDoubleLock"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static", "final" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "SingletonDoubleLock",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "sleep"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "doCounting",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ClientForSingletonThreadDoubleLock" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 16,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientForSingletonThreadDoubleLock",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "thread1 = new Thread() {\r\n\r\n    public void run() {\r\n        System.out.println(\"Thread1 Running\");\r\n        SingletonDoubleLock.getInstance().doCounting();\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			}, {
+				"VARIABLEDECLARATION" : [ "thread2 = new Thread() {\r\n\r\n    public void run() {\r\n        System.out.println(\"Thread2 Running\");\r\n        SingletonDoubleLock.getInstance().doCounting();\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			}, {
+				"VARIABLEDECLARATION" : [ "thread3 = new Thread() {\r\n\r\n    public void run() {\r\n        System.out.println(\"Thread3 Running\");\r\n        SingletonDoubleLock.getInstance().doCounting();\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 16,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "SingletonDoubleLock",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "SingletonDoubleLock",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "SingletonDoubleLock",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"SingletonEagerInstance" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "SingletonEagerInstance",
+				"FIELDMODIFIERTYPE" : [ "public", "static", "final" ],
+				"FIELDDECLARATION" : [ "uniqueInstance = new SingletonEagerInstance()" ],
+				"FIELDDATATYPE" : "SingletonEagerInstance",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "stateholder = 1" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SingletonEagerInstance",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "i = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "doCounting",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ClientForSingletonLazyInstance" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 8,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientForSingletonLazyInstance",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "instance = SingletonLazyInstance.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "SingletonLazyInstance",
+				"VARIABLEELEMENTTYPE" : "SingletonLazyInstance"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 8,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "SingletonLazyInstance",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "instance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "instance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "instance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"ClientForSingletonThreadIssue" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 16,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientForSingletonThreadIssue",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "thread1 = new Thread() {\r\n\r\n    public void run() {\r\n        System.out.println(\"Thread1 Running\");\r\n        SingletonThreadissueInstance.getInstance().doCounting();\r\n        ;\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			}, {
+				"VARIABLEDECLARATION" : [ "thread2 = new Thread() {\r\n\r\n    public void run() {\r\n        System.out.println(\"Thread2 Running\");\r\n        SingletonThreadissueInstance.getInstance().doCounting();\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			}, {
+				"VARIABLEDECLARATION" : [ "thread3 = new Thread() {\r\n\r\n    public void run() {\r\n        System.out.println(\"Thread3 Running\");\r\n        SingletonThreadissueInstance.getInstance().doCounting();\r\n        ;\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 16,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "SingletonThreadissueInstance",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "SingletonThreadissueInstance",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "SingletonThreadissueInstance",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"ClientForSingletonEagerInstance" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientForSingletonEagerInstance",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "uniqueInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "uniqueInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "uniqueInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"SingletonThreadissueInstance" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "SingletonThreadissueInstance",
+				"FIELDMODIFIERTYPE" : [ "public", "static" ],
+				"FIELDDECLARATION" : [ "uniqueInstance = null" ],
+				"FIELDDATATYPE" : "SingletonThreadissueInstance",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "stateholder = 1" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SingletonThreadissueInstance",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "i = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 3,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ClientForSingletonThreadIssue"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ClientForSingletonThreadIssue"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ClientForSingletonThreadIssue"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static", "final" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "SingletonThreadissueInstance",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "sleep"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "doCounting",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"SingletonSyncInstance" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "SingletonSyncInstance",
+				"FIELDMODIFIERTYPE" : [ "public", "static" ],
+				"FIELDDECLARATION" : [ "uniqueInstance = null" ],
+				"FIELDDATATYPE" : "SingletonSyncInstance",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "stateholder = 1" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SingletonSyncInstance",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "i = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 3,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ClientForSingletonThreadSyncIssue"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ClientForSingletonThreadSyncIssue"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ClientForSingletonThreadSyncIssue"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static", "final", "synchronized" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "SingletonSyncInstance",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "sleep"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "doCounting",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ClientForSingletonThreadSyncIssue" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 16,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientForSingletonThreadSyncIssue",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "thread1 = new Thread() {\r\n\r\n    public void run() {\r\n        System.out.println(\"Thread1 Running\");\r\n        SingletonSyncInstance.getInstance().doCounting();\r\n        ;\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			}, {
+				"VARIABLEDECLARATION" : [ "thread2 = new Thread() {\r\n\r\n    public void run() {\r\n        System.out.println(\"Thread2 Running\");\r\n        SingletonSyncInstance.getInstance().doCounting();\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			}, {
+				"VARIABLEDECLARATION" : [ "thread3 = new Thread() {\r\n\r\n    public void run() {\r\n        System.out.println(\"Thread3 Running\");\r\n        SingletonSyncInstance.getInstance().doCounting();\r\n        ;\r\n    }\r\n}" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 16,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "SingletonSyncInstance",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "SingletonSyncInstance",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "getInstance",
+					"CALLEEMETHODNAME" : "doCounting"
+				}, {
+					"CALLEECLASS" : "SingletonSyncInstance",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Thread",
+					"CALLEEMETHODNAME" : "start"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"SingletonLazyInstance" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "SingletonLazyInstance",
+				"FIELDMODIFIERTYPE" : [ "public", "static" ],
+				"FIELDDECLARATION" : [ "uniqueInstance = null" ],
+				"FIELDDATATYPE" : "SingletonLazyInstance",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "stateholder = 1" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SingletonLazyInstance",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "i = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "ClientForSingletonLazyInstance"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static", "final" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "SingletonLazyInstance",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "doCounting",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"memento" : {
+			"SingletonDoubleLock" : [ "SingletonDoubleLock acts as a caretaker for memento SingletonDoubleLock, which gets Instance, which does Counting.", "SingletonDoubleLock acts as an originator for memento SingletonDoubleLock, which gets a SingletonDoubleLock Instance to.", "SingletonDoubleLock acts as a memento, which does Counting, which does Counting." ],
+			"SingletonThreadissueInstance" : [ "SingletonThreadissueInstance acts as a caretaker for memento SingletonThreadissueInstance, which gets Instance, which does Counting.", "SingletonThreadissueInstance acts as a memento, which does Counting, which does Counting.", "SingletonThreadissueInstance acts as an originator for memento SingletonThreadissueInstance, which gets a SingletonThreadissueInstance Instance to." ],
+			"SingletonSyncInstance" : [ "SingletonSyncInstance acts as an originator for memento SingletonSyncInstance, which gets a SingletonSyncInstance Instance to.", "SingletonSyncInstance acts as a caretaker for memento SingletonSyncInstance, which gets Instance, which does Counting.", "SingletonSyncInstance acts as a memento, which does Counting, which does Counting." ],
+			"SingletonLazyInstance" : [ "SingletonLazyInstance acts as a caretaker for memento SingletonLazyInstance, which gets Instance, which does Counting.", "SingletonLazyInstance acts as a memento, which does Counting, which does Counting.", "SingletonLazyInstance acts as an originator for memento SingletonLazyInstance, which gets a SingletonLazyInstance Instance to." ]
+		}
+	}
+}

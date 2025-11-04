@@ -1,0 +1,328 @@
+{
+	"final_summary" : "RoundHole.java: RoundHole does not have any design pattern.  It is a public class. The 2 methods of RoundHole are getRadius (double) and fit (boolean). Only one method ( fits method of class RoundHole ) calls getRadius and getRadius calls no methods. No methods call fit and fit calls 2 methods : getRadius method of class RoundHole and getRadius method of class peg.\n\n\nDemo.java: Demo does not have any design pattern.  It is a public class. The only method of Demo is main (void). No methods call main and main calls 2 methods : fits method of class hole and println method of class PrintStream.\n\n\nRoundPeg.java: adapter: RoundPeg acts as a target for adapter SquarePegAdapter, which adapts to RoundPeg. It is a public class. The only method of RoundPeg is getRadius (double). No methods call getRadius and getRadius calls no methods.\n\n\nSquarePegAdapter.java: adapter: SquarePegAdapter acts as an adapter, which adapts to RoundPeg. It is a public class that extends RoundPeg. The only method of SquarePegAdapter is getRadius (double). No methods call getRadius and getRadius calls 3 methods : pow method of class Math, getWidth method of class peg and sqrt method of class Math.\n\n\nSquarePeg.java: adapter: SquarePeg acts as an adaptee for adapter SquarePegAdapter, which adapts to RoundPeg, which adapts to RoundPeg. It is a public class. The 2 methods of SquarePeg are getWidth (double) and getSquare (double). No methods call getWidth and getWidth calls no methods. No methods call getSquare and getSquare calls only one method : pow method of class Math.\n\n\n",
+	"design_pattern" : [ {
+		"adapter" : {
+			"SquarePegAdapter" : {
+				"adaptee" : [ "SquarePeg" ],
+				"target" : [ "RoundPeg" ]
+			}
+		}
+	} ],
+	"RefactoringGuru-adapter-example" : {
+		"RoundHole" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "radius" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "RoundHole",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "radius",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "result" ],
+				"VARIABLECOMMONTYPE" : "boolean",
+				"VARIABLEELEMENTTYPE" : "boolean"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getRadius",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "fits",
+					"CALLEDCLASS" : "RoundHole"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "fits",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "RoundHole",
+					"CALLEEMETHODNAME" : "getRadius"
+				}, {
+					"CALLEECLASS" : "peg",
+					"CALLEEMETHODNAME" : "getRadius"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "peg",
+					"PARAMETERTYPE" : "RoundPeg"
+				} ]
+			} ]
+		},
+		"Demo" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Demo",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "hole = new RoundHole(5)" ],
+				"VARIABLECOMMONTYPE" : "RoundHole",
+				"VARIABLEELEMENTTYPE" : "RoundHole"
+			}, {
+				"VARIABLEDECLARATION" : [ "rpeg = new RoundPeg(5)" ],
+				"VARIABLECOMMONTYPE" : "RoundPeg",
+				"VARIABLEELEMENTTYPE" : "RoundPeg"
+			}, {
+				"VARIABLEDECLARATION" : [ "smallSqPeg = new SquarePeg(2)" ],
+				"VARIABLECOMMONTYPE" : "SquarePeg",
+				"VARIABLEELEMENTTYPE" : "SquarePeg"
+			}, {
+				"VARIABLEDECLARATION" : [ "largeSqPeg = new SquarePeg(20)" ],
+				"VARIABLECOMMONTYPE" : "SquarePeg",
+				"VARIABLEELEMENTTYPE" : "SquarePeg"
+			}, {
+				"VARIABLEDECLARATION" : [ "smallSqPegAdapter = new SquarePegAdapter(smallSqPeg)" ],
+				"VARIABLECOMMONTYPE" : "SquarePegAdapter",
+				"VARIABLEELEMENTTYPE" : "SquarePegAdapter"
+			}, {
+				"VARIABLEDECLARATION" : [ "largeSqPegAdapter = new SquarePegAdapter(largeSqPeg)" ],
+				"VARIABLECOMMONTYPE" : "SquarePegAdapter",
+				"VARIABLEELEMENTTYPE" : "SquarePegAdapter"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "IF", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "IF", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 6,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "hole",
+					"CALLEEMETHODNAME" : "fits"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "hole",
+					"CALLEEMETHODNAME" : "fits"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "hole",
+					"CALLEEMETHODNAME" : "fits"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 9,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"RoundPeg" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "radius" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "RoundPeg",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "radius",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getRadius",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"SquarePegAdapter" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "SquarePeg",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "peg" ],
+				"FIELDDATATYPE" : "SquarePeg",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ "RoundPeg" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SquarePegAdapter",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "peg",
+					"PARAMETERTYPE" : "SquarePeg"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "result" ],
+				"VARIABLECOMMONTYPE" : "double",
+				"VARIABLEELEMENTTYPE" : "double"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getRadius",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Math",
+					"CALLEEMETHODNAME" : "sqrt"
+				}, {
+					"CALLEECLASS" : "Math",
+					"CALLEEMETHODNAME" : "pow"
+				}, {
+					"CALLEECLASS" : "peg",
+					"CALLEEMETHODNAME" : "getWidth"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"SquarePeg" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "width" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SquarePeg",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "width",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "result" ],
+				"VARIABLECOMMONTYPE" : "double",
+				"VARIABLEELEMENTTYPE" : "double"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getWidth",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getSquare",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Math",
+					"CALLEEMETHODNAME" : "pow"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"adapter" : {
+			"RoundPeg" : [ "RoundPeg acts as a target for adapter SquarePegAdapter, which adapts to RoundPeg." ],
+			"SquarePegAdapter" : [ "SquarePegAdapter acts as an adapter, which adapts to RoundPeg." ],
+			"SquarePeg" : [ "SquarePeg acts as an adaptee for adapter SquarePegAdapter, which adapts to RoundPeg, which adapts to RoundPeg." ]
+		}
+	}
+}

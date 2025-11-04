@@ -1,0 +1,221 @@
+{
+	"final_summary" : "Memento.java: memento: Memento acts as a memento, which gets Saved Time. It is a public class. The only method of Memento is getSavedTime (String). No methods call getSavedTime and getSavedTime calls no methods.\n\n\nLife.java: memento: Life acts as an originator for memento Memento, which saves a Memento To Memento to, which restores Memento parameter of memento From Memento. It is a public class. The 3 methods of Life are set (void), saveToMemento (Memento) and restoreFromMemento (void). No methods call set and set calls only one method : println method of class PrintStream. No methods call saveToMemento and saveToMemento calls only one method : println method of class PrintStream. No methods call restoreFromMemento and restoreFromMemento calls 2 methods : getSavedTime method of class memento and println method of class PrintStream.\n\n\nTimeMachineClient.java: TimeMachineClient does not have any design pattern.  It is a public class. The only method of TimeMachineClient is main (void). No methods call main and main calls 5 methods : add method of class savedTimes, restoreFromMemento method of class life, set method of class life, get method of class savedTimes and saveToMemento method of class life.\n\n\n",
+	"design_pattern" : [ {
+		"memento" : {
+			"Memento" : {
+				"caretaker" : { },
+				"originator" : {
+					"Life" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"luisburgos-memento-examples" : {
+		"Memento" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "time" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Memento",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "timeToSave",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getSavedTime",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Life" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "time" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Life",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "set",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "time",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "saveToMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Memento",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "restoreFromMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "memento",
+					"CALLEEMETHODNAME" : "getSavedTime"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "memento",
+					"PARAMETERTYPE" : "Memento"
+				} ]
+			} ]
+		},
+		"TimeMachineClient" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 12,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "TimeMachineClient",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "savedTimes = new ArrayList<Memento>()" ],
+				"VARIABLECOMMONTYPE" : "List<Memento>",
+				"VARIABLEELEMENTTYPE" : "List<Memento>"
+			}, {
+				"VARIABLEDECLARATION" : [ "life = new Life()" ],
+				"VARIABLECOMMONTYPE" : "Life",
+				"VARIABLEELEMENTTYPE" : "Life"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 12,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "life",
+					"CALLEEMETHODNAME" : "set"
+				}, {
+					"CALLEECLASS" : "savedTimes",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "life",
+					"CALLEEMETHODNAME" : "saveToMemento"
+				}, {
+					"CALLEECLASS" : "life",
+					"CALLEEMETHODNAME" : "set"
+				}, {
+					"CALLEECLASS" : "savedTimes",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "life",
+					"CALLEEMETHODNAME" : "saveToMemento"
+				}, {
+					"CALLEECLASS" : "life",
+					"CALLEEMETHODNAME" : "set"
+				}, {
+					"CALLEECLASS" : "savedTimes",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "life",
+					"CALLEEMETHODNAME" : "saveToMemento"
+				}, {
+					"CALLEECLASS" : "life",
+					"CALLEEMETHODNAME" : "set"
+				}, {
+					"CALLEECLASS" : "life",
+					"CALLEEMETHODNAME" : "restoreFromMemento"
+				}, {
+					"CALLEECLASS" : "savedTimes",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 10,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"memento" : {
+			"Memento" : [ "Memento acts as a memento, which gets Saved Time." ],
+			"Life" : [ "Life acts as an originator for memento Memento, which saves a Memento To Memento to, which restores Memento parameter of memento From Memento." ]
+		}
+	}
+}

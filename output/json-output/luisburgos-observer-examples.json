@@ -1,0 +1,278 @@
+{
+	"final_summary" : "Bidder.java: Bidder does not have any design pattern.  It is a public class that implements Observer. The only method of Bidder is update (void). No methods call update and update calls 3 methods : getDescription method of class event, getType method of class event and println method of class out.\n\n\nAuctionTestDriven.java: AuctionTestDriven does not have any design pattern.  It is a public class. The only method of AuctionTestDriven is main (void). No methods call main and main calls 2 methods : notifyObserver method of class theAuctioneer and attach method of class theAuctioneer.\n\n\nAuctioneer.java: Auctioneer does not have any design pattern.  It is a public class that extends Subject. The 4 methods of Auctioneer are getList (LinkedList<Observer>), attach (void), detach (void) and notifyObserver (void). 2 methods ( detach method of class Auctioneer and attach method of class Auctioneer ) call getList and getList calls 3 methods : put method of class observers, get method of class observers and containsKey method of class observers. No methods call attach and attach calls 2 methods : getList method of class Auctioneer and add method of class getList. No methods call detach and detach calls 2 methods : getList method of class Auctioneer and remove method of class getList. No methods call notifyObserver and notifyObserver calls 6 methods : hasNext method of class iterator, update method of class next, iterator method of class get, next method of class iterator, get method of class observers and containsKey method of class observers.\n\n\n",
+	"design_pattern" : [ ],
+	"luisburgos-observer-examples" : {
+		"Bidder" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private", "static" ],
+				"FIELDDECLARATION" : [ "ID = 0" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Observer" ],
+				"CLASSNAME" : "Bidder",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "update",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "event",
+					"CALLEEMETHODNAME" : "getType"
+				}, {
+					"CALLEECLASS" : "event",
+					"CALLEEMETHODNAME" : "getDescription"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "Event"
+				} ]
+			} ]
+		},
+		"AuctionTestDriven" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AuctionTestDriven",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "theAuctioneer = new Auctioneer()" ],
+				"VARIABLECOMMONTYPE" : "Subject",
+				"VARIABLEELEMENTTYPE" : "Subject"
+			}, {
+				"VARIABLEDECLARATION" : [ "bidderOne = new Bidder()" ],
+				"VARIABLECOMMONTYPE" : "Observer",
+				"VARIABLEELEMENTTYPE" : "Observer"
+			}, {
+				"VARIABLEDECLARATION" : [ "bidderTwo = new Bidder()" ],
+				"VARIABLECOMMONTYPE" : "Observer",
+				"VARIABLEELEMENTTYPE" : "Observer"
+			}, {
+				"VARIABLEDECLARATION" : [ "bidderThree = new Bidder()" ],
+				"VARIABLECOMMONTYPE" : "Observer",
+				"VARIABLEELEMENTTYPE" : "Observer"
+			}, {
+				"VARIABLEDECLARATION" : [ "highBid = new Event(0, \"HIGH BID\")" ],
+				"VARIABLECOMMONTYPE" : "Event",
+				"VARIABLEELEMENTTYPE" : "Event"
+			}, {
+				"VARIABLEDECLARATION" : [ "lowBid = new Event(1, \"LOW BID\")" ],
+				"VARIABLECOMMONTYPE" : "Event",
+				"VARIABLEELEMENTTYPE" : "Event"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 6,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "theAuctioneer",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "theAuctioneer",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "theAuctioneer",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "theAuctioneer",
+					"CALLEEMETHODNAME" : "attach"
+				}, {
+					"CALLEECLASS" : "theAuctioneer",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				}, {
+					"CALLEECLASS" : "theAuctioneer",
+					"CALLEEMETHODNAME" : "notifyObserver"
+				} ],
+				"NUMBEROFMETHODLINES" : 12,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Auctioneer" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "HashMap<Integer, LinkedList<Observer>>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "observers" ],
+				"FIELDDATATYPE" : "HashMap<Integer, LinkedList<Observer>>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 13,
+				"EXTENDSFROM" : [ "Subject" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Auctioneer",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "iterator = observers.get(eventTpye).iterator()" ],
+				"VARIABLECOMMONTYPE" : "Iterator<Observer>",
+				"VARIABLEELEMENTTYPE" : "Iterator<Observer>"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getList",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "detach",
+					"CALLEDCLASS" : "Auctioneer"
+				}, {
+					"CALLEDMETHODNAME" : "attach",
+					"CALLEDCLASS" : "Auctioneer"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "LinkedList<Observer>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "containsKey"
+				}, {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "put"
+				}, {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "type",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "attach",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getList",
+					"CALLEEMETHODNAME" : "add"
+				}, {
+					"CALLEECLASS" : "Auctioneer",
+					"CALLEEMETHODNAME" : "getList"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "eventTpye",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "newObserver",
+					"PARAMETERTYPE" : "Observer"
+				} ]
+			}, {
+				"METHODNAME" : "detach",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "getList",
+					"CALLEEMETHODNAME" : "remove"
+				}, {
+					"CALLEECLASS" : "Auctioneer",
+					"CALLEEMETHODNAME" : "getList"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "eventTpye",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "observer",
+					"PARAMETERTYPE" : "Observer"
+				} ]
+			}, {
+				"METHODNAME" : "notifyObserver",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "containsKey"
+				}, {
+					"CALLEECLASS" : "get",
+					"CALLEEMETHODNAME" : "iterator"
+				}, {
+					"CALLEECLASS" : "observers",
+					"CALLEEMETHODNAME" : "get"
+				}, {
+					"CALLEECLASS" : "iterator",
+					"CALLEEMETHODNAME" : "hasNext"
+				}, {
+					"CALLEECLASS" : "next",
+					"CALLEEMETHODNAME" : "update"
+				}, {
+					"CALLEECLASS" : "iterator",
+					"CALLEEMETHODNAME" : "next"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "eventTpye",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "Event"
+				} ]
+			} ]
+		}
+	},
+	"summary_NLG" : { }
+}

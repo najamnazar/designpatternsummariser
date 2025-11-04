@@ -1,0 +1,371 @@
+{
+	"iluwatar-factory-method" : {
+		"App" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "MANUFACTURED = \"{} manufactured {}\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 8,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "App",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "blacksmith = new OrcBlacksmith()" ],
+				"VARIABLECOMMONTYPE" : "Blacksmith",
+				"VARIABLEELEMENTTYPE" : "Blacksmith"
+			}, {
+				"VARIABLEDECLARATION" : [ "weapon = blacksmith.manufactureWeapon(WeaponType.SPEAR)" ],
+				"VARIABLECOMMONTYPE" : "Weapon",
+				"VARIABLEELEMENTTYPE" : "Weapon"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 8,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "blacksmith",
+					"CALLEEMETHODNAME" : "manufactureWeapon"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "blacksmith",
+					"CALLEEMETHODNAME" : "manufactureWeapon"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "blacksmith",
+					"CALLEEMETHODNAME" : "manufactureWeapon"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				}, {
+					"CALLEECLASS" : "blacksmith",
+					"CALLEEMETHODNAME" : "manufactureWeapon"
+				}, {
+					"CALLEECLASS" : "LOGGER",
+					"CALLEEMETHODNAME" : "info"
+				} ],
+				"NUMBEROFMETHODLINES" : 10,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Blacksmith" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Blacksmith",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "manufactureWeapon",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Weapon",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "weaponType",
+					"PARAMETERTYPE" : "WeaponType"
+				} ]
+			} ]
+		},
+		"OrcWeapon" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ElfWeapon" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"OrcBlacksmith" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Map<WeaponType, OrcWeapon>",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "ORCARSENAL" ],
+				"FIELDDATATYPE" : "Map<WeaponType, OrcWeapon>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ "Blacksmith" ],
+				"IMPLEMENTSFROM" : [ "Blacksmith" ],
+				"CLASSNAME" : "OrcBlacksmith",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "manufactureWeapon",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Weapon",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ORCARSENAL",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "weaponType",
+					"PARAMETERTYPE" : "WeaponType"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"WeaponType" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "title" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ElfBlacksmith" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Map<WeaponType, ElfWeapon>",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "ELFARSENAL" ],
+				"FIELDDATATYPE" : "Map<WeaponType, ElfWeapon>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ "Blacksmith" ],
+				"IMPLEMENTSFROM" : [ "Blacksmith" ],
+				"CLASSNAME" : "ElfBlacksmith",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "manufactureWeapon",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Weapon",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ELFARSENAL",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "weaponType",
+					"PARAMETERTYPE" : "WeaponType"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Weapon" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Weapon",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "weaponType",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "WeaponType",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"final_summary" : "App.java: App does not have any design pattern.  It is a public class. The only method of App is main (void). No methods call main and main calls 2 methods : info method of class LOGGER and manufactureWeapon method of class blacksmith.\n\n\nBlacksmith.java: observer: Blacksmith acts as a publisher for observer WeaponType, which is inherited by OrcBlacksmith, ElfBlacksmith, which manufactures WeaponType parameter of weaponType Weapon. It is a public interface. The only method of Blacksmith is manufactureWeapon (Weapon). No methods call manufactureWeapon and manufactureWeapon calls no methods.\n\n abstract_factory: Blacksmith acts as an abstract factory for, which is inherited by OrcBlacksmith, ElfBlacksmith. It is a public interface. The only method of Blacksmith is manufactureWeapon (Weapon). No methods call manufactureWeapon and manufactureWeapon calls no methods.\n\n memento: Blacksmith acts as an originator for memento Weapon, which is inherited by, which manufactures a Weapon Weapon to. It is a public interface. The only method of Blacksmith is manufactureWeapon (Weapon). No methods call manufactureWeapon and manufactureWeapon calls no methods.\n\n\nOrcBlacksmith.java: observer: OrcBlacksmith acts as a publisher for observer WeaponType, which manufactures WeaponType parameter of weaponType Weapon, which tos String. OrcBlacksmith acts as a publisher for observer WeaponType, which is inherited by, which manufactures WeaponType parameter of weaponType Weapon, which tos String. It is a public class that extends Blacksmith and that implements Blacksmith. The 2 methods of OrcBlacksmith are manufactureWeapon (Weapon) and toString (String). No methods call manufactureWeapon and manufactureWeapon calls only one method : get method of class ORCARSENAL. No methods call toString and toString calls no methods.\n\n abstract_factory: OrcBlacksmith acts as a factory for Blacksmith, which overrides manufactureWeapon method of Blacksmith. It is a public class that extends Blacksmith and that implements Blacksmith. The 2 methods of OrcBlacksmith are manufactureWeapon (Weapon) and toString (String). No methods call manufactureWeapon and manufactureWeapon calls only one method : get method of class ORCARSENAL. No methods call toString and toString calls no methods.\n\n memento: OrcBlacksmith acts as a caretaker for memento Weapon, which manufactures WeaponType parameter of weaponType Weapon, which tos String. OrcBlacksmith acts as an originator for memento Weapon, which manufactures a Weapon Weapon to. It is a public class that extends Blacksmith and that implements Blacksmith. The 2 methods of OrcBlacksmith are manufactureWeapon (Weapon) and toString (String). No methods call manufactureWeapon and manufactureWeapon calls only one method : get method of class ORCARSENAL. No methods call toString and toString calls no methods.\n\n\nElfBlacksmith.java: observer: ElfBlacksmith acts as a publisher for observer WeaponType, which manufactures WeaponType parameter of weaponType Weapon, which tos String. ElfBlacksmith acts as a publisher for observer WeaponType, which is inherited by, which manufactures WeaponType parameter of weaponType Weapon, which tos String. It is a public class that extends Blacksmith and that implements Blacksmith. The 2 methods of ElfBlacksmith are manufactureWeapon (Weapon) and toString (String). No methods call manufactureWeapon and manufactureWeapon calls only one method : get method of class ELFARSENAL. No methods call toString and toString calls no methods.\n\n abstract_factory: ElfBlacksmith acts as a factory for Blacksmith, which overrides manufactureWeapon method of Blacksmith. It is a public class that extends Blacksmith and that implements Blacksmith. The 2 methods of ElfBlacksmith are manufactureWeapon (Weapon) and toString (String). No methods call manufactureWeapon and manufactureWeapon calls only one method : get method of class ELFARSENAL. No methods call toString and toString calls no methods.\n\n memento: ElfBlacksmith acts as a caretaker for memento Weapon, which manufactures WeaponType parameter of weaponType Weapon, which tos String. ElfBlacksmith acts as an originator for memento Weapon, which manufactures a Weapon Weapon to. It is a public class that extends Blacksmith and that implements Blacksmith. The 2 methods of ElfBlacksmith are manufactureWeapon (Weapon) and toString (String). No methods call manufactureWeapon and manufactureWeapon calls only one method : get method of class ELFARSENAL. No methods call toString and toString calls no methods.\n\n\nWeapon.java: abstract_factory: Weapon acts as an abstract factory for, which is inherited by. It is a public interface. The only method of Weapon is weaponType (WeaponType). No methods call weaponType and weaponType calls no methods.\n\n memento: Weapon acts as a memento, which weapons Type. It is a public interface. The only method of Weapon is weaponType (WeaponType). No methods call weaponType and weaponType calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"abstract_factory" : {
+			"Blacksmith" : {
+				"abstract_product" : { },
+				"concrete_factory" : [ "OrcBlacksmith", "ElfBlacksmith" ]
+			},
+			"Weapon" : {
+				"abstract_product" : { },
+				"concrete_factory" : [ ]
+			}
+		}
+	}, {
+		"observer" : {
+			"WeaponType" : {
+				"concrete_observer" : [ ],
+				"publisher" : {
+					"Blacksmith" : [ "OrcBlacksmith", "ElfBlacksmith" ],
+					"OrcBlacksmith" : [ ],
+					"ElfBlacksmith" : [ ]
+				}
+			}
+		}
+	}, {
+		"memento" : {
+			"Weapon" : {
+				"caretaker" : {
+					"OrcBlacksmith" : [ ],
+					"ElfBlacksmith" : [ ]
+				},
+				"originator" : {
+					"Blacksmith" : [ "OrcBlacksmith", "ElfBlacksmith" ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"Blacksmith" : [ "Blacksmith acts as a publisher for observer WeaponType, which is inherited by OrcBlacksmith, ElfBlacksmith, which manufactures WeaponType parameter of weaponType Weapon." ],
+			"OrcBlacksmith" : [ "OrcBlacksmith acts as a publisher for observer WeaponType, which manufactures WeaponType parameter of weaponType Weapon, which tos String.", "OrcBlacksmith acts as a publisher for observer WeaponType, which is inherited by, which manufactures WeaponType parameter of weaponType Weapon, which tos String." ],
+			"WeaponType" : [ "WeaponType acts as an observer for publisher ElfBlacksmith, which is inherited by, which tos String." ],
+			"ElfBlacksmith" : [ "ElfBlacksmith acts as a publisher for observer WeaponType, which manufactures WeaponType parameter of weaponType Weapon, which tos String.", "ElfBlacksmith acts as a publisher for observer WeaponType, which is inherited by, which manufactures WeaponType parameter of weaponType Weapon, which tos String." ]
+		},
+		"abstract_factory" : {
+			"Blacksmith" : [ "Blacksmith acts as an abstract factory for, which is inherited by OrcBlacksmith, ElfBlacksmith." ],
+			"OrcBlacksmith" : [ "OrcBlacksmith acts as a factory for Blacksmith, which overrides manufactureWeapon method of Blacksmith." ],
+			"ElfBlacksmith" : [ "ElfBlacksmith acts as a factory for Blacksmith, which overrides manufactureWeapon method of Blacksmith." ],
+			"Weapon" : [ "Weapon acts as an abstract factory for, which is inherited by." ]
+		},
+		"memento" : {
+			"Blacksmith" : [ "Blacksmith acts as an originator for memento Weapon, which is inherited by, which manufactures a Weapon Weapon to." ],
+			"OrcBlacksmith" : [ "OrcBlacksmith acts as a caretaker for memento Weapon, which manufactures WeaponType parameter of weaponType Weapon, which tos String.", "OrcBlacksmith acts as an originator for memento Weapon, which manufactures a Weapon Weapon to." ],
+			"ElfBlacksmith" : [ "ElfBlacksmith acts as a caretaker for memento Weapon, which manufactures WeaponType parameter of weaponType Weapon, which tos String.", "ElfBlacksmith acts as an originator for memento Weapon, which manufactures a Weapon Weapon to." ],
+			"Weapon" : [ "Weapon acts as a memento, which weapons Type." ]
+		}
+	}
+}

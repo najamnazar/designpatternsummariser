@@ -1,0 +1,234 @@
+{
+	"final_summary" : "TextEditor.java: facade: TextEditor acts as a facade for subsystem TextWindow, which hitSave calls save method of TextWindow, which hitUndo calls restore method of TextWindow. It is a public class. The 2 methods of TextEditor are hitSave (void) and hitUndo (void). No methods call hitSave and hitSave calls only one method : save method of class TextWindow. No methods call hitUndo and hitUndo calls only one method : restore method of class TextWindow.\n\n\nTextWindow.java: facade: TextWindow acts as a subsystem for facade TextEditor, which hitSave method of TextEditor calls save, which hitUndo method of TextEditor calls restore. TextWindow acts as a facade for subsystem TextWindowState, which addText calls append method of StringBuilder, which save calls toString method of StringBuilder, which restore calls getText method of TextWindowState. It is a public class. The 3 methods of TextWindow are addText (void), save (TextWindowState) and restore (void). No methods call addText and addText calls only one method : append method of class StringBuilder. Only one method ( hitSave method of class TextEditor ) calls save and save calls only one method : toString method of class StringBuilder. Only one method ( hitUndo method of class TextEditor ) calls restore and restore calls only one method : getText method of class TextWindowState.\n\n\nTextWindowState.java: facade: TextWindowState acts as a subsystem for facade TextWindow, which restore method of TextWindow calls getText. It is a public class. The only method of TextWindowState is getText (String). Only one method ( restore method of class TextWindow ) calls getText and getText calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"facade" : {
+			"TextEditor" : [ "TextWindow" ],
+			"TextWindow" : [ "TextWindowState" ]
+		}
+	} ],
+	"AbdurRKhalid-Memento" : {
+		"TextEditor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "TextWindow",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "textWindow" ],
+				"FIELDDATATYPE" : "TextWindow",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "TextWindowState",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "savedTextWindow" ],
+				"FIELDDATATYPE" : "TextWindowState",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "TextEditor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "textWindow",
+					"PARAMETERTYPE" : "TextWindow"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "hitSave",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "TextWindow",
+					"CALLEEMETHODNAME" : "save"
+				}, {
+					"CALLEECLASS" : "TextWindow",
+					"CALLEEMETHODNAME" : "save"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "hitUndo",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "TextWindow",
+					"CALLEEMETHODNAME" : "restore"
+				}, {
+					"CALLEECLASS" : "TextWindow",
+					"CALLEEMETHODNAME" : "restore"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"TextWindow" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "StringBuilder",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "currentText" ],
+				"FIELDDATATYPE" : "StringBuilder",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "TextWindow",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addText",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "StringBuilder",
+					"CALLEEMETHODNAME" : "append"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "text",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "save",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "hitSave",
+					"CALLEDCLASS" : "TextEditor"
+				}, {
+					"CALLEDMETHODNAME" : "hitSave",
+					"CALLEDCLASS" : "TextEditor"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "TextWindowState",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "StringBuilder",
+					"CALLEEMETHODNAME" : "toString"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "restore",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "hitUndo",
+					"CALLEDCLASS" : "TextEditor"
+				}, {
+					"CALLEDMETHODNAME" : "hitUndo",
+					"CALLEDCLASS" : "TextEditor"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "TextWindowState",
+					"CALLEEMETHODNAME" : "getText"
+				}, {
+					"CALLEECLASS" : "TextWindowState",
+					"CALLEEMETHODNAME" : "getText"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "save",
+					"PARAMETERTYPE" : "TextWindowState"
+				} ]
+			} ]
+		},
+		"TextWindowState" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "text" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "TextWindowState",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "text",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getText",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "restore",
+					"CALLEDCLASS" : "TextWindow"
+				}, {
+					"CALLEDMETHODNAME" : "restore",
+					"CALLEDCLASS" : "TextWindow"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"facade" : {
+			"TextEditor" : [ "TextEditor acts as a facade for subsystem TextWindow, which hitSave calls save method of TextWindow, which hitUndo calls restore method of TextWindow." ],
+			"TextWindow" : [ "TextWindow acts as a subsystem for facade TextEditor, which hitSave method of TextEditor calls save, which hitUndo method of TextEditor calls restore.", "TextWindow acts as a facade for subsystem TextWindowState, which addText calls append method of StringBuilder, which save calls toString method of StringBuilder, which restore calls getText method of TextWindowState." ],
+			"TextWindowState" : [ "TextWindowState acts as a subsystem for facade TextWindow, which restore method of TextWindow calls getText." ]
+		}
+	}
+}

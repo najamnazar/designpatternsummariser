@@ -1,0 +1,586 @@
+{
+	"final_summary" : "BigHuYouCompany.java: BigHuYouCompany does not have any design pattern.  It is a public class. The only method of BigHuYouCompany is startProject (void). No methods call startProject and startProject calls only one method : accept method of class slave.\n\n\nLiveApp.java: visitor: LiveApp acts as a visitor for element CorporateSlave, which overrides, which visits Programmer parameter of programmer, which visits HumanSource parameter of humanSource, which visits Tester parameter of tester. It is a public class that implements CorporateSlaveVisitor. The 3 methods of LiveApp are visit (void), visit (void) and visit (void). No methods call visit and visit calls 3 methods : format method of class String, getName method of class tester and println method of class out. No methods call visit and visit calls 3 methods : format method of class String, getName method of class tester and println method of class out. No methods call visit and visit calls 3 methods : format method of class String, getName method of class tester and println method of class out.\n\n\nHumanSource.java: visitor: HumanSource acts as a visitor for element CorporateSlave, which overrides accept method of CorporateSlave, which gets a Name to, which accepts CorporateSlaveVisitor parameter of visitor. It is a public class that implements CorporateSlave. The 2 methods of HumanSource are getName (String) and accept (void). No methods call getName and getName calls no methods. No methods call accept and accept calls only one method : visit method of class visitor.\n\n\nTester.java: visitor: Tester acts as a visitor for element CorporateSlave, which overrides accept method of CorporateSlave, which gets a Name to, which accepts CorporateSlaveVisitor parameter of visitor. It is a public class that implements CorporateSlave. The 2 methods of Tester are getName (String) and accept (void). No methods call getName and getName calls no methods. No methods call accept and accept calls only one method : visit method of class visitor.\n\n\nProgrammer.java: visitor: Programmer acts as a visitor for element CorporateSlave, which overrides accept method of CorporateSlave, which gets a Name to, which accepts CorporateSlaveVisitor parameter of visitor. It is a public class that implements CorporateSlave. The 2 methods of Programmer are getName (String) and accept (void). No methods call getName and getName calls no methods. No methods call accept and accept calls only one method : visit method of class visitor.\n\n\nSocialApp.java: visitor: SocialApp acts as a visitor for element CorporateSlave, which overrides, which visits Programmer parameter of programmer, which visits HumanSource parameter of humanSource, which visits Tester parameter of tester. It is a public class that implements CorporateSlaveVisitor. The 3 methods of SocialApp are visit (void), visit (void) and visit (void). No methods call visit and visit calls 3 methods : format method of class String, getName method of class tester and println method of class out. No methods call visit and visit calls 3 methods : format method of class String, getName method of class tester and println method of class out. No methods call visit and visit calls 3 methods : format method of class String, getName method of class tester and println method of class out.\n\n\nVisitorClient.java: VisitorClient does not have any design pattern.  It is a public class. The only method of VisitorClient is startProject (void). No methods call startProject and startProject calls 2 methods : startProject method of class bigHuYou and println method of class PrintStream.\n\n\nCorporateSlaveVisitor.java: CorporateSlaveVisitor does not have any design pattern.  It is a public interface. The 3 methods of CorporateSlaveVisitor are visit (void), visit (void) and visit (void). No methods call visit and visit calls no methods. No methods call visit and visit calls no methods. No methods call visit and visit calls no methods.\n\n\nCorporateSlave.java: visitor: CorporateSlave acts as an element for visitor CorporateSlave, which is inherited by HumanSource, Tester, Programmer, which accepts CorporateSlaveVisitor parameter of visitor. CorporateSlave acts as a visitor for element CorporateSlave, which is inherited by LiveApp, SocialApp, which accepts CorporateSlaveVisitor parameter of visitor. CorporateSlave acts as a visitor for element CorporateSlave, which is inherited by HumanSource, Tester, Programmer, which accepts CorporateSlaveVisitor parameter of visitor. It is a public interface. The only method of CorporateSlave is accept (void). No methods call accept and accept calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"visitor" : {
+			"CorporateSlave" : {
+				"concrete_element" : [ "HumanSource", "Tester", "Programmer" ],
+				"visitor" : {
+					"CorporateSlaveVisitor" : [ "LiveApp", "SocialApp" ],
+					"CorporateSlave" : [ "HumanSource", "Tester", "Programmer" ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"visitor" : {
+			"LiveApp" : [ "LiveApp acts as a visitor for element CorporateSlave, which overrides, which visits Programmer parameter of programmer, which visits HumanSource parameter of humanSource, which visits Tester parameter of tester." ],
+			"HumanSource" : [ "HumanSource acts as a visitor for element CorporateSlave, which overrides accept method of CorporateSlave, which gets a Name to, which accepts CorporateSlaveVisitor parameter of visitor." ],
+			"Tester" : [ "Tester acts as a visitor for element CorporateSlave, which overrides accept method of CorporateSlave, which gets a Name to, which accepts CorporateSlaveVisitor parameter of visitor." ],
+			"SocialApp" : [ "SocialApp acts as a visitor for element CorporateSlave, which overrides, which visits Programmer parameter of programmer, which visits HumanSource parameter of humanSource, which visits Tester parameter of tester." ],
+			"Programmer" : [ "Programmer acts as a visitor for element CorporateSlave, which overrides accept method of CorporateSlave, which gets a Name to, which accepts CorporateSlaveVisitor parameter of visitor." ],
+			"CorporateSlave" : [ "CorporateSlave acts as an element for visitor CorporateSlave, which is inherited by HumanSource, Tester, Programmer, which accepts CorporateSlaveVisitor parameter of visitor.", "CorporateSlave acts as a visitor for element CorporateSlave, which is inherited by LiveApp, SocialApp, which accepts CorporateSlaveVisitor parameter of visitor.", "CorporateSlave acts as a visitor for element CorporateSlave, which is inherited by HumanSource, Tester, Programmer, which accepts CorporateSlaveVisitor parameter of visitor." ]
+		}
+	},
+	"shusheng007-visitor" : {
+		"BigHuYouCompany" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "List<CorporateSlave>",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "employee = new ArrayList<>()" ],
+				"FIELDDATATYPE" : "List<CorporateSlave>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "BigHuYouCompany",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "slave" ],
+				"VARIABLECOMMONTYPE" : "CorporateSlave",
+				"VARIABLEELEMENTTYPE" : "CorporateSlave"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "startProject",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "slave",
+					"CALLEEMETHODNAME" : "accept"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "CorporateSlaveVisitor"
+				} ]
+			} ]
+		},
+		"LiveApp" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 9,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "CorporateSlaveVisitor" ],
+				"CLASSNAME" : "LiveApp",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "tester",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "programmer",
+					"PARAMETERTYPE" : "Programmer"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "tester",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "humanSource",
+					"PARAMETERTYPE" : "HumanSource"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "tester",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "tester",
+					"PARAMETERTYPE" : "Tester"
+				} ]
+			} ]
+		},
+		"HumanSource" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "CorporateSlave" ],
+				"CLASSNAME" : "HumanSource",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "visitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "CorporateSlaveVisitor"
+				} ]
+			} ]
+		},
+		"Tester" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "CorporateSlave" ],
+				"CLASSNAME" : "Tester",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "visitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "CorporateSlaveVisitor"
+				} ]
+			} ]
+		},
+		"Programmer" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "CorporateSlave" ],
+				"CLASSNAME" : "Programmer",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "visitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "CorporateSlaveVisitor"
+				} ]
+			} ]
+		},
+		"SocialApp" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 9,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "CorporateSlaveVisitor" ],
+				"CLASSNAME" : "SocialApp",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "tester",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "programmer",
+					"PARAMETERTYPE" : "Programmer"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "tester",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "humanSource",
+					"PARAMETERTYPE" : "HumanSource"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "tester",
+					"CALLEEMETHODNAME" : "getName"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "tester",
+					"PARAMETERTYPE" : "Tester"
+				} ]
+			} ]
+		},
+		"VisitorClient" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "VisitorClient",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "bigHuYou = new BigHuYouCompany()" ],
+				"VARIABLECOMMONTYPE" : "BigHuYouCompany",
+				"VARIABLEELEMENTTYPE" : "BigHuYouCompany"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "startProject",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "bigHuYou",
+					"CALLEEMETHODNAME" : "startProject"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "bigHuYou",
+					"CALLEEMETHODNAME" : "startProject"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"CorporateSlaveVisitor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CorporateSlaveVisitor",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "programmer",
+					"PARAMETERTYPE" : "Programmer"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "humanSource",
+					"PARAMETERTYPE" : "HumanSource"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "tester",
+					"PARAMETERTYPE" : "Tester"
+				} ]
+			} ]
+		},
+		"CorporateSlave" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CorporateSlave",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "CorporateSlaveVisitor"
+				} ]
+			} ]
+		}
+	}
+}

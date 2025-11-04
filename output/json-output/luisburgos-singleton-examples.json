@@ -1,0 +1,62 @@
+{
+	"final_summary" : "Government.java: memento: Government acts as a caretaker for memento Government, which gets Government. Government acts as an originator for memento Government, which gets a Government Government to. Government acts as a memento, which gets Government. It is a public class. The only method of Government is getGovernment (Government). No methods call getGovernment and getGovernment calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"memento" : {
+			"Government" : {
+				"caretaker" : {
+					"Government" : [ ]
+				},
+				"originator" : {
+					"Government" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"memento" : {
+			"Government" : [ "Government acts as a caretaker for memento Government, which gets Government.", "Government acts as an originator for memento Government, which gets a Government Government to.", "Government acts as a memento, which gets Government." ]
+		}
+	},
+	"luisburgos-singleton-examples" : {
+		"Government" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Government",
+				"FIELDMODIFIERTYPE" : [ "static" ],
+				"FIELDDECLARATION" : [ "government" ],
+				"FIELDDATATYPE" : "Government",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Government",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getGovernment",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "synchronized", "static" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Government",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

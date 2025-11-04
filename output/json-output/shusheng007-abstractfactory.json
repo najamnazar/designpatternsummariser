@@ -1,0 +1,268 @@
+{
+	"final_summary" : "AppleFactory.java: abstract_factory: AppleFactory acts as a factory for AbstractFactory, which overrides makeComputer method of AbstractFactory, makeMobilePhone method of AbstractFactory. It is a public class that implements AbstractFactory. The 2 methods of AppleFactory are makeComputer (Computer) and makeMobilePhone (MobilePhone). No methods call makeComputer and makeComputer calls no methods. No methods call makeMobilePhone and makeMobilePhone calls no methods.\n\n memento: AppleFactory acts as an originator for memento MobilePhone, which makes a MobilePhone Mobile Phone to. It is a public class that implements AbstractFactory. The 2 methods of AppleFactory are makeComputer (Computer) and makeMobilePhone (MobilePhone). No methods call makeComputer and makeComputer calls no methods. No methods call makeMobilePhone and makeMobilePhone calls no methods.\n\n\nXiaoMiFactory.java: abstract_factory: XiaoMiFactory acts as a factory for AbstractFactory, which overrides makeComputer method of AbstractFactory, makeMobilePhone method of AbstractFactory. It is a public class that implements AbstractFactory. The 2 methods of XiaoMiFactory are makeComputer (Computer) and makeMobilePhone (MobilePhone). No methods call makeComputer and makeComputer calls no methods. No methods call makeMobilePhone and makeMobilePhone calls no methods.\n\n memento: XiaoMiFactory acts as an originator for memento MobilePhone, which makes a MobilePhone Mobile Phone to. It is a public class that implements AbstractFactory. The 2 methods of XiaoMiFactory are makeComputer (Computer) and makeMobilePhone (MobilePhone). No methods call makeComputer and makeComputer calls no methods. No methods call makeMobilePhone and makeMobilePhone calls no methods.\n\n\nMiPhone.java: abstract_factory: MiPhone acts as a product for AbstractFactory, which overrides setOperationSystem method of MobilePhone. It is a public class that extends MobilePhone. The only method of MiPhone is setOperationSystem (void). No methods call setOperationSystem and setOperationSystem calls only one method : println method of class PrintStream.\n\n memento: MiPhone acts as a memento, which sets Operation System. It is a public class that extends MobilePhone. The only method of MiPhone is setOperationSystem (void). No methods call setOperationSystem and setOperationSystem calls only one method : println method of class PrintStream.\n\n\nAbstractFactory.java: abstract_factory: AbstractFactory acts as an abstract factory for MobilePhone, which is inherited by AppleFactory, XiaoMiFactory. It is a public interface. The 2 methods of AbstractFactory are makeComputer (Computer) and makeMobilePhone (MobilePhone). No methods call makeComputer and makeComputer calls no methods. No methods call makeMobilePhone and makeMobilePhone calls no methods.\n\n memento: AbstractFactory acts as an originator for memento MobilePhone, which is inherited by, which makes a MobilePhone Mobile Phone to. It is a public interface. The 2 methods of AbstractFactory are makeComputer (Computer) and makeMobilePhone (MobilePhone). No methods call makeComputer and makeComputer calls no methods. No methods call makeMobilePhone and makeMobilePhone calls no methods.\n\n\nMobilePhone.java: abstract_factory: MobilePhone acts as an abstract product for MobilePhone, which is inherited by MiPhone, IPhone. It is a public abstract class. The only method of MobilePhone is setOperationSystem (void). No methods call setOperationSystem and setOperationSystem calls no methods.\n\n memento: MobilePhone acts as a memento, which is inherited by MiPhone, IPhone, which sets Operation System. It is a public abstract class. The only method of MobilePhone is setOperationSystem (void). No methods call setOperationSystem and setOperationSystem calls no methods.\n\n\nIPhone.java: abstract_factory: IPhone acts as a product for AbstractFactory, which overrides setOperationSystem method of MobilePhone. It is a public class that extends MobilePhone. The only method of IPhone is setOperationSystem (void). No methods call setOperationSystem and setOperationSystem calls only one method : println method of class PrintStream.\n\n memento: IPhone acts as a memento, which sets Operation System. It is a public class that extends MobilePhone. The only method of IPhone is setOperationSystem (void). No methods call setOperationSystem and setOperationSystem calls only one method : println method of class PrintStream.\n\n\n",
+	"design_pattern" : [ {
+		"abstract_factory" : {
+			"AbstractFactory" : {
+				"abstract_product" : {
+					"MobilePhone" : [ "MiPhone", "IPhone" ]
+				},
+				"concrete_factory" : [ "AppleFactory", "XiaoMiFactory" ]
+			}
+		}
+	}, {
+		"memento" : {
+			"MobilePhone" : {
+				"caretaker" : { },
+				"originator" : {
+					"AbstractFactory" : [ "AppleFactory", "XiaoMiFactory" ]
+				},
+				"concrete_memento" : [ "MiPhone", "IPhone" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"abstract_factory" : {
+			"AppleFactory" : [ "AppleFactory acts as a factory for AbstractFactory, which overrides makeComputer method of AbstractFactory, makeMobilePhone method of AbstractFactory." ],
+			"XiaoMiFactory" : [ "XiaoMiFactory acts as a factory for AbstractFactory, which overrides makeComputer method of AbstractFactory, makeMobilePhone method of AbstractFactory." ],
+			"MiPhone" : [ "MiPhone acts as a product for AbstractFactory, which overrides setOperationSystem method of MobilePhone." ],
+			"MobilePhone" : [ "MobilePhone acts as an abstract product for MobilePhone, which is inherited by MiPhone, IPhone." ],
+			"AbstractFactory" : [ "AbstractFactory acts as an abstract factory for MobilePhone, which is inherited by AppleFactory, XiaoMiFactory." ],
+			"IPhone" : [ "IPhone acts as a product for AbstractFactory, which overrides setOperationSystem method of MobilePhone." ]
+		},
+		"memento" : {
+			"AppleFactory" : [ "AppleFactory acts as an originator for memento MobilePhone, which makes a MobilePhone Mobile Phone to." ],
+			"XiaoMiFactory" : [ "XiaoMiFactory acts as an originator for memento MobilePhone, which makes a MobilePhone Mobile Phone to." ],
+			"MiPhone" : [ "MiPhone acts as a memento, which sets Operation System." ],
+			"AbstractFactory" : [ "AbstractFactory acts as an originator for memento MobilePhone, which is inherited by, which makes a MobilePhone Mobile Phone to." ],
+			"MobilePhone" : [ "MobilePhone acts as a memento, which is inherited by MiPhone, IPhone, which sets Operation System." ],
+			"IPhone" : [ "IPhone acts as a memento, which sets Operation System." ]
+		}
+	},
+	"shusheng007-abstractfactory" : {
+		"AppleFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "AbstractFactory" ],
+				"CLASSNAME" : "AppleFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeComputer",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Computer",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeMobilePhone",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "MobilePhone",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"XiaoMiFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "AbstractFactory" ],
+				"CLASSNAME" : "XiaoMiFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeComputer",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Computer",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeMobilePhone",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "MobilePhone",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MiPhone" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "MobilePhone" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "MiPhone",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "setOperationSystem",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"AbstractFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AbstractFactory",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makeComputer",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Computer",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makeMobilePhone",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "MobilePhone",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MobilePhone" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "MobilePhone",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "setOperationSystem",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"IPhone" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "MobilePhone" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "IPhone",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "setOperationSystem",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	}
+}

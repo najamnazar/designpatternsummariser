@@ -1,0 +1,130 @@
+{
+	"final_summary" : "Test.java: Test does not have any design pattern.  It is a public class. The only method of Test is main (void). No methods call main and main calls 4 methods : identityHashCode method of class System, getInstance method of class Singleton, println method of class PrintStream and println method of class out.\n\n\nSingleton.java: memento: Singleton acts as an originator for memento Singleton, which gets a Singleton Instance to. Singleton acts as a caretaker for memento Singleton, which gets Instance. Singleton acts as a memento, which gets Instance. It is a public class. The only method of Singleton is getInstance (Singleton). Only one method ( main method of class Test ) calls getInstance and getInstance calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"memento" : {
+			"Singleton" : {
+				"caretaker" : {
+					"Singleton" : [ ]
+				},
+				"originator" : {
+					"Singleton" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"luisburgos-singleton-pattern" : {
+		"Test" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Test",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "singletonOne = Singleton.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Singleton",
+				"VARIABLEELEMENTTYPE" : "Singleton"
+			}, {
+				"VARIABLEDECLARATION" : [ "singletonTwo = Singleton.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Singleton",
+				"VARIABLEELEMENTTYPE" : "Singleton"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Singleton",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "Singleton",
+					"CALLEEMETHODNAME" : "getInstance"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "System",
+					"CALLEEMETHODNAME" : "identityHashCode"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "System",
+					"CALLEEMETHODNAME" : "identityHashCode"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Singleton" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Singleton",
+				"FIELDMODIFIERTYPE" : [ "static" ],
+				"FIELDDECLARATION" : [ "instance" ],
+				"FIELDDATATYPE" : "Singleton",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Singleton",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Test"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Test"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "synchronized", "static" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Singleton",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"memento" : {
+			"Singleton" : [ "Singleton acts as an originator for memento Singleton, which gets a Singleton Instance to.", "Singleton acts as a caretaker for memento Singleton, which gets Instance.", "Singleton acts as a memento, which gets Instance." ]
+		}
+	}
+}

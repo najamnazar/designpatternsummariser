@@ -1,0 +1,388 @@
+{
+	"saeidzebardast-memento" : {
+		"Caretaker" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ArrayList<Memento>",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "savedArticles = new ArrayList<Memento>()" ],
+				"FIELDDATATYPE" : "ArrayList<Memento>",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Caretaker",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "addMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "savedArticles",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "m",
+					"PARAMETERTYPE" : "Memento"
+				} ]
+			}, {
+				"METHODNAME" : "getMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Memento",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "savedArticles",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "index",
+					"PARAMETERTYPE" : "int"
+				} ]
+			} ]
+		},
+		"Memento" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "article" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Memento",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "articleSave",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getSavedArticle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"TestMemento" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "JButton",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "saveBut", "undoBut", "redoBut" ],
+				"FIELDDATATYPE" : "JButton",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "JTextArea",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "theArticle = new JTextArea(40, 60)" ],
+				"FIELDDATATYPE" : "JTextArea",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Caretaker",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "caretaker = new Caretaker()" ],
+				"FIELDDATATYPE" : "Caretaker",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Originator",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "originator = new Originator()" ],
+				"FIELDDATATYPE" : "Originator",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "saveFiles = 0", "currentArticle = 0" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 32,
+				"EXTENDSFROM" : [ "JFrame" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "TestMemento",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "panel1 = new JPanel()" ],
+				"VARIABLECOMMONTYPE" : "JPanel",
+				"VARIABLEELEMENTTYPE" : "JPanel"
+			}, {
+				"VARIABLEDECLARATION" : [ "saveListener = new ButtonListener()" ],
+				"VARIABLECOMMONTYPE" : "ButtonListener",
+				"VARIABLEELEMENTTYPE" : "ButtonListener"
+			}, {
+				"VARIABLEDECLARATION" : [ "undoListener = new ButtonListener()" ],
+				"VARIABLECOMMONTYPE" : "ButtonListener",
+				"VARIABLEELEMENTTYPE" : "ButtonListener"
+			}, {
+				"VARIABLEDECLARATION" : [ "redoListener = new ButtonListener()" ],
+				"VARIABLECOMMONTYPE" : "ButtonListener",
+				"VARIABLEELEMENTTYPE" : "ButtonListener"
+			}, {
+				"VARIABLEDECLARATION" : [ "textBoxString = originator.restoreFromMemento(caretaker.getMemento(currentArticle))" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "textBoxString = originator.restoreFromMemento(caretaker.getMemento(currentArticle))" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "textInTextArea = theArticle.getText()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			}, {
+				"METHODNAME" : "actionPerformed",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 19,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "EventObject",
+					"CALLEEMETHODNAME" : "getSource"
+				}, {
+					"CALLEECLASS" : "JTextComponent",
+					"CALLEEMETHODNAME" : "getText"
+				}, {
+					"CALLEECLASS" : "originator",
+					"CALLEEMETHODNAME" : "set"
+				}, {
+					"CALLEECLASS" : "caretaker",
+					"CALLEEMETHODNAME" : "addMemento"
+				}, {
+					"CALLEECLASS" : "originator",
+					"CALLEEMETHODNAME" : "storeInMemento"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "AbstractButton",
+					"CALLEEMETHODNAME" : "setEnabled"
+				}, {
+					"CALLEECLASS" : "EventObject",
+					"CALLEEMETHODNAME" : "getSource"
+				}, {
+					"CALLEECLASS" : "originator",
+					"CALLEEMETHODNAME" : "restoreFromMemento"
+				}, {
+					"CALLEECLASS" : "caretaker",
+					"CALLEEMETHODNAME" : "getMemento"
+				}, {
+					"CALLEECLASS" : "JTextComponent",
+					"CALLEEMETHODNAME" : "setText"
+				}, {
+					"CALLEECLASS" : "AbstractButton",
+					"CALLEEMETHODNAME" : "setEnabled"
+				}, {
+					"CALLEECLASS" : "AbstractButton",
+					"CALLEEMETHODNAME" : "setEnabled"
+				}, {
+					"CALLEECLASS" : "EventObject",
+					"CALLEEMETHODNAME" : "getSource"
+				}, {
+					"CALLEECLASS" : "originator",
+					"CALLEEMETHODNAME" : "restoreFromMemento"
+				}, {
+					"CALLEECLASS" : "caretaker",
+					"CALLEEMETHODNAME" : "getMemento"
+				}, {
+					"CALLEECLASS" : "JTextComponent",
+					"CALLEEMETHODNAME" : "setText"
+				}, {
+					"CALLEECLASS" : "AbstractButton",
+					"CALLEEMETHODNAME" : "setEnabled"
+				}, {
+					"CALLEECLASS" : "AbstractButton",
+					"CALLEEMETHODNAME" : "setEnabled"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "e",
+					"PARAMETERTYPE" : "ActionEvent"
+				} ]
+			} ]
+		},
+		"Originator" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "article" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Originator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "set",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "newArticle",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "storeInMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Memento",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "restoreFromMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "memento",
+					"CALLEEMETHODNAME" : "getSavedArticle"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "memento",
+					"PARAMETERTYPE" : "Memento"
+				} ]
+			} ]
+		}
+	},
+	"final_summary" : "Caretaker.java: observer: Caretaker acts as a publisher for observer Memento, which is inherited by, which adds Memento parameter of m Memento, which gets int parameter of index Memento. It is a class. The 2 methods of Caretaker are addMemento (void) and getMemento (Memento). No methods call addMemento and addMemento calls only one method : add method of class savedArticles. No methods call getMemento and getMemento calls only one method : get method of class savedArticles.\n\n memento: Caretaker acts as a caretaker for memento Memento, which adds Memento parameter of m Memento, which gets int parameter of index Memento. It is a class. The 2 methods of Caretaker are addMemento (void) and getMemento (Memento). No methods call addMemento and addMemento calls only one method : add method of class savedArticles. No methods call getMemento and getMemento calls only one method : get method of class savedArticles.\n\n\nMemento.java: observer: Memento acts as an observer for publisher Caretaker, which is inherited by, which gets Saved Article. It is a public class. The only method of Memento is getSavedArticle (String). No methods call getSavedArticle and getSavedArticle calls no methods.\n\n memento: Memento acts as a memento, which gets Saved Article. It is a public class. The only method of Memento is getSavedArticle (String). No methods call getSavedArticle and getSavedArticle calls no methods.\n\n\nTestMemento.java: TestMemento does not have any design pattern.  It is a public class that extends JFrame. The 2 methods of TestMemento are main (void) and actionPerformed (void). No methods call main and main calls no methods. No methods call actionPerformed and actionPerformed calls 10 methods : storeInMemento method of class originator, setEnabled method of class AbstractButton, getMemento method of class caretaker, restoreFromMemento method of class originator, getText method of class JTextComponent, set method of class originator, addMemento method of class caretaker, setText method of class JTextComponent, println method of class PrintStream and getSource method of class EventObject.\n\n\nOriginator.java: memento: Originator acts as an originator for memento Memento, which stores a Memento In Memento to, which restores Memento parameter of memento From Memento. It is a public class. The 3 methods of Originator are set (void), storeInMemento (Memento) and restoreFromMemento (String). No methods call set and set calls only one method : println method of class PrintStream. No methods call storeInMemento and storeInMemento calls only one method : println method of class PrintStream. No methods call restoreFromMemento and restoreFromMemento calls 2 methods : getSavedArticle method of class memento and println method of class PrintStream.\n\n\n",
+	"design_pattern" : [ {
+		"observer" : {
+			"Memento" : {
+				"concrete_observer" : [ ],
+				"publisher" : {
+					"Caretaker" : [ ]
+				}
+			}
+		}
+	}, {
+		"memento" : {
+			"Memento" : {
+				"caretaker" : {
+					"Caretaker" : [ ]
+				},
+				"originator" : {
+					"Originator" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"Caretaker" : [ "Caretaker acts as a publisher for observer Memento, which is inherited by, which adds Memento parameter of m Memento, which gets int parameter of index Memento." ],
+			"Memento" : [ "Memento acts as an observer for publisher Caretaker, which is inherited by, which gets Saved Article." ]
+		},
+		"memento" : {
+			"Caretaker" : [ "Caretaker acts as a caretaker for memento Memento, which adds Memento parameter of m Memento, which gets int parameter of index Memento." ],
+			"Memento" : [ "Memento acts as a memento, which gets Saved Article." ],
+			"Originator" : [ "Originator acts as an originator for memento Memento, which stores a Memento In Memento to, which restores Memento parameter of memento From Memento." ]
+		}
+	}
+}

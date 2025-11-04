@@ -1,0 +1,967 @@
+{
+	"final_summary" : "UserConverter.java: UserConverter does not have any design pattern.  It is a public class that extends AbstractConverter<User, UserDto>. The 2 methods of UserConverter are fromDto (User) and fromEntity (UserDto). No methods call fromDto and fromDto calls 13 methods : stream method of class getRoles, getId method of class dto, map method of class getRoles, toList method of class Collectors, getPassword method of class dto, setId method of class user, getRoles method of class dto, setUsername method of class user, getUsername method of class dto, collect method of class getRoles, valueOf method of class Role, setPassword method of class user and setRoles method of class user. No methods call fromEntity and fromEntity calls 13 methods : getUsername method of class entity, getId method of class entity, stream method of class getRoles, getPassword method of class entity, map method of class getRoles, toList method of class Collectors, setId method of class user, name method of class rol, getRoles method of class entity, setUsername method of class user, collect method of class getRoles, setPassword method of class user and setRoles method of class user.\n\n\nUser.java: User does not have any design pattern.  It is a public class. The 9 methods of User are getId (Long), setId (void), getUsername (String), setUsername (void), getPassword (String), setPassword (void), getRoles (List<Role>), setRoles (void) and toString (String). No methods call getId and getId calls no methods. No methods call setId and setId calls no methods. No methods call getUsername and getUsername calls no methods. No methods call setUsername and setUsername calls no methods. No methods call getPassword and getPassword calls no methods. No methods call setPassword and setPassword calls no methods. No methods call getRoles and getRoles calls no methods. No methods call setRoles and setRoles calls no methods. No methods call toString and toString calls no methods.\n\n\nUserConverterTest.java: UserConverterTest does not have any design pattern.  It is a public class. The only method of UserConverterTest is main (void). No methods call main and main calls 3 methods : fromEntity method of class new UserConverter, asList method of class Arrays and println method of class out.\n\n\nBook.java: adapter: Book acts as a target for adapter AdapterBook, which adapts to Book. It is a public interface. The only method of Book is getTitleAndAuthor (String). No methods call getTitleAndAuthor and getTitleAndAuthor calls no methods.\n\n\nUserDto.java: UserDto does not have any design pattern.  It is a public class. The 9 methods of UserDto are getId (Long), setId (void), getUsername (String), setUsername (void), getPassword (String), setPassword (void), getRoles (List<String>), setRoles (void) and toString (String). No methods call getId and getId calls no methods. No methods call setId and setId calls no methods. No methods call getUsername and getUsername calls no methods. No methods call setUsername and setUsername calls no methods. No methods call getPassword and getPassword calls no methods. No methods call setPassword and setPassword calls no methods. No methods call getRoles and getRoles calls no methods. No methods call setRoles and setRoles calls no methods. No methods call toString and toString calls no methods.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 2 methods : println method of class out and getTitleAndAuthor method of class book.\n\n\nAbstractConverter.java: AbstractConverter does not have any design pattern.  It is a public abstract class. The 4 methods of AbstractConverter are fromDto (E), fromEntity (D), fromDto (List<E>) and fromEntity (List<D>). Only one method ( fromDto method of class AbstractConverter ) calls fromDto and fromDto calls 5 methods : stream method of class Collection, map method of class Stream, toList method of class Collectors, fromDto method of class AbstractConverter and collect method of class Stream. Only one method ( fromEntity method of class AbstractConverter ) calls fromEntity and fromEntity calls 5 methods : stream method of class Collection, map method of class Stream, toList method of class Collectors, fromEntity method of class AbstractConverter and collect method of class Stream. Only one method ( fromDto method of class AbstractConverter ) calls fromDto and fromDto calls 5 methods : stream method of class Collection, map method of class Stream, toList method of class Collectors, fromDto method of class AbstractConverter and collect method of class Stream. Only one method ( fromEntity method of class AbstractConverter ) calls fromEntity and fromEntity calls 5 methods : stream method of class Collection, map method of class Stream, toList method of class Collectors, fromEntity method of class AbstractConverter and collect method of class Stream.\n\n\nAdapterBook.java: adapter: AdapterBook acts as an adapter, which adapts to Book. It is a public class that extends Book and that implements Book. The only method of AdapterBook is getTitleAndAuthor (String). No methods call getTitleAndAuthor and getTitleAndAuthor calls 2 methods : getTitle method of class book and getAuthor method of class book.\n\n\nSimpleBook.java: adapter: SimpleBook acts as an adaptee for adapter AdapterBook, which adapts to Book, which adapts to Book. It is a public class. The 2 methods of SimpleBook are getTitle (String) and getAuthor (String). No methods call getTitle and getTitle calls no methods. No methods call getAuthor and getAuthor calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"adapter" : {
+			"AdapterBook" : {
+				"adaptee" : [ "SimpleBook" ],
+				"target" : [ "Book" ]
+			}
+		}
+	} ],
+	"luisburgos-adapter-examples" : {
+		"Role" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"UserConverter" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 28,
+				"EXTENDSFROM" : [ "AbstractConverter<User, UserDto>" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UserConverter",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "user = new User()" ],
+				"VARIABLECOMMONTYPE" : "User",
+				"VARIABLEELEMENTTYPE" : "User"
+			}, {
+				"VARIABLEDECLARATION" : [ "user = new UserDto()" ],
+				"VARIABLECOMMONTYPE" : "UserDto",
+				"VARIABLEELEMENTTYPE" : "UserDto"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "fromDto",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 14,
+				"METHODRETURNTYPE" : "User",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "user",
+					"CALLEEMETHODNAME" : "setId"
+				}, {
+					"CALLEECLASS" : "dto",
+					"CALLEEMETHODNAME" : "getId"
+				}, {
+					"CALLEECLASS" : "user",
+					"CALLEEMETHODNAME" : "setUsername"
+				}, {
+					"CALLEECLASS" : "dto",
+					"CALLEEMETHODNAME" : "getUsername"
+				}, {
+					"CALLEECLASS" : "user",
+					"CALLEEMETHODNAME" : "setPassword"
+				}, {
+					"CALLEECLASS" : "dto",
+					"CALLEEMETHODNAME" : "getPassword"
+				}, {
+					"CALLEECLASS" : "dto",
+					"CALLEEMETHODNAME" : "getRoles"
+				}, {
+					"CALLEECLASS" : "user",
+					"CALLEEMETHODNAME" : "setRoles"
+				}, {
+					"CALLEECLASS" : "getRoles",
+					"CALLEEMETHODNAME" : "collect"
+				}, {
+					"CALLEECLASS" : "getRoles",
+					"CALLEEMETHODNAME" : "map"
+				}, {
+					"CALLEECLASS" : "getRoles",
+					"CALLEEMETHODNAME" : "stream"
+				}, {
+					"CALLEECLASS" : "dto",
+					"CALLEEMETHODNAME" : "getRoles"
+				}, {
+					"CALLEECLASS" : "Role",
+					"CALLEEMETHODNAME" : "valueOf"
+				}, {
+					"CALLEECLASS" : "Collectors",
+					"CALLEEMETHODNAME" : "toList"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "dto",
+					"PARAMETERTYPE" : "UserDto"
+				} ]
+			}, {
+				"METHODNAME" : "fromEntity",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 14,
+				"METHODRETURNTYPE" : "UserDto",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "user",
+					"CALLEEMETHODNAME" : "setId"
+				}, {
+					"CALLEECLASS" : "entity",
+					"CALLEEMETHODNAME" : "getId"
+				}, {
+					"CALLEECLASS" : "user",
+					"CALLEEMETHODNAME" : "setUsername"
+				}, {
+					"CALLEECLASS" : "entity",
+					"CALLEEMETHODNAME" : "getUsername"
+				}, {
+					"CALLEECLASS" : "user",
+					"CALLEEMETHODNAME" : "setPassword"
+				}, {
+					"CALLEECLASS" : "entity",
+					"CALLEEMETHODNAME" : "getPassword"
+				}, {
+					"CALLEECLASS" : "entity",
+					"CALLEEMETHODNAME" : "getRoles"
+				}, {
+					"CALLEECLASS" : "user",
+					"CALLEEMETHODNAME" : "setRoles"
+				}, {
+					"CALLEECLASS" : "getRoles",
+					"CALLEEMETHODNAME" : "collect"
+				}, {
+					"CALLEECLASS" : "getRoles",
+					"CALLEEMETHODNAME" : "map"
+				}, {
+					"CALLEECLASS" : "getRoles",
+					"CALLEEMETHODNAME" : "stream"
+				}, {
+					"CALLEECLASS" : "entity",
+					"CALLEEMETHODNAME" : "getRoles"
+				}, {
+					"CALLEECLASS" : "rol",
+					"CALLEEMETHODNAME" : "name"
+				}, {
+					"CALLEECLASS" : "Collectors",
+					"CALLEEMETHODNAME" : "toList"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "entity",
+					"PARAMETERTYPE" : "User"
+				} ]
+			} ]
+		},
+		"User" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Long",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "id" ],
+				"FIELDDATATYPE" : "Long",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "username" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "password" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "List<Role>",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "roles" ],
+				"FIELDDATATYPE" : "List<Role>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Boolean",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "active" ],
+				"FIELDDATATYPE" : "Boolean",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "User",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "id",
+					"PARAMETERTYPE" : "Long"
+				}, {
+					"PARAMETERNAME" : "username",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "password",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "roles",
+					"PARAMETERTYPE" : "List<Role>"
+				}, {
+					"PARAMETERNAME" : "active",
+					"PARAMETERTYPE" : "Boolean"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getId",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Long",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setId",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "id",
+					"PARAMETERTYPE" : "Long"
+				} ]
+			}, {
+				"METHODNAME" : "getUsername",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setUsername",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "username",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getPassword",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setPassword",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "password",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getRoles",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "List<Role>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setRoles",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "roles",
+					"PARAMETERTYPE" : "List<Role>"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UserConverterTest" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UserConverterTest",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "userDto" ],
+				"VARIABLECOMMONTYPE" : "UserDto",
+				"VARIABLEELEMENTTYPE" : "UserDto"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "new UserConverter",
+					"CALLEEMETHODNAME" : "fromEntity"
+				}, {
+					"CALLEECLASS" : "Arrays",
+					"CALLEEMETHODNAME" : "asList"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Book" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Book",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getTitleAndAuthor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"UserDto" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Long",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "id" ],
+				"FIELDDATATYPE" : "Long",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "username" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "password" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "List<String>",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "roles" ],
+				"FIELDDATATYPE" : "List<String>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UserDto",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getId",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Long",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setId",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "id",
+					"PARAMETERTYPE" : "Long"
+				} ]
+			}, {
+				"METHODNAME" : "getUsername",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setUsername",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "username",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getPassword",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setPassword",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "password",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getRoles",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "List<String>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setRoles",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "roles",
+					"PARAMETERTYPE" : "List<String>"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "book" ],
+				"VARIABLECOMMONTYPE" : "Book",
+				"VARIABLEELEMENTTYPE" : "Book"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "book",
+					"CALLEEMETHODNAME" : "getTitleAndAuthor"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"AbstractConverter" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 10,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AbstractConverter",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ "E", "D" ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "fromDto",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "fromDto",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromDto",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromDto",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromDto",
+					"CALLEDCLASS" : "AbstractConverter"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "E",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Stream",
+					"CALLEEMETHODNAME" : "collect"
+				}, {
+					"CALLEECLASS" : "Stream",
+					"CALLEEMETHODNAME" : "map"
+				}, {
+					"CALLEECLASS" : "Collection",
+					"CALLEEMETHODNAME" : "stream"
+				}, {
+					"CALLEECLASS" : "AbstractConverter",
+					"CALLEEMETHODNAME" : "fromDto"
+				}, {
+					"CALLEECLASS" : "Collectors",
+					"CALLEEMETHODNAME" : "toList"
+				}, {
+					"CALLEECLASS" : "AbstractConverter",
+					"CALLEEMETHODNAME" : "fromDto"
+				} ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "dto",
+					"PARAMETERTYPE" : "D"
+				} ]
+			}, {
+				"METHODNAME" : "fromEntity",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "fromEntity",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromEntity",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromEntity",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromEntity",
+					"CALLEDCLASS" : "AbstractConverter"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "D",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "AbstractConverter",
+					"CALLEEMETHODNAME" : "fromEntity"
+				}, {
+					"CALLEECLASS" : "Stream",
+					"CALLEEMETHODNAME" : "collect"
+				}, {
+					"CALLEECLASS" : "Stream",
+					"CALLEEMETHODNAME" : "map"
+				}, {
+					"CALLEECLASS" : "Collection",
+					"CALLEEMETHODNAME" : "stream"
+				}, {
+					"CALLEECLASS" : "AbstractConverter",
+					"CALLEEMETHODNAME" : "fromEntity"
+				}, {
+					"CALLEECLASS" : "Collectors",
+					"CALLEEMETHODNAME" : "toList"
+				} ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "entity",
+					"PARAMETERTYPE" : "E"
+				} ]
+			}, {
+				"METHODNAME" : "fromDto",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "fromDto",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromDto",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromDto",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromDto",
+					"CALLEDCLASS" : "AbstractConverter"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "List<E>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Stream",
+					"CALLEEMETHODNAME" : "collect"
+				}, {
+					"CALLEECLASS" : "Stream",
+					"CALLEEMETHODNAME" : "map"
+				}, {
+					"CALLEECLASS" : "Collection",
+					"CALLEEMETHODNAME" : "stream"
+				}, {
+					"CALLEECLASS" : "AbstractConverter",
+					"CALLEEMETHODNAME" : "fromDto"
+				}, {
+					"CALLEECLASS" : "Collectors",
+					"CALLEEMETHODNAME" : "toList"
+				}, {
+					"CALLEECLASS" : "AbstractConverter",
+					"CALLEEMETHODNAME" : "fromDto"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "dtos",
+					"PARAMETERTYPE" : "List<D>"
+				} ]
+			}, {
+				"METHODNAME" : "fromEntity",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "fromEntity",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromEntity",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromEntity",
+					"CALLEDCLASS" : "AbstractConverter"
+				}, {
+					"CALLEDMETHODNAME" : "fromEntity",
+					"CALLEDCLASS" : "AbstractConverter"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "List<D>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "AbstractConverter",
+					"CALLEEMETHODNAME" : "fromEntity"
+				}, {
+					"CALLEECLASS" : "Stream",
+					"CALLEEMETHODNAME" : "collect"
+				}, {
+					"CALLEECLASS" : "Stream",
+					"CALLEEMETHODNAME" : "map"
+				}, {
+					"CALLEECLASS" : "Collection",
+					"CALLEEMETHODNAME" : "stream"
+				}, {
+					"CALLEECLASS" : "AbstractConverter",
+					"CALLEEMETHODNAME" : "fromEntity"
+				}, {
+					"CALLEECLASS" : "Collectors",
+					"CALLEEMETHODNAME" : "toList"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "entities",
+					"PARAMETERTYPE" : "List<E>"
+				} ]
+			} ]
+		},
+		"AdapterBook" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "SimpleBook",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "book" ],
+				"FIELDDATATYPE" : "SimpleBook",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "Book" ],
+				"IMPLEMENTSFROM" : [ "Book" ],
+				"CLASSNAME" : "AdapterBook",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "book",
+					"PARAMETERTYPE" : "SimpleBook"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getTitleAndAuthor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "book",
+					"CALLEEMETHODNAME" : "getTitle"
+				}, {
+					"CALLEECLASS" : "book",
+					"CALLEEMETHODNAME" : "getAuthor"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"SimpleBook" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "title" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "author" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SimpleBook",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "title",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "author",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getTitle",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getAuthor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"adapter" : {
+			"Book" : [ "Book acts as a target for adapter AdapterBook, which adapts to Book." ],
+			"AdapterBook" : [ "AdapterBook acts as an adapter, which adapts to Book." ],
+			"SimpleBook" : [ "SimpleBook acts as an adaptee for adapter AdapterBook, which adapts to Book, which adapts to Book." ]
+		}
+	}
+}

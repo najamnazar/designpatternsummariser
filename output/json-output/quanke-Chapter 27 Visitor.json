@@ -1,0 +1,642 @@
+{
+	"quanke-Chapter 27 Visitor" : {
+		"BuyBasket" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ArrayList",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "list = new ArrayList()" ],
+				"FIELDDATATYPE" : "ArrayList",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "BuyBasket",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "i = list.iterator()" ],
+				"VARIABLECOMMONTYPE" : "Iterator",
+				"VARIABLEELEMENTTYPE" : "Iterator"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ArrayList",
+					"CALLEEMETHODNAME" : "iterator"
+				}, {
+					"CALLEECLASS" : "Iterator",
+					"CALLEEMETHODNAME" : "hasNext"
+				}, {
+					"CALLEECLASS" : "Product",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "Iterator",
+					"CALLEEMETHODNAME" : "next"
+				}, {
+					"CALLEECLASS" : "Product",
+					"CALLEEMETHODNAME" : "accept"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "Visitor"
+				} ]
+			}, {
+				"METHODNAME" : "addProduct",
+				"NUMBEROFINCOMINGMETHODS" : 6,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ArrayList",
+					"CALLEEMETHODNAME" : "add"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "product",
+					"PARAMETERTYPE" : "Product"
+				} ]
+			}, {
+				"METHODNAME" : "removeProduct",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ArrayList",
+					"CALLEEMETHODNAME" : "remove"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "product",
+					"PARAMETERTYPE" : "Product"
+				} ]
+			} ]
+		},
+		"Apple" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Product" ],
+				"CLASSNAME" : "Apple",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Visitor",
+					"CALLEEMETHODNAME" : "visit"
+				}, {
+					"CALLEECLASS" : "Visitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "Visitor"
+				} ]
+			} ]
+		},
+		"Saler" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "Visitor" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Saler",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "apple",
+					"PARAMETERTYPE" : "Apple"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "book",
+					"PARAMETERTYPE" : "Book"
+				} ]
+			} ]
+		},
+		"Visitor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "protected" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PROTECTED"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Visitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "setName",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Book"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Apple"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Book"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Apple"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "apple",
+					"PARAMETERTYPE" : "Apple"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Book"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Apple"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Book"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Apple"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "book",
+					"PARAMETERTYPE" : "Book"
+				} ]
+			} ]
+		},
+		"Customer" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "Visitor" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Customer",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "apple",
+					"PARAMETERTYPE" : "Apple"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "book",
+					"PARAMETERTYPE" : "Book"
+				} ]
+			} ]
+		},
+		"Book" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Product" ],
+				"CLASSNAME" : "Book",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Visitor",
+					"CALLEEMETHODNAME" : "visit"
+				}, {
+					"CALLEECLASS" : "Visitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "Visitor"
+				} ]
+			} ]
+		},
+		"Product" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Product",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "BuyBasket"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "BuyBasket"
+				} ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "Visitor"
+				} ]
+			} ]
+		},
+		"XMLUtil" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 10,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "XMLUtil",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "dFactory = DocumentBuilderFactory.newInstance()" ],
+				"VARIABLECOMMONTYPE" : "DocumentBuilderFactory",
+				"VARIABLEELEMENTTYPE" : "DocumentBuilderFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "builder = dFactory.newDocumentBuilder()" ],
+				"VARIABLECOMMONTYPE" : "DocumentBuilder",
+				"VARIABLEELEMENTTYPE" : "DocumentBuilder"
+			}, {
+				"VARIABLEDECLARATION" : [ "doc" ],
+				"VARIABLECOMMONTYPE" : "Document",
+				"VARIABLEELEMENTTYPE" : "Document"
+			}, {
+				"VARIABLEDECLARATION" : [ "nl = doc.getElementsByTagName(\"className\")" ],
+				"VARIABLECOMMONTYPE" : "NodeList",
+				"VARIABLEELEMENTTYPE" : "NodeList"
+			}, {
+				"VARIABLEDECLARATION" : [ "classNode = nl.item(0).getFirstChild()" ],
+				"VARIABLECOMMONTYPE" : "Node",
+				"VARIABLEELEMENTTYPE" : "Node"
+			}, {
+				"VARIABLEDECLARATION" : [ "cName = classNode.getNodeValue()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "c = Class.forName(cName)" ],
+				"VARIABLECOMMONTYPE" : "Class",
+				"VARIABLEELEMENTTYPE" : "Class"
+			}, {
+				"VARIABLEDECLARATION" : [ "obj = c.newInstance()" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getBean",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Client"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 10,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DocumentBuilderFactory",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "DocumentBuilderFactory",
+					"CALLEEMETHODNAME" : "newDocumentBuilder"
+				}, {
+					"CALLEECLASS" : "DocumentBuilder",
+					"CALLEEMETHODNAME" : "parse"
+				}, {
+					"CALLEECLASS" : "Document",
+					"CALLEEMETHODNAME" : "getElementsByTagName"
+				}, {
+					"CALLEECLASS" : "Node",
+					"CALLEEMETHODNAME" : "getFirstChild"
+				}, {
+					"CALLEECLASS" : "NodeList",
+					"CALLEEMETHODNAME" : "item"
+				}, {
+					"CALLEECLASS" : "Node",
+					"CALLEEMETHODNAME" : "getNodeValue"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "forName"
+				}, {
+					"CALLEECLASS" : "Class",
+					"CALLEEMETHODNAME" : "newInstance"
+				}, {
+					"CALLEECLASS" : "Throwable",
+					"CALLEEMETHODNAME" : "printStackTrace"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Client" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Client",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "b1 = new Book()" ],
+				"VARIABLECOMMONTYPE" : "Product",
+				"VARIABLEELEMENTTYPE" : "Product"
+			}, {
+				"VARIABLEDECLARATION" : [ "b2 = new Book()" ],
+				"VARIABLECOMMONTYPE" : "Product",
+				"VARIABLEELEMENTTYPE" : "Product"
+			}, {
+				"VARIABLEDECLARATION" : [ "a1 = new Apple()" ],
+				"VARIABLECOMMONTYPE" : "Product",
+				"VARIABLEELEMENTTYPE" : "Product"
+			}, {
+				"VARIABLEDECLARATION" : [ "visitor" ],
+				"VARIABLECOMMONTYPE" : "Visitor",
+				"VARIABLEELEMENTTYPE" : "Visitor"
+			}, {
+				"VARIABLEDECLARATION" : [ "basket = new BuyBasket()" ],
+				"VARIABLECOMMONTYPE" : "BuyBasket",
+				"VARIABLEELEMENTTYPE" : "BuyBasket"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 5,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "BuyBasket",
+					"CALLEEMETHODNAME" : "addProduct"
+				}, {
+					"CALLEECLASS" : "BuyBasket",
+					"CALLEEMETHODNAME" : "addProduct"
+				}, {
+					"CALLEECLASS" : "BuyBasket",
+					"CALLEEMETHODNAME" : "addProduct"
+				}, {
+					"CALLEECLASS" : "XMLUtil",
+					"CALLEEMETHODNAME" : "getBean"
+				}, {
+					"CALLEECLASS" : "Visitor",
+					"CALLEEMETHODNAME" : "setName"
+				}, {
+					"CALLEECLASS" : "BuyBasket",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "BuyBasket",
+					"CALLEEMETHODNAME" : "addProduct"
+				}, {
+					"CALLEECLASS" : "BuyBasket",
+					"CALLEEMETHODNAME" : "addProduct"
+				}, {
+					"CALLEECLASS" : "BuyBasket",
+					"CALLEEMETHODNAME" : "addProduct"
+				}, {
+					"CALLEECLASS" : "XMLUtil",
+					"CALLEEMETHODNAME" : "getBean"
+				}, {
+					"CALLEECLASS" : "Visitor",
+					"CALLEEMETHODNAME" : "setName"
+				}, {
+					"CALLEECLASS" : "BuyBasket",
+					"CALLEEMETHODNAME" : "accept"
+				} ],
+				"NUMBEROFMETHODLINES" : 11,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "a",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	},
+	"final_summary" : "BuyBasket.java: BuyBasket does not have any design pattern.  It is a public class. The 3 methods of BuyBasket are accept (void), addProduct (void) and removeProduct (void). Only one method ( main method of class Client ) calls accept and accept calls 4 methods : accept method of class Product, next method of class Iterator, hasNext method of class Iterator and iterator method of class ArrayList. Only one method ( main method of class Client ) calls addProduct and addProduct calls only one method : add method of class ArrayList. No methods call removeProduct and removeProduct calls only one method : remove method of class ArrayList.\n\n\nApple.java: Apple does not have any design pattern.  It is a public class that implements Product. The only method of Apple is accept (void). No methods call accept and accept calls only one method : visit method of class Visitor.\n\n\nSaler.java: Saler does not have any design pattern.  It is a public class that extends Visitor. The 2 methods of Saler are visit (void) and visit (void). No methods call visit and visit calls only one method : println method of class PrintStream. No methods call visit and visit calls only one method : println method of class PrintStream.\n\n\nVisitor.java: Visitor does not have any design pattern.  It is a public abstract class. The 3 methods of Visitor are setName (void), visit (void) and visit (void). Only one method ( main method of class Client ) calls setName and setName calls no methods. 2 methods ( accept method of class Book and accept method of class Apple ) call visit and visit calls no methods. 2 methods ( accept method of class Book and accept method of class Apple ) call visit and visit calls no methods.\n\n\nCustomer.java: Customer does not have any design pattern.  It is a public class that extends Visitor. The 2 methods of Customer are visit (void) and visit (void). No methods call visit and visit calls only one method : println method of class PrintStream. No methods call visit and visit calls only one method : println method of class PrintStream.\n\n\nBook.java: Book does not have any design pattern.  It is a public class that implements Product. The only method of Book is accept (void). No methods call accept and accept calls only one method : visit method of class Visitor.\n\n\nProduct.java: Product does not have any design pattern.  It is a public interface. The only method of Product is accept (void). Only one method ( accept method of class BuyBasket ) calls accept and accept calls no methods.\n\n\nXMLUtil.java: XMLUtil does not have any design pattern.  It is a public class. The only method of XMLUtil is getBean (Object). Only one method ( main method of class Client ) calls getBean and getBean calls 10 methods : newInstance method of class DocumentBuilderFactory, item method of class NodeList, newInstance method of class Class, getNodeValue method of class Node, printStackTrace method of class Throwable, getElementsByTagName method of class Document, forName method of class Class, newDocumentBuilder method of class DocumentBuilderFactory, parse method of class DocumentBuilder and getFirstChild method of class Node.\n\n\nClient.java: Client does not have any design pattern.  It is a public class. The only method of Client is main (void). No methods call main and main calls 4 methods : getBean method of class XMLUtil, addProduct method of class BuyBasket, accept method of class BuyBasket and setName method of class Visitor.\n\n\n",
+	"design_pattern" : [ ],
+	"summary_NLG" : { }
+}

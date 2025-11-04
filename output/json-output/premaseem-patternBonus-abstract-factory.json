@@ -1,0 +1,562 @@
+{
+	"final_summary" : "Pizza.java: memento: Pizza acts as a memento, which is inherited by Pizza, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost. Pizza acts as a memento, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost. It is a public interface. The 10 methods of Pizza are getDescription (void), getCost (double), getDescription (void), getCost (double), getDescription (void), getCost (double), getDescription (void), getCost (double), getDescription (void) and getCost (double). No methods call getDescription and getDescription calls no methods. No methods call getCost and getCost calls no methods. No methods call getDescription and getDescription calls no methods. No methods call getCost and getCost calls no methods. No methods call getDescription and getDescription calls no methods. No methods call getCost and getCost calls no methods. No methods call getDescription and getDescription calls no methods. No methods call getCost and getCost calls no methods. No methods call getDescription and getDescription calls no methods. No methods call getCost and getCost calls no methods.\n\n factory_method: Pizza acts as a product for AbstracePizzaFactory, which overrides getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza. Pizza acts as an abstract product for AbstracePizzaFactory, which is inherited by Pizza. It is a public interface. The 10 methods of Pizza are getDescription (void), getCost (double), getDescription (void), getCost (double), getDescription (void), getCost (double), getDescription (void), getCost (double), getDescription (void) and getCost (double). No methods call getDescription and getDescription calls no methods. No methods call getCost and getCost calls no methods. No methods call getDescription and getDescription calls no methods. No methods call getCost and getCost calls no methods. No methods call getDescription and getDescription calls no methods. No methods call getCost and getCost calls no methods. No methods call getDescription and getDescription calls no methods. No methods call getCost and getCost calls no methods. No methods call getDescription and getDescription calls no methods. No methods call getCost and getCost calls no methods.\n\n\nAbstracePizzaFactory.java: factory_method: AbstracePizzaFactory acts as a factory for AbstracePizzaFactory, which overrides. AbstracePizzaFactory acts as a factory method for Pizza, which is inherited by AbstracePizzaFactory, AbstracePizzaFactory. It is a public abstract class. The 4 methods of AbstracePizzaFactory are createPizzaBase (Pizza), getPizzaBase (Pizza), createPizzaBase (Pizza) and createPizzaBase (Pizza). Only one method ( getPizzaBase method of class AbstracePizzaFactory ) calls createPizzaBase and createPizzaBase calls no methods. No methods call getPizzaBase and getPizzaBase calls only one method : createPizzaBase method of class AbstracePizzaFactory. Only one method ( getPizzaBase method of class AbstracePizzaFactory ) calls createPizzaBase and createPizzaBase calls no methods. Only one method ( getPizzaBase method of class AbstracePizzaFactory ) calls createPizzaBase and createPizzaBase calls no methods.\n\n\nPizzaStore.java: memento: PizzaStore acts as an originator for memento Pizza, which orders a Pizza Pizza to. It is a public class. The 3 methods of PizzaStore are orderPizza (Pizza), getPizzaFactory (AbstracePizzaFactory) and bakePizza (void). No methods call orderPizza and orderPizza calls 3 methods : getPizzaBase method of class pizzaFactory, getPizzaFactory method of class PizzaStore and bakePizza method of class PizzaStore. Only one method ( orderPizza method of class PizzaStore ) calls getPizzaFactory and getPizzaFactory calls only one method : equalsIgnoreCase method of class String. Only one method ( orderPizza method of class PizzaStore ) calls bakePizza and bakePizza calls no methods.\n\n\nClientForPizzaFactory.java: ClientForPizzaFactory does not have any design pattern.  It is a public class. The only method of ClientForPizzaFactory is main (void). No methods call main and main calls 7 methods : orderPizza method of class pizzaStore, next method of class Scanner, getCost method of class pizza, nextInt method of class Scanner, println method of class PrintStream, println method of class out and getDescription method of class pizza.\n\n\n",
+	"premaseem-patternBonus-abstract-factory" : {
+		"Pizza" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Pizza",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Pizza" ],
+				"IMPLEMENTSFROM" : [ "Pizza" ],
+				"CLASSNAME" : "VegPizza",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Pizza" ],
+				"IMPLEMENTSFROM" : [ "Pizza" ],
+				"CLASSNAME" : "JainVegPizza",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Pizza" ],
+				"IMPLEMENTSFROM" : [ "Pizza" ],
+				"CLASSNAME" : "CornPizza",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Pizza" ],
+				"IMPLEMENTSFROM" : [ "Pizza" ],
+				"CLASSNAME" : "JainCornPizza",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getCost",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"AbstracePizzaFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AbstracePizzaFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AbstracePizzaFactory" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "JainPizzaFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			}, {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "AbstracePizzaFactory" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "GeneralPizzaFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "pizza = null" ],
+				"VARIABLECOMMONTYPE" : "Pizza",
+				"VARIABLEELEMENTTYPE" : "Pizza"
+			}, {
+				"VARIABLEDECLARATION" : [ "pizza = null" ],
+				"VARIABLECOMMONTYPE" : "Pizza",
+				"VARIABLEELEMENTTYPE" : "Pizza"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createPizzaBase",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "getPizzaBase",
+					"CALLEDCLASS" : "AbstracePizzaFactory"
+				}, {
+					"CALLEDMETHODNAME" : "getPizzaBase",
+					"CALLEDCLASS" : "AbstracePizzaFactory"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Pizza",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "PizzaType",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getPizzaBase",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Pizza",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "AbstracePizzaFactory",
+					"CALLEEMETHODNAME" : "createPizzaBase"
+				}, {
+					"CALLEECLASS" : "AbstracePizzaFactory",
+					"CALLEEMETHODNAME" : "createPizzaBase"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "pizzaType",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "createPizzaBase",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "getPizzaBase",
+					"CALLEDCLASS" : "AbstracePizzaFactory"
+				}, {
+					"CALLEDMETHODNAME" : "getPizzaBase",
+					"CALLEDCLASS" : "AbstracePizzaFactory"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "Pizza",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "pizzaType",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "createPizzaBase",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "getPizzaBase",
+					"CALLEDCLASS" : "AbstracePizzaFactory"
+				}, {
+					"CALLEDMETHODNAME" : "getPizzaBase",
+					"CALLEDCLASS" : "AbstracePizzaFactory"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "Pizza",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "pizzaType",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"PizzaStore" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 5,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "PizzaStore",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "pizzaFactory = getPizzaFactory(pizzafactory)" ],
+				"VARIABLECOMMONTYPE" : "AbstracePizzaFactory",
+				"VARIABLEELEMENTTYPE" : "AbstracePizzaFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "pizza = pizzaFactory.getPizzaBase(pizzaType)" ],
+				"VARIABLECOMMONTYPE" : "Pizza",
+				"VARIABLEELEMENTTYPE" : "Pizza"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "orderPizza",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "Pizza",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PizzaStore",
+					"CALLEEMETHODNAME" : "getPizzaFactory"
+				}, {
+					"CALLEECLASS" : "pizzaFactory",
+					"CALLEEMETHODNAME" : "getPizzaBase"
+				}, {
+					"CALLEECLASS" : "PizzaStore",
+					"CALLEEMETHODNAME" : "bakePizza"
+				}, {
+					"CALLEECLASS" : "PizzaStore",
+					"CALLEEMETHODNAME" : "getPizzaFactory"
+				}, {
+					"CALLEECLASS" : "PizzaStore",
+					"CALLEEMETHODNAME" : "bakePizza"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "pizzafactory",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "pizzaType",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getPizzaFactory",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "orderPizza",
+					"CALLEDCLASS" : "PizzaStore"
+				}, {
+					"CALLEDMETHODNAME" : "orderPizza",
+					"CALLEDCLASS" : "PizzaStore"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "AbstracePizzaFactory",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equalsIgnoreCase"
+				}, {
+					"CALLEECLASS" : "String",
+					"CALLEEMETHODNAME" : "equalsIgnoreCase"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "pizzafactory",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "bakePizza",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "orderPizza",
+					"CALLEDCLASS" : "PizzaStore"
+				}, {
+					"CALLEDMETHODNAME" : "orderPizza",
+					"CALLEDCLASS" : "PizzaStore"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ClientForPizzaFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 15,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ClientForPizzaFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "scan = new Scanner(System.in)" ],
+				"VARIABLECOMMONTYPE" : "Scanner",
+				"VARIABLEELEMENTTYPE" : "Scanner"
+			}, {
+				"VARIABLEDECLARATION" : [ "repeatRunFlag = 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "pizzafactory = scan.next()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "pizzaType = scan.next()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "pizzaStore = new PizzaStore()" ],
+				"VARIABLECOMMONTYPE" : "PizzaStore",
+				"VARIABLEELEMENTTYPE" : "PizzaStore"
+			}, {
+				"VARIABLEDECLARATION" : [ "pizza = pizzaStore.orderPizza(pizzafactory, pizzaType)" ],
+				"VARIABLECOMMONTYPE" : "Pizza",
+				"VARIABLEELEMENTTYPE" : "Pizza"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 15,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "next"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "next"
+				}, {
+					"CALLEECLASS" : "pizzaStore",
+					"CALLEEMETHODNAME" : "orderPizza"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "pizza",
+					"CALLEEMETHODNAME" : "getDescription"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "pizza",
+					"CALLEEMETHODNAME" : "getCost"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Scanner",
+					"CALLEEMETHODNAME" : "nextInt"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	},
+	"design_pattern" : [ {
+		"factory_method" : {
+			"AbstracePizzaFactory" : {
+				"concrete_product" : [ "Pizza" ],
+				"abstract_product" : "Pizza",
+				"concrete_factory" : [ "AbstracePizzaFactory", "AbstracePizzaFactory" ]
+			}
+		}
+	}, {
+		"memento" : {
+			"Pizza" : {
+				"caretaker" : { },
+				"originator" : {
+					"PizzaStore" : [ ]
+				},
+				"concrete_memento" : [ "Pizza" ]
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"memento" : {
+			"Pizza" : [ "Pizza acts as a memento, which is inherited by Pizza, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost.", "Pizza acts as a memento, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost, which gets Cost." ],
+			"PizzaStore" : [ "PizzaStore acts as an originator for memento Pizza, which orders a Pizza Pizza to." ]
+		},
+		"factory_method" : {
+			"Pizza" : [ "Pizza acts as a product for AbstracePizzaFactory, which overrides getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getDescription method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza, getCost method of Pizza.", "Pizza acts as an abstract product for AbstracePizzaFactory, which is inherited by Pizza." ],
+			"AbstracePizzaFactory" : [ "AbstracePizzaFactory acts as a factory for AbstracePizzaFactory, which overrides.", "AbstracePizzaFactory acts as a factory method for Pizza, which is inherited by AbstracePizzaFactory, AbstracePizzaFactory." ]
+		}
+	}
+}

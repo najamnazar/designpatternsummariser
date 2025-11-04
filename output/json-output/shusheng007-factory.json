@@ -1,0 +1,195 @@
+{
+	"shusheng007-factory" : {
+		"MacComputer" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Computer" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "MacComputer",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "setOperationSystem",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"FactoryPatternService" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 8,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "FactoryPatternService",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "computer = SimpleComputerFactory.makeComputer(\"mi\")" ],
+				"VARIABLECOMMONTYPE" : "Computer",
+				"VARIABLEELEMENTTYPE" : "Computer"
+			}, {
+				"VARIABLEDECLARATION" : [ "factory = new MacComputerFactory()" ],
+				"VARIABLECOMMONTYPE" : "ComputerFactory",
+				"VARIABLEELEMENTTYPE" : "ComputerFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "appleFactory = new AppleFactory()" ],
+				"VARIABLECOMMONTYPE" : "AbstractFactory",
+				"VARIABLEELEMENTTYPE" : "AbstractFactory"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "makePcUseSimpleFactory",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "SimpleComputerFactory",
+					"CALLEEMETHODNAME" : "makeComputer"
+				}, {
+					"CALLEECLASS" : "computer",
+					"CALLEEMETHODNAME" : "setOperationSystem"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makePcUseFactory",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "makeComputer",
+					"CALLEEMETHODNAME" : "setOperationSystem"
+				}, {
+					"CALLEECLASS" : "factory",
+					"CALLEEMETHODNAME" : "makeComputer"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "makePcUseAbstractFactory",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "makeComputer",
+					"CALLEEMETHODNAME" : "setOperationSystem"
+				}, {
+					"CALLEECLASS" : "appleFactory",
+					"CALLEEMETHODNAME" : "makeComputer"
+				}, {
+					"CALLEECLASS" : "makeMobilePhone",
+					"CALLEEMETHODNAME" : "setOperationSystem"
+				}, {
+					"CALLEECLASS" : "appleFactory",
+					"CALLEEMETHODNAME" : "makeMobilePhone"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Computer" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Computer",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "setOperationSystem",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"MiComputer" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Computer" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "MiComputer",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "setOperationSystem",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"final_summary" : "MacComputer.java: MacComputer does not have any design pattern.  It is a public class that extends Computer. The only method of MacComputer is setOperationSystem (void). No methods call setOperationSystem and setOperationSystem calls only one method : println method of class PrintStream.\n\n\nFactoryPatternService.java: FactoryPatternService does not have any design pattern.  It is a public class. The 3 methods of FactoryPatternService are makePcUseSimpleFactory (void), makePcUseFactory (void) and makePcUseAbstractFactory (void). No methods call makePcUseSimpleFactory and makePcUseSimpleFactory calls 2 methods : setOperationSystem method of class computer and makeComputer method of class SimpleComputerFactory. No methods call makePcUseFactory and makePcUseFactory calls 2 methods : setOperationSystem method of class makeComputer and makeComputer method of class factory. No methods call makePcUseAbstractFactory and makePcUseAbstractFactory calls 4 methods : setOperationSystem method of class makeComputer, makeMobilePhone method of class appleFactory, makeComputer method of class appleFactory and setOperationSystem method of class makeMobilePhone.\n\n\nComputer.java: Computer does not have any design pattern.  It is a public abstract class. The only method of Computer is setOperationSystem (void). No methods call setOperationSystem and setOperationSystem calls no methods.\n\n\nMiComputer.java: MiComputer does not have any design pattern.  It is a public class that extends Computer. The only method of MiComputer is setOperationSystem (void). No methods call setOperationSystem and setOperationSystem calls only one method : println method of class PrintStream.\n\n\n",
+	"design_pattern" : [ ],
+	"summary_NLG" : { }
+}

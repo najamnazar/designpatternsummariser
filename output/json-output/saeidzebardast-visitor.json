@@ -1,0 +1,600 @@
+{
+	"saeidzebardast-visitor" : {
+		"Tobacco" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "price" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Visitable" ],
+				"IMPLEMENTSFROM" : [ "Visitable" ],
+				"CLASSNAME" : "Tobacco",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "item",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "visitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "Visitor"
+				} ]
+			}, {
+				"METHODNAME" : "getPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"TaxHolidayVisitor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "DecimalFormat",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "df = new DecimalFormat(\"#.##\")" ],
+				"FIELDDATATYPE" : "DecimalFormat",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 14,
+				"EXTENDSFROM" : [ "Visitor" ],
+				"IMPLEMENTSFROM" : [ "Visitor" ],
+				"CLASSNAME" : "TaxHolidayVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Double",
+					"CALLEEMETHODNAME" : "parseDouble"
+				}, {
+					"CALLEECLASS" : "df",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "necessityItem",
+					"CALLEEMETHODNAME" : "getPrice"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "liquorItem",
+					"PARAMETERTYPE" : "Liquor"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Double",
+					"CALLEEMETHODNAME" : "parseDouble"
+				}, {
+					"CALLEECLASS" : "df",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "necessityItem",
+					"CALLEEMETHODNAME" : "getPrice"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "tobaccoItem",
+					"PARAMETERTYPE" : "Tobacco"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Double",
+					"CALLEEMETHODNAME" : "parseDouble"
+				}, {
+					"CALLEECLASS" : "df",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "necessityItem",
+					"CALLEEMETHODNAME" : "getPrice"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "necessityItem",
+					"PARAMETERTYPE" : "Necessity"
+				} ]
+			} ]
+		},
+		"Visitor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Visitor",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "liquorItem",
+					"PARAMETERTYPE" : "Liquor"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "tobaccoItem",
+					"PARAMETERTYPE" : "Tobacco"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "necessityItem",
+					"PARAMETERTYPE" : "Necessity"
+				} ]
+			} ]
+		},
+		"Visitable" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Visitable",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "Visitor"
+				} ]
+			} ]
+		},
+		"VisitorTest" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 13,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "VisitorTest",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "taxCalc = new TaxVisitor()" ],
+				"VARIABLECOMMONTYPE" : "TaxVisitor",
+				"VARIABLEELEMENTTYPE" : "TaxVisitor"
+			}, {
+				"VARIABLEDECLARATION" : [ "taxHolidayCalc = new TaxHolidayVisitor()" ],
+				"VARIABLECOMMONTYPE" : "TaxHolidayVisitor",
+				"VARIABLEELEMENTTYPE" : "TaxHolidayVisitor"
+			}, {
+				"VARIABLEDECLARATION" : [ "milk = new Necessity(3.47)" ],
+				"VARIABLECOMMONTYPE" : "Necessity",
+				"VARIABLEELEMENTTYPE" : "Necessity"
+			}, {
+				"VARIABLEDECLARATION" : [ "vodka = new Liquor(11.99)" ],
+				"VARIABLECOMMONTYPE" : "Liquor",
+				"VARIABLEELEMENTTYPE" : "Liquor"
+			}, {
+				"VARIABLEDECLARATION" : [ "cigars = new Tobacco(19.99)" ],
+				"VARIABLECOMMONTYPE" : "Tobacco",
+				"VARIABLEELEMENTTYPE" : "Tobacco"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 5,
+				"NUMBEROFOUTGOINGMETHODS" : 13,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "milk",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "vodka",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "cigars",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "milk",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "vodka",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "out",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "cigars",
+					"CALLEEMETHODNAME" : "accept"
+				} ],
+				"NUMBEROFMETHODLINES" : 12,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Necessity" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "price" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Visitable" ],
+				"IMPLEMENTSFROM" : [ "Visitable" ],
+				"CLASSNAME" : "Necessity",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "item",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "visitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "Visitor"
+				} ]
+			}, {
+				"METHODNAME" : "getPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Liquor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "double",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "price" ],
+				"FIELDDATATYPE" : "double",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Visitable" ],
+				"IMPLEMENTSFROM" : [ "Visitable" ],
+				"CLASSNAME" : "Liquor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "item",
+					"PARAMETERTYPE" : "double"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "visitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "Visitor"
+				} ]
+			}, {
+				"METHODNAME" : "getPrice",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"TaxVisitor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "DecimalFormat",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "df = new DecimalFormat(\"#.##\")" ],
+				"FIELDDATATYPE" : "DecimalFormat",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "NONE",
+				"NUMBEROFMETHODCALLS" : 14,
+				"EXTENDSFROM" : [ "Visitor" ],
+				"IMPLEMENTSFROM" : [ "Visitor" ],
+				"CLASSNAME" : "TaxVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Double",
+					"CALLEEMETHODNAME" : "parseDouble"
+				}, {
+					"CALLEECLASS" : "df",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "necessityItem",
+					"CALLEEMETHODNAME" : "getPrice"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "liquorItem",
+					"PARAMETERTYPE" : "Liquor"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Double",
+					"CALLEEMETHODNAME" : "parseDouble"
+				}, {
+					"CALLEECLASS" : "df",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "necessityItem",
+					"CALLEEMETHODNAME" : "getPrice"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "tobaccoItem",
+					"PARAMETERTYPE" : "Tobacco"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "double",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "PrintStream",
+					"CALLEEMETHODNAME" : "println"
+				}, {
+					"CALLEECLASS" : "Double",
+					"CALLEEMETHODNAME" : "parseDouble"
+				}, {
+					"CALLEECLASS" : "df",
+					"CALLEEMETHODNAME" : "format"
+				}, {
+					"CALLEECLASS" : "necessityItem",
+					"CALLEEMETHODNAME" : "getPrice"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "necessityItem",
+					"PARAMETERTYPE" : "Necessity"
+				} ]
+			} ]
+		}
+	},
+	"final_summary" : "Tobacco.java: Tobacco does not have any design pattern.  It is a class that extends Visitable and that implements Visitable. The 2 methods of Tobacco are accept (double) and getPrice (double). No methods call accept and accept calls only one method : visit method of class visitor. No methods call getPrice and getPrice calls no methods.\n\n\nTaxHolidayVisitor.java: TaxHolidayVisitor does not have any design pattern.  It is a class that extends Visitor and that implements Visitor. The 3 methods of TaxHolidayVisitor are visit (double), visit (double) and visit (double). No methods call visit and visit calls 4 methods : format method of class df, getPrice method of class necessityItem, println method of class PrintStream and parseDouble method of class Double. No methods call visit and visit calls 4 methods : format method of class df, getPrice method of class necessityItem, println method of class PrintStream and parseDouble method of class Double. No methods call visit and visit calls 4 methods : format method of class df, getPrice method of class necessityItem, println method of class PrintStream and parseDouble method of class Double.\n\n\nVisitor.java: Visitor does not have any design pattern.  It is a interface. The 3 methods of Visitor are visit (double), visit (double) and visit (double). No methods call visit and visit calls no methods. No methods call visit and visit calls no methods. No methods call visit and visit calls no methods.\n\n\nVisitable.java: Visitable does not have any design pattern.  It is a interface. The only method of Visitable is accept (double). No methods call accept and accept calls no methods.\n\n\nVisitorTest.java: VisitorTest does not have any design pattern.  It is a public class. The only method of VisitorTest is main (void). No methods call main and main calls 5 methods : accept method of class vodka, accept method of class cigars, println method of class out, println method of class PrintStream and accept method of class milk.\n\n\nNecessity.java: Necessity does not have any design pattern.  It is a class that extends Visitable and that implements Visitable. The 2 methods of Necessity are accept (double) and getPrice (double). No methods call accept and accept calls only one method : visit method of class visitor. No methods call getPrice and getPrice calls no methods.\n\n\nLiquor.java: Liquor does not have any design pattern.  It is a class that extends Visitable and that implements Visitable. The 2 methods of Liquor are accept (double) and getPrice (double). No methods call accept and accept calls only one method : visit method of class visitor. No methods call getPrice and getPrice calls no methods.\n\n\nTaxVisitor.java: TaxVisitor does not have any design pattern.  It is a class that extends Visitor and that implements Visitor. The 3 methods of TaxVisitor are visit (double), visit (double) and visit (double). No methods call visit and visit calls 4 methods : format method of class df, getPrice method of class necessityItem, println method of class PrintStream and parseDouble method of class Double. No methods call visit and visit calls 4 methods : format method of class df, getPrice method of class necessityItem, println method of class PrintStream and parseDouble method of class Double. No methods call visit and visit calls 4 methods : format method of class df, getPrice method of class necessityItem, println method of class PrintStream and parseDouble method of class Double.\n\n\n",
+	"design_pattern" : [ ],
+	"summary_NLG" : { }
+}
