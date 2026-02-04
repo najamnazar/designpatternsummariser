@@ -227,6 +227,29 @@ Copyright (C) 2025 Najam Nazar
 Licensed under BSD 2-Clause License
 GitHub: https://github.com/najamnazar/designpatternsummariser
 ```
+## 📚 Citation
+
+**If you use this code in your research or project, please cite our paper:**
+
+**Paper Details:**
+- **Journal**: Empirical Software Engineering (Springer)
+- **DOI**: [10.1007/s10664-025-10788-x](https://link.springer.com/article/10.1007/s10664-025-10788-x)
+- **Publisher**: Springer
+
+### BibTeX Entry
+
+```bibtex
+@article{Nazar:2025,
+  title={Design pattern detection and summarization in Java source code},
+  author={Nazar, Najam and Sameer Sikka and Christoph Treude},
+  journal={Empirical Software Engineering},
+  volume={30},
+  year={2025},
+  publisher={Springer},
+  doi={10.1007/s10664-025-10788-x},
+  url={https://link.springer.com/article/10.1007/s10664-025-10788-x}
+}
+```
 
 ## 🤝 Contributing & Support
 
